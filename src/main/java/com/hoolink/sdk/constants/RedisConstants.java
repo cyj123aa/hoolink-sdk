@@ -5,7 +5,7 @@ package com.hoolink.sdk.constants;
  * @Description : Redis相关常量
  * @date : Created on 2019/5/10 13:29
  */
-public class RedisConstant {
+public class RedisConstants {
 
     /**
      * 远程升级和强制回滚
