@@ -28,7 +28,12 @@ public enum UpgradeStateEnum {
     /**
      *升级成功
      */
-    UPGRADE_SUCCESS
+    UPGRADE_SUCCESS,
+
+    /**
+     * 上线
+     */
+    ONLINE
 
 
 
