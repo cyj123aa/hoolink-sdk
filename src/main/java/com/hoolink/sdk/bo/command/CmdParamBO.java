@@ -24,4 +24,10 @@ public class CmdParamBO<T> {
 
     private T cmdData;
 
+    private Class tClazz;
+
+    public void setCmdData(T cmdData) {
+        this.cmdData = cmdData;
+        this.tClazz = cmdData.getClass();
+    }
 }
