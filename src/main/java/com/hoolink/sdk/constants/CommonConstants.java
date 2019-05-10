@@ -1,0 +1,74 @@
+package com.hoolink.sdk.constants;
+
+/**
+ * @author ds
+ * Created by ds on 2017/12/11.
+ * 常量类
+ */
+public class CommonConstants {
+
+    public static final String DATE_SPLIT = "-";
+    public static final String COMMA = ",";
+    public static final Long DEFAULT_USER_ID = 1L;
+    public static final String DEFAULT_USER_ACCOUNT = "admin";
+
+    /*** 手机号长度 */
+    public static final int MOBIL_PHONE_LENGTH = 11;
+
+    /**
+     * 账号
+     */
+    public static final String LOG_ACCOUNT = "[Account]";
+    /**
+     * 方法名
+     */
+    public static final String LOG_METHOD = "[Method]";
+    /**
+     * 参数
+     */
+    public static final String LOG_PARAM = "[Param]";
+    /**
+     * 返回值
+     */
+    public static final String LOG_RETURN = "[Return]";
+    /**
+     * 其它觉得必要的描述信息
+     */
+    public static final String LOG_CONTENT = "[Content]";
+    public static final String LOG_ERROR = "[Exception]";
+
+    /**
+     * 指令
+     */
+    public static final String COMMAND_OPERATE_SUCCESS = "指令下发成功";
+    public static final String COMMAND_OPERATE_ERROR = "指令下发异常";
+
+
+    /*** 每次请求的唯一标识 */
+    public static final String TXID = "txId";
+    /**
+     * 获取全局用户信息
+     */
+    public static final String CURRENT_LOGIN_AUTH = "CURRENT_LOGIN_AUTH";
+
+
+    /**
+     * 显示屏进度条redisKey前缀 progress
+     */
+    public static final String SCREEN_SEND_PREFIX = "progress_";
+
+    /**
+     * 显示屏重发redisKey前缀 restart
+     */
+    public static final String SCREEN_CONFIG_PREFIX = "restart_";
+
+    /**
+     * 世邦替换字段"jsondata["
+     */
+    public static final String SPON_REPLACE_1 = "jsondata[";
+    /**
+     * 世邦替换字段"]"
+     */
+    public static final String SPON_REPLACE_2 = "]";
+
+}
