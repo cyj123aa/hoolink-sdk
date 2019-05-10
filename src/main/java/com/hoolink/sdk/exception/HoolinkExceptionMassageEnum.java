@@ -118,6 +118,7 @@ public enum HoolinkExceptionMassageEnum {
     GET_CURRENT_USER_ERROR("获取当前登录用户失败"),
     PHONE_EXISTS("该手机号已存在"),
     GET_CHECK_EXCEL_DATA_ERROR("获取校验excel数据结果失败"),
+    READ_FIRMWARE_FILE_ERROR("固件文件读取失败"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),

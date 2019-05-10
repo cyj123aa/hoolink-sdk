@@ -76,4 +76,9 @@ public class ReadFirmwareBO implements Serializable {
      */
     private Integer firmwareNo;
 
+    /**
+     * 上传包对应的文件名
+     */
+    private String obsName;
+
 }
