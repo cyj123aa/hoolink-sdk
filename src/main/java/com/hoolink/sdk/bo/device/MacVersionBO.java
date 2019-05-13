@@ -10,6 +10,9 @@ import lombok.Data;
 public class MacVersionBO {
     private String mac;
     private String version;
-    private UpgradeStateEnum upgradestate;
+    private UpgradeStateEnum upgradeState;
+
+    /**** 设备型号id */
+    private Long deviceSubTypeId;
 
 }

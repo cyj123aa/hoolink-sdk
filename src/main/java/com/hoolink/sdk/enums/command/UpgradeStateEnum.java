@@ -22,6 +22,10 @@ public enum UpgradeStateEnum {
      */
     UPGRADE_END,
     /**
+     *升级结果不对
+     */
+    UPGRADE_ERROR,
+    /**
      * 上线
      */
     ONLINE
