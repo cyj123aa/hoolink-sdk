@@ -33,13 +33,13 @@ public class MonitorBO extends DeviceManagerBO {
     private Boolean hasEnvironment;
 
     /*** 是否有气体检测传感器 */
-    private Long hasGas;
+    private Boolean hasGas;
 
     /*** 是否有漏电检测传感器 */
-    private Long hasLeakage;
+    private Boolean hasLeakage;
 
     /*** 是否有水位检测传感器 */
-    private Long hasWaterLevel;
+    private Boolean hasWaterLevel;
 
     /*** 环境检测传感器实体 */
     private SensorEnvironmentBO sensorEnvironment;
