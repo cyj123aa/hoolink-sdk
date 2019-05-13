@@ -80,6 +80,7 @@ public enum HoolinkExceptionMassageEnum {
     CHOOSE_POLE_ERROR("获取灯杆列表失败"),
     CHOOSE_RADIO_ERROR("获取广播列表失败"),
     GET_PROJECT_ID_ERROR("所属项目不能为空"),
+    BATCH_IMPORT_EXCEL_DATE_ERROR("批量导入设备数据失败"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
@@ -130,6 +131,9 @@ public enum HoolinkExceptionMassageEnum {
     UPLOAD_FILE_ERROR("文件上传失败"),
     CHECK_FIRMWARE_ERROR("固件校验未通过！请确认输入固件版本与上传文件是否一致"),
     FIRMWARE_NAME_OUT_OF_ORDER("输入固件版本不符合规则！"),
+
+    DEVICE_CHECK_PASSWORD_NOT_EXIST("密码不能为空, 请输入密码!"),
+    DEVICE_CHECK_PASSWORD_ERROR("密码错误, 请重新输入!"),
     FIRMWARE_FILE_FORMAT_ORDER("上传固件格式不正确！请确认后再试"),
     ;
 
