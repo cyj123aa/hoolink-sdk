@@ -33,4 +33,7 @@ public class ProjectDeviceSubTypeBO implements Serializable {
     /*** 描述 */
     private String description;
 
+    /*** 厂商名称 */
+    private String factoryName;
+
 }
