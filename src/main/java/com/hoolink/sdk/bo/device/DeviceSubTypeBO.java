@@ -2,6 +2,9 @@ package com.hoolink.sdk.bo.device;
 
 import lombok.Data;
 
+/**
+ * @author xubaofeng
+ */
 @Data
 public class DeviceSubTypeBO {
     /**
@@ -26,21 +29,8 @@ public class DeviceSubTypeBO {
      * 表字段 : device_sub_type.sub_type_name
      * </pre>
      */
-    private String subTypeName;
 
-    /*** 图片路径 */
-    private String imgPath;
 
-    /*** 描述 */
-    private String description;
-
-    /*** 厂商ID */
-    private Long factoryId;
-
-    /*** 厂商名称 */
-    private String factoryName;
-
-    
 
 
 
