@@ -28,4 +28,7 @@ public class SearchLightBO implements Serializable {
     /*** 状态 0:全部,1:在线,2:离线,3:工作中,4:维修中,5:故障 */
     private String status;
 
+    /** 设备类型 */
+    private Long deviceSubTypeId;
+
 }
