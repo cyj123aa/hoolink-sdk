@@ -30,7 +30,7 @@ public enum HoolinkExceptionMassageEnum {
     USER_PHONE_EXISTS("手机号已被绑定，请更换其他手机号"),
     USER_PHONE_NOT_EXISTS("手机号不存在"),
     USER_BIND_PHONE_ERROR("手机绑定失败"),
-    CAPTCHA_ERROR("验证码错误"),
+    CAPTCHA_ERROR("您输入的验证码有误！"),
     CAPTCHA_CACHE_TOO_FREQUENTLY("验证码存储过于频繁"),
     USER_LIST_ERROR("用户列表信息获取失败"),
     RESET_PASSWORD_ERROR("重置密码操作失败！"),
