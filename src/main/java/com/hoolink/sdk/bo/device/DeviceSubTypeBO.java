@@ -28,6 +28,20 @@ public class DeviceSubTypeBO {
      */
     private String subTypeName;
 
+    /*** 图片路径 */
+    private String imgPath;
+
+    /*** 描述 */
+    private String description;
+
+    /*** 厂商ID */
+    private Long factoryId;
+
+    /*** 厂商名称 */
+    private String factoryName;
+
+    
+
 
 
 
