@@ -14,6 +14,7 @@ public enum HoolinkExceptionMassageEnum {
     PARAM_ERROR("参数错误"),
     LOGIN_ERROR("登录异常"),
     LOGIN_TIME_OUT("登录超时"),
+    PAGE_TIME_OUT("页面超时，请重新操作！"),
     OTHER_USER_LOGIN("异地登录"),
     NOT_AUTH("无权限访问"),
     AUTH_ERROR("权限获取失败"),
