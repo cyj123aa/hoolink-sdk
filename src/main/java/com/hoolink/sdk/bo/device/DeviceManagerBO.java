@@ -88,13 +88,17 @@ public class DeviceManagerBO implements Serializable {
     private String typeName;
 
     /*** 在线状态 */
-    private Boolean  onlineStatus;
+    private Boolean onlineStatus;
 
     /*** 工作状态 */
-    private Boolean  workStatus;
+    private Boolean workStatus;
 
     /*** 操作类型 1 增加，2修改*/
     private String operate;
 
+    /** 分组Id */
+    private Long groupId;
 
+    /** 分组名称 */
+    private String groupName;
 }
