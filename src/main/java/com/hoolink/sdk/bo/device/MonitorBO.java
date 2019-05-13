@@ -29,6 +29,12 @@ public class MonitorBO extends DeviceManagerBO {
     /*** 最后通讯时间 */
     private Long lastTime;
 
+    /*** 灯杆mac */
+    private String poleMac;
+
+    /*** 灯杆型号名称 */
+    private String poleSubTypeName;
+
     /*** 是否有环境检测传感器 */
     private Boolean hasEnvironment;
 
