@@ -82,6 +82,9 @@ public enum HoolinkExceptionMassageEnum {
     GET_PROJECT_ID_ERROR("所属项目不能为空"),
     BATCH_IMPORT_EXCEL_DATE_ERROR("批量导入设备数据失败"),
 
+    DELETE_CLUSTER_SUBTYPE_ERROR("该设备种类下有设备型号，不能删除"),
+    DELETE_TYPE_SUBTYPE_ERROR("该设备类型下有设备型号，不能删除"),
+
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
     CREATE_CUSTOMER_ERROR("客户创建失败！"),
