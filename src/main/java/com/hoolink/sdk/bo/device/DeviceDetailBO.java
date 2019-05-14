@@ -72,5 +72,8 @@ public class DeviceDetailBO implements Serializable {
 
     /*** 验证码 */
     private String validateCode;
+
+    /*** 版本信息 */
+    private String versionName;
     
 }

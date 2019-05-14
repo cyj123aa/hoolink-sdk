@@ -54,6 +54,5 @@ public class CameraBO extends DeviceManagerBO {
     /*** 灯杆型号名称 */
     private String poleSubTypeName;
 
-    /*** sn */
-    private String sn;
+
 }
