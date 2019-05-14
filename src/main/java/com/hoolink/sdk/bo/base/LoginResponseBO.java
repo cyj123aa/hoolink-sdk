@@ -22,13 +22,16 @@ public class LoginResponseBO implements Serializable {
     /*** 角色ID */
     private Long roleId;
 
+    /*** 绑定手机标识 */
+    private Boolean bindPhone;
+
     /*** Token */
     private String token;
 
     /*** 第一次登录 */
     private Boolean firstLogin;
 
-    /*** 修改密码 */
+    /*** 修改密码标识 */
     private Boolean resetPassword;
 
     /*** 最后一次登录的项目 */

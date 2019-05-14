@@ -19,4 +19,7 @@ public class DeviceManagerTypeBO extends DeviceManagerBO implements Serializable
 
     /*** 设备型号名称 */
     private String subTypeName;
+
+    /*** 版本信息 */
+    private String versionName;
 }

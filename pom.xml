@@ -113,6 +113,11 @@
             <artifactId>lombok</artifactId>
             <version>${lombol.version}</version>
         </dependency>
+        <!-- jackson 支持 Java8 新特性依赖包 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>

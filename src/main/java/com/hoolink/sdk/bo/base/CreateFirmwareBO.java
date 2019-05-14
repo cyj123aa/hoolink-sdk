@@ -59,4 +59,29 @@ public class CreateFirmwareBO implements Serializable {
      * </pre>
      */
     private Long deviceTypeId;
+
+    /**
+     * 创建者
+     */
+    private Long creator;
+
+    /**
+     * 创建时间
+     */
+    private Long created;
+
+    /**
+     * 修改人
+     */
+    private Long updator;
+
+    /**
+     * 修改时间
+     */
+    private Long updated;
+
+    /**
+     * 数据有效性
+     */
+    private Boolean enabled;
 }

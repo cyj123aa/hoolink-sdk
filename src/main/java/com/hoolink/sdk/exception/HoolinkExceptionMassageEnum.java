@@ -14,6 +14,7 @@ public enum HoolinkExceptionMassageEnum {
     PARAM_ERROR("参数错误"),
     LOGIN_ERROR("登录异常"),
     LOGIN_TIME_OUT("登录超时"),
+    PAGE_TIME_OUT("页面超时，请重新操作！"),
     OTHER_USER_LOGIN("异地登录"),
     NOT_AUTH("无权限访问"),
     AUTH_ERROR("权限获取失败"),
@@ -30,7 +31,7 @@ public enum HoolinkExceptionMassageEnum {
     USER_PHONE_EXISTS("手机号已被绑定，请更换其他手机号"),
     USER_PHONE_NOT_EXISTS("手机号不存在"),
     USER_BIND_PHONE_ERROR("手机绑定失败"),
-    CAPTCHA_ERROR("验证码错误"),
+    CAPTCHA_ERROR("您输入的验证码有误！"),
     CAPTCHA_CACHE_TOO_FREQUENTLY("验证码存储过于频繁"),
     USER_LIST_ERROR("用户列表信息获取失败"),
     RESET_PASSWORD_ERROR("重置密码操作失败！"),
@@ -82,6 +83,10 @@ public enum HoolinkExceptionMassageEnum {
     GET_PROJECT_ID_ERROR("所属项目不能为空"),
     BATCH_IMPORT_EXCEL_DATE_ERROR("批量导入设备数据失败"),
 
+    DELETE_CLUSTER_SUBTYPE_ERROR("该设备种类下有设备型号，不能删除"),
+    DELETE_TYPE_SUBTYPE_ERROR("该设备类型下有设备型号，不能删除"),
+    DEVICE_TYPE_NOT_EXIST_ERROR("该设备的设备类型不存在，查询失败"),
+
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
     CREATE_CUSTOMER_ERROR("客户创建失败！"),
@@ -120,6 +125,12 @@ public enum HoolinkExceptionMassageEnum {
     PHONE_EXISTS("该手机号已存在"),
     GET_CHECK_EXCEL_DATA_ERROR("获取校验excel数据结果失败"),
     READ_FIRMWARE_FILE_ERROR("固件文件读取失败"),
+    CREATE_FIRMWARE_ERROR("创建固件失败！"),
+    UPDATE_FIRMWARE_ERROR("编辑固件失败！"),
+    READ_FIRMWARE_BY_ID_ERROR("查询固件详情失败！"),
+    READ_FIRMWARE_LIST_BY_DEVICESUBTYPE_ID_ERROR("查询固件列表失败！"),
+    READ_FIRMWARE_LIST_BY_PARAM_ERROR("查询固件列表失败！"),
+    REMOVE_FIRMWARE_ERROR("删除固件失败！"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -135,6 +146,7 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_CHECK_PASSWORD_NOT_EXIST("密码不能为空, 请输入密码!"),
     DEVICE_CHECK_PASSWORD_ERROR("密码错误, 请重新输入!"),
     FIRMWARE_FILE_FORMAT_ORDER("上传固件格式不正确！请确认后再试"),
+    DEVICE_GROUP_NAME_NOT_EXIST("设备分组名称不能为空!"),
     ;
 
     private String message;
