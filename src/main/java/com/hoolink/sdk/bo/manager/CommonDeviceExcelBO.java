@@ -8,6 +8,8 @@ import lombok.Data;
  */
 @Data
 public class CommonDeviceExcelBO {
+
+    private Long deviceTypeId;
     /**
      * 设备型号名称
      */
