@@ -133,6 +133,8 @@ public class ProjectBO  implements Serializable {
      */
 
     private List<Long> menuId;
-
-
+    /**
+     * 创建人
+     */
+    private  Long  creator;
 }
