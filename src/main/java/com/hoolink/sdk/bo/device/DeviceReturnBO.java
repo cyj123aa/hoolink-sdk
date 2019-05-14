@@ -49,4 +49,7 @@ public class DeviceReturnBO implements Serializable {
 
     /*** 安装地址 */
     private String installAddress;
+
+    /*** 版本信息 */
+    private String versionName;
 }
