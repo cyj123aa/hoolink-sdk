@@ -123,6 +123,12 @@ public enum HoolinkExceptionMassageEnum {
     PHONE_EXISTS("该手机号已存在"),
     GET_CHECK_EXCEL_DATA_ERROR("获取校验excel数据结果失败"),
     READ_FIRMWARE_FILE_ERROR("固件文件读取失败"),
+    CREATE_FIRMWARE_ERROR("创建固件失败！"),
+    UPDATE_FIRMWARE_ERROR("编辑固件失败！"),
+    READ_FIRMWARE_BY_ID_ERROR("查询固件详情失败！"),
+    READ_FIRMWARE_LIST_BY_DEVICESUBTYPE_ID_ERROR("查询固件列表失败！"),
+    READ_FIRMWARE_LIST_BY_PARAM_ERROR("查询固件列表失败！"),
+    REMOVE_FIRMWARE_ERROR("删除固件失败！"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
