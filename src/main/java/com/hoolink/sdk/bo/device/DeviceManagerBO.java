@@ -104,6 +104,5 @@ public class DeviceManagerBO implements Serializable {
     /** 分组名称 */
     private String groupName;
 
-    /** 版本号*/
-    private String versionName;
+
 }
