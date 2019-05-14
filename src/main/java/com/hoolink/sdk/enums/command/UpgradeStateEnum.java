@@ -14,9 +14,13 @@ public enum UpgradeStateEnum {
      */
     SEND_SUCCESS,
     /**
-     *接包结束
+     *接包成功
      */
-    SEND_PACKAGE_END,
+    SEND_PACKAGE_SUCCESS,
+    /**
+     *接包失败
+     */
+    SEND_PACKAGE_ERROR,
     /**
      *升级结束
      */
