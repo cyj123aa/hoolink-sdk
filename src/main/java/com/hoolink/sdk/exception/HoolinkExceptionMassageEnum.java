@@ -84,6 +84,7 @@ public enum HoolinkExceptionMassageEnum {
 
     DELETE_CLUSTER_SUBTYPE_ERROR("该设备种类下有设备型号，不能删除"),
     DELETE_TYPE_SUBTYPE_ERROR("该设备类型下有设备型号，不能删除"),
+    DEVICE_TYPE_NOT_EXIST_ERROR("该设备的设备类型不存在，查询失败"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
