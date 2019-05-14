@@ -80,6 +80,8 @@ public class DeviceManagerBO implements Serializable {
 
     /*** 版本号 */
     private Long versionId;
+    /*** 版本号 */
+    private String versionName;
 
     /*** 型号名称 */
     private String subTypeName;
