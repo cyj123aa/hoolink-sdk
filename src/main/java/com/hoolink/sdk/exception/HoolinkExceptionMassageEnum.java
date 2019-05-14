@@ -82,6 +82,9 @@ public enum HoolinkExceptionMassageEnum {
     GET_PROJECT_ID_ERROR("所属项目不能为空"),
     BATCH_IMPORT_EXCEL_DATE_ERROR("批量导入设备数据失败"),
 
+    DELETE_CLUSTER_SUBTYPE_ERROR("该设备种类下有设备型号，不能删除"),
+    DELETE_TYPE_SUBTYPE_ERROR("该设备类型下有设备型号，不能删除"),
+
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
     CREATE_CUSTOMER_ERROR("客户创建失败！"),
@@ -120,6 +123,12 @@ public enum HoolinkExceptionMassageEnum {
     PHONE_EXISTS("该手机号已存在"),
     GET_CHECK_EXCEL_DATA_ERROR("获取校验excel数据结果失败"),
     READ_FIRMWARE_FILE_ERROR("固件文件读取失败"),
+    CREATE_FIRMWARE_ERROR("创建固件失败！"),
+    UPDATE_FIRMWARE_ERROR("编辑固件失败！"),
+    READ_FIRMWARE_BY_ID_ERROR("查询固件详情失败！"),
+    READ_FIRMWARE_LIST_BY_DEVICESUBTYPE_ID_ERROR("查询固件列表失败！"),
+    READ_FIRMWARE_LIST_BY_PARAM_ERROR("查询固件列表失败！"),
+    REMOVE_FIRMWARE_ERROR("删除固件失败！"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -135,6 +144,7 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_CHECK_PASSWORD_NOT_EXIST("密码不能为空, 请输入密码!"),
     DEVICE_CHECK_PASSWORD_ERROR("密码错误, 请重新输入!"),
     FIRMWARE_FILE_FORMAT_ORDER("上传固件格式不正确！请确认后再试"),
+    DEVICE_GROUP_NAME_NOT_EXIST("设备分组名称不能为空!"),
     ;
 
     private String message;
