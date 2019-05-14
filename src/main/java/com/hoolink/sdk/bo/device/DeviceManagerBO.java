@@ -94,7 +94,7 @@ public class DeviceManagerBO implements Serializable {
     private Boolean workStatus;
 
     /*** 操作类型 1 增加，2修改*/
-    private String operate;
+    private String operateType;
 
     /** 分组Id */
     private Long groupId;
