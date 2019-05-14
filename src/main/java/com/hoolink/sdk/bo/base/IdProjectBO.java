@@ -136,5 +136,9 @@ public class IdProjectBO  {
      */
 
     private List<Long> menuId;
+    /**
+     * 修改人
+     */
+    private Long updator;
 
 }

@@ -25,7 +25,7 @@ public class OwnerNameBO {
      * </pre>
      */
     @NotBlank(message = "负责人不能为空")
-    @Length(min=3, max=16,message = "负责人长度最小3最大16")
+    @Length(max=16,message = "负责人长度最大16")
     private String ownerName;
 
     /**
