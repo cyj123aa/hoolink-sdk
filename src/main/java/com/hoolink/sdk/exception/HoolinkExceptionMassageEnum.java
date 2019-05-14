@@ -135,6 +135,7 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_CHECK_PASSWORD_NOT_EXIST("密码不能为空, 请输入密码!"),
     DEVICE_CHECK_PASSWORD_ERROR("密码错误, 请重新输入!"),
     FIRMWARE_FILE_FORMAT_ORDER("上传固件格式不正确！请确认后再试"),
+    DEVICE_GROUP_NAME_NOT_EXIST("设备分组名称不能为空!"),
     ;
 
     private String message;
