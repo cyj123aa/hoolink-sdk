@@ -66,30 +66,6 @@ public class MediaTaskBO {
     private Integer taskVol;
 
     /**
-     * 创建人
-     * 表字段 : media_task.creator
-     */
-    private Long creator;
-
-    /**
-     * 创建时间
-     * 表字段 : media_task.created
-     */
-    private Long created;
-
-    /**
-     * 修改人
-     * 表字段 : media_task.updator
-     */
-    private Long updator;
-
-    /**
-     * 修改时间
-     * 表字段 : media_task.updated
-     */
-    private Long updated;
-
-    /**
      * 删除标志
      * 表字段 : media_task.enabled
      */
@@ -117,10 +93,24 @@ public class MediaTaskBO {
      */
     private Byte strategyType;
 
+
+    /**
+     * 配置清单播放状态：0 未播放，1，播放
+     * 表字段 : media_task.play_status
+     */
+    private Boolean playStatus;
+
+
+    /**
+     * 定时任务暂停状态：0 暂停，1，启动，默认启动
+     * 表字段 : media_task.using_status
+     */
+    private Boolean usingStatus;
+
     /**
      * 策略列表：周或者日期
      */
-    private List<String> strategys;
+    private List<TaskStrategyBO> strategys;
 
     /**
      * 播放清单音乐资源
