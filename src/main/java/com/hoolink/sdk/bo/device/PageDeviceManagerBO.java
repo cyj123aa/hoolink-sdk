@@ -45,8 +45,6 @@ public class PageDeviceManagerBO implements Serializable {
     /*** 设备型号名称 */
     private String subTypeName;
 
-    /*** 设备版本ID */
-    private Long versionId;
     /*** 设备版本名称 */
     private String version;
 
