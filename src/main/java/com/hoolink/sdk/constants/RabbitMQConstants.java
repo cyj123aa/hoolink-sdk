@@ -112,6 +112,12 @@ public class RabbitMQConstants {
     public static final String SCREEN_SEND_RATE_QUEUE= "screen.send.rate.queue";
     public static final String SCREEN_SEND_RATE_EXCHANGE= "screen.send.rate.exchange";
 
+    /**
+     * 音乐策略消息队列
+     */
+    public static final String MUSIC_TIMING_STRATEGY_QUEUE = "music.strategy.queue";
+    public static final String MUSIC_TIMING_STRATEGY_EXCHANGE = "music.strategy.exchange";
+    public static final String MUSIC_TIMING_STRATEGY_EXCHANGE_ROUTING_KEY = "music.strategy.exchange.key";
 
 
 
