@@ -55,7 +55,12 @@ public class DeviceCommonUpdateBO implements Serializable {
     /*** 端口号 */
     private String port;
 
+    /*** 设备验证码     */
+    private String validateCode;
+
     /*** 模型编号 */
     private String modelNo;
+
+
 
 }
