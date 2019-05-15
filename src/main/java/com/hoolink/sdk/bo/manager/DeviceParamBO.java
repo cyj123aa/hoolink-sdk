@@ -19,7 +19,7 @@ public class DeviceParamBO {
     private Long deviceSubTypeId;
 
     /*** 设备版本idList */
-    private List<Long> versionIdList;
+    private List<String> versionNameList;
 
     /*** 项目idList */
     private List<Long> projectIdList;
