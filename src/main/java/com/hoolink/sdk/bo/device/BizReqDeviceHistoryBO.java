@@ -33,4 +33,6 @@ public class BizReqDeviceHistoryBO implements Serializable {
     /**项目id*/
     private Long projectId;
 
+    /**设备地址*/
+    private System mac;
 }
