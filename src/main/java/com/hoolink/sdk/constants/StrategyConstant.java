@@ -11,7 +11,7 @@ public class StrategyConstant {
     /*** 每天 */
     public static final byte EVERY_DAY = 1;
 
-    /*** 自定义 */
+    /*** 自定义，选择周几（周一到周日） */
     public static final byte CUSTOM = 2;
 
     /*** 特殊日期 */
