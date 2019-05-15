@@ -1,6 +1,6 @@
 package com.hoolink.sdk.utils;
 
-import java.util.Random;
+import org.apache.commons.lang3.RandomUtils;
 
 /**
  * @author XuBaofeng.
@@ -11,17 +11,17 @@ import java.util.Random;
 public class CharUtil {
 
     private static final char[] CHARS = {
-            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-            'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     };
 
     /**
      * 追加数组:
      * * 将 source 追加到 target 中, 从 index 位开始
      *
-     * @param source
-     * @param target
-     * @param index
+     * @param source 源数据
+     * @param target 目标
+     * @param index  起始位置
      */
     public static void charsAppend(char[] source, char[] target, int index) {
         for (int i = 0; i < source.length; i++) {
@@ -35,6 +35,6 @@ public class CharUtil {
      * @return
      */
     public static char getRandomChar() {
-        return CHARS[new Random().nextInt(36)];
+        return CHARS[RandomUtils.nextInt(0, 26)];
     }
 }

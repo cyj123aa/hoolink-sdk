@@ -26,7 +26,4 @@ public class LightDownBO implements Serializable {
     /*** 调光值 */
     private Integer dimming;
 
-    /*** 下行记录ID */
-    private Long bizId;
-
 }
