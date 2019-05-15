@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @ClassName RealCastBO
+ * @ClassName MediaTaskBO
  * @Author huyaxi
  * @DATE 2019/4/15 17:36
  */

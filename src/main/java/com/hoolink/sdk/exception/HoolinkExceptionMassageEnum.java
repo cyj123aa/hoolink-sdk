@@ -96,6 +96,7 @@ public enum HoolinkExceptionMassageEnum {
     CUSTOMER_NO_EXIST_ERROR("客户号已存在！"),
     CUSTOMER_DETAIL_NULL("客户详情信息为空！"),
     CUSTOMER_NAME_EXIST_ERROR("公司名称已存在！"),
+    CUSTOMER_NO_EXIST_NULL("公司号不存在！"),
 
     /*** 管理系统登录用户提示信息 */
     USER_NOT_EXIST_ERROR("当前登录用户不存在！"),
