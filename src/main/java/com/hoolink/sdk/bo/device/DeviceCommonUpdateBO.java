@@ -2,6 +2,7 @@ package com.hoolink.sdk.bo.device;
 
 import lombok.Data;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
@@ -17,9 +18,11 @@ public class DeviceCommonUpdateBO implements Serializable {
     private Long projectId;
 
     /*** 设备类型ID */
+    @NotNull(message = "设备类型不能为空")
     private Long deviceTypeId;
 
     /*** 设备ID */
+    @NotNull(message = "设备ID不能为空")
     private Long id;
 
     /*** 物理地址 */
