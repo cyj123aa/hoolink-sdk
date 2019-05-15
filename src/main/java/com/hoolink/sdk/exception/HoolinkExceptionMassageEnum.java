@@ -87,6 +87,9 @@ public enum HoolinkExceptionMassageEnum {
     DELETE_TYPE_SUBTYPE_ERROR("该设备类型下有设备型号，不能删除"),
     DEVICE_TYPE_NOT_EXIST_ERROR("该设备的设备类型不存在"),
 
+    FACTORY_ID_NOT_NULL_ERROR("厂商ID不能为空"),
+    DEVICE_ID_NOT_NULL_ERROR("设备ID不能为空"),
+
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
@@ -96,6 +99,7 @@ public enum HoolinkExceptionMassageEnum {
     CUSTOMER_NO_EXIST_ERROR("客户号已存在！"),
     CUSTOMER_DETAIL_NULL("客户详情信息为空！"),
     CUSTOMER_NAME_EXIST_ERROR("公司名称已存在！"),
+    CUSTOMER_NO_EXIST_NULL("公司号不存在！"),
 
     /*** 管理系统登录用户提示信息 */
     USER_NOT_EXIST_ERROR("当前登录用户不存在！"),
@@ -148,6 +152,10 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_CHECK_PASSWORD_ERROR("密码错误, 请重新输入!"),
     FIRMWARE_FILE_FORMAT_ORDER("上传固件格式不正确！请确认后再试"),
     DEVICE_GROUP_NAME_NOT_EXIST("设备分组名称不能为空!"),
+    DEVICE_GROUP_NOT_EXIST("密码不能为空, 请输入密码!"),
+    MANAGER_USER_NOT_EXIST_ERROR("该用户不存在！"),
+    DEPARTMENT_ENCRY_LEVEL_DEFAULT_NULL("部门或者对应密保等级为空！"),
+    COMPANY_CODE_ERROR("公司不允许为空"),
     ;
 
     private String message;

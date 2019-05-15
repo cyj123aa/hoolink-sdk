@@ -1,5 +1,9 @@
 package com.hoolink.sdk.bo.device.req;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -15,6 +19,10 @@ import java.util.List;
  */
 @Data
 public class CreateLightStrategyBO implements Serializable {
+
+    /*** 项目ID */
+    @NotNull(message = "项目ID不允许为空")
+    private Long projectId;
 
     /*** 策略名称 */
     @NotBlank(message = "策略名称不允许为空")
@@ -32,6 +40,8 @@ public class CreateLightStrategyBO implements Serializable {
     private List<Byte> dayOfWeeks;
 
     /*** 特殊日期 */
+    @JsonSerialize(contentUsing = LocalDateSerializer.class)
+    @JsonDeserialize(contentUsing = LocalDateDeserializer.class)
     private List<LocalDate> specialDates;
 
     /*** 配置项 */
