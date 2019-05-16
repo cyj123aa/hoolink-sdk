@@ -117,6 +117,7 @@ public enum HoolinkExceptionMassageEnum {
 
     /*** manage-base */
     UPDATE_DEVICE_MAINTAIN("更新设备的维保年限失败"),
+    DEVICE_MAINTAIN_LOW("设备的维保年限过低"),
     GET_DEVICE_TYPE_INFO("获得设备类型信息"),
     GET_DEVICE_TYPE_MAINTAIN_INFO("获得设备类型维保信息"),
     USER_ACCOUNT_OR_PASSWORD_ERROR("账号或密码错误，请重新输入"),
