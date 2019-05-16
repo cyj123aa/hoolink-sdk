@@ -42,6 +42,7 @@ public enum HoolinkExceptionMassageEnum {
     CREATE_PROJECT_ERROR("项目创建失败！"),
     UPDATE_PROJECT_ERROR("项目修改失败！"),
     GET_PROJECT_DETAIL_ERROR("项目详情获取失败！"),
+    PROJECT_STATUS_ERROR("项目状态失效，无法操作！"),
     UPDATE_PROJECT_STATUS_ERROR("项目状态修改失败！"),
     GET_PROJECT_LIST_ERROR("项目列表查询失败！"),
     GET_PROJECT_MENU_ERROR("权限获取失败！"),
