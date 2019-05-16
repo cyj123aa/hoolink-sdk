@@ -74,4 +74,13 @@ public class CommonConstants {
      */
     public static final String SPON_REPLACE_2 = "]";
 
+    /**
+     * jedis的工具类使用
+     */
+    public static final String  STRING_NUM_0 = "0";
+    /**
+     * 初始化默认值
+     */
+    public static final Integer DEFAULT_VALUE_0 = 0;
+    public static final String REDIS_RESULT_OK = "OK";
 }
