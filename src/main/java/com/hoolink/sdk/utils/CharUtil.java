@@ -155,6 +155,27 @@ public class CharUtil {
         return !isBlank(c);
     }
 
+    /**
+     * 判断字符数组是否位空: ['\0', '\n', '\r']
+     * * 所有字符都为空的数组判断为空数组
+     *
+     * @param chars
+     * @return
+     */
+    public static boolean isBlank(char[] chars) {
+        for (char c : chars) {
+            if (isBlank(c)) {
+                continue;
+            }
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isNotBlank(char[] c) {
+        return !isBlank(c);
+    }
+
     private static char getRandom(int index, int end) {
         return CHARS[RandomUtils.nextInt(index, end)];
     }
