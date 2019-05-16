@@ -47,6 +47,7 @@ public enum HoolinkExceptionMassageEnum {
     GET_PROJECT_MENU_ERROR("权限获取失败！"),
     UPDATE_PROJECT_MENU_ERROR("权限更新失败！"),
     UPDATE_PROJECT_OWNER_ERROR("修改项目负责人失败！"),
+    PROJECT_STATUS_ERROR("项目为禁用状态，无法操作！"),
     GET_DEVICE_TYPE_ERROR("获取设备类型！"),
     UPDATE_DEVICE_TYPE_ERROR("获取设备类型！"),
     PROJECT_NAME_EXIST("项目名称已经存在"),
