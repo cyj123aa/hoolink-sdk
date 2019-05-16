@@ -6,7 +6,7 @@ package com.hoolink.sdk.enums;
  */
 public enum OperateTypeEnum {
 
-    INSERT("增加"),
+    INSERT("新增"),
     UPDATE("修改");
 
     private String operate;
