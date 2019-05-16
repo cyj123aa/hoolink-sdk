@@ -1,8 +1,13 @@
 package com.hoolink.sdk.bo.device;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -27,8 +32,14 @@ public class LightStrategyBO implements Serializable {
     /*** 策略状态 */
     private Boolean status;
 
-    /*** 重复模式中 自定义和特殊日期 对应的值 */
-    private List<LightStrategyCycleBO> cycles;
+    /*** 自定义 (周一到周日，对应 1-7) */
+    private List<Byte> dayOfWeeks;
+
+    /*** 特殊日期 */
+    @JsonSerialize(contentUsing = LocalDateSerializer.class)
+    @JsonDeserialize(contentUsing = LocalDateDeserializer.class)
+    private List<LocalDate> specialDates;
+
     /*** 策略项，按时间维度分 */
     private List<LightStrategyItemBO> items;
 }
