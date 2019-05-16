@@ -91,7 +91,7 @@ public class CharUtil {
     }
 
     /**
-     * 生成随机字符 [0 - 9 \ A - Z]
+     * 生成随机字符 [0 - 9 | A - Z]
      *
      * @return
      */
@@ -128,7 +128,7 @@ public class CharUtil {
     }
 
     /**
-     * 在字符数组后空位追加随机字符 [0 - 9 \ A - Z]
+     * 在字符数组后空位追加随机字符 [0 - 9 | A - Z]
      *
      * @param chars
      */
