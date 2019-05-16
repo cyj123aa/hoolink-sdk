@@ -1,5 +1,7 @@
 package com.hoolink.sdk.utils;
 
+import com.hoolink.sdk.exception.BusinessException;
+import com.hoolink.sdk.exception.HoolinkExceptionMassageEnum;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -9,6 +11,37 @@ import org.apache.commons.lang3.StringUtils;
  * description: 设备工具类
  */
 public class DeviceUtil {
+
+    /**
+     * 根据规则生成设备序列号
+     *
+     * @param subTypeId 设备型号ID
+     * @param mac       设备物理地址
+     * @return
+     */
+    public static String assemblyDeviceNo(Long subTypeId, String mac) {
+        if (StringUtils.isBlank(mac)) {
+            // ----- 物理地址不能为空
+            throw new BusinessException(HoolinkExceptionMassageEnum.DEVICE_MAC_EMPTY_ERROR);
+        }
+        char[] deviceNo;
+        int flagLength = 13;
+        if (mac.length() <= flagLength) {
+            // ----- 当mac地址长度小于等于13位时, 根据 设备型号\mac\随机字符 地址生成 16位 的固定长度序列号
+            deviceNo = new char[16];
+        } else {
+            // ----- 当mac地址长度大于13时, 根据 设备型号\mac地址 生成长度大于 16位 的不固定长度序列号
+            deviceNo = new char[mac.length() + 3];
+        }
+        // ----- 追加设备型号 >>  从第 0 位开始
+        char[] types = String.format("%03d", subTypeId).toCharArray();
+        CharUtil.charsAppend(types, deviceNo, 0);
+        // ----- 追加物理地址 >>  从第 3 位开始(设备型号为三位)
+        CharUtil.charsAppend(mac.toCharArray(), deviceNo, types.length);
+        // ----- 补足空位
+        CharUtil.appendRandomChar(deviceNo);
+        return new String(deviceNo).toUpperCase();
+    }
 
     /**
      * 组装设备名称, 规则如下:
