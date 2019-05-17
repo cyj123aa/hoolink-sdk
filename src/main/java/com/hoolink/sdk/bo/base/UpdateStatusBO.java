@@ -21,4 +21,7 @@ public class UpdateStatusBO {
     @NotNull(message = "状态不能为空")
     private Boolean status;
 
+    private Long  updator;
+
+    private Long  updated;
 }
