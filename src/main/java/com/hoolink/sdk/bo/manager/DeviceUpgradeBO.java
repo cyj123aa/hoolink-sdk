@@ -16,6 +16,9 @@ public class DeviceUpgradeBO {
     /*** 设备编号 */
     private String deviceNo;
 
+    /*** 设备名称 */
+    private String deviceName;
+
     /*** 设备mac */
     private String deviceMac;
 
