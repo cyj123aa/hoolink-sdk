@@ -16,7 +16,7 @@ public class CreateLightStrategyItemDeviceBO implements Serializable {
 
     /*** 设备ID */
     @NotEmpty(message = "设备不允许为空")
-    private List<Long> deviceId;
+    private List<Long> deviceIds;
 
     /*** 调光值 */
     @NotNull(message = "调光值不允许为空")
