@@ -2,6 +2,9 @@ package com.hoolink.sdk.bo.device;
 
 import lombok.Data;
 
+/**
+ * @author xubaofeng
+ */
 @Data
 public class DeviceSubTypeBO {
     /**
@@ -27,6 +30,7 @@ public class DeviceSubTypeBO {
      * </pre>
      */
     private String subTypeName;
+
 
 
 

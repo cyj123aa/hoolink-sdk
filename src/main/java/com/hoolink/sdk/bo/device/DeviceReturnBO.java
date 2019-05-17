@@ -38,13 +38,15 @@ public class DeviceReturnBO implements Serializable {
 
     /*** 设备状态 */
     private String deviceStatus;
-
+    
     /*** 版本信息 */
-    private Long versionId;
+    private String versionName;
 
     /*** 创建时间 */
     private Long created;
 
     /*** 安装地址 */
     private String installAddress;
+
+
 }

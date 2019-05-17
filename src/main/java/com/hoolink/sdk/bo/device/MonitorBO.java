@@ -28,4 +28,34 @@ public class MonitorBO extends DeviceManagerBO {
 
     /*** 最后通讯时间 */
     private Long lastTime;
+
+    /*** 灯杆mac */
+    private String poleMac;
+
+    /*** 灯杆型号名称 */
+    private String poleSubTypeName;
+
+    /*** 是否有环境检测传感器 */
+    private Boolean hasEnvironment;
+
+    /*** 是否有气体检测传感器 */
+    private Boolean hasGas;
+
+    /*** 是否有漏电检测传感器 */
+    private Boolean hasLeakage;
+
+    /*** 是否有水位检测传感器 */
+    private Boolean hasWaterLevel;
+
+    /*** 环境检测传感器实体 */
+    private SensorEnvironmentBO sensorEnvironment;
+
+    /*** 气体检测传感器实体 */
+    private SensorGasBO sensorGas;
+
+    /*** 漏电检测传感器实体 */
+    private SensorLeakageBO sensorLeakage;
+
+    /*** 水位检测传感器实体 */
+    private SensorWaterLevelBO sensorWaterLevel;
 }

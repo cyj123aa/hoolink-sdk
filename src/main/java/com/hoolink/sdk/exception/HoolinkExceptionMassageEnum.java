@@ -82,6 +82,15 @@ public enum HoolinkExceptionMassageEnum {
     CHOOSE_POLE_ERROR("获取灯杆列表失败"),
     CHOOSE_RADIO_ERROR("获取广播列表失败"),
     GET_PROJECT_ID_ERROR("所属项目不能为空"),
+    BATCH_IMPORT_EXCEL_DATE_ERROR("批量导入设备数据失败"),
+
+    DELETE_CLUSTER_SUBTYPE_ERROR("该设备种类下有设备型号，不能删除"),
+    DELETE_TYPE_SUBTYPE_ERROR("该设备类型下有设备型号，不能删除"),
+    DEVICE_TYPE_NOT_EXIST_ERROR("该设备的设备类型不存在"),
+
+    FACTORY_ID_NOT_NULL_ERROR("厂商ID不能为空"),
+    DEVICE_ID_NOT_NULL_ERROR("设备ID不能为空"),
+
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
@@ -91,6 +100,7 @@ public enum HoolinkExceptionMassageEnum {
     CUSTOMER_NO_EXIST_ERROR("客户号已存在！"),
     CUSTOMER_DETAIL_NULL("客户详情信息为空！"),
     CUSTOMER_NAME_EXIST_ERROR("公司名称已存在！"),
+    CUSTOMER_NO_EXIST_NULL("公司号不存在！"),
 
     /*** 管理系统登录用户提示信息 */
     USER_NOT_EXIST_ERROR("当前登录用户不存在！"),
@@ -108,6 +118,7 @@ public enum HoolinkExceptionMassageEnum {
 
     /*** manage-base */
     UPDATE_DEVICE_MAINTAIN("更新设备的维保年限失败"),
+    DEVICE_MAINTAIN_LOW("设备的维保年限过低"),
     GET_DEVICE_TYPE_INFO("获得设备类型信息"),
     GET_DEVICE_TYPE_MAINTAIN_INFO("获得设备类型维保信息"),
     USER_ACCOUNT_OR_PASSWORD_ERROR("账号或密码错误，请重新输入"),
@@ -121,6 +132,12 @@ public enum HoolinkExceptionMassageEnum {
     PHONE_EXISTS("该手机号已存在"),
     GET_CHECK_EXCEL_DATA_ERROR("获取校验excel数据结果失败"),
     READ_FIRMWARE_FILE_ERROR("固件文件读取失败"),
+    CREATE_FIRMWARE_ERROR("创建固件失败！"),
+    UPDATE_FIRMWARE_ERROR("编辑固件失败！"),
+    READ_FIRMWARE_BY_ID_ERROR("查询固件详情失败！"),
+    READ_FIRMWARE_LIST_BY_DEVICESUBTYPE_ID_ERROR("查询固件列表失败！"),
+    READ_FIRMWARE_LIST_BY_PARAM_ERROR("查询固件列表失败！"),
+    REMOVE_FIRMWARE_ERROR("删除固件失败！"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -132,6 +149,15 @@ public enum HoolinkExceptionMassageEnum {
     UPLOAD_FILE_ERROR("文件上传失败"),
     CHECK_FIRMWARE_ERROR("固件校验未通过！请确认输入固件版本与上传文件是否一致"),
     FIRMWARE_NAME_OUT_OF_ORDER("输入固件版本不符合规则！"),
+
+    DEVICE_CHECK_PASSWORD_NOT_EXIST("密码不能为空, 请输入密码!"),
+    DEVICE_CHECK_PASSWORD_ERROR("密码错误, 请重新输入!"),
+    FIRMWARE_FILE_FORMAT_ORDER("上传固件格式不正确！请确认后再试"),
+    DEVICE_GROUP_NAME_NOT_EXIST("设备分组名称不能为空!"),
+    DEVICE_GROUP_NOT_EXIST("密码不能为空, 请输入密码!"),
+    MANAGER_USER_NOT_EXIST_ERROR("该用户不存在！"),
+    DEPARTMENT_ENCRY_LEVEL_DEFAULT_NULL("部门或者对应密保等级为空！"),
+    COMPANY_CODE_ERROR("公司不允许为空"),
     ;
 
     private String message;

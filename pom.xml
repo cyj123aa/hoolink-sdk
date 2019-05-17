@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hoolink.sdk</groupId>
@@ -17,6 +17,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
         <java.version>1.8</java.version>
+        <amqp.client.version>4.0.3</amqp.client.version>
         <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
         <cse.version>2.3.65</cse.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
@@ -57,6 +58,17 @@
         <dependency>
             <groupId>org.apache.servicecomb</groupId>
             <artifactId>swagger-invocation-core</artifactId>
+        </dependency>
+        <!-- rabbit mq -->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>${amqp.client.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.0</version>
         </dependency>
         <!-- 用于@notnull注解等支持-->
         <dependency>
@@ -100,6 +112,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombol.version}</version>
+        </dependency>
+        <!-- jackson 支持 Java8 新特性依赖包 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>
     </dependencies>
 

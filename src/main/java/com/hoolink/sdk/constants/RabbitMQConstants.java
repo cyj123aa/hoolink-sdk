@@ -7,7 +7,13 @@ package com.hoolink.sdk.constants;
 public class RabbitMQConstants {
 
     /**
+     * 设备升级
+     */
+    public static final String DEVICE_UPGRADE_QUEUE = "device.upgrade.queue";
+
+    /**
      * 派工交换器
+     * 设备升级
      */
     public static final String DIRECT_DISPATCH_EXCHANGE = "direct.dispatch.exchange";
     public static final String FANOUT_DISPATCH_EXCHANGE = "fanout.dispatch.exchange";
@@ -89,6 +95,10 @@ public class RabbitMQConstants {
      */
     public static final String ALARM_THRESHOLD_CONFIG_QUEUE = "alarm.threshold.config.queue";
 
+    /**
+     * manage-base固件升级推送
+     */
+    public static final String DEVICE_UPGRADE_FANOUT_EXCHANGE = "device.upgrade.fanout.exchange";
 
     /**
      * 消息订阅修改同步redis发送的消息队列
@@ -101,6 +111,14 @@ public class RabbitMQConstants {
 
     public static final String SCREEN_SEND_RATE_QUEUE= "screen.send.rate.queue";
     public static final String SCREEN_SEND_RATE_EXCHANGE= "screen.send.rate.exchange";
+
+    /**
+     * 音乐策略消息队列
+     */
+    public static final String MUSIC_TIMING_STRATEGY_QUEUE = "music.strategy.queue";
+    public static final String MUSIC_TIMING_STRATEGY_EXCHANGE = "music.strategy.exchange";
+    public static final String MUSIC_TIMING_STRATEGY_EXCHANGE_ROUTING_KEY = "music.strategy.exchange.key";
+
 
 
 }

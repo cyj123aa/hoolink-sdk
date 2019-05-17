@@ -9,12 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
@@ -98,6 +93,25 @@ public class ExcelUtil {
             resource = new ByteArrayResource(out.toByteArray());
         } finally {
             workbook.dispose();
+        }
+        String fileDisposition = "attachment;filename=" + URLEncoder.encode(fileName, "UTF-8");
+        return ResponseEntity
+                .ok()
+                .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_OCTET_STREAM_VALUE)
+                .header(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, "Content-Disposition")
+                .header(HttpHeaders.CONTENT_ENCODING, "UTF-8")
+                .header(HttpHeaders.CONTENT_DISPOSITION, fileDisposition)
+                .body(resource);
+    }
+
+    public static ResponseEntity<Resource> export(Workbook workbook, String fileName) throws Exception {
+        ByteArrayResource resource;
+        // ===== response输出excel
+        try (ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+            workbook.write(out);
+            resource = new ByteArrayResource(out.toByteArray());
+        } finally {
+            workbook.close();
         }
         String fileDisposition = "attachment;filename=" + URLEncoder.encode(fileName, "UTF-8");
         return ResponseEntity

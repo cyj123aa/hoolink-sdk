@@ -13,10 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 对象属性拷贝工具类
@@ -38,7 +35,7 @@ public class CopyPropertiesUtil {
      */
     public static <T, E> List<E> copyList(List<T> list, Class<E> clazz) {
         if (CollectionUtils.isEmpty(list)) {
-            return new ArrayList<>();
+            return Collections.emptyList();
         }
         return JSON.parseArray(JSON.toJSONString(list), clazz);
     }

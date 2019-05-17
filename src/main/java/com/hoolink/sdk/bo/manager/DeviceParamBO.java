@@ -1,6 +1,5 @@
 package com.hoolink.sdk.bo.manager;
 
-import javax.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.util.List;
@@ -18,8 +17,8 @@ public class DeviceParamBO {
 
     private Long deviceSubTypeId;
 
-    /*** 设备版本idList */
-    private List<Long> versionIdList;
+    /*** 设备版本versionNameList */
+    private List<String> versionNameList;
 
     /*** 项目idList */
     private List<Long> projectIdList;

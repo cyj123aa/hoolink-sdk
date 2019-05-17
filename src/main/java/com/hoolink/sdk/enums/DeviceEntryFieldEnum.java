@@ -23,6 +23,7 @@ public enum DeviceEntryFieldEnum {
     WATERLEVEL("waterLevel"),
     GAS("gas"),
     OPERATE("operate"),
+    ID("id"),
     ;
 
     private String field;

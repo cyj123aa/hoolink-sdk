@@ -59,4 +59,9 @@ public class CreateFirmwareBO implements Serializable {
      * </pre>
      */
     private Long deviceTypeId;
+
+    /**
+     * 是否覆盖
+     */
+    private Boolean whetherCover;
 }

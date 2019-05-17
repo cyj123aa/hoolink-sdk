@@ -42,6 +42,9 @@ public class CommonConstants {
      */
     public static final String COMMAND_OPERATE_SUCCESS = "指令下发成功";
     public static final String COMMAND_OPERATE_ERROR = "指令下发异常";
+    public static final String COMMAND_PARAM_EMPTY = "参数校验为空";
+    public static final String COMMAND_UPGRADE_VERSION_ERROR = "版本号格式不正确";
+    public static final String COMMAND_UPGRADE_FILE_ERROR = "文件格式不正确";
 
 
     /*** 每次请求的唯一标识 */
@@ -71,4 +74,13 @@ public class CommonConstants {
      */
     public static final String SPON_REPLACE_2 = "]";
 
+    /**
+     * jedis的工具类使用
+     */
+    public static final String  STRING_NUM_0 = "0";
+    /**
+     * 初始化默认值
+     */
+    public static final Integer DEFAULT_VALUE_0 = 0;
+    public static final String REDIS_RESULT_OK = "OK";
 }
