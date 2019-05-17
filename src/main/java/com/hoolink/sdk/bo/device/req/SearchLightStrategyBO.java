@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author zhangxin
@@ -27,6 +28,12 @@ public class SearchLightStrategyBO extends PageParamBO implements Serializable {
     /*** 策略模式 */
     private Byte pattern;
 
+    /*** 策略模式 */
+    private List<Byte> patterns;
+
     /*** 策略状态 */
     private Boolean status;
+
+    /*** 不包含的ID */
+    private Long outId;
 }

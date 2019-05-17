@@ -37,4 +37,7 @@ public class LightStrategyItemBO implements Serializable {
 
     /*** 策略项子项 (调光值、设备) */
     private List<LightStrategySubItemBO> subItems;
+
+    /*** 冲突状态 */
+    private Boolean status;
 }
