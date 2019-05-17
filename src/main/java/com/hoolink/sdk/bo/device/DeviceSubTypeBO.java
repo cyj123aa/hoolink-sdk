@@ -30,6 +30,13 @@ public class DeviceSubTypeBO {
      * </pre>
      */
     private String subTypeName;
+    /**
+     * <pre>
+     * 设备类型ID
+     * 表字段 : device_sub_type.device_type_id
+     * </pre>
+     */
+    private Long deviceTypeId;
 
 
 
