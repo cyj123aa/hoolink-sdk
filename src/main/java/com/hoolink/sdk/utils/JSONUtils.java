@@ -9,6 +9,7 @@ import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Json工具类
@@ -139,6 +140,16 @@ public final class JSONUtils {
             return null;
         }
         return toList(jsonDataStr, clazz);
+    }
+
+
+    /**
+     *
+     * @param json
+     * @return
+     */
+    public static Map<String, Object> stringToMap(String json) {
+        return JSONObject.parseObject(json);
     }
 }
 

@@ -91,7 +91,7 @@ public class CharUtil {
     }
 
     /**
-     * 生成随机字符 [0 - 9 \ A - Z]
+     * 生成随机字符 [0 - 9 | A - Z]
      *
      * @return
      */
@@ -128,7 +128,7 @@ public class CharUtil {
     }
 
     /**
-     * 在字符数组后空位追加随机字符 [0 - 9 \ A - Z]
+     * 在字符数组后空位追加随机字符 [0 - 9 | A - Z]
      *
      * @param chars
      */
@@ -152,6 +152,27 @@ public class CharUtil {
     }
 
     public static boolean isNotBlank(char c) {
+        return !isBlank(c);
+    }
+
+    /**
+     * 判断字符数组是否位空: ['\0', '\n', '\r']
+     * * 所有字符都为空的数组判断为空数组
+     *
+     * @param chars
+     * @return
+     */
+    public static boolean isBlank(char[] chars) {
+        for (char c : chars) {
+            if (isBlank(c)) {
+                continue;
+            }
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isNotBlank(char[] c) {
         return !isBlank(c);
     }
 

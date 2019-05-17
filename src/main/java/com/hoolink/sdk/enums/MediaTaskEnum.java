@@ -8,8 +8,8 @@ import com.hoolink.sdk.utils.ByteUtil;
  * @DATE 2019/5/15 13:47
  */
 public enum  MediaTaskEnum {
-    NORMAL(ByteUtil.intToByte(1),"常规"),
-    STRATEGY(ByteUtil.intToByte(2),"策略");
+    NORMAL(Byte.valueOf(ByteUtil.intToByte(1)),"常规"),
+    STRATEGY(Byte.valueOf(ByteUtil.intToByte(2)),"策略");
 
     private Byte type;
     private String description;

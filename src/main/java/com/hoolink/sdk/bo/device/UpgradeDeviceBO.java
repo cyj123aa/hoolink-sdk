@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class UpgradeDeviceBO implements Serializable {
 
     /*** 设备主键ID */
-    private Long id;
+    private Long deviceId;
 
     /*** 设备编号 */
     private String deviceNo;
@@ -24,7 +24,7 @@ public class UpgradeDeviceBO implements Serializable {
     private String deviceName;
 
     /*** 物理地址 */
-    private String mac;
+    private String deviceMac;
 
     /*** 项目ID */
     private Long projectId;
