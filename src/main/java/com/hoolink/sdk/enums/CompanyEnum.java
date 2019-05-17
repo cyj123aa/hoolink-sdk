@@ -6,7 +6,13 @@ package com.hoolink.sdk.enums;
  * @date 2019/05/15 18:54
  */
 public enum CompanyEnum {
+	/**
+	 * 互灵
+	 */
 	HULING(1, "互灵"),
+	/**
+	 * 晶日
+	 */
 	JINGRI(2, "晶日");
 	
     private Integer key;
