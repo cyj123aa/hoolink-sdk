@@ -47,6 +47,7 @@ public enum HoolinkExceptionMassageEnum {
     GET_PROJECT_MENU_ERROR("权限获取失败！"),
     UPDATE_PROJECT_MENU_ERROR("权限更新失败！"),
     UPDATE_PROJECT_OWNER_ERROR("修改项目负责人失败！"),
+    PROJECT_STATUS_ERROR("项目为禁用状态，无法操作！"),
     GET_DEVICE_TYPE_ERROR("获取设备类型！"),
     UPDATE_DEVICE_TYPE_ERROR("获取设备类型！"),
     PROJECT_NAME_EXIST("项目名称已经存在"),
@@ -117,6 +118,7 @@ public enum HoolinkExceptionMassageEnum {
 
     /*** manage-base */
     UPDATE_DEVICE_MAINTAIN("更新设备的维保年限失败"),
+    DEVICE_MAINTAIN_LOW("设备的维保年限过低"),
     GET_DEVICE_TYPE_INFO("获得设备类型信息"),
     GET_DEVICE_TYPE_MAINTAIN_INFO("获得设备类型维保信息"),
     USER_ACCOUNT_OR_PASSWORD_ERROR("账号或密码错误，请重新输入"),
