@@ -61,4 +61,6 @@ public class LightBO extends DeviceManagerBO {
     /*** 集中器型号名称 */
     private String externalSubTypeName;
 
+    /** 设备状态 1:工作中,2:在线,3:故障,4:离线,5:维修中 */
+    private Integer status;
 }
