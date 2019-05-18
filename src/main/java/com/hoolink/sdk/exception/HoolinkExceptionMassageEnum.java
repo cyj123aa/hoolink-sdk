@@ -142,6 +142,7 @@ public enum HoolinkExceptionMassageEnum {
     COMPANY_CODE_ERROR("公司不允许为空！"),
     NOT_LOGIN_ERROR("未登录！"),
     FORBIDDEN("无权访问！"),
+    ACCESS_OBS_FAILED("访问OBS服务失败"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
