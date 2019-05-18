@@ -42,12 +42,12 @@ public enum HoolinkExceptionMassageEnum {
     CREATE_PROJECT_ERROR("项目创建失败！"),
     UPDATE_PROJECT_ERROR("项目修改失败！"),
     GET_PROJECT_DETAIL_ERROR("项目详情获取失败！"),
+    PROJECT_STATUS_ERROR("项目状态失效，无法操作！"),
     UPDATE_PROJECT_STATUS_ERROR("项目状态修改失败！"),
     GET_PROJECT_LIST_ERROR("项目列表查询失败！"),
     GET_PROJECT_MENU_ERROR("权限获取失败！"),
     UPDATE_PROJECT_MENU_ERROR("权限更新失败！"),
     UPDATE_PROJECT_OWNER_ERROR("修改项目负责人失败！"),
-    PROJECT_STATUS_ERROR("项目为禁用状态，无法操作！"),
     GET_DEVICE_TYPE_ERROR("获取设备类型！"),
     UPDATE_DEVICE_TYPE_ERROR("获取设备类型！"),
     PROJECT_NAME_EXIST("项目名称已经存在"),
@@ -138,6 +138,10 @@ public enum HoolinkExceptionMassageEnum {
     READ_FIRMWARE_LIST_BY_DEVICESUBTYPE_ID_ERROR("查询固件列表失败！"),
     READ_FIRMWARE_LIST_BY_PARAM_ERROR("查询固件列表失败！"),
     REMOVE_FIRMWARE_ERROR("删除固件失败！"),
+    DEPARTMENT_ENCRY_LEVEL_DEFAULT_NULL("部门或者对应密保等级为空！"),
+    COMPANY_CODE_ERROR("公司不允许为空！"),
+    NOT_LOGIN_ERROR("未登录！"),
+    FORBIDDEN("无权访问！"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -157,8 +161,6 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_GROUP_NOT_EXIST("密码不能为空, 请输入密码!"),
     MANAGER_USER_NOT_EXIST_ERROR("该用户不存在！"),
     CREATE_GROUP_ERROR("创建组失败!"),
-    DEPARTMENT_ENCRY_LEVEL_DEFAULT_NULL("部门或者对应密保等级为空！"),
-    COMPANY_CODE_ERROR("公司不允许为空"),
     ;
 
     private String message;

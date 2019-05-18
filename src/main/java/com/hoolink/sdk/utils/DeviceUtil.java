@@ -1,8 +1,12 @@
 package com.hoolink.sdk.utils;
 
+import com.hoolink.sdk.enums.DeviceTypeEnum;
 import com.hoolink.sdk.exception.BusinessException;
 import com.hoolink.sdk.exception.HoolinkExceptionMassageEnum;
 import org.apache.commons.lang3.StringUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author XuBaofeng.
@@ -11,6 +15,24 @@ import org.apache.commons.lang3.StringUtils;
  * description: 设备工具类
  */
 public class DeviceUtil {
+
+    /**
+     * 获取需要排除的设备:
+     * * 气体检测
+     * * 环境监测
+     * * 水位监测
+     * * 漏电检测
+     *
+     * @return
+     */
+    public static List<Long> getDeviceTypeIds() {
+        List<Long> typeIds = new ArrayList<>();
+        typeIds.add(DeviceTypeEnum.LEAKAGE_DETECT.getDeviceType());
+        typeIds.add(DeviceTypeEnum.WATER_GAUGE.getDeviceType());
+        typeIds.add(DeviceTypeEnum.ENVIRONMENT.getDeviceType());
+        typeIds.add(DeviceTypeEnum.GAS.getDeviceType());
+        return typeIds;
+    }
 
     /**
      * 根据规则生成设备序列号
