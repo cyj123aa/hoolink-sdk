@@ -5,6 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
@@ -1087,6 +1088,20 @@ public final class DateUtil {
         return format.format(key);
     }
 
-
+    /**
+     * 时间冲突检查， true 冲突, false 不冲突
+     * 考虑了跨天的场景
+     *
+     * @param srcStart
+     * @param srcEnd
+     * @param distStart
+     * @param distEnd
+     * @return
+     */
+    public static boolean timeConflict(LocalTime srcStart, LocalTime srcEnd, LocalTime distStart, LocalTime distEnd) {
+        // 开始 > src结束 && 结束 < src开始， 当中需要考虑跨天场景
+        return  (srcEnd.isBefore(srcStart) || distStart.isBefore(srcEnd))
+                && (distEnd.isBefore(distStart) || distEnd.isAfter(srcStart));
+    }
 
 }
