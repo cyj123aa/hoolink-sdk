@@ -138,6 +138,10 @@ public enum HoolinkExceptionMassageEnum {
     READ_FIRMWARE_LIST_BY_DEVICESUBTYPE_ID_ERROR("查询固件列表失败！"),
     READ_FIRMWARE_LIST_BY_PARAM_ERROR("查询固件列表失败！"),
     REMOVE_FIRMWARE_ERROR("删除固件失败！"),
+    DEPARTMENT_ENCRY_LEVEL_DEFAULT_NULL("部门或者对应密保等级为空！"),
+    COMPANY_CODE_ERROR("公司不允许为空！"),
+    NOT_LOGIN_ERROR("未登录！"),
+    FORBIDDEN("无权访问！"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -157,10 +161,6 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_GROUP_NOT_EXIST("密码不能为空, 请输入密码!"),
     MANAGER_USER_NOT_EXIST_ERROR("该用户不存在！"),
     CREATE_GROUP_ERROR("创建组失败!"),
-    DEPARTMENT_ENCRY_LEVEL_DEFAULT_NULL("部门或者对应密保等级为空！"),
-    COMPANY_CODE_ERROR("公司不允许为空！"),
-    NOT_LOGIN_ERROR("请登录！"),
-    NOT_PERMISSION_ERROR("无权访问！"),
     ;
 
     private String message;
