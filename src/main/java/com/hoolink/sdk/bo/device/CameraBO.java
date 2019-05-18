@@ -50,6 +50,8 @@ public class CameraBO extends DeviceManagerBO {
 
     /*** 灯杆mac */
     private String poleMac;
+    /*** 灯杆mac */
+    private String poleName;
 
     /*** 灯杆型号名称 */
     private String poleSubTypeName;
