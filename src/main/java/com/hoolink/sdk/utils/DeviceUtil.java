@@ -4,6 +4,8 @@ import com.hoolink.sdk.exception.BusinessException;
 import com.hoolink.sdk.exception.HoolinkExceptionMassageEnum;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.List;
+
 /**
  * @author XuBaofeng.
  * @date 2019-02-27 22:39.
@@ -85,4 +87,17 @@ public class DeviceUtil {
         }
         return sb.toString();
     }
+
+    public static String assemblyDialnos(List<String> dialnosList, String separator) {
+        //生成电话号码串,和分隔符 格式 1:2:3
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < dialnosList.size(); i++) {
+            sb.append(dialnosList.get(i));
+            if (i < dialnosList.size() - 1) {
+                sb.append(separator);
+            }
+        }
+        return sb.toString();
+    }
+
 }
