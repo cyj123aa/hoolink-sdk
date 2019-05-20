@@ -2,28 +2,23 @@ package com.hoolink.sdk.bo.base;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author cyj
  */
 @Data
-public class RoleProjectMenuBO {
+public class RoleProjectMenuBO implements Serializable {
+    private static final long serialVersionUID = -3911279475478406439L;
+
+    /*** 角色ID */
     private Long roleId;
-
+    /*** 项目ID */
     private Long projectId;
-    /**
-     * <pre>
-     * 对应权限id
-     * 表字段 : middle_role_project_menu.menu_id
-     * </pre>
-     */
+    /*** 对应权限id  */
     private Long menuId;
-
-
-    /**
-     * <pre>
-     * 更改权限:只读读写
-     * 表字段 : middle_role_project_menu.readonly
-     * </pre>
-     */
+    /*** 更改权限:只读读写 */
     private Boolean readonly;
+    /*** 菜单类型 */
+    private Byte menuType;
 }

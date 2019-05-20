@@ -1,37 +1,30 @@
 package com.hoolink.sdk.enums;
 
 /**
+ * 权限
  * @author lijunling
- * @description 密保等级
- * @date 2019/05/15 19:03
+ *
+ * @date 2019/05/18 11:43
  */
-public enum EncryLevelEnum {
+public enum PermissionEnum {
 	/**
-	 * 一级
+	 * 只读
 	 */
-	ONE(1, "一级"),
+	READ_ONLY(1, "只读"),
 	/**
-	 * 二级
+	 * 全部(读、写)
 	 */
-	TWO(2, "二级"),
-	/**
-	 * 三级
-	 */
-	THREE(3, "三级"),
-	/**
-	 * 四级
-	 */
-	FOUR(4, "四级");
+	ALL(2, "全部(读、写)");
 	
     private Integer key;
     private String value;
     
-    EncryLevelEnum(Integer key, String value){
+    PermissionEnum(Integer key, String value){
         this.key = key;
         this.value = value;
     }
-
-    public Integer getKey() {
+    
+	public Integer getKey() {
 		return key;
 	}
 
@@ -49,9 +42,9 @@ public enum EncryLevelEnum {
 
 	public static String getValue(Integer key) {
     	if(key != null) {
-        	for(EncryLevelEnum encryLevelEnum : EncryLevelEnum.values()) {
-        		if(encryLevelEnum.key.intValue() == key.intValue()) {
-        			return encryLevelEnum.value;
+        	for(PermissionEnum permissionEnum : PermissionEnum.values()) {
+        		if(permissionEnum.key.intValue() == key.intValue()) {
+        			return permissionEnum.value;
         		}
         	}    		
     	}

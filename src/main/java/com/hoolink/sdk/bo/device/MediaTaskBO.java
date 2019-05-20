@@ -6,6 +6,7 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
  * @DATE 2019/5/14 20:31
  */
 @Data
-public class MediaTaskBO {
+public class MediaTaskBO implements Serializable {
 
     /**
      * ID
@@ -75,6 +76,7 @@ public class MediaTaskBO {
      * 开始时间
      * 表字段 : media_task.start_time
      */
+
     @JsonDeserialize(using = LocalTimeDeserializer.class)
     @JsonSerialize(using = LocalTimeSerializer.class)
     private LocalTime startTime;
