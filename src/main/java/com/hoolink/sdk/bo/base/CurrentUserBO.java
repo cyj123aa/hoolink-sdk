@@ -40,5 +40,7 @@ public class CurrentUserBO implements Serializable {
     private String phone;
     /** 角色编号 **/
     private Long roleId;
+    /** 角色层级 **/
+    private Byte roleLevel;
 
 }
