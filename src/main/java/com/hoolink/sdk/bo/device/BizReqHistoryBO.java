@@ -46,4 +46,7 @@ public class BizReqHistoryBO implements Serializable {
     /**创建时间*/
     private Long created;
 
+    /** 操作人*/
+    private String account;
+
 }

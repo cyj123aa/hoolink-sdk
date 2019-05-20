@@ -156,6 +156,7 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_GROUP_NAME_NOT_EXIST("设备分组名称不能为空!"),
     DEVICE_GROUP_NOT_EXIST("密码不能为空, 请输入密码!"),
     MANAGER_USER_NOT_EXIST_ERROR("该用户不存在！"),
+    CREATE_GROUP_ERROR("创建组失败!"),
     DEPARTMENT_ENCRY_LEVEL_DEFAULT_NULL("部门或者对应密保等级为空！"),
     COMPANY_CODE_ERROR("公司不允许为空"),
     ;

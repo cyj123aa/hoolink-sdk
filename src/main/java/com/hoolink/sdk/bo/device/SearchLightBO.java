@@ -25,7 +25,7 @@ public class SearchLightBO implements Serializable {
     @NotNull(message = "项目id不能为空")
     private Long projectId;
 
-    /*** 状态 0:全部,1:在线,2:离线,3:工作中,4:维修中,5:故障 */
+    /** 设备状态 0:全部,1:工作中,2:在线,3:故障,4:离线,5:维修中 */
     private Integer status;
 
     /** 设备类型 */

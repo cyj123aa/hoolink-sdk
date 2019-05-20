@@ -42,4 +42,7 @@ public class LightStrategyBO implements Serializable {
 
     /*** 策略项，按时间维度分 */
     private List<LightStrategyItemBO> items;
+
+    /*** 冲突状态 */
+    private Boolean hasConflict;
 }
