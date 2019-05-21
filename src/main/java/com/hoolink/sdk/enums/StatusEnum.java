@@ -7,7 +7,13 @@ package com.hoolink.sdk.enums;
  * @date 2019/05/15 18:55
  */
 public enum StatusEnum {
+	/**
+	 * 启用
+	 */
 	OPEN(true, "启用"),
+	/**
+	 * 禁用
+	 */
 	CLOSE(false, "禁用");
 	
     private Boolean key;
