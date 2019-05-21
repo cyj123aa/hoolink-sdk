@@ -144,6 +144,8 @@ public enum HoolinkExceptionMassageEnum {
     NOT_LOGIN_ERROR("未登录！"),
     FORBIDDEN("无权访问！"),
     ACCESS_OBS_FAILED("访问OBS服务失败"),
+    READ_INIT_MENU_FAILED("初始化菜单列表失败"),
+    READ_NEXT_MENU_FAILED("获取下级菜单列表失败"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),

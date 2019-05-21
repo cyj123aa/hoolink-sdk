@@ -109,6 +109,13 @@ public class MediaTaskBO implements Serializable {
      */
     private Boolean usingStatus;
 
+
+    /**
+     * 三方任务ID
+     * 表字段 : media_task.random
+     */
+    private String random;
+
     /**
      * 三方任务ID
      * 表字段 : media_task.random
