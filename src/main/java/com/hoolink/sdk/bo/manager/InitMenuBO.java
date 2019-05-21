@@ -32,4 +32,9 @@ public class InitMenuBO {
      * 对外公开资源菜单列表
      */
     private EdmMenuBO publicVO;
+
+    /**
+     * 当前用户资源库密保等级
+     */
+    private Integer encryLevelCompany;
 }
