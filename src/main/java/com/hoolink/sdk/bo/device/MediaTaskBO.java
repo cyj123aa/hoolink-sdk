@@ -117,12 +117,6 @@ public class MediaTaskBO implements Serializable {
     private String random;
 
     /**
-     * 三方任务ID
-     * 表字段 : media_task.random
-     */
-    private String random;
-
-    /**
      * 策略列表：周或者日期
      */
     private List<TaskStrategyBO> strategys;
