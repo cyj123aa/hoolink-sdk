@@ -132,6 +132,7 @@ public enum HoolinkExceptionMassageEnum {
     PHONE_EXISTS("该手机号已存在"),
     GET_CHECK_EXCEL_DATA_ERROR("获取校验excel数据结果失败"),
     READ_FIRMWARE_FILE_ERROR("固件文件读取失败"),
+    READ_FILE_ERROR("文件读取失败"),
     CREATE_FIRMWARE_ERROR("创建固件失败！"),
     UPDATE_FIRMWARE_ERROR("编辑固件失败！"),
     READ_FIRMWARE_BY_ID_ERROR("查询固件详情失败！"),

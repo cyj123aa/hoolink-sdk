@@ -45,11 +45,6 @@ public class MediaTaskControlBO implements Serializable {
     private Boolean enabled;
 
     /**
-     * 冲突时间
-     */
-    private String conflictTime;
-
-    /**
      * 定时类型：1：每天，2：自定义，3：特殊日期
      * 表字段 : media_task.strategy_type
      */
@@ -67,11 +62,17 @@ public class MediaTaskControlBO implements Serializable {
      */
     private Boolean usingStatus;
 
+    /**
+     * 三方任务ID
+     * 表字段 : media_task.random
+     */
+    private String random;
+
 
     /**
      * 时间
      */
-    private List<String> strategys;
+    private List<MediaTaskConflictStrategyBO> strategys;
 
     /**
      * 设备
