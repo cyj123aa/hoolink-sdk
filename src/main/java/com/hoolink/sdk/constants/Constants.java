@@ -22,4 +22,9 @@ public class Constants {
     public static final int HTTP_STATUS_200 = 200;
 
     public static final int HTTP_STATUS_206 = 206;
+
+    /**
+     * EDM下菜单code
+     */
+
 }
