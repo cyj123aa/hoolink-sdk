@@ -22,6 +22,7 @@ public enum HoolinkExceptionMassageEnum {
     SWITCHCMD_CLASS_NULL("分发命令类未找到"),
     SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
     NOT_REGISTERED_IN_THE_REGISTRY("未连接到注册中心"),
+    SERVICE_CONSUME_FAULT("微服务调用失败"),
 
     /*** 用户管理提示信息message */
     USER_CUSTOMER_NUMBER_EXIST("客户号已存在"),
