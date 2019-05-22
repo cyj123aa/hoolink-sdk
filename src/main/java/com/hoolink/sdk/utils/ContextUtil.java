@@ -63,9 +63,8 @@ public class ContextUtil {
      *
      * @return
      */
-    private static final CurrentUserBO getDefaultUser() {
+    private static CurrentUserBO getDefaultUser() {
         CurrentUserBO userBO = new CurrentUserBO();
-        userBO = new CurrentUserBO();
         userBO.setUserId(CommonConstants.DEFAULT_USER_ID);
         userBO.setAccount(CommonConstants.DEFAULT_USER_ACCOUNT);
         return userBO;
@@ -76,7 +75,7 @@ public class ContextUtil {
      *
      * @return
      */
-    public static final String getTxid() {
+    public static String getTxid() {
         return ContextUtils.getInvocationContext().getContext(CommonConstants.TXID);
     }
 }
