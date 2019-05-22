@@ -42,6 +42,7 @@ public class DeviceUtil {
                         device.setKey(manager.getId());
                         device.setValue(manager.getId());
                         device.setTitle(manager.getDeviceName());
+                        device.setType(manager.getDeviceTypeId());
                         children.add(device);
                     });
                     groupTreeBO.setChildren(children);

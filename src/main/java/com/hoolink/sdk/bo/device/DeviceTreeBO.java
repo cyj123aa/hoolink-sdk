@@ -18,4 +18,6 @@ public class DeviceTreeBO implements Serializable {
     private String title;
     /*** 值 */
     private Long value;
+    /*** 设备类型 */
+    private Long type;
 }
