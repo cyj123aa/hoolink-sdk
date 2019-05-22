@@ -12,7 +12,7 @@ import java.util.List;
  * description:
  */
 @Data
-public class StrategyLightBO implements Serializable {
+public class DeviceShuttleBoxBO implements Serializable {
     private static final long serialVersionUID = 3134692051407112749L;
 
     /*** 所有设备 */
