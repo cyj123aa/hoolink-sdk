@@ -57,4 +57,8 @@ public class ScreenPlayConfigBO implements Serializable {
     /*** 发布文件ID集合 */
     @NotEmpty(message = "发布文件不能为空")
     private List<Long> fileIds;
+
+    /*** 清单生成的lst文件ID */
+    @NotNull(message = "lst文件ID不能为空")
+    private Long lstObsId;
 }
