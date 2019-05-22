@@ -9,6 +9,7 @@ public enum DeviceEntryFieldEnum {
     SUBTYPENAME("subTypeName"),
     DEVICENAME("deviceName"),
     POLEMAC("poleMac"),
+    POLESUBTYPENAME("poleSubTypeName"),
     EXTERNAL("externalMac"),
     MAC("mac"),
     INSTALLADDRESS("installAddress"),
@@ -24,6 +25,8 @@ public enum DeviceEntryFieldEnum {
     GAS("gas"),
     OPERATE("operate"),
     ID("id"),
+    BROADCASTSUBTYPENAME("broadcastSubTypeName"),
+    BROADCASTMAC("broadcastMac"),
     ;
 
     private String field;
