@@ -11,6 +11,8 @@ public class CommonConstants {
     public static final String COMMA = ",";
     public static final Long DEFAULT_USER_ID = 1L;
     public static final String DEFAULT_USER_ACCOUNT = "admin";
+    public static final String COLON_SEPARATE = ":";
+
 
     /*** 手机号长度 */
     public static final int MOBIL_PHONE_LENGTH = 11;

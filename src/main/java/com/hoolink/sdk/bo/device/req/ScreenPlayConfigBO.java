@@ -16,6 +16,9 @@ import java.util.List;
 public class ScreenPlayConfigBO implements Serializable {
     private static final long serialVersionUID = -5475285894907996876L;
 
+    /*** 清单ID */
+    private Long id;
+
     /*** 项目表外键 */
     @NotNull(message = "项目ID不能为空")
     private Long projectId;
@@ -57,4 +60,11 @@ public class ScreenPlayConfigBO implements Serializable {
     /*** 发布文件ID集合 */
     @NotEmpty(message = "发布文件不能为空")
     private List<Long> fileIds;
+
+    /*** 清单生成的lst文件ID */
+    @NotNull(message = "lst文件ID不能为空")
+    private Long lstObsId;
+
+    /*** 文件下发状态状态：0：下发中， 1：下发成功，2：下发失败 */
+    private Byte sendStatus;
 }
