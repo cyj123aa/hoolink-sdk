@@ -12,10 +12,6 @@ import java.util.List;
 @Data
 public class InitMenuBO {
     /**
-     * 我的收藏
-     */
-    private EdmMenuBO collectVO;
-    /**
      * 部门资源菜单列表
      */
     private EdmMenuBO deptVO;
