@@ -1,8 +1,12 @@
 package com.hoolink.sdk.utils;
 
+import com.hoolink.sdk.bo.device.DeviceTreeBO;
+import com.hoolink.sdk.bo.device.GroupBO;
+import com.hoolink.sdk.bo.device.GroupTreeBO;
 import com.hoolink.sdk.enums.DeviceTypeEnum;
 import com.hoolink.sdk.exception.BusinessException;
 import com.hoolink.sdk.exception.HoolinkExceptionMassageEnum;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
@@ -15,6 +19,38 @@ import java.util.List;
  * description: 设备工具类
  */
 public class DeviceUtil {
+
+    /**
+     * 根据分组集合获取树结构
+     *
+     * @param groups
+     * @return
+     */
+    public static List<GroupTreeBO> getGroupTreeBOByList(List<GroupBO> groups) {
+        List<GroupTreeBO> result = new ArrayList<>();
+        if (CollectionUtils.isNotEmpty(groups)) {
+            groups.forEach(group -> {
+                GroupTreeBO groupTreeBO = new GroupTreeBO();
+                groupTreeBO.setKey(group.getId());
+                groupTreeBO.setValue(group.getId());
+                groupTreeBO.setTitle(group.getGroupName());
+                groupTreeBO.setDeviceSize(group.getDeviceSize());
+                if (CollectionUtils.isNotEmpty(group.getManagers())) {
+                    List<DeviceTreeBO> children = new ArrayList<>();
+                    group.getManagers().forEach(manager -> {
+                        DeviceTreeBO device = new DeviceTreeBO();
+                        device.setKey(manager.getId());
+                        device.setValue(manager.getId());
+                        device.setTitle(manager.getDeviceName());
+                        children.add(device);
+                    });
+                    groupTreeBO.setChildren(children);
+                }
+                result.add(groupTreeBO);
+            });
+        }
+        return result;
+    }
 
     /**
      * 获取需要排除的设备:
@@ -77,7 +113,7 @@ public class DeviceUtil {
      * @return
      */
     public static String assemblyDeviceName(String poleNo, String poleName, String deviceNo, String deviceName) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         if (StringUtils.isNotBlank(poleNo)) {
             sb.append(poleNo);
         }
@@ -88,7 +124,7 @@ public class DeviceUtil {
             sb.append(poleName);
         }
         if (StringUtils.isNotBlank(deviceNo) || StringUtils.isNotBlank(deviceName)) {
-            Boolean flag = StringUtils.isNotBlank(poleNo) || StringUtils.isNotBlank(poleName);
+            boolean flag = StringUtils.isNotBlank(poleNo) || StringUtils.isNotBlank(poleName);
             if (flag) {
                 sb.append("【");
             }
