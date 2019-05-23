@@ -34,7 +34,7 @@ public class CurrentUserBO implements Serializable {
     private Byte userType;
 
     /*** 登录用户的权限菜单URL */
-    private Map<String, Set<String>> authUrls;
+    private Set<String> authUrls;
 
     /** 手机号*/
     private String phone;

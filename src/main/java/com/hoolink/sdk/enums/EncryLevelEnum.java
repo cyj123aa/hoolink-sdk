@@ -7,6 +7,10 @@ package com.hoolink.sdk.enums;
  */
 public enum EncryLevelEnum {
 	/**
+	 * 特级
+	 */
+	SUPER(0, "特级"),
+	/**
 	 * 一级
 	 */
 	ONE(1, "一级"),
@@ -21,7 +25,11 @@ public enum EncryLevelEnum {
 	/**
 	 * 四级
 	 */
-	FOUR(4, "四级");
+	FOUR(4, "四级"),
+	/**
+	 * 五级
+	 */
+	FIVE(5, "五级");
 	
     private Integer key;
     private String value;
@@ -50,7 +58,7 @@ public enum EncryLevelEnum {
 	public static String getValue(Integer key) {
     	if(key != null) {
         	for(EncryLevelEnum encryLevelEnum : EncryLevelEnum.values()) {
-        		if(encryLevelEnum.key.intValue() == key.intValue()) {
+        		if(encryLevelEnum.key.equals(key)) {
         			return encryLevelEnum.value;
         		}
         	}    		
