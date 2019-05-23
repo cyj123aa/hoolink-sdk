@@ -3,7 +3,6 @@ package com.hoolink.sdk.bo.base;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -42,5 +41,7 @@ public class CurrentUserBO implements Serializable {
     private Long roleId;
     /** 角色层级 **/
     private Byte roleLevel;
+    /** 所属公司 **/
+    private Set<Long> comanyIdSet;
 
 }

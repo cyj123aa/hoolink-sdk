@@ -25,11 +25,7 @@ public enum EncryLevelEnum {
 	/**
 	 * 四级
 	 */
-	FOUR(4, "四级"),
-	/**
-	 * 五级
-	 */
-	FIVE(5, "五级");
+	FOUR(4, "四级");
 	
     private Integer key;
     private String value;

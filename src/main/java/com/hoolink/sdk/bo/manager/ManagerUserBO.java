@@ -74,7 +74,17 @@ public class ManagerUserBO {
     /**
      * 账号状态: 启用/禁用
      */
-    private String statusName;
+    private String statusDesc;
+    
+    /**
+     * 是否可见员工密保等级
+     */
+    private Boolean viewEncryLevelPermitted;
+    
+    /**
+     * 是否可见员工密保等级
+     */
+    private String viewEncryLevelPermittedDesc;
     
     /**
      *创建时间 
@@ -92,7 +102,7 @@ public class ManagerUserBO {
     private List<UserDepartmentBO> userDeptPairList;
     
     @Data
-    public class UserDepartmentBO{
+    public static class UserDepartmentBO{
     	/**
     	 * 部门ID
     	 */
