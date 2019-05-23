@@ -1,9 +1,6 @@
 package com.hoolink.sdk.utils;
 
-import com.hoolink.sdk.bo.device.DeviceTreeBO;
-import com.hoolink.sdk.bo.device.DeviceTypeBO;
-import com.hoolink.sdk.bo.device.GroupBO;
-import com.hoolink.sdk.bo.device.GroupTreeBO;
+import com.hoolink.sdk.bo.device.*;
 import com.hoolink.sdk.enums.DeviceSubTypeEnum;
 import com.hoolink.sdk.enums.DeviceTypeEnum;
 import com.hoolink.sdk.exception.BusinessException;
@@ -23,6 +20,22 @@ import java.util.Objects;
  * description: 设备工具类
  */
 public class DeviceUtil {
+
+    public static List<DeviceTreeBO> getDeviceTreeBOByList(List<DeviceManagerBO> devices) {
+        List<DeviceTreeBO> result = new ArrayList<>();
+        if (CollectionUtils.isNotEmpty(devices)) {
+            devices.forEach(manager -> {
+                DeviceTreeBO device = new DeviceTreeBO();
+                device.setKey(manager.getId());
+                device.setValue(manager.getId());
+                device.setTitle(manager.getDeviceName());
+                DeviceSubTypeEnum byType = DeviceSubTypeEnum.getByType(manager.getDeviceSubTypeId());
+                device.setType(byType == null ? null : byType.getType());
+                result.add(device);
+            });
+        }
+        return result;
+    }
 
     /**
      * 根据分组集合获取树结构
