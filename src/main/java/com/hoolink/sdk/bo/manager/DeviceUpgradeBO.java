@@ -62,4 +62,10 @@ public class DeviceUpgradeBO {
 
     /*** 第三步状态（完成）：0未开始完成，1完成中，2成功 */
     private Byte thirdStepStatus;
+
+    /*** 缓存开始时间 */
+    private Long cacheCreated;
+
+    /*** 缓存操作人 */
+    private Long cacheCreator;
 }
