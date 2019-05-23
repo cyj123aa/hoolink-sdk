@@ -1,8 +1,10 @@
 package com.hoolink.sdk.utils;
 
 import com.hoolink.sdk.bo.device.DeviceTreeBO;
+import com.hoolink.sdk.bo.device.DeviceTypeBO;
 import com.hoolink.sdk.bo.device.GroupBO;
 import com.hoolink.sdk.bo.device.GroupTreeBO;
+import com.hoolink.sdk.enums.DeviceSubTypeEnum;
 import com.hoolink.sdk.enums.DeviceTypeEnum;
 import com.hoolink.sdk.exception.BusinessException;
 import com.hoolink.sdk.exception.HoolinkExceptionMassageEnum;
@@ -10,7 +12,9 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author XuBaofeng.
@@ -42,6 +46,7 @@ public class DeviceUtil {
                         device.setKey(manager.getId());
                         device.setValue(manager.getId());
                         device.setTitle(manager.getDeviceName());
+                        device.setType(manager.getDeviceTypeId());
                         children.add(device);
                     });
                     groupTreeBO.setChildren(children);
@@ -156,4 +161,39 @@ public class DeviceUtil {
         return sb.toString();
     }
 
+    /**
+     * 根据设备型号IDS获取设备类型集合
+     *
+     * @param subTypeIds
+     * @return
+     */
+    public static List<DeviceTypeBO> assemblyDeviceTypes(List<Long> subTypeIds) {
+        if (CollectionUtils.isEmpty(subTypeIds)) {
+            return Collections.emptyList();
+        }
+        // ----- 根据设备型号IDS获取设备类型IDS
+        List<Long> typeIds = new ArrayList<>();
+        subTypeIds.forEach(subTypeId -> {
+            DeviceSubTypeEnum subTypeEnum = DeviceSubTypeEnum.getByType(subTypeId);
+            if (!typeIds.contains(subTypeEnum.getType())) {
+                typeIds.add(subTypeEnum.getType());
+            }
+        });
+        if (CollectionUtils.isEmpty(typeIds)) {
+            return Collections.emptyList();
+        }
+        // ----- 根据设备类型IDS获取设备类型ID集合
+        List<DeviceTypeBO> result = new ArrayList<>();
+        typeIds.forEach(typeId -> {
+            DeviceTypeEnum typeEnum = DeviceTypeEnum.getByType(typeId);
+            if (Objects.nonNull(typeEnum)) {
+                DeviceTypeBO deviceTypeBO = new DeviceTypeBO();
+                deviceTypeBO.setId(typeEnum.getDeviceType());
+                deviceTypeBO.setTypeName(typeEnum.getTypeName());
+                deviceTypeBO.setTypeCode(typeEnum.getDeviceCode());
+                result.add(deviceTypeBO);
+            }
+        });
+        return result;
+    }
 }
