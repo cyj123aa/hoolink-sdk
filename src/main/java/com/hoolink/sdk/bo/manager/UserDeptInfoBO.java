@@ -21,5 +21,5 @@ public class UserDeptInfoBO {
     /**
      * id,密保等级（部门）
      */
-    private Map<String,String> deptMap;
+    private Map<String,Integer> deptMap;
 }
