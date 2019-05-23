@@ -1,15 +1,14 @@
 package com.hoolink.sdk.utils;
 
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang3.StringUtils;
+
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.lang3.StringUtils;
+import java.security.SecureRandom;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * 字符串AES128加密 <加盐>
@@ -20,6 +19,7 @@ import org.apache.commons.lang3.StringUtils;
 public class Aes128Util {
 
     private static final String KEY_ALGORITHM = "AES";
+    private static final String SHA1_PRNG = "SHA1PRNG";
     /*** 字符编码 ***/
     private static final String CHARACTER_CODING = "UTF-8";
     /*** 默认的加密算法 ***/
@@ -41,7 +41,7 @@ public class Aes128Util {
      * AES 加密操作, 自定义盐
      *
      * @param content 待加密内容
-     * @param key 秘钥
+     * @param key     秘钥
      * @return 返回Base64转码后的加密数据
      */
     public static String encrypt(String content, String key) {
@@ -78,7 +78,7 @@ public class Aes128Util {
      * AES 解密操作, 自定义盐
      *
      * @param content 待解密内容
-     * @param key 秘钥
+     * @param key     秘钥
      * @return 解密数据
      */
     public static String decrypt(String content, String key) {
@@ -105,12 +105,12 @@ public class Aes128Util {
      *
      * @return
      */
-    private static SecretKeySpec getSecretKey(final String key) throws Exception {
+    private static SecretKey getSecretKey(String key) throws Exception {
+        SecureRandom secureRandom = SecureRandom.getInstance(SHA1_PRNG);
+        secureRandom.setSeed(key.getBytes());
         KeyGenerator kg = KeyGenerator.getInstance(KEY_ALGORITHM);
-        kg.init(128, new SecureRandom(key.getBytes()));
-        SecretKey secretKey = kg.generateKey();
-        return new SecretKeySpec(secretKey.getEncoded(), KEY_ALGORITHM);
+        kg.init(secureRandom);
+        return kg.generateKey();
     }
-
 
 }
