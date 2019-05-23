@@ -33,4 +33,8 @@ public class InitMenuBO {
      * 当前用户资源库密保等级
      */
     private Integer encryLevelCompany;
+    /**
+     * 用户岗级可见
+     */
+    private List<Long> positionList;
 }

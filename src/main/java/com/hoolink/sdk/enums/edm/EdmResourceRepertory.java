@@ -30,6 +30,10 @@ public enum EdmResourceRepertory {
         return null;
     }
 
+    public Integer getKey() {
+        return key;
+    }
+
     public String getCode() {
         return code;
     }

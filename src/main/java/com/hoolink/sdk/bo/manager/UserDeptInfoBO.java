@@ -2,6 +2,7 @@ package com.hoolink.sdk.bo.manager;
 
 import lombok.Data;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -22,4 +23,9 @@ public class UserDeptInfoBO {
      * id,密保等级（部门）
      */
     private Map<String,Integer> deptMap;
+
+    /**
+     * 用户岗级可见
+     */
+    private List<Long> positionList;
 }
