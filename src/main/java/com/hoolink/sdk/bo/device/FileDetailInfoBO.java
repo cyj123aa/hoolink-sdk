@@ -4,7 +4,6 @@ import com.hoolink.sdk.bo.device.req.ScreenTxtBO;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author wangdong
@@ -16,6 +15,9 @@ public class FileDetailInfoBO implements Serializable {
 
     /*** 文件名称 */
     private String fileName;
+
+    /*** 文件ID */
+    private Long fileId;
 
     /*** 文件扩展 */
     private String fileExtName;
@@ -37,5 +39,5 @@ public class FileDetailInfoBO implements Serializable {
 
     /*** 文本信息 */
     private ScreenTxtBO screenTxtBO;
-    
+
 }
