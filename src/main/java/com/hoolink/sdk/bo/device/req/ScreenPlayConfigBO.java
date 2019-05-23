@@ -34,9 +34,6 @@ public class ScreenPlayConfigBO implements Serializable {
     @NotNull(message = "屏幕亮度不能为空")
     private Integer brightness;
 
-    /*** 清单持续时间 */
-    private Integer playDuration;
-
     /*** 清单类型：1常规 2定时 */
     @NotNull(message = "清单类型不能为空")
     private Byte configType;
