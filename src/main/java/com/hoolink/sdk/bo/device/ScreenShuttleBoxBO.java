@@ -18,6 +18,5 @@ public class ScreenShuttleBoxBO implements Serializable {
 
     /*** 已被选择的显示屏 */
     private List<ScreenShuttleBoxBasicBO> beSelectScreen;
-
-
+    
 }
