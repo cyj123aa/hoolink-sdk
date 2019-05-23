@@ -15,6 +15,14 @@ public enum CheckDeviceMessageEnum {
 
     private String message;
 
+    public String getName() {
+        return name;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
     CheckDeviceMessageEnum(String name, String message) {
         this.name = name;
         this.message = message;

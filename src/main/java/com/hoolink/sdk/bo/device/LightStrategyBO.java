@@ -45,4 +45,7 @@ public class LightStrategyBO implements Serializable {
 
     /*** 冲突状态 */
     private Boolean hasConflict;
+
+    /*** 已选设备 */
+    private List<GroupTreeBO> selectedDevice;
 }
