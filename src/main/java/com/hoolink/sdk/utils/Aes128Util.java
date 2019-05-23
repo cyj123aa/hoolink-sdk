@@ -1,5 +1,6 @@
 package com.hoolink.sdk.utils;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 
@@ -7,8 +8,6 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import java.security.SecureRandom;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * 字符串AES128加密 <加盐>
@@ -16,6 +15,7 @@ import java.util.logging.Logger;
  * @author XuBaofeng.
  * @date 2018-10-11 18:55.
  */
+@Slf4j
 public class Aes128Util {
 
     private static final String KEY_ALGORITHM = "AES";
@@ -58,8 +58,7 @@ public class Aes128Util {
             byte[] result = cipher.doFinal(byteContent);
             return Base64.encodeBase64String(result);
         } catch (Exception e) {
-            String msg = "String: [" + content + "] Aes128Util encryption error";
-            Logger.getLogger(Aes128Util.class.getName()).log(Level.SEVERE, msg, e);
+            log.error("String: [{}] Aes128Util encryption error.", content, e);
         }
         return null;
     }
@@ -94,8 +93,7 @@ public class Aes128Util {
             byte[] result = cipher.doFinal(Base64.decodeBase64(content));
             return new String(result, CHARACTER_CODING);
         } catch (Exception e) {
-            String msg = "String: [" + content + "] Aes128Util decryption error";
-            Logger.getLogger(Aes128Util.class.getName()).log(Level.SEVERE, msg, e);
+            log.error("String: [{}] Aes128Util decryption error.", content, e);
         }
         return null;
     }
