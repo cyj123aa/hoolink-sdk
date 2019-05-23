@@ -12,7 +12,8 @@ import java.io.Serializable;
  */
 @Data
 public class BeSelectDeviceBO implements Serializable {
-    private Long deviceId;
+
+    private Long id;
 
     private String deviceNo;
 
