@@ -94,6 +94,7 @@ public enum HoolinkExceptionMassageEnum {
 
     /*** 显示屏相关提示信息 */
     SCREEN_CREATE_LST_ERROR("清单LST文件创建失败"),
+    SCREEN_TXT_ID_ERROR("文本ID不正确"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
