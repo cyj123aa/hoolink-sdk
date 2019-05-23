@@ -13,7 +13,7 @@ public class DeviceFileTypeBO implements Serializable {
     private static final long serialVersionUID = 4655119946739289190L;
 
     /*** obs或者txt的ID */
-    private Long obsId;
+    private Long obsTxtId;
 
     /*** 文件类型：1文本 2多媒体 */
     private Byte fileType;
