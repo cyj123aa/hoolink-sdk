@@ -10,9 +10,12 @@ import java.io.Serializable;
 @Data
 public class ScreenTxtBO implements Serializable {
     private static final long serialVersionUID = -2988282093535337311L;
-    
+
     /*** 显示屏文本信息表主键ID */
     private Long id;
+
+    /*** 项目ID */
+    private Long projectId;
 
     /*** 字体大小 */
     private Short sizes;
@@ -38,5 +41,15 @@ public class ScreenTxtBO implements Serializable {
     /*** 1-5（1：黑体，2：楷体，3：宋体，4：仿宋，5：隶书）  */
     private Short txtStyle;
 
+    /*** 创建时间 */
+    private Long created;
 
+    /*** 创建者 */
+    private Long creator;
+
+    /*** 修改时间 */
+    private Long updated;
+
+    /*** 修改者 */
+    private Long updator;
 }
