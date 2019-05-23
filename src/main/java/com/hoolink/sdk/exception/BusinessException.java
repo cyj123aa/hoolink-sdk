@@ -5,6 +5,7 @@ package com.hoolink.sdk.exception;
  * Created by zhao_aken on 16/5/1.
  */
 public class BusinessException extends RuntimeException {
+
     private static final long serialVersionUID = 6975474977247031741L;
 
     public BusinessException(String msg) {

@@ -18,4 +18,7 @@ public class CmdResultBO implements Serializable {
 
     /**操作结果*/
     private Boolean cmdResult;
+
+    /**设备型号id*/
+    private Long deviceSubTypeId;
 }
