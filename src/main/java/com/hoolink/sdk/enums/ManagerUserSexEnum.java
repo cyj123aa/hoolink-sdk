@@ -6,7 +6,13 @@ package com.hoolink.sdk.enums;
  * @date 2019/05/15 19:03
  */
 public enum ManagerUserSexEnum {
+	/**
+	 * 男
+	 */
     SEX_MALE(true,"男"),
+    /**
+     * 女
+     */
     SEX_MADAM(false,"女");
     
     private Boolean key;

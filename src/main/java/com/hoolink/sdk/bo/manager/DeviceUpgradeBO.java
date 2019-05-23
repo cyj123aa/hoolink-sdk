@@ -1,5 +1,6 @@
 package com.hoolink.sdk.bo.manager;
 
+import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 
 /**
