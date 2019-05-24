@@ -6,21 +6,21 @@ import java.io.Serializable;
 
 /**
  * @author wangdong
- * @date 2019/5/23 20:36
+ * @date 2019/5/24 10:44
  */
 @Data
-public class ScreenShuttleBoxBasicBO implements Serializable {
-    private static final long serialVersionUID = -6817785065195122554L;
+public class ScreenFileShuttleBoxBasicBO implements Serializable {
+    private static final long serialVersionUID = -4581549433875931117L;
     
     /*** obs或者txt的ID */
-    private Long obsTxtId;
+    private Long value;
 
     /*** 文件类型：1文本 2多媒体 */
     private Byte fileType;
 
     /*** 文件名称 */
-    private String fileName;
+    private String title;
 
     /*** 文件扩展名 */
-    private String fileExtName;
+    private String type;
 }

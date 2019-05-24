@@ -20,22 +20,22 @@ public class DeviceLightBO {
     private String ack;
 
     /** 电压*/
-    private String voltage;
+    private Integer voltage;
 
     /** 电流*/
-    private String lightCurrent;
+    private Integer lightCurrent;
 
     /** 功率*/
-    private String lightPower;
+    private Integer lightPower;
 
     /** 调光值*/
     private Integer dimmingValue;
 
     /** 光衰*/
-    private String lightWeak;
+    private Integer lightWeak;
 
     /** 耗电量 度*/
-    private String powerCost;
+    private Integer powerCost;
 
     /** 温度*/
     private Integer temperature;
