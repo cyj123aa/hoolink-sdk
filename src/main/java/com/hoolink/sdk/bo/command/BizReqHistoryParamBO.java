@@ -37,4 +37,10 @@ public class BizReqHistoryParamBO implements Serializable {
 
     /**操作失败设备数*/
     private Integer failNum;
+
+    /** 创建时间*/
+    private Long created;
+
+    /**项目id*/
+    private Long projectId;
 }
