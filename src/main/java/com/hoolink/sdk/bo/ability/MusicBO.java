@@ -20,5 +20,9 @@ public class MusicBO {
 
     private Long projectId;
 
+    private Long creator;
+
+    private Long created;
+
     private String musicUrl;
 }
