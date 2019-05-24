@@ -91,6 +91,7 @@ public enum HoolinkExceptionMassageEnum {
 
     FACTORY_ID_NOT_NULL_ERROR("厂商ID不能为空"),
     DEVICE_ID_NOT_NULL_ERROR("设备ID不能为空"),
+    DEVICES_ALREADY_GROUPED("保存失败，设备已存在其他分组中"),
 
     /*** 显示屏相关提示信息 */
     SCREEN_CREATE_LST_ERROR("清单LST文件创建失败"),
