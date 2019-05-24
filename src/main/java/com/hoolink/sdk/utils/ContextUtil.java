@@ -76,6 +76,7 @@ public class ContextUtil {
      * @return
      */
     public static String getTxid() {
-        return ContextUtils.getInvocationContext().getContext(CommonConstants.TXID);
+        return "XXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        //return ContextUtils.getInvocationContext().getContext(CommonConstants.TXID);
     }
 }
