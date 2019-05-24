@@ -12,6 +12,7 @@ public class CommonConstants {
     public static final Long DEFAULT_USER_ID = 1L;
     public static final String DEFAULT_USER_ACCOUNT = "admin";
     public static final String COLON_SEPARATE = ":";
+    public static final String UNDERLINE = "_";
 
 
     /*** 手机号长度 */
