@@ -76,7 +76,16 @@ public class ContextUtil {
      * @return
      */
     public static String getTxid() {
-        return "XXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        //return ContextUtils.getInvocationContext().getContext(CommonConstants.TXID);
+        return ContextUtils.getInvocationContext().getContext(ContextConstant.TX_ID);
+    }
+
+    /**
+     * 获取每次请求的项目ID
+     *
+     * @return
+     */
+    public static Long getProjectId() {
+        String context = ContextUtils.getInvocationContext().getContext(ContextConstant.PROJECT_ID);
+        return Long.valueOf(context);
     }
 }
