@@ -5,12 +5,12 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @ClassName MerageUpload
+ * @ClassName MergeUpload
  * @Author Administrator
  * @DATE 2019/4/28 16:30
  */
 @Data
-public class MerageUpload {
+public class MergeUpload {
     private String uploadId;
     private List<PartEtag> partEtags;
     private String fileName;
