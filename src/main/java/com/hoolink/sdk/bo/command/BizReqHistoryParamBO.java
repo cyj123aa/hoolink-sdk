@@ -40,4 +40,7 @@ public class BizReqHistoryParamBO implements Serializable {
 
     /** 创建时间*/
     private Long created;
+
+    /**项目id*/
+    private Long projectId;
 }
