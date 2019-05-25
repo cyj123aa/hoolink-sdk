@@ -123,6 +123,12 @@ public class MediaTaskBO implements Serializable {
     private Long created;
 
     /**
+     * 创建时间
+     * 表字段 : media_task.play_time
+     */
+    private Long playTime;
+
+    /**
      * 执行时间，此字段只在通过项目查询任务清单排序的时候使用
      */
     private Long runTime;
