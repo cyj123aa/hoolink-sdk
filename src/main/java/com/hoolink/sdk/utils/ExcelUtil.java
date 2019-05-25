@@ -158,7 +158,7 @@ public class ExcelUtil {
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             hssfWorkbook.write(out);
             resource = new ByteArrayResource(out.toByteArray());
-            String excelName = String.format("%1s_%2s.xlsx", fileName, new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
+            String excelName = String.format("%1s_%2s.xls", fileName, new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
             String fileDisposition = null;
             fileDisposition = "attachment;filename=" + URLEncoder.encode(excelName, "UTF-8");
 
