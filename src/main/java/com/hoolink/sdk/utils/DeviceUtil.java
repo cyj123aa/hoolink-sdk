@@ -38,39 +38,6 @@ public class DeviceUtil {
     }
 
     /**
-     * 根据分组集合获取树结构
-     *
-     * @param groups
-     * @return
-     */
-    public static List<GroupTreeBO> getGroupTreeBOByList(List<GroupBO> groups) {
-        List<GroupTreeBO> result = new ArrayList<>();
-        if (CollectionUtils.isNotEmpty(groups)) {
-            groups.forEach(group -> {
-                GroupTreeBO groupTreeBO = new GroupTreeBO();
-                groupTreeBO.setKey(group.getId());
-                groupTreeBO.setValue(group.getId());
-                groupTreeBO.setTitle(group.getGroupName());
-                groupTreeBO.setDeviceSize(group.getDeviceSize());
-                if (CollectionUtils.isNotEmpty(group.getManagers())) {
-                    List<DeviceTreeBO> children = new ArrayList<>();
-                    group.getManagers().forEach(manager -> {
-                        DeviceTreeBO device = new DeviceTreeBO();
-                        device.setKey(manager.getId());
-                        device.setValue(manager.getId());
-                        device.setTitle(manager.getDeviceName());
-                        device.setType(manager.getDeviceTypeId());
-                        children.add(device);
-                    });
-                    groupTreeBO.setChildren(children);
-                }
-                result.add(groupTreeBO);
-            });
-        }
-        return result;
-    }
-
-    /**
      * 获取需要排除的设备:
      * * 气体检测
      * * 环境监测
