@@ -148,6 +148,12 @@ public enum HoolinkExceptionMassageEnum {
     READ_INIT_MENU_FAILED("初始化菜单列表失败"),
     READ_NEXT_MENU_FAILED("获取下级菜单列表失败"),
     USER_ACCOUNT_EXISTS("该账号已注册"),
+    EXCEL_COMPANY_ERROR("请选择正确的公司"),
+    EXCEL_DEPT_ERROR("请选择正确的部门"),
+    EXCEL_TEAM_ERROR("请选择正确的team"),
+    EXCEL_ROLE_ERROR("请选择正确的角色"),
+    EXCEL_ENCRY_LEVEL_ERROR("请选择正确的加密等级"),
+    EXCEL_VIEW_ENCRY_PERMITTED_ERROR("请选择是否可见员工密保等级"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),

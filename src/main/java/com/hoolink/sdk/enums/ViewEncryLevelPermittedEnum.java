@@ -19,7 +19,23 @@ public enum ViewEncryLevelPermittedEnum {
     private Boolean key;
     private String value;
     
-    ViewEncryLevelPermittedEnum(Boolean key, String value){
+    public Boolean getKey() {
+		return key;
+	}
+
+	public void setKey(Boolean key) {
+		this.key = key;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	ViewEncryLevelPermittedEnum(Boolean key, String value){
         this.key = key;
         this.value = value;
     }
