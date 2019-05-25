@@ -59,9 +59,14 @@ public class ScreenPlayConfigBO implements Serializable {
     private List<DeviceFileTypeBO> files;
 
     /*** 清单生成的lst文件ID */
-    @NotNull(message = "lst文件ID不能为空")
-    private Long lstObsId;
+    private Long obsId;
 
     /*** 文件下发状态状态：0：下发中， 1：下发成功，2：下发失败 */
     private Byte sendStatus;
+
+    /*** 下行的播放清单名称：格式为play001.lst-play100.lst' */
+    private String innerName;
+
+    /*** 播放文件序号，与inner_name相对应 */
+    private Integer playIndex;
 }
