@@ -20,7 +20,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * @date 2019/4/23
  */
 @ConstraintComposition(CompositionType.OR)
-@Pattern(regexp = "1[3|4|5|7|8][0-9]\\d{8}")
+@Pattern(regexp = "1[3|4|5|6|7|8][0-9]\\d{8}")
 @Documented
 @Constraint(validatedBy = {})
 @Target({METHOD, FIELD, CONSTRUCTOR, PARAMETER})
