@@ -18,6 +18,11 @@ public class SetClockPlanBO {
      */
     private Map<String,List<LightPlanWorkBO>> external;
 
-    private Long bizId;
+    /**
+     * 命令下发参数
+     * key: 集中器MAC地址
+     * value: 该集中器下所有单灯MAC地址
+     */
+    private Map<String, List<String>> removeExternal;
 
 }
