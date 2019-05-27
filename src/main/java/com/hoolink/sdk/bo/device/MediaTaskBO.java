@@ -109,6 +109,30 @@ public class MediaTaskBO implements Serializable {
      */
     private Boolean usingStatus;
 
+
+    /**
+     * 三方任务ID
+     * 表字段 : media_task.random
+     */
+    private String random;
+
+    /**
+     * 创建时间
+     * 表字段 : media_task.created
+     */
+    private Long created;
+
+    /**
+     * 创建时间
+     * 表字段 : media_task.play_time
+     */
+    private Long playTime;
+
+    /**
+     * 执行时间，此字段只在通过项目查询任务清单排序的时候使用
+     */
+    private Long runTime;
+
     /**
      * 策略列表：周或者日期
      */

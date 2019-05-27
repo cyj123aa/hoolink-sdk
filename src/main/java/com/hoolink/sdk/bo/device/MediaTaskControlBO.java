@@ -1,8 +1,13 @@
 package com.hoolink.sdk.bo.device;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalTime;
 import java.util.List;
 
 /**
@@ -38,16 +43,23 @@ public class MediaTaskControlBO implements Serializable {
     private Long projectId;
 
 
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    private LocalTime startTime;
+
+    /**
+     * 结束时间
+     * 表字段 : media_task.end_time
+     */
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    private LocalTime endTime;
+
     /**
      * 删除标志
      * 表字段 : media_task.enabled
      */
     private Boolean enabled;
-
-    /**
-     * 冲突时间
-     */
-    private String conflictTime;
 
     /**
      * 定时类型：1：每天，2：自定义，3：特殊日期
@@ -67,14 +79,20 @@ public class MediaTaskControlBO implements Serializable {
      */
     private Boolean usingStatus;
 
+    /**
+     * 三方任务ID
+     * 表字段 : media_task.random
+     */
+    private String random;
+
 
     /**
-     * 时间
+     * 策略列表
      */
     private List<String> strategys;
 
     /**
-     * 设备
+     * 设备ID列表
      */
-    private List<MediaTaskConflictDeviceBO> deviceIds;
+    private List<Long> deviceIds;
 }
