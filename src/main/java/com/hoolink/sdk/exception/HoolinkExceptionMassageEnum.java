@@ -97,6 +97,11 @@ public enum HoolinkExceptionMassageEnum {
     SCREEN_CREATE_LST_ERROR("清单LST文件创建失败"),
     SCREEN_TXT_ID_ERROR("文本ID不正确"),
     PROJECT_CONFIG_MAX_ERROR("该项目下项目已经达到100个，不可再添加"),
+    SCREEN_ONLINE_ERROR("显示屏上线状态更新失败"),
+    SCREEN_OFFLINE_ERROR("显示屏下线状态更新失败"),
+    SCREEN_DATA_ERROR("找不到需要操控的清单或者设备"),
+    SCREEN_ALL_OFFLINE_ERROR("该清单中显示屏全部离线"),
+    SCREEN_CONFIG_ID_ERROR("清单ID不正确"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),

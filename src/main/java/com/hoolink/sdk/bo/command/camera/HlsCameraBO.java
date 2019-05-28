@@ -14,6 +14,4 @@ public class HlsCameraBO {
 
     private String deviceName;
 
-
-
 }
