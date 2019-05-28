@@ -13,6 +13,9 @@ public class DeviceLightBO {
     /** 单灯扩展表*/
     private Long id;
 
+    /** 单灯mac */
+    private String mac;
+
     /** 所属集中器ID*/
     private Long externalId;
 

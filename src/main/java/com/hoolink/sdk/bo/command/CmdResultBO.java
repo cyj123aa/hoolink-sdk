@@ -28,4 +28,7 @@ public class CmdResultBO implements Serializable {
 
     /**设备型号id*/
     private Long deviceSubTypeId;
+
+    /**指令码*/
+    private String cmdCode;
 }
