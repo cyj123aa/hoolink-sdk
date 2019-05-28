@@ -100,7 +100,7 @@ public enum HoolinkExceptionMassageEnum {
     SCREEN_ONLINE_ERROR("显示屏上线状态更新失败"),
     SCREEN_OFFLINE_ERROR("显示屏下线状态更新失败"),
     SCREEN_DATA_ERROR("找不到需要操控的清单或者设备"),
-    SCREEN_ALL_OFFLINE_ERROR("该清单中有显示屏全部离线"),
+    SCREEN_ALL_OFFLINE_ERROR("该清单中显示屏全部离线"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
