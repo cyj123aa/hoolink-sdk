@@ -157,7 +157,7 @@ public enum HoolinkExceptionMassageEnum {
     USER_NO_EXISTS("编号重复"),
     DEPARTMENT_FORMAT_ERROR("部门格式不正确！"),
     TYPE_AT_LEASE_DEPT("请至少选择到部门层级！"),
-    DEPARTMENT_REPEAT_OR_CONTAIN("部门重复或者父子关系！"),
+    DEPARTMENT_REPEAT_OR_CONTAIN("部门添加不能出现重复或者包含的关系！"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
