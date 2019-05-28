@@ -18,17 +18,17 @@ public class SetVolumeParamBO {
      * 终端ID
      */
     @NotEmpty(message = "tids不能为空")
-    private List<Long> tids;
+    private Long tids;
     /**
      * 音量
      */
     private String vol;
 
-    public List<Long> getTids() {
+    public Long getTids() {
         return tids;
     }
 
-    public void setTids(List<Long> tids) {
+    public void setTids(Long tids) {
         this.tids = tids;
     }
 

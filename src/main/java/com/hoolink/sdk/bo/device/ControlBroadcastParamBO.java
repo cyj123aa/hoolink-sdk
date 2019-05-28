@@ -10,10 +10,12 @@ import java.util.List;
  **/
 public class ControlBroadcastParamBO extends DeviceBroadcastBO {
 
+    private Long deviceId;
+
     /**
      * 广播组的id
      */
-    private List<Long> configGroupIds;
+    private List<Long> groupIds;
 
     /**
      * 标志是否开始广播/停止广播(0:开始,1:停止)--世邦
@@ -21,12 +23,20 @@ public class ControlBroadcastParamBO extends DeviceBroadcastBO {
      */
     private Byte startOrStop;
 
-    public List<Long> getConfigGroupIds() {
-        return configGroupIds;
+    public Long getDeviceId() {
+        return deviceId;
     }
 
-    public void setConfigGroupIds(List<Long> configGroupIds) {
-        this.configGroupIds = configGroupIds;
+    public void setDeviceId(Long deviceId) {
+        this.deviceId = deviceId;
+    }
+
+    public List<Long> getGroupIds() {
+        return groupIds;
+    }
+
+    public void setGroupIds(List<Long> groupIds) {
+        this.groupIds = groupIds;
     }
 
     public Byte getStartOrStop() {
@@ -35,5 +45,14 @@ public class ControlBroadcastParamBO extends DeviceBroadcastBO {
 
     public void setStartOrStop(Byte startOrStop) {
         this.startOrStop = startOrStop;
+    }
+
+    @Override
+    public String toString() {
+        return "ControlBroadcastParamBO{" +
+                "deviceId=" + deviceId +
+                ", groupIds=" + groupIds +
+                ", startOrStop=" + startOrStop +
+                '}';
     }
 }
