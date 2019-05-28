@@ -19,9 +19,8 @@ public enum HoolinkExceptionMassageEnum {
     NOT_AUTH("无权限访问"),
     AUTH_ERROR("权限获取失败"),
     COMMAND_DOWN_ERROR("指令下发失败"),
-    SWITCHCMD_CLASS_NULL("分发命令类未找到"),
-    SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
     NOT_REGISTERED_IN_THE_REGISTRY("未连接到注册中心"),
+    SERVICE_CONSUME_FAULT("微服务调用失败"),
 
     /*** 用户管理提示信息message */
     USER_CUSTOMER_NUMBER_EXIST("客户号已存在"),
@@ -90,7 +89,18 @@ public enum HoolinkExceptionMassageEnum {
 
     FACTORY_ID_NOT_NULL_ERROR("厂商ID不能为空"),
     DEVICE_ID_NOT_NULL_ERROR("设备ID不能为空"),
+    DEVICES_ALREADY_GROUPED("保存失败，设备已存在其他分组中"),
 
+    /*** 显示屏相关提示信息 */
+    SCREEN_CREATE_LST_ERROR("清单LST文件创建失败"),
+    SCREEN_TXT_ID_ERROR("文本ID不正确"),
+    PROJECT_CONFIG_MAX_ERROR("该项目下项目已经达到100个，不可再添加"),
+    SCREEN_ONLINE_ERROR("显示屏上线状态更新失败"),
+    SCREEN_OFFLINE_ERROR("显示屏下线状态更新失败"),
+    SCREEN_DATA_ERROR("找不到需要操控的清单或者设备"),
+    SCREEN_ALL_OFFLINE_ERROR("该清单中显示屏全部离线"),
+    SCREEN_CONFIG_ID_ERROR("清单ID不正确"),
+    LIGHT_DIMMER_ERROR("调光值不能为空"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
@@ -132,6 +142,7 @@ public enum HoolinkExceptionMassageEnum {
     PHONE_EXISTS("该手机号已存在"),
     GET_CHECK_EXCEL_DATA_ERROR("获取校验excel数据结果失败"),
     READ_FIRMWARE_FILE_ERROR("固件文件读取失败"),
+    READ_FILE_ERROR("文件读取失败"),
     CREATE_FIRMWARE_ERROR("创建固件失败！"),
     UPDATE_FIRMWARE_ERROR("编辑固件失败！"),
     READ_FIRMWARE_BY_ID_ERROR("查询固件详情失败！"),
@@ -143,6 +154,8 @@ public enum HoolinkExceptionMassageEnum {
     NOT_LOGIN_ERROR("未登录！"),
     FORBIDDEN("无权访问！"),
     ACCESS_OBS_FAILED("访问OBS服务失败"),
+    READ_INIT_MENU_FAILED("初始化菜单列表失败"),
+    READ_NEXT_MENU_FAILED("获取下级菜单列表失败"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -162,6 +175,12 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_GROUP_NOT_EXIST("密码不能为空, 请输入密码!"),
     MANAGER_USER_NOT_EXIST_ERROR("该用户不存在！"),
     CREATE_GROUP_ERROR("创建组失败!"),
+
+    /** hoolink-command */
+    SWITCHCMD_CLASS_NULL("分发命令类未找到"),
+    SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
+    NB_ACCESS_TOKEN_FAULT("nb平台获取accessToken失败"),
+    NB_SERVICE_CONSUME_FAULT("nb平台调用失败"),
     ;
 
     private String message;

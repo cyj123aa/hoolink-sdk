@@ -48,4 +48,7 @@ public class ScreenDeviceBO extends DeviceManagerBO {
     /*** 灯杆型号名称 */
     private String poleSubTypeName;
 
+    /*** 设备类型ID */
+    private Long subTypeId;
+
 }

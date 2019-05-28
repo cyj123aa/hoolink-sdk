@@ -1,8 +1,13 @@
 package com.hoolink.sdk.bo.device;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalTime;
 
 /**
  * @author XuBaofeng.
@@ -24,10 +29,14 @@ public class LightStrategyDownBO implements Serializable {
     private Integer dimmingValue;
 
     /*** 开始时间 */
-    private Long startTime;
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
+    private LocalTime startTime;
 
     /*** 结束时间 */
-    private Long endTime;
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
+    private LocalTime endTime;
 
     /*** 集中器物理地址 */
     private Long externalId;

@@ -15,6 +15,12 @@ public class UpdateDimmingBO {
     /** 设备id */
     private List<Long> ids;
 
+    /** 设备mac */
+    private String mac;
+
+    /**设备型号id */
+    private Long deviceSubTypeId;
+
     /** 调光值 */
     private Integer dimmingValue;
 }

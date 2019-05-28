@@ -36,4 +36,6 @@ public class SearchLightStrategyBO extends PageParamBO implements Serializable {
 
     /*** 不包含的ID */
     private Long outId;
+
+    private String orderByiFieldIds;
 }

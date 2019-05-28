@@ -12,13 +12,13 @@ import java.util.List;
  * description:
  */
 @Data
-public class StrategyLightBO implements Serializable {
+public class DeviceShuttleBoxBO implements Serializable {
     private static final long serialVersionUID = 3134692051407112749L;
 
     /*** 所有设备 */
-    private List<GroupBO> allDevice;
+    private List<GroupTreeBO> allDevice;
 
     /*** 已选设备 */
-    private List<GroupBO> beSelectDevice;
+    private List<GroupTreeBO> beSelectDevice;
 
 }

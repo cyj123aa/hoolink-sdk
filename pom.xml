@@ -80,11 +80,6 @@
             <artifactId>commons-collections</artifactId>
             <version>${commons.collections.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>23.0</version>
-        </dependency>
         <!-- fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
