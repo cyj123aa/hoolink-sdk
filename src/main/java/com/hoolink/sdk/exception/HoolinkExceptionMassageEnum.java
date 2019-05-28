@@ -19,8 +19,6 @@ public enum HoolinkExceptionMassageEnum {
     NOT_AUTH("无权限访问"),
     AUTH_ERROR("权限获取失败"),
     COMMAND_DOWN_ERROR("指令下发失败"),
-    SWITCHCMD_CLASS_NULL("分发命令类未找到"),
-    SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
     NOT_REGISTERED_IN_THE_REGISTRY("未连接到注册中心"),
     SERVICE_CONSUME_FAULT("微服务调用失败"),
 
@@ -102,6 +100,7 @@ public enum HoolinkExceptionMassageEnum {
     SCREEN_DATA_ERROR("找不到需要操控的清单或者设备"),
     SCREEN_ALL_OFFLINE_ERROR("该清单中显示屏全部离线"),
     SCREEN_CONFIG_ID_ERROR("清单ID不正确"),
+    LIGHT_DIMMER_ERROR("调光值不能为空"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
@@ -176,6 +175,12 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_GROUP_NOT_EXIST("密码不能为空, 请输入密码!"),
     MANAGER_USER_NOT_EXIST_ERROR("该用户不存在！"),
     CREATE_GROUP_ERROR("创建组失败!"),
+
+    /** hoolink-command */
+    SWITCHCMD_CLASS_NULL("分发命令类未找到"),
+    SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
+    NB_ACCESS_TOKEN_FAULT("nb平台获取accessToken失败"),
+    NB_SERVICE_CONSUME_FAULT("nb平台调用失败"),
     ;
 
     private String message;
