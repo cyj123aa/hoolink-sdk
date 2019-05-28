@@ -102,6 +102,7 @@ public enum HoolinkExceptionMassageEnum {
     SCREEN_DATA_ERROR("找不到需要操控的清单或者设备"),
     SCREEN_ALL_OFFLINE_ERROR("该清单中显示屏全部离线"),
     SCREEN_CONFIG_ID_ERROR("清单ID不正确"),
+    LIGHT_DIMMER_ERROR("调光值不能为空"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
