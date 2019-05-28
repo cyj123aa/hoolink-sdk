@@ -77,16 +77,6 @@ public class ManagerUserBO {
     private String statusDesc;
     
     /**
-     * 是否可见员工密保等级
-     */
-    private Boolean viewEncryLevelPermitted;
-    
-    /**
-     * 是否可见员工密保等级
-     */
-    private String viewEncryLevelPermittedDesc;
-    
-    /**
      * 性别: 1/0 男/女
      */
     private Boolean sex;
