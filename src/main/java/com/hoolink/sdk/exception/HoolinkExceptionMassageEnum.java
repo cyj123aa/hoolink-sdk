@@ -154,6 +154,10 @@ public enum HoolinkExceptionMassageEnum {
     EXCEL_ROLE_ERROR("请选择正确的角色"),
     EXCEL_ENCRY_LEVEL_ERROR("请选择正确的加密等级"),
     EXCEL_VIEW_ENCRY_PERMITTED_ERROR("请选择是否可见员工密保等级"),
+    USER_NO_EXISTS("编号重复"),
+    DEPARTMENT_FORMAT_ERROR("部门格式不正确！"),
+    TYPE_AT_LEASE_DEPT("请至少选择到部门层级！"),
+    DEPARTMENT_REPEAT_OR_CONTAIN("部门重复或者父子关系！"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),

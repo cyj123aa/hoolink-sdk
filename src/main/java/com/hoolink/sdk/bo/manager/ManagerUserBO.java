@@ -87,6 +87,16 @@ public class ManagerUserBO {
     private String viewEncryLevelPermittedDesc;
     
     /**
+     * 性别: 1/0 男/女
+     */
+    private Boolean sex;
+    
+    /**
+     * 性别
+     */
+    private String sexDesc;
+    
+    /**
      *创建时间 
      */
     private Long created;
