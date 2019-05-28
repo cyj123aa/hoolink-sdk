@@ -30,6 +30,15 @@ public enum EdmResourceRepertory {
         return null;
     }
 
+    public static final EdmResourceRepertory getByType(Integer type) {
+        for (EdmResourceRepertory edmResourceRepertory : EdmResourceRepertory.values()) {
+            if (edmResourceRepertory.key.equals(type)) {
+                return edmResourceRepertory;
+            }
+        }
+        return null;
+    }
+
     public Integer getKey() {
         return key;
     }
