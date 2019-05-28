@@ -3,6 +3,7 @@ package com.hoolink.sdk.bo.base;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -33,7 +34,7 @@ public class CurrentUserBO implements Serializable {
     private Byte userType;
 
     /*** 登录用户的权限菜单URL */
-    private Set<String> authUrls;
+    private Map<String, Set<String>> authUrls;
 
     /** 手机号*/
     private String phone;
@@ -43,5 +44,7 @@ public class CurrentUserBO implements Serializable {
     private Byte roleLevel;
     /** 所属公司 **/
     private Set<Long> comanyIdSet;
+    /** 权限url**/
+    private Set<String> accessUrlSet;
 
 }
