@@ -29,7 +29,6 @@ public class CreateLightStrategyBO implements Serializable {
     private String name;
 
     /*** 策略描述 */
-    @NotBlank(message = "策略描述不允许为空")
     private String description;
 
     /*** 策略模式 */
