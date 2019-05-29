@@ -23,4 +23,9 @@ public class UserTemporaryResourceBO {
      * 文件类型
      */
     private Byte resource_type;
+
+    /**
+     * 父节点
+     */
+    private String parentIdCode;
 }
