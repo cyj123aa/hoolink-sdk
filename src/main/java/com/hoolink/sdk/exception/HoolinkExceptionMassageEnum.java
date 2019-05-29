@@ -158,7 +158,9 @@ public enum HoolinkExceptionMassageEnum {
     DEPARTMENT_FORMAT_ERROR("部门格式不正确！"),
     TYPE_AT_LEASE_DEPT("请至少选择到部门层级！"),
     DEPARTMENT_REPEAT_OR_CONTAIN("部门添加不能出现重复或者包含的关系！"),
-    EXCEL_DATA_EMPTY("excel空数据！"),
+    EXCEL_DATA_FORMAT_ERROR("excel数据格式错误！"),
+    EXCEL_SEX_ERROR("请选择性别"),
+    EXCEL_IMPORTED_FAILED("数据导入失败"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
