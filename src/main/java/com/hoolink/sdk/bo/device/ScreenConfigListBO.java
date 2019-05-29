@@ -54,5 +54,14 @@ public class ScreenConfigListBO implements Serializable {
     /*** 清单状态：false 禁用 true启用 */
     private Boolean configStatus;
 
+    /*** 创建时间 */
+    private Long created;
+
+    /*** 修改时间 */
+    private Long updated;
+
+    /*** 距离策略开始间隔时间 */
+    private Long intervalTime;
+
     
 }
