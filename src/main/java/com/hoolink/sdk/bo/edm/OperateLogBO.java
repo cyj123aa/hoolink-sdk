@@ -8,13 +8,14 @@ import lombok.Data;
  * @date 2019/5/28 10:41
  */
 @Data
-public class OperateLogBO extends PageParam {
+public class OperateLogBO {
 
     private Long id;
 
     private Long created;
 
     private Long creator;
+    private String name;
     /**
      * 操作类型
      */
