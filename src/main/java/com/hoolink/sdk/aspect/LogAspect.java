@@ -104,14 +104,9 @@ public class LogAspect {
         } catch (Exception e) {
             // ===== 日志输出之后组装返回值
             String message = e.getMessage();
-            if (e instanceof BusinessException) {
+            if (!(e instanceof BusinessException) && !(e instanceof ConstraintViolationException)) {
                 // ----- 当controller捕获到的异常是BusinessException异常
-                if (!HoolinkExceptionMassageEnum.isExist(message)) {
-                    message = assembleCodeAndMsg(method);
-                }
-            } else if (e instanceof ConstraintViolationException) {
                 // ----- 当controller捕获的异常是由于参数校验不通过引起的ConstraintViolationException时, 不做任何处理, 只接将message返回
-            } else {
                 // ----- 当controller捕获到的异常不是自定义的异常
                 message = assembleCodeAndMsg(method);
             }

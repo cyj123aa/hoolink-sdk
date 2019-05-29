@@ -8,7 +8,7 @@ public class BroadcastGroupParamBO {
      * 关联麦克风id
      * 表字段 : broadcast_group.device_id
      */
-    private List<Long> deviceId;
+    private Long deviceId;
 
     /**
      * 项目id
@@ -30,7 +30,8 @@ public class BroadcastGroupParamBO {
      *
      * @return broadcast_group.device_id：关联麦克风id
      */
-    public List<Long> getDeviceId() {
+
+    public Long getDeviceId() {
         return deviceId;
     }
 
@@ -41,7 +42,8 @@ public class BroadcastGroupParamBO {
      * @param deviceId
      *            broadcast_group.device_id：关联麦克风id
      */
-    public void setDeviceId(List<Long> deviceId) {
+
+    public void setDeviceId(Long deviceId) {
         this.deviceId = deviceId;
     }
 
