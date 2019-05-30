@@ -147,7 +147,7 @@ public enum HoolinkExceptionMassageEnum {
     ACCESS_OBS_FAILED("访问OBS服务失败"),
     READ_INIT_MENU_FAILED("初始化菜单列表失败"),
     READ_NEXT_MENU_FAILED("获取下级菜单列表失败"),
-    USER_ACCOUNT_EXISTS("该账号已注册"),
+    USER_ACCOUNT_EXISTS("账号重复"),
     EXCEL_COMPANY_ERROR("请选择正确的公司"),
     EXCEL_DEPT_ERROR("请选择正确的部门"),
     EXCEL_TEAM_ERROR("请选择正确的team"),
