@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Data
 public class ScreenIdParamBO implements Serializable {
     private static final long serialVersionUID = 154587828461578876L;
-    
+
     /*** 显示屏ID */
     @NotNull(message = "显示屏ID不能为空")
     private Long screenId;
