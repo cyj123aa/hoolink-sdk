@@ -148,6 +148,7 @@ public enum HoolinkExceptionMassageEnum {
     READ_INIT_MENU_FAILED("初始化菜单列表失败"),
     READ_NEXT_MENU_FAILED("获取下级菜单列表失败"),
     LIST_MENU_BY_ROLE("根据角色获取菜单失败"),
+    ORG_INFO_ERROR("获取组织架构信息失败"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -172,7 +173,7 @@ public enum HoolinkExceptionMassageEnum {
     USER_SECURITY_NOT_EXIST("用户资源密保等级不存在"),
     OUTPUT_FILE_NOT_EXIST("输出的文件不纯在"),
     REPERTORY_INFO_ERROR("需要设置的文件资源为空！"),
-    MANAGE_DEPARTMENT_TREE("获取组织架构失败")
+    ORG_LIST_TREE_ERROR("获取组织架构树失败！")
     ;
 
     private String message;

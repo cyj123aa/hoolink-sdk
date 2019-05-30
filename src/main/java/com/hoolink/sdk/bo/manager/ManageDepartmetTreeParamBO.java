@@ -18,7 +18,7 @@ public class ManageDepartmetTreeParamBO implements Serializable {
     @NotEmpty(message = "组织架构id不能为空")
     private List<Long> idList;
 
-    /** 是否需要查询架构下人员 */
+    /** 是否需要查询架构下人员标识 */
     @NotNull(message = "是否需要查询组织架构的人员标识不能为空")
     private Boolean flag;
 }
