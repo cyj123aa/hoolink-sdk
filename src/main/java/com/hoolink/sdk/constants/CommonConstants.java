@@ -11,6 +11,8 @@ public class CommonConstants {
     public static final String COMMA = ",";
     public static final Long DEFAULT_USER_ID = 1L;
     public static final String DEFAULT_USER_ACCOUNT = "admin";
+    public static final String COLON_SEPARATE = ":";
+    public static final String UNDERLINE = "_";
 
     /*** 手机号长度 */
     public static final int MOBIL_PHONE_LENGTH = 11;
@@ -46,14 +48,10 @@ public class CommonConstants {
     public static final String COMMAND_UPGRADE_VERSION_ERROR = "版本号格式不正确";
     public static final String COMMAND_UPGRADE_FILE_ERROR = "文件格式不正确";
 
-
-    /*** 每次请求的唯一标识 */
-    public static final String TXID = "txId";
     /**
      * 获取全局用户信息
      */
     public static final String CURRENT_LOGIN_AUTH = "CURRENT_LOGIN_AUTH";
-
 
     /**
      * 显示屏进度条redisKey前缀 progress
@@ -77,7 +75,7 @@ public class CommonConstants {
     /**
      * jedis的工具类使用
      */
-    public static final String  STRING_NUM_0 = "0";
+    public static final String STRING_NUM_0 = "0";
     /**
      * 初始化默认值
      */

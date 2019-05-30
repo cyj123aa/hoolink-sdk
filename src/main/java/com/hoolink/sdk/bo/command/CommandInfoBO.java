@@ -36,4 +36,6 @@ public class CommandInfoBO implements Serializable {
      * 持续时间
      */
     private Integer time;
+
+    private String vol;
 }

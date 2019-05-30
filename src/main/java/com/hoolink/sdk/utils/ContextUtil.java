@@ -63,9 +63,8 @@ public class ContextUtil {
      *
      * @return
      */
-    private static final CurrentUserBO getDefaultUser() {
+    private static CurrentUserBO getDefaultUser() {
         CurrentUserBO userBO = new CurrentUserBO();
-        userBO = new CurrentUserBO();
         userBO.setUserId(CommonConstants.DEFAULT_USER_ID);
         userBO.setAccount(CommonConstants.DEFAULT_USER_ACCOUNT);
         return userBO;
@@ -76,8 +75,20 @@ public class ContextUtil {
      *
      * @return
      */
-    public static final String getTxid() {
-        return UUIDUtil.getTxId();
-        //return ContextUtils.getInvocationContext().getContext(CommonConstants.TXID);
+    public static String getTxid() {
+        if (ContextUtils.getInvocationContext() == null){
+            return null;
+        }
+        return ContextUtils.getInvocationContext().getContext(ContextConstant.TX_ID);
+    }
+
+    /**
+     * 获取每次请求的项目ID
+     *
+     * @return
+     */
+    public static Long getProjectId() {
+        String context = ContextUtils.getInvocationContext().getContext(ContextConstant.PROJECT_ID);
+        return Long.valueOf(context);
     }
 }

@@ -27,4 +27,7 @@ public class ProjectMenuTreeBO implements Serializable {
 
     /*** 只读\全部 */
     private Boolean readonly;
+
+    /*** 菜单类型 */
+    private Byte menuType;
 }

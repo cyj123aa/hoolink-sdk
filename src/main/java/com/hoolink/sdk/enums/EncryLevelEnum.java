@@ -6,9 +6,21 @@ package com.hoolink.sdk.enums;
  * @date 2019/05/15 19:03
  */
 public enum EncryLevelEnum {
+	/**
+	 * 一级
+	 */
 	ONE(1, "一级"),
+	/**
+	 * 二级
+	 */
 	TWO(2, "二级"),
+	/**
+	 * 三级
+	 */
 	THREE(3, "三级"),
+	/**
+	 * 四级
+	 */
 	FOUR(4, "四级");
 	
     private Integer key;

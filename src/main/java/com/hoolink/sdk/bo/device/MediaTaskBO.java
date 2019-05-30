@@ -6,6 +6,7 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
  * @DATE 2019/5/14 20:31
  */
 @Data
-public class MediaTaskBO {
+public class MediaTaskBO implements Serializable {
 
     /**
      * ID
@@ -75,6 +76,7 @@ public class MediaTaskBO {
      * 开始时间
      * 表字段 : media_task.start_time
      */
+
     @JsonDeserialize(using = LocalTimeDeserializer.class)
     @JsonSerialize(using = LocalTimeSerializer.class)
     private LocalTime startTime;
@@ -106,6 +108,30 @@ public class MediaTaskBO {
      * 表字段 : media_task.using_status
      */
     private Boolean usingStatus;
+
+
+    /**
+     * 三方任务ID
+     * 表字段 : media_task.random
+     */
+    private String random;
+
+    /**
+     * 创建时间
+     * 表字段 : media_task.created
+     */
+    private Long created;
+
+    /**
+     * 创建时间
+     * 表字段 : media_task.play_time
+     */
+    private Long playTime;
+
+    /**
+     * 执行时间，此字段只在通过项目查询任务清单排序的时候使用
+     */
+    private Long runTime;
 
     /**
      * 策略列表：周或者日期
