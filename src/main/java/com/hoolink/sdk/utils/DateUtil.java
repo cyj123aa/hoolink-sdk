@@ -1,6 +1,5 @@
 package com.hoolink.sdk.utils;
 
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -334,7 +333,6 @@ public final class DateUtil {
     public static String date2StringBySecond(Date date) {
         return date2String(date, "yyyy-MM-dd HH:mm:ss");
     }
-
 
     /**
      * 指定年月日，返回Date对象
@@ -964,7 +962,7 @@ public final class DateUtil {
      * @author : wangdong
      * @date : 2018/10/17 15:59
      */
-    public static Boolean judgeToday(Date inputJudgeDate)  {
+    public static Boolean judgeToday(Date inputJudgeDate) {
         //获取当前系统时间
         long longDate = System.currentTimeMillis();
         Date nowDate = new Date(longDate);
@@ -1046,7 +1044,7 @@ public final class DateUtil {
      * 以年为维度添加或减去指定的时间
      *
      * @param date 日期
-     * @param num 年数
+     * @param num  年数
      */
     public static Date getDateByYear(Date date, int num) {
         Calendar c = Calendar.getInstance();
@@ -1077,12 +1075,13 @@ public final class DateUtil {
 
     /**
      * 时间戳转为string时间格式
+     *
      * @param key
      * @return
      * @Auth lixiaoran
      * @Date 2019-04-18
      */
-    public static String getStringByTimeStamp(Long key){
+    public static String getStringByTimeStamp(Long key) {
         // 设置时间格式
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return format.format(key);
@@ -1100,8 +1099,38 @@ public final class DateUtil {
      */
     public static boolean timeConflict(LocalTime srcStart, LocalTime srcEnd, LocalTime distStart, LocalTime distEnd) {
         // 开始 > src结束 && 结束 < src开始， 当中需要考虑跨天场景
-        return  (srcEnd.isBefore(srcStart) || distStart.isBefore(srcEnd))
+        return (srcEnd.isBefore(srcStart) || distStart.isBefore(srcEnd))
                 && (distEnd.isBefore(distStart) || distEnd.isAfter(srcStart));
     }
 
+    /**
+     * 根据当前时间戳获取当前时周几
+     *
+     * @param dt
+     * @return
+     * @throws
+     * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
+     */
+    public static Integer getWeekByDate(Long dt) {
+        return getWeekByDate(new Date(dt));
+    }
+
+    /**
+     * 根据当前时间获取当前时周几
+     *
+     * @param dt
+     * @return
+     * @throws
+     * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
+     */
+    public static Integer getWeekByDate(Date dt) {
+        Integer[] weekDays = {7, 1, 2, 3, 4, 5, 6};
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(dt);
+        int w = cal.get(Calendar.DAY_OF_WEEK) - 1;
+        if (w < 0) {
+            w = 0;
+        }
+        return weekDays[w];
+    }
 }
