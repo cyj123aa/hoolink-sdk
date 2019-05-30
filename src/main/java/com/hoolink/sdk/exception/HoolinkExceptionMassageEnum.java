@@ -124,7 +124,6 @@ public enum HoolinkExceptionMassageEnum {
     GET_DEVICE_TYPE_MAINTAIN_INFO("获得设备类型维保信息"),
     USER_ACCOUNT_OR_PASSWORD_ERROR("账号或密码错误，请重新输入"),
     USER_FORBIDDEN("该账号已被禁用，请联系管理员"),
-    USER_DELETED("该账号已被删除，请联系管理员"),
     PHONE_CODE_ERROR("您输入的验证码有误！"),
     ACCOUNT_NOT_EXIST("该账号不存在!"),
     NOT_BIND_PHONE("未绑定安全手机，请联系管理员"),
