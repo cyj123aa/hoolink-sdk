@@ -103,6 +103,10 @@ public enum HoolinkExceptionMassageEnum {
     LIGHT_DIMMER_ERROR("调光值不能为空"),
     CHANNEL_NO_ERROR("该设备已断线，不可操作"),
 
+    /*** 巡检 */
+    INSPECTION_TIME_SELECT_ERROR("请选择自定义时间"),
+    INSPECTION_RUNNING_UPDATE_ERROR("巡检计划正在执行中，无法编辑！"),
+
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
     CREATE_CUSTOMER_ERROR("客户创建失败！"),

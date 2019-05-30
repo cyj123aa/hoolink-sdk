@@ -37,6 +37,15 @@ public class ContextUtil {
     }
 
     /**
+     * 获取全局 UserId
+     *
+     * @return
+     */
+    public static Long getCurrentUserId() {
+        return getCurrentUser().getUserId();
+    }
+
+    /**
      * 获取manage全局User
      *
      * @return
