@@ -3,7 +3,6 @@ package com.hoolink.sdk.bo.device;
 /**
  * @version V1.0
  * @classname:BroadcastRecordingFilesParamBO
- * @description: TODO
  * @author: xiaolei.yang
  * @date: 2019/5/17 15:11
  * @Description 世邦录音文件BO

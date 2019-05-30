@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  * @ClassName ConstantUtil
- * @Description TODO
  * @Author Administrator
  * @DATE 2018/11/13 13:03
  */
