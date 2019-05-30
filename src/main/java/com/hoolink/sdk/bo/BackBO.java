@@ -43,4 +43,10 @@ public class BackBO<T> implements Serializable {
         this.message = message;
     }
 
+    public BackBO(Boolean status,T data, String message){
+        this.status = status;
+        this.message = message;
+        this.data = data;
+    }
+
 }
