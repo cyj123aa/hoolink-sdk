@@ -1,11 +1,9 @@
 package com.hoolink.sdk.bo.manager;
 
-import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 
 /**
  * @author : chenzb
- * @Description : TODO
  * @date : Created on 2019/4/25 15:57
  */
 @Data
