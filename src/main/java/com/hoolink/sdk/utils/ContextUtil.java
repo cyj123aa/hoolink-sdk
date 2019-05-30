@@ -76,7 +76,7 @@ public class ContextUtil {
      * @return
      */
     public static String getTxid() {
-        if (ContextUtils.getInvocationContext() == null){
+        if (ContextUtils.getInvocationContext() == null) {
             return null;
         }
         return ContextUtils.getInvocationContext().getContext(ContextConstant.TX_ID);
@@ -90,5 +90,14 @@ public class ContextUtil {
     public static Long getProjectId() {
         String context = ContextUtils.getInvocationContext().getContext(ContextConstant.PROJECT_ID);
         return Long.valueOf(context);
+    }
+
+    /**
+     * 获取每次请求的用户ID
+     *
+     * @return
+     */
+    public static Long getUserId() {
+        return getCurrentUser().getUserId();
     }
 }
