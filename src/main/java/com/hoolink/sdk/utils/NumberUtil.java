@@ -113,4 +113,17 @@ public class NumberUtil {
         BigDecimal b2 = new BigDecimal(n2.toString());
         return b1.divide(b2).floatValue();
     }
+
+    /**
+     * 两个Double数相除后取四舍五入保留两位小数
+     *
+     * @param n1 number 1
+     * @param n2 number 2
+     * @return n1 / n2 后四舍五入
+     */
+    public static Double round(Double n1, Double n2){
+        Double div = div(n1, n2);
+        BigDecimal b1 = new BigDecimal(div);
+        return b1.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+    }
 }

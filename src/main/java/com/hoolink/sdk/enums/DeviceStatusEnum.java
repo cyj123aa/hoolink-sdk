@@ -9,7 +9,7 @@ package com.hoolink.sdk.enums;
 public enum DeviceStatusEnum {
     /*** 设备状态 */
     OPEN(1, "工作中"),
-    CLOSE(2, "在线"),
+    CLOSE(2, "待机"),
     ALARM(3, "故障"),
     OFFLINE(4, "离线"),
     MAINTAIN(5, "维修中");

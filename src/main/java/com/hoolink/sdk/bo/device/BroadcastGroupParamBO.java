@@ -1,5 +1,7 @@
 package com.hoolink.sdk.bo.device;
 
+import java.util.List;
+
 public class BroadcastGroupParamBO {
 
     /**
@@ -28,6 +30,7 @@ public class BroadcastGroupParamBO {
      *
      * @return broadcast_group.device_id：关联麦克风id
      */
+
     public Long getDeviceId() {
         return deviceId;
     }
@@ -39,6 +42,7 @@ public class BroadcastGroupParamBO {
      * @param deviceId
      *            broadcast_group.device_id：关联麦克风id
      */
+
     public void setDeviceId(Long deviceId) {
         this.deviceId = deviceId;
     }

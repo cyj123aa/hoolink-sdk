@@ -45,8 +45,14 @@ public class DeviceManagerBO implements Serializable {
     /*** 设备类型 */
     private Long deviceTypeId;
 
+    /*** 设备类型名 */
+    private String typeName;
+
     /*** 设备型号 */
     private Long deviceSubTypeId;
+
+    /*** 型号名称 */
+    private String subTypeName;
 
     /*** 模型编号 */
     private String modelNo;
@@ -79,15 +85,7 @@ public class DeviceManagerBO implements Serializable {
     private String installAddress;
 
     /*** 版本号 */
-    private Long versionId;
-    /*** 版本号 */
     private String versionName;
-
-    /*** 型号名称 */
-    private String subTypeName;
-
-    /*** 设备类型名 */
-    private String typeName;
 
     /*** 在线状态 */
     private Boolean onlineStatus;
@@ -98,11 +96,10 @@ public class DeviceManagerBO implements Serializable {
     /*** 操作类型 1 增加，2修改*/
     private String operateType;
 
-    /** 分组Id */
+    /*** 分组Id */
     private Long groupId;
 
-    /** 分组名称 */
+    /*** 分组名称 */
     private String groupName;
-
 
 }

@@ -17,5 +17,7 @@ public class SearchGroupBO extends PageParamBO implements Serializable {
 
     private Long projectId;
 
+    private Long groupId;
+
     private String groupName;
 }

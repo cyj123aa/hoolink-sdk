@@ -20,7 +20,7 @@ public class BackBOUtil {
     }
 
     public static <T> BackBO<T> operateError(T data, String message) {
-        return new BackBO<>(Boolean.FALSE, message);
+        return new BackBO<>(Boolean.FALSE,data, message);
     }
 
     public static final <T> BackBO<T> defaultBackBO() {

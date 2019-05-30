@@ -20,7 +20,7 @@ public class Constants {
     public static final String SELECT_TYPE_DEVICE = "device";
 
     public static final int HTTP_STATUS_200 = 200;
-
+    public static final String YINGSHI_CODE = "200";
     public static final int HTTP_STATUS_206 = 206;
 
     /**

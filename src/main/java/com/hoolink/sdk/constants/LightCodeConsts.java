@@ -75,4 +75,7 @@ public class LightCodeConsts {
      * <br>该状态在主动查询设备状态时表示集中器正常，但有设备存在异常
      */
     public static final String ACK_PART_SUCCESS = "10";
+
+    public static final String DOWN_CMD_36 = "0x36";
+    public static final String DOWN_CMD_37 = "0x37";
 }
