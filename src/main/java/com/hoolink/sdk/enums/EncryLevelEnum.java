@@ -9,23 +9,23 @@ public enum EncryLevelEnum {
 	/**
 	 * 特级
 	 */
-	SUPER(0, "特级"),
+	SUPER(1, "特级"),
 	/**
 	 * 一级
 	 */
-	ONE(1, "一级"),
+	ONE(2, "一级"),
 	/**
 	 * 二级
 	 */
-	TWO(2, "二级"),
+	TWO(3, "二级"),
 	/**
 	 * 三级
 	 */
-	THREE(3, "三级"),
+	THREE(4, "三级"),
 	/**
 	 * 四级
 	 */
-	FOUR(4, "四级");
+	FOUR(5, "四级");
 	
     private Integer key;
     private String value;
