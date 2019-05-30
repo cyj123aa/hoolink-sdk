@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
@@ -17,6 +18,7 @@ public class BaseParam<T> implements Serializable {
 
     private static final long serialVersionUID = 3710671367322502503L;
 
+    @NotNull(message = "参数不允许为空")
     private T data;
 
 }

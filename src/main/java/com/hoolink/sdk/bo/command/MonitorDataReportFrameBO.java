@@ -10,85 +10,80 @@ import lombok.Data;
 @Data
 public class MonitorDataReportFrameBO {
 
-    /**
-     * 监控器MAC
-     */
+    /** 设备id */
+    private Long monitorId;
+
+    /** 环境传感器扩展表外键ID */
+    private Long deviceSensorEnvironmentId;
+
+    /** 气体传感器扩展表外键ID */
+    private Long deviceSensorGasId;
+
+    /** 漏电传感器扩展表外键ID */
+    private Long deviceSensorLeakageId;
+
+    /** 水位传感器扩展表外键ID */
+    private Long deviceSensorWaterLevelId;
+
+    /** 监控器MAC */
     private String mac;
-    /**
-     * 平均风向
-     */
+
+    /** 平均风向 */
     private Integer windDirection;
-    /**
-     * 平均风速
-     */
+
+    /** 平均风速 */
     private Float windSpeed;
-    /**
-     * 温度
-     */
+
+    /** 温度 */
     private Float temperature;
-    /**
-     * 湿度
-     */
+
+    /** 湿度*/
     private Float humidity;
-    /**
-     * 气压
-     */
+
+    /** 气压 */
     private Float airPressure;
-    /**
-     * 雨量
-     */
+
+    /** 雨量*/
     private Float rainfall;
-    /**
-     * 辐射
-     */
+
+    /** 辐射 */
     private Float radiation;
-    /**
-     * 紫外线
-     */
+
+    /** 紫外线 */
     private Integer ultraviolet;
-    /**
-     * 噪音
-     */
+
+    /** 噪音 */
     private Float noise;
-    /**
-     * PM2.5
-     */
+
+    /** PM2.5 */
     private Float pmTowPointFive;
-    /**
-     * PM10
-     */
+
+    /** PM10 */
     private Float pmTen;
-    /**
-     * CO气体
-     */
-    private Float co;
-    /**
-     * SO2气体
-     */
-    private Float so2;
-    /**
-     * H2S气体
-     */
-    private Float h2s;
-    /**
-     * NO2气体
-     */
-    private Float no2;
-    /**
-     * O3气体
-     */
-    private Float o3;
-    /**
-     * NO气体
-     */
-    private Float no;
-    /**
-     * 水尺水位
-     */
+
+    /** CO气体 */
+    private Float gasCo;
+
+    /** SO2气体 */
+    private Float gasSo2;
+
+    /** H2S气体 */
+    private Float gasH2s;
+
+    /** NO2气体 */
+    private Float gasNo2;
+
+    /** O3气体 */
+    private Float gasO3;
+
+    /** NO气体 */
+    private Float gasNo;
+
+    /** 水尺水位 */
     private Float waterLevel;
-    /**
-     * 漏电电流
-     */
+
+    /** 漏电电流 */
     private Float leakageCurrent;
 
+    private Long lastTime;
 }

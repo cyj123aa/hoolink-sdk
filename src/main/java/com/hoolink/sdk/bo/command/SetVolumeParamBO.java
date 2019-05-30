@@ -8,7 +8,6 @@ import java.util.List;
 /**
  * @version V1.0
  * @classname:SetVolumeParamBO
- * @description: TODO
  * @author: xiaolei.yang
  * @date: 2019/5/22 14:50
  **/
