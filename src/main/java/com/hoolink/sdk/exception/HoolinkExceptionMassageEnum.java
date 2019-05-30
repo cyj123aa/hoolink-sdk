@@ -171,7 +171,8 @@ public enum HoolinkExceptionMassageEnum {
     /** edm */
     USER_SECURITY_NOT_EXIST("用户资源密保等级不存在"),
     OUTPUT_FILE_NOT_EXIST("输出的文件不纯在"),
-    REPERTORY_INFO_ERROR("需要设置的文件资源为空！")
+    REPERTORY_INFO_ERROR("需要设置的文件资源为空！"),
+    MANAGE_DEPARTMENT_TREE("获取组织架构失败")
     ;
 
     private String message;
