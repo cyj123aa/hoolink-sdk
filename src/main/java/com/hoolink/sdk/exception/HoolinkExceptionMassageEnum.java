@@ -182,6 +182,7 @@ public enum HoolinkExceptionMassageEnum {
     CREATE_GROUP_ERROR("创建组失败!"),
     USER_MENU_INCOMPLETE("用户菜单权限不完整!"),
     PLEASE_MENU_CONFIG("请配置菜单权限!"),
+    USER_NOT_VISITOR("当前用户角色无权限!"),
     ;
 
     private String message;
