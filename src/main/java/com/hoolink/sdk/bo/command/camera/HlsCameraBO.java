@@ -1,5 +1,6 @@
 package com.hoolink.sdk.bo.command.camera;
 
+import com.hoolink.sdk.bo.rpc.PageParamBO;
 import lombok.Data;
 
 /**
@@ -7,11 +8,8 @@ import lombok.Data;
  * @date 2018/12/29 14:02
  */
 @Data
-public class HlsCameraBO {
+public class HlsCameraBO extends PageParamBO {
     private Long projectId;
-    private Integer pageSize;
-    private Integer pageNo;
-
     private String deviceName;
 
 }
