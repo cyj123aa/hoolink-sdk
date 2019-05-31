@@ -14,7 +14,7 @@ public class CreateFaceLabelBO {
     @NotNull
     private String objectKey;
     @NotNull
-    private String faceSetName;
+    private Long projectId;
     @NotNull
     private String bucketName;
 
