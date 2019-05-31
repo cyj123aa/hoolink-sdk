@@ -17,5 +17,7 @@ public class CreateFaceLabelBO {
     private Long projectId;
     @NotNull
     private String bucketName;
+    @NotNull
+    private Byte faceSetType;
 
 }
