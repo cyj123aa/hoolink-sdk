@@ -149,6 +149,7 @@ public enum HoolinkExceptionMassageEnum {
     READ_NEXT_MENU_FAILED("获取下级菜单列表失败"),
     LIST_MENU_BY_ROLE("根据角色获取菜单失败"),
     ORG_INFO_ERROR("获取组织架构信息失败"),
+    ENCRYPTED_LEVEL_ERROR("获取密保等级失败"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
