@@ -11,8 +11,15 @@ import javax.validation.constraints.NotNull;
  */
 @Data
 public class RealPlayFileBO {
+    /**
+     * 设备的mac地址
+     */
     @NotNull
     private String param1;
+    /**
+     * xxx,打卡成功。
+     * 文本信息message
+     */
     @NotNull
     private String param4;
 }
