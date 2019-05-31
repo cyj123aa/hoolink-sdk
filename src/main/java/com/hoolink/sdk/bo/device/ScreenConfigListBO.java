@@ -1,6 +1,12 @@
 package com.hoolink.sdk.bo.device;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import com.hoolink.sdk.bo.device.req.ScreenStrategyCycleBO;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -31,9 +37,17 @@ public class ScreenConfigListBO implements Serializable {
     private Byte configType;
 
     /*** 定时开始时间 */
+    @JsonFormat(pattern = "HH:mm:ss")
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    @ApiModelProperty(dataType = "java.lang.String", example = "06:08:00")
     private LocalTime timingStart;
 
     /*** 定时结束时间 */
+    @JsonFormat(pattern = "HH:mm:ss")
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    @ApiModelProperty(dataType = "java.lang.String", example = "06:08:00")
     private LocalTime timingEnd;
 
     /*** 模式: 1.每天 2.自定义 3.特殊日期 */
@@ -63,5 +77,6 @@ public class ScreenConfigListBO implements Serializable {
     /*** 距离策略开始间隔时间 */
     private Long intervalTime;
 
-    
+    /*** 清单已下发百分比 */
+    private Integer sendPercent;
 }
