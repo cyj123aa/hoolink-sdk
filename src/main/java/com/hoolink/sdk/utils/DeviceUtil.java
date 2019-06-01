@@ -176,4 +176,16 @@ public class DeviceUtil {
         });
         return result;
     }
+
+    public static String getIdBunch(List<Long> idList, String separator) {
+        //生成id串,格式1,2,3
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < idList.size(); i++) {
+            sb.append(idList.get(i));
+            if (i < idList.size() - 1) {
+                sb.append(separator);
+            }
+        }
+        return sb.toString();
+    }
 }

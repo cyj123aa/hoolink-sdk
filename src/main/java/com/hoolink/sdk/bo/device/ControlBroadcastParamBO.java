@@ -1,5 +1,7 @@
 package com.hoolink.sdk.bo.device;
 
+import lombok.Data;
+
 import java.util.List;
 
 /**
@@ -8,6 +10,8 @@ import java.util.List;
  * @author: xiaolei.yang
  * @date: 2019/5/16 13:51
  **/
+
+@Data
 public class ControlBroadcastParamBO extends DeviceBroadcastBO {
 
     private Long deviceId;
@@ -23,36 +27,4 @@ public class ControlBroadcastParamBO extends DeviceBroadcastBO {
      */
     private Byte startOrStop;
 
-    public Long getDeviceId() {
-        return deviceId;
-    }
-
-    public void setDeviceId(Long deviceId) {
-        this.deviceId = deviceId;
-    }
-
-    public List<Long> getGroupIds() {
-        return groupIds;
-    }
-
-    public void setGroupIds(List<Long> groupIds) {
-        this.groupIds = groupIds;
-    }
-
-    public Byte getStartOrStop() {
-        return startOrStop;
-    }
-
-    public void setStartOrStop(Byte startOrStop) {
-        this.startOrStop = startOrStop;
-    }
-
-    @Override
-    public String toString() {
-        return "ControlBroadcastParamBO{" +
-                "deviceId=" + deviceId +
-                ", groupIds=" + groupIds +
-                ", startOrStop=" + startOrStop +
-                '}';
-    }
 }

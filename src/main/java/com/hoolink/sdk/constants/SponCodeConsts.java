@@ -41,4 +41,7 @@ public class SponCodeConsts {
     /*** 播放 */
     public static final String STOP = "stop";
 
+    /*** 设置音量 */
+    public static final String SET_VOLUME = "setvolume";
+
 }
