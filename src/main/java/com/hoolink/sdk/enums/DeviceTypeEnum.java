@@ -25,20 +25,20 @@ public enum DeviceTypeEnum {
     BROADCAST(8L, "broadcast", "实时广播"),
     // ----- 监控器
     MONITOR(9L, "monitor", "监控器"),
-    // ----- 漏电保护
-    LEAKAGE_DETECT(10L, "leakage_detect", "漏电保护"),
-    // ----- 气体检测
-    GAS(11L, "gas", "气体检测"),
-    // ----- 水位检测
-    WATER_GAUGE(12L, "water_gauge", "水位检测"),
+    // ----- 漏电监测
+    LEAKAGE_DETECT(10L, "leakage_detect", "漏电监测"),
+    // ----- 气体监测
+    GAS(11L, "gas", "气体监测"),
+    // ----- 水位监测
+    WATER_GAUGE(12L, "water_gauge", "水位监测"),
     // ----- 智能灯杆
     POLE(13L, "pole", "智能灯杆"),
     // ----- 集中器
     EXTERNAL(14L, "external", "集中器"),
-    // ----- 土壤检测
-    SOIL(15L, "soil", "土壤检测"),
-    // ----- 水质检测
-    WATER(16L, "water", "水质检测"),
+    // ----- 土壤监测
+    SOIL(15L, "soil", "土壤监测"),
+    // ----- 水质监测
+    WATER(16L, "water", "水质监测"),
     //----- 温湿度
     TEM_HUMIDITY(17L, "tem_humidity", "温湿度");
 
