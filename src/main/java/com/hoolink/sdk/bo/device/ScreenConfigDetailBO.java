@@ -61,4 +61,7 @@ public class ScreenConfigDetailBO implements Serializable {
 
     /*** 文件穿梭框 */
     private ScreenFileShuttleBoxBO fileShuttleBox;
+
+    /*** 清单内已被选择的显示屏ID */
+    private List<Long> screenIds;
 }
