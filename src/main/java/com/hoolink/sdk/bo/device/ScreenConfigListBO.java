@@ -37,14 +37,14 @@ public class ScreenConfigListBO implements Serializable {
     private Byte configType;
 
     /*** 定时开始时间 */
-    @JsonFormat(pattern = "HH:mm:ss")
+    @JsonFormat(pattern = "HH:mm")
     @JsonDeserialize(using = LocalTimeDeserializer.class)
     @JsonSerialize(using = LocalTimeSerializer.class)
     @ApiModelProperty(dataType = "java.lang.String", example = "06:08:00")
     private LocalTime timingStart;
 
     /*** 定时结束时间 */
-    @JsonFormat(pattern = "HH:mm:ss")
+    @JsonFormat(pattern = "HH:mm")
     @JsonDeserialize(using = LocalTimeDeserializer.class)
     @JsonSerialize(using = LocalTimeSerializer.class)
     @ApiModelProperty(dataType = "java.lang.String", example = "06:08:00")
@@ -78,5 +78,5 @@ public class ScreenConfigListBO implements Serializable {
     private Long intervalTime;
 
     /*** 清单已下发百分比 */
-    private Integer sendPercent;
+    private String sendPercent;
 }
