@@ -79,4 +79,7 @@ public class ScreenConfigListBO implements Serializable {
 
     /*** 清单已下发百分比 */
     private String sendPercent;
+
+    /*** 清单开始到现在的时间 */
+    private Long startToNowTime;
 }
