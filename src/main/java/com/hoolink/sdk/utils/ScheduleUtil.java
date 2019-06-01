@@ -35,6 +35,6 @@ public class ScheduleUtil {
                 time.getHour() + TEMP +
                 date.getDayOfMonth() + TEMP +
                 date.getMonthValue() + TEMP +
-                date.getYear();
+                "?" + TEMP + date.getYear();
     }
 }
