@@ -85,5 +85,9 @@ public class MonitorDataReportFrameBO {
     /** 漏电电流 */
     private Float leakageCurrent;
 
+    /** 最新通讯时间 */
     private Long lastTime;
+
+    /** 项目id */
+    private Long projectId;
 }
