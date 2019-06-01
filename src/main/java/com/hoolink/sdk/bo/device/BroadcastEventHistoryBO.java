@@ -17,10 +17,10 @@ public class BroadcastEventHistoryBO {
     private String eventName;
 
     /**
-     * 广播组id
+     * 广播组id集合
      * 表字段 : broadcast_event_history.broadcast_group_id
      */
-    private Long broadcastGroupId;
+    private String broadcastGroupId;
 
     /**
      * 广播发起时间
@@ -41,16 +41,22 @@ public class BroadcastEventHistoryBO {
     private Long creator;
 
     /**
+     * 创建时间
+     * 表字段 : broadcast_event_history.created
+     */
+    private Long created;
+
+    /**
      * 是否启用(1:启用, 0:禁用)
      * 表字段 : broadcast_event_history.enabled
      */
     private Boolean enabled;
 
     /**
-     * 发起设备麦克风Mac
-     * 表字段 : broadcast_event_history.microphone_mac
+     * 发起设备麦克风id
+     * 表字段 : broadcast_event_history.microphone_id
      */
-    private String microphoneMac;
+    private Long microphoneId;
 
     /**
      * 接收设备id串(broadcastId),格式:1,2,3
