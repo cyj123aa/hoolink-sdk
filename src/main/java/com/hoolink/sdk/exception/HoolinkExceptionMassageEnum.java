@@ -105,7 +105,8 @@ public enum HoolinkExceptionMassageEnum {
 
     /*** 巡检 */
     INSPECTION_TIME_SELECT_ERROR("请选择自定义时间"),
-    INSPECTION_RUNNING_UPDATE_ERROR("巡检计划正在执行中，无法编辑！"),
+    INSPECTION_RUNNING_UPDATE_ERROR("巡检计划正在进行中，无法编辑！"),
+    INSPECTION_RUNNING_REMOVE_ERROR("巡检计划正在执行中，无法删除！"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),

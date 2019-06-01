@@ -26,6 +26,10 @@ public class InspectionPlanBO implements Serializable {
     private LocalTime startTime;
     /*** 结束时间 */
     private LocalTime endTime;
+    /*** 启用状态 */
+    private Boolean usingStatus;
+    /*** 生效状态，不生效的第二天会通过定时任务生效 */
+    private Boolean effectiveStatus;
     /*** 设备IDs */
     private List<Long> deviceIds;
     /*** 策略模式 */
