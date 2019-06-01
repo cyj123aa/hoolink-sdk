@@ -20,5 +20,5 @@ public class ScreenFileParamBO implements Serializable {
     private String fileName;
 
     /*** 文件类型 */
-    private String fileType;
+    private String fileExt;
 }

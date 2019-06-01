@@ -46,12 +46,6 @@ public class RabbitMQConstants {
     public static final String ALARM_SOCKET_QUEUE = "direct.socket.alarm.queue";
 
     /**
-     * 人脸比对事件消息队列
-     */
-    public static final String FACE_QUEUE = "face.queue";
-    public static final String FACE_EXCHANGE = "face.exchange";
-
-    /**
      * 灯杆设备实时信息消息队列
      */
     public static final String POLE_INFO_QUEUE = "pole.info.queue";
@@ -120,6 +114,9 @@ public class RabbitMQConstants {
     public static final String MUSIC_TIMING_STRATEGY_EXCHANGE = "music.strategy.exchange";
     public static final String MUSIC_TIMING_STRATEGY_EXCHANGE_ROUTING_KEY = "music.strategy.exchange.key";
 
-
-
+    /**
+     * 成员人脸消息队列
+     */
+    public static final String MEMBER_FACE_QUEUE = "member.face.queue";
+    public static final String MEMBER_FACE_ROUTING_KEY = "member.face.routing.key";
 }
