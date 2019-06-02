@@ -2,6 +2,8 @@ package com.hoolink.sdk.bo.device;
 
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 /**
  * @ClassName FaceHistoryBO
  * @Author huyaxi
@@ -15,4 +17,6 @@ public class FaceHistoryBO {
     private Long smallObsId;
     private String faceLabelId;
     private Long deviceId;
+    /*** TODO huyaxi 巡检打卡时间 */
+    private LocalDateTime inspectionTime;
 }
