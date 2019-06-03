@@ -12,11 +12,9 @@ import javax.validation.constraints.NotNull;
 @Data
 public class CreateFaceLabelBO {
     @NotNull
-    private String objectKey;
+    private Long obsId;
     @NotNull
     private Long projectId;
-    @NotNull
-    private String bucketName;
     @NotNull
     private Byte faceSetType;
 

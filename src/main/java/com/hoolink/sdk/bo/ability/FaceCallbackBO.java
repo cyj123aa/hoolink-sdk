@@ -4,7 +4,6 @@ import lombok.Data;
 
 /**
  * @ClassName FaceConfigVO
- * @Description TODO
  * @Author Administrator
  * @DATE 2019/3/7 17:03
  */
