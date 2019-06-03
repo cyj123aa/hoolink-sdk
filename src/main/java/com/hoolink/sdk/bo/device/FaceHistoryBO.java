@@ -12,11 +12,9 @@ import java.time.LocalDateTime;
 @Data
 public class FaceHistoryBO {
     private Long projectId;
-    private String faceDate;
+    private LocalDateTime faceDate;
     private Long bigObsId;
     private Long smallObsId;
     private String faceLabelId;
     private Long deviceId;
-    /*** TODO huyaxi 巡检打卡时间 */
-    private LocalDateTime inspectionTime;
 }
