@@ -175,6 +175,7 @@ public enum HoolinkExceptionMassageEnum {
     EXCEL_DATA_FORMAT_ERROR("excel数据格式错误！"),
     EXCEL_SEX_ERROR("请选择性别"),
     EXCEL_IMPORTED_FAILED("数据导入失败"),
+    DEPT_NOT_SELECTED("组织架构未选择"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
