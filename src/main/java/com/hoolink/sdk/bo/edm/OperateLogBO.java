@@ -1,6 +1,5 @@
 package com.hoolink.sdk.bo.edm;
 
-import com.hoolink.sdk.param.PageParam;
 import lombok.Data;
 
 /**
@@ -12,8 +11,7 @@ public class OperateLogBO {
 
     private Long id;
 
-    private Long created;
-
+    private String created;
     private Long creator;
     private String name;
     /**
