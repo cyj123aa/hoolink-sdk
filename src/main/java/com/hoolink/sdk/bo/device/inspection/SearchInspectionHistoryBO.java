@@ -1,5 +1,9 @@
 package com.hoolink.sdk.bo.device.inspection;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.hoolink.sdk.param.PageParam;
 import lombok.Data;
 
@@ -19,9 +23,13 @@ public class SearchInspectionHistoryBO extends PageParam implements Serializable
     private Long projectId;
 
     /*** 开始时间 */
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
     private LocalDate startDate;
 
     /*** 结束时间 */
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @JsonDeserialize(using = LocalDateDeserializer.class)
     private LocalDate endDate;
 
     /*** 设备名称，模糊查询条件 */
