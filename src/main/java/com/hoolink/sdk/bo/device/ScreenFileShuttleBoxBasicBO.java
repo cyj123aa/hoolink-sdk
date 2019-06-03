@@ -33,4 +33,7 @@ public class ScreenFileShuttleBoxBasicBO implements Serializable {
 
     /*** 创建时间 */
     private Long created;
+
+    /*** 顺序 */
+    private Integer fileOrder;
 }
