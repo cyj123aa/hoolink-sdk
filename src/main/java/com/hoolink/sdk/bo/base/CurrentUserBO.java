@@ -42,5 +42,9 @@ public class CurrentUserBO implements Serializable {
     private Long roleId;
     /** 角色层级 **/
     private Byte roleLevel;
+    /** 所属公司 **/
+    private Set<Long> comanyIdSet;
+    /** 权限url**/
+    private Set<String> accessUrlSet;
 
 }
