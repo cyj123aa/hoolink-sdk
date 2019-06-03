@@ -27,6 +27,7 @@ public enum DeviceEntryFieldEnum {
     ID("id"),
     BROADCASTSUBTYPENAME("broadcastSubTypeName"),
     BROADCASTMAC("broadcastMac"),
+    MODULENO("moduleNo"),
     ;
 
     private String field;
