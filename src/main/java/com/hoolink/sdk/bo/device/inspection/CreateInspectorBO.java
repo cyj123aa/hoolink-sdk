@@ -50,4 +50,8 @@ public class CreateInspectorBO implements Serializable {
     /*** 头像ID */
     @NotNull(message = "请上传头像")
     private Long avatarId;
+
+    /*** 人脸标签 */
+    @NotNull
+    private String faceLabel;
 }

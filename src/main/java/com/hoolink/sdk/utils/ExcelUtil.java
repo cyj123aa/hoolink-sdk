@@ -57,6 +57,33 @@ public class ExcelUtil {
     }
 
     /**
+     * 组装Excel的方法, 通过该方法传入标题栏和数据体得到一个Excel文件
+     *
+     * @param head     标题栏
+     * @param contents 数据集合
+     * @return
+     * @throws Exception
+     */
+    public static SXSSFWorkbook assembleExcel07(String[] head, List<List<String>> contents) {
+        // ---- 创建excel文件
+        SXSSFWorkbook workbook = new SXSSFWorkbook();
+        // ---- 创建工作簿
+        Sheet sheet = workbook.createSheet();
+        // ---- 设置默认列宽
+        sheet.setDefaultColumnWidth(15);
+        // ---- 创建标题行
+        Row titleRow = sheet.createRow(0);
+        for (int i = 0; i < head.length; i++) {
+            Cell cell = titleRow.createCell(i);
+            cell.setCellValue(head[i]);
+            cell.setCellStyle(getHeadCellStyle(workbook));
+        }
+        // ---- 创建数据行
+        assembleContents(contents, sheet);
+        return workbook;
+    }
+
+    /**
      * 创建03版excel
      *
      * @param head

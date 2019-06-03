@@ -1,5 +1,9 @@
 package com.hoolink.sdk.bo.device.inspection;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
@@ -25,10 +29,14 @@ public class CreateInspectionPlanBO implements Serializable {
 
     /*** 巡检时间，开始时间 */
     @NotNull(message = "请选择巡检时间")
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
     private LocalTime startTime;
 
     /*** 巡检时间，结束时间 */
     @NotNull(message = "请选择巡检时间")
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
     private LocalTime endTime;
 
     /*** 策略模式 */

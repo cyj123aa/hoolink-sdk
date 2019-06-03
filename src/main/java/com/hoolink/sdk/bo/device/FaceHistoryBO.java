@@ -2,6 +2,8 @@ package com.hoolink.sdk.bo.device;
 
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 /**
  * @ClassName FaceHistoryBO
  * @Author huyaxi
@@ -10,7 +12,7 @@ import lombok.Data;
 @Data
 public class FaceHistoryBO {
     private Long projectId;
-    private String faceDate;
+    private LocalDateTime faceDate;
     private Long bigObsId;
     private Long smallObsId;
     private String faceLabelId;
