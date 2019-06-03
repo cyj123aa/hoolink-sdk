@@ -36,7 +36,7 @@ public class CreateLightStrategyBO implements Serializable {
     private Byte pattern;
 
     /*** 自定义 (周一到周日，对应 1-7) */
-    private List<Byte> dayOfWeeks;
+    private List<Integer> dayOfWeeks;
 
     /*** 特殊日期 */
     @JsonSerialize(contentUsing = LocalDateSerializer.class)
