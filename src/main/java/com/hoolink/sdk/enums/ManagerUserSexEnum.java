@@ -38,4 +38,15 @@ public enum ManagerUserSexEnum {
 	public void setValue(String value) {
 		this.value = value;
 	}
+	
+	public static String getValue(Boolean key) {
+    	if(key != null) {
+        	for(ManagerUserSexEnum userSexEnum : ManagerUserSexEnum.values()) {
+        		if(userSexEnum.key.equals(key)) {
+        			return userSexEnum.value;
+        		}
+        	}    		
+    	}
+    	return null;
+    }
 }

@@ -7,6 +7,7 @@ package com.hoolink.sdk.enums;
  * description:
  */
 public enum DeviceTypeEnum {
+
     // ----- 数字监控
     CAMERA(1L, "camera", "数字监控"),
     // ----- 数字音响

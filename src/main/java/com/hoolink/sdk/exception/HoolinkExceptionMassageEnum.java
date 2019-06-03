@@ -164,6 +164,20 @@ public enum HoolinkExceptionMassageEnum {
     ACCESS_OBS_FAILED("访问OBS服务失败"),
     READ_INIT_MENU_FAILED("初始化菜单列表失败"),
     READ_NEXT_MENU_FAILED("获取下级菜单列表失败"),
+    USER_ACCOUNT_EXISTS("账号重复"),
+    EXCEL_COMPANY_ERROR("请选择正确的公司"),
+    EXCEL_DEPT_ERROR("请选择正确的部门"),
+    EXCEL_TEAM_ERROR("请选择正确的team"),
+    EXCEL_ROLE_ERROR("请选择正确的角色"),
+    EXCEL_ENCRY_LEVEL_ERROR("请选择正确的加密等级"),
+    EXCEL_VIEW_ENCRY_PERMITTED_ERROR("请选择是否可见员工密保等级"),
+    USER_NO_EXISTS("编号重复"),
+    DEPARTMENT_FORMAT_ERROR("部门格式不正确！"),
+    TYPE_AT_LEASE_DEPT("请至少选择到部门层级！"),
+    DEPARTMENT_REPEAT_OR_CONTAIN("部门添加不能出现重复或者包含的关系！"),
+    EXCEL_DATA_FORMAT_ERROR("excel数据格式错误！"),
+    EXCEL_SEX_ERROR("请选择性别"),
+    EXCEL_IMPORTED_FAILED("数据导入失败"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -183,6 +197,9 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_GROUP_NOT_EXIST("密码不能为空, 请输入密码!"),
     MANAGER_USER_NOT_EXIST_ERROR("该用户不存在！"),
     CREATE_GROUP_ERROR("创建组失败!"),
+    USER_MENU_INCOMPLETE("用户菜单权限不完整!"),
+    PLEASE_MENU_CONFIG("请配置菜单权限!"),
+    USER_NOT_VISITOR("当前用户角色无权限!"),
 
     /** hoolink-command */
     SWITCHCMD_CLASS_NULL("分发命令类未找到"),
