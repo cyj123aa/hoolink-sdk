@@ -60,14 +60,10 @@ public class NovaCodeConsts {
     public static final byte SCREEN_FILE_CLEAR_BACK = (byte) 0x7D;
     //显示屏招测状态
     public static final String SCREEN_QUERY_STATUS = "0x01";
-    //显示屏退出登录
-    public static final String SCREEN_LOGIN_OUT = "screenNovaLoginOut";
-    //显示屏清空时控策略
-    public static final String SCREEN_CLEAR_FIXED_TIME = "clearFixedTime";
-    //显示屏下发时控策略
-    public static final String SCREEN_SEND_FIXED_TIME = "sendFixedTime";
     /*** 显示屏定时任务下发 */
     public static final String SCREEN_TIMING_CONTROL = "timingControl";
+    /*** 清除显示屏时控计划 */
+    public static final String SCREEN_CLEAR_TIMING_CONTROL = "clearTimingControl";
 
     /**
      * ================================指令码内部参数值=============================
