@@ -1,6 +1,8 @@
 package com.hoolink.sdk.bo.device.req;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -11,6 +13,8 @@ import java.io.Serializable;
  * description:
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ScreenConfigStatusBO implements Serializable {
 
     /*** 清单ID */
