@@ -177,7 +177,8 @@ public enum HoolinkExceptionMassageEnum {
     ORG_LIST_TREE_ERROR("获取组织架构树失败！"),
     MANAGE_DEPARTMENT_TREE("获取组织架构失败"),
     USER_ROLE_NOT_EXIST("用户角色不能为空！"),
-    USER_NO_FILE_UPDATE_PERMISSION_ERROR("该用户没有编辑权限，请联系管理员授权！")
+    USER_NO_FILE_UPDATE_PERMISSION_ERROR("该用户没有编辑权限，请联系管理员授权！"),
+    UNSATISFIED_PERMISSIONS_EXIST_IN_THE_FAVORITE_FILE("收藏文件中存在不满足您权限的文件，无法收藏！")
     ;
 
     private String message;
