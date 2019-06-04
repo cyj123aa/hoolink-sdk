@@ -1,16 +1,19 @@
 package com.hoolink.sdk.enums.edm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author chenzhixiong
  * @date 2019/6/3 14:14
  * 文件密保等级
  */
 public enum FileSecurityLevel {
+    FIFTH_LEVEL(0,"特级"),
     FIRST_LEVEL(1,"一级"),
     SECOND_LEVEL(2,"二级"),
     THIRD_LEVEL(3,"三级"),
     FOURTH_LEVEL(4,"四级"),
-    FIFTH_LEVEL(5,"特级"),
     ;
     private Integer key;
     private String code;
@@ -42,6 +45,14 @@ public enum FileSecurityLevel {
             }
         }
         return null;
+    }
+
+    public static List<FileSecurityLevel> getAll() {
+        List<FileSecurityLevel> list = new ArrayList<>();
+        for (FileSecurityLevel securityLevel : FileSecurityLevel.values()) {
+            list.add(securityLevel);
+        }
+     return list;
     }
 
 
