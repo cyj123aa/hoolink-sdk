@@ -1,5 +1,8 @@
 package com.hoolink.sdk.utils;
 
+import com.hoolink.sdk.exception.BusinessException;
+import com.hoolink.sdk.exception.HoolinkExceptionMassageEnum;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
@@ -13,8 +16,19 @@ import java.util.Objects;
 public class ScheduleUtil {
     private static final String TEMP = " ";
 
-    public static String assemblyCron(LocalTime time) {
-        return assemblyCron(time, null);
+    public static String[] assemblyCron(LocalTime timingStart, LocalTime timingEnd) {
+        if (Objects.isNull(timingStart) || Objects.isNull(timingEnd)) {
+            throw new BusinessException(HoolinkExceptionMassageEnum.PARAM_ERROR);
+        }
+        LocalDate today = LocalDate.now();
+        LocalTime nowTime = LocalTime.now();
+        if (timingStart.isBefore(LocalTime.of(nowTime.getHour(), nowTime.getMinute(), nowTime.getSecond()))) {
+            // ----- 在 当前时间 之前[次日] ||  在 当前时间 之后[当日]
+            today = today.plusDays(1);
+        }
+        String start = assemblyCron(timingStart, today);
+        String end = assemblyCron(timingEnd, today);
+        return new String[]{start, end};
     }
 
     /**
@@ -23,18 +37,8 @@ public class ScheduleUtil {
      * @param time
      * @return
      */
-    public static String assemblyCron(LocalTime time, LocalDate date) {
-        if (Objects.isNull(time)) {
-            time = LocalTime.now();
-        }
-        if (Objects.isNull(date)) {
-            date = LocalDate.now();
-        }
-        return time.getSecond() + TEMP +
-                time.getMinute() + TEMP +
-                time.getHour() + TEMP +
-                date.getDayOfMonth() + TEMP +
-                date.getMonthValue() + TEMP +
-                "?" + TEMP + date.getYear();
+    public static String assemblyCron(LocalTime time, LocalDate day) {
+        return time.getSecond() + TEMP + time.getMinute() + TEMP + time.getHour() + TEMP +
+                day.getDayOfMonth() + TEMP + day.getMonthValue() + TEMP + "?" + TEMP + day.getYear();
     }
 }
