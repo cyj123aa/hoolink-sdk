@@ -15,4 +15,6 @@ public class ResourceParamBO {
     private String code;
 
     private List<Long> positionList;
+
+    private Integer type;
 }
