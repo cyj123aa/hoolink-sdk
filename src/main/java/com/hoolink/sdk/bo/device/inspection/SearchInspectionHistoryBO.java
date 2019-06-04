@@ -6,6 +6,7 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.hoolink.sdk.param.PageParam;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -15,6 +16,7 @@ import java.time.LocalDate;
  * @date 2019/6/1
  */
 @Data
+@EqualsAndHashCode(callSuper = true)
 public class SearchInspectionHistoryBO extends PageParam implements Serializable {
 
     private static final long serialVersionUID = -7765207394681012140L;
