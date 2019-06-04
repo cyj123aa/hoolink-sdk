@@ -73,4 +73,6 @@ public class CallResHistoryBO implements Serializable {
      */
     private Long created;
 
+    private String file;
+
 }
