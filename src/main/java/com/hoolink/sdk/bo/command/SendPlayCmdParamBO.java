@@ -18,4 +18,7 @@ public class SendPlayCmdParamBO {
      * 通道集合
      */
     private List<String> channelList;
+
+    /*** 亮度 */
+    private Integer brightness;
 }
