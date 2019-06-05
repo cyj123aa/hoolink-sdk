@@ -40,4 +40,7 @@ public class EdmMenuTreeBO implements Serializable {
 
     /*** 1：只读\ 2：全部 */
     private Integer readOnly;
+
+    /** 父节点id */
+    private Long parentId;
 }
