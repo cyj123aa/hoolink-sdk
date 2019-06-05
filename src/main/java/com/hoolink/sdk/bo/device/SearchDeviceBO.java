@@ -22,6 +22,9 @@ public class SearchDeviceBO extends PageParamBO {
     /*** 名称 */
     private String deviceName;
 
+    /*** 灯杆ID */
+    private Long poleId;
+
     /*** 设备分组ID */
     private Long groupId;
 

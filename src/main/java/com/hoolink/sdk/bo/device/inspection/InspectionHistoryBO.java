@@ -1,5 +1,11 @@
 package com.hoolink.sdk.bo.device.inspection;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -25,14 +31,20 @@ public class InspectionHistoryBO implements Serializable {
     private String deviceName;
 
     /*** 计划开始时间 */
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
     private LocalTime planStartTime;
     /*** 计划结束时间 */
+    @JsonSerialize(using = LocalTimeSerializer.class)
+    @JsonDeserialize(using = LocalTimeDeserializer.class)
     private LocalTime planEndTime;
 
     /*** 计划名称 */
     private String planName;
 
     /*** 巡检打卡时间 */
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime inspectionTime;
     /*** 打卡抓拍图，大图 */
     private Long bigSnapshotId;
