@@ -28,4 +28,7 @@ public class ScreenConfigBO implements Serializable {
 
     /*** 清单状态 */
     private Integer deviceStatus;
+
+    /*** 显示屏名称 */
+    private String deviceName;
 }

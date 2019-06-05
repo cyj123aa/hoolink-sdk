@@ -30,6 +30,12 @@ public final class DateUtil {
     private static final String SEPARATOR_ONE = "-";
     private static final String SEPARATOR_TWO = "/";
 
+    /*** "yyyy-MM-dd HH:mm:ss" */
+    public static final DateTimeFormatter ALL_PATTERN_FORMATTER = DateTimeFormatter.ofPattern(ALL_PATTERN);
+    /*** HH:mm */
+    public static final DateTimeFormatter HH_MM_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
+
+
     /**
      * 以传入的日期为基数，计算数个月后的日期，如果计算数月前则传入负数
      *
