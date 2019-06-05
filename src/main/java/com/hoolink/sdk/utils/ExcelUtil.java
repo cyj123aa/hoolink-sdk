@@ -15,6 +15,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -28,6 +30,10 @@ import java.util.List;
 public class ExcelUtil {
 
     private static final String FILE_PATTERN = "yyyyMMddHHmmss";
+
+    private static final DateTimeFormatter FILE_PATTERN_FORMATTER = DateTimeFormatter.ofPattern(FILE_PATTERN);
+
+    private static final String SXSSF_FILE_TYPE = ".xlsx";
 
     /**
      * 组装Excel的方法, 通过该方法传入标题栏和数据体得到一个Excel文件
@@ -160,6 +166,10 @@ public class ExcelUtil {
                 .header(HttpHeaders.CONTENT_ENCODING, "UTF-8")
                 .header(HttpHeaders.CONTENT_DISPOSITION, fileDisposition)
                 .body(resource);
+    }
+
+    public static String getSXSSFileName(String fileName) {
+        return fileName + "_" + FILE_PATTERN_FORMATTER.format(LocalDateTime.now()) + SXSSF_FILE_TYPE;
     }
 
     public static ResponseEntity<Resource> export(Workbook workbook, String fileName) throws Exception {
