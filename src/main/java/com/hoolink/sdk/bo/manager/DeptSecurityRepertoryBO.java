@@ -2,6 +2,8 @@ package com.hoolink.sdk.bo.manager;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @Author: xuli
  * @Date: 2019/5/30 11:33
@@ -28,4 +30,9 @@ public class DeptSecurityRepertoryBO {
      * 资源库密保等级
      */
     private Integer encryLevelCompany;
+
+    /**
+     * 子集id
+     */
+    private List<DeptSecurityRepertoryBO> childs;
 }

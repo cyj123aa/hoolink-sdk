@@ -176,6 +176,7 @@ public enum HoolinkExceptionMassageEnum {
     REPERTORY_INFO_ERROR("需要设置的文件资源为空！"),
     ORG_LIST_TREE_ERROR("获取组织架构树失败！"),
     FILE_NO_JURISDICTION("获取文件密保权限失败"),
+    FILE_JURISDICTION_PARAM_ERROR("获取文件密保权限参数错误"),
     MANAGE_DEPARTMENT_TREE("获取组织架构失败")
     ;
 
