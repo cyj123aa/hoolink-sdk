@@ -19,7 +19,7 @@ public class SelectProcessBO {
 
     private String name;
     /**
-     * manger 需要根据项目名称， 去base查询出，流程的ids集合
+     * manger 需要根据项目名称， 去base查询出 project/listProcessId，流程的ids集合
      */
     private List<Long> ids;
 
