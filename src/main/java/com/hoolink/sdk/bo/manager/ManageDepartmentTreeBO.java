@@ -22,6 +22,9 @@ public class ManageDepartmentTreeBO implements Serializable {
     /** 组织架构id */
     private String value;
 
+    /*** 部门资源或资源库中的父节点层级code */
+    private String parentIdCode;
+
     /** 组织类型 */
     private Byte deptType;
 
