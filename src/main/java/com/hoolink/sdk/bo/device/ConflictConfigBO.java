@@ -32,7 +32,7 @@ public class ConflictConfigBO implements Serializable {
     private String configName;
 
     /*** 清单模式: 1.每天 2.自定义 3.特殊日期 */
-    private Integer pattern;
+    private Byte pattern;
 
     /*** 特殊日期 */
     @ApiModelProperty(dataType = "[Ljava.lang.String;")

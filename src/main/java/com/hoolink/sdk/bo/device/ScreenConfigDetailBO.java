@@ -34,14 +34,14 @@ public class ScreenConfigDetailBO implements Serializable {
     private Byte configType;
 
     /*** 定时开始时间 */
-    @JsonFormat(pattern = "HH:mm:ss")
+    @JsonFormat(pattern = "HH:mm")
     @JsonDeserialize(using = LocalTimeDeserializer.class)
     @JsonSerialize(using = LocalTimeSerializer.class)
     @ApiModelProperty(dataType = "java.lang.String", example = "06:08:00")
     private LocalTime timingStart;
 
     /*** 定时结束时间 */
-    @JsonFormat(pattern = "HH:mm:ss")
+    @JsonFormat(pattern = "HH:mm")
     @JsonDeserialize(using = LocalTimeDeserializer.class)
     @JsonSerialize(using = LocalTimeSerializer.class)
     @ApiModelProperty(dataType = "java.lang.String", example = "06:08:00")
@@ -61,4 +61,7 @@ public class ScreenConfigDetailBO implements Serializable {
 
     /*** 文件穿梭框 */
     private ScreenFileShuttleBoxBO fileShuttleBox;
+
+    /*** 清单内已被选择的显示屏ID */
+    private List<Long> screenIds;
 }

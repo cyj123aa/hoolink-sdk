@@ -101,6 +101,10 @@ public class ContextUtil {
         return Long.valueOf(context);
     }
 
+    public static void setProjectId(Long projectId) {
+        ContextUtils.getInvocationContext().addContext(ContextConstant.PROJECT_ID, String.valueOf(projectId));
+    }
+
     /**
      * 获取每次请求的用户ID
      *

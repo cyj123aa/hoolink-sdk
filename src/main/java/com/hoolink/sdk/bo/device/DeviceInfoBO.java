@@ -49,6 +49,9 @@ public class DeviceInfoBO implements Serializable {
     /*** 项目ID */
     private Long projectId;
 
+    /*** 灯杆ID */
+    private Long poleId;
+
     /*** 3D模型坐标 */
     private Integer x;
     private Integer y;
