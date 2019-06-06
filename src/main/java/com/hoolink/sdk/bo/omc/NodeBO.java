@@ -17,6 +17,13 @@ public class NodeBO {
     private Long id;
     /**
      * <pre>
+     * 流程id
+     * 表字段 : node.process_id
+     * </pre>
+     */
+    private Long processId;
+    /**
+     * <pre>
      * 节点名字
      * 表字段 : node.Node_name
      * </pre>
