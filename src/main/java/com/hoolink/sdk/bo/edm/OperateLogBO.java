@@ -13,7 +13,8 @@ public class OperateLogBO {
 
     private String created;
     private Long creator;
-    private String name;
+
+    private String operateName;
     /**
      * 操作类型
      */
