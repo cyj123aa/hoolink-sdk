@@ -33,7 +33,7 @@ public class EdmMenuTreeBO implements Serializable {
     /**
      * 资源库
      */
-    private Integer type;
+    private Integer repertoryType;
 
     /*** 是否可以操作 */
     private Boolean enableUpdate;
@@ -43,4 +43,9 @@ public class EdmMenuTreeBO implements Serializable {
 
     /** 父节点id */
     private Long parentId;
+
+    /**
+     * 菜单类别  true：组织架构  false：资源列表
+     */
+    private Boolean menuType;
 }
