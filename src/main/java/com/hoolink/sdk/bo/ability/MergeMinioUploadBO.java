@@ -10,7 +10,8 @@ import lombok.Data;
  */
 @Data
 public class MergeMinioUploadBO {
+	private Long obsId;
+	private String objectName;
     private String uploadId;
     private MinioPartBO[] parts;
-    private String objectName;
 }
