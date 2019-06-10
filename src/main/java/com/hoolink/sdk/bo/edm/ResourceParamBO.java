@@ -16,5 +16,5 @@ public class ResourceParamBO {
 
     private List<Long> positionList;
 
-    private Integer type;
+    private Integer repertoryType;
 }
