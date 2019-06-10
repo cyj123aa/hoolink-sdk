@@ -10,7 +10,7 @@ public enum StatusEnum {
 	/**
 	 * 启用
 	 */
-	OPEN(true, "启用"),
+	OPEN(true, "正常"),
 	/**
 	 * 禁用
 	 */
@@ -27,7 +27,7 @@ public enum StatusEnum {
     public static String getValue(Boolean key) {
     	if(key != null) {
         	for(StatusEnum statusEnum : StatusEnum.values()) {
-        		if(statusEnum.key.booleanValue() == key.booleanValue()) {
+        		if(statusEnum.key.equals(key)) {
         			return statusEnum.value;
         		}
         	}    		

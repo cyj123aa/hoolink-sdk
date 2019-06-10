@@ -22,5 +22,14 @@ public class LightAndExternalBO implements Serializable {
     private Long externalId;
     /*** 集中器物理地址 */
     private String externalMac;
+    /**灯杆id*/
+    private Long poleId;
+    /**项目id*/
+    private Long projectId;
+    /** nb平台的设备ID*/
+    private String nbDeviceId;
+    private Boolean runStatus;
+    /** 设备型号Id */
+    private Long deviceSubTypeId;
 
 }

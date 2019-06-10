@@ -5,10 +5,13 @@ import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @Author: xuli
  * @Date: 2019/4/26 16:02
  */
+@Slf4j
 public class MD5Util {
     /**
      * 对字符串md5加密(小写+字母)
@@ -61,6 +64,40 @@ public class MD5Util {
             e.printStackTrace();
             return null;
         }
+    }
+    
+    /**
+     * 此处为MD5加密，和前端保持一致，"e+iot"拼接密码，加密两次
+     * @param str
+     * @return
+     */
+    public static String encode(String str) {
+        String strDigest = "";
+        try {
+            MessageDigest md5 = MessageDigest.getInstance("MD5");
+            byte[] data;
+            data = md5.digest(str.getBytes("utf-8"));// 转换为MD5码
+            strDigest = bytesToHexString(data);
+        } catch (Exception ex) {
+            log.error("md5 encode failed..., exception:{}", ex);
+        }
+        return strDigest;
+    }
+    
+    public static String bytesToHexString(byte[] src) {
+        StringBuilder stringBuilder = new StringBuilder("");
+        if (src == null || src.length <= 0) {
+            return null;
+        }
+        for (int i = 0; i < src.length; i++) {
+            int v = src[i] & 0xFF;
+            String hv = Integer.toHexString(v);
+            if (hv.length() < 2) {
+                stringBuilder.append(0);
+            }
+            stringBuilder.append(hv);
+        }
+        return stringBuilder.toString();
     }
 
     public static void main(String[] args) {

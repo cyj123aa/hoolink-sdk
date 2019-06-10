@@ -19,7 +19,7 @@ public class DeviceLogReturnBO implements Serializable {
     private Long deviceId;
 
     /*** 成功、失败 */
-    private String resultName;
+    private Boolean resultName;
 
     /*** 详情 */
     private String content;

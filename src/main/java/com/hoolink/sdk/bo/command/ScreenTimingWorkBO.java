@@ -2,8 +2,6 @@ package com.hoolink.sdk.bo.command;
 
 import lombok.Data;
 
-import java.util.List;
-
 /**
  * @author zhuli
  * @date 2018/12/29
@@ -23,5 +21,5 @@ public class ScreenTimingWorkBO {
     /**
      * 播放列表号
      */
-    private List<Integer> playIndex;
+    private Integer playIndex;
 }

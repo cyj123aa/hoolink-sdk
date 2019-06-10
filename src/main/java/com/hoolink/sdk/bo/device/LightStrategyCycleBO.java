@@ -22,7 +22,7 @@ public class LightStrategyCycleBO implements Serializable {
     private Long LightStrategyId;
 
     /*** 周几 (1-7) */
-    private Byte dayOfWeek;
+    private Integer dayOfWeek;
 
     /*** 指定日期 */
     @JsonSerialize(using = LocalDateSerializer.class)

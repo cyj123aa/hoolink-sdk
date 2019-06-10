@@ -74,7 +74,17 @@ public class ManagerUserBO {
     /**
      * 账号状态: 启用/禁用
      */
-    private String statusName;
+    private String statusDesc;
+
+    /**
+     * 性别: 1/0 男/女
+     */
+    private Boolean sex;
+
+    /**
+     * 性别
+     */
+    private String sexDesc;
     
     /**
      *创建时间 
@@ -89,5 +99,5 @@ public class ManagerUserBO {
     /**
      * 用户部门关系
      */
-    private List<UserDepartmentBO> userDeptPairList;
+    private List<DeptPairBO> userDeptPairList;
 }

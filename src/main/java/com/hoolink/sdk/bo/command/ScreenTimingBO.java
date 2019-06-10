@@ -11,7 +11,6 @@ import java.util.List;
  */
 @Data
 public class ScreenTimingBO {
-    private Long bizId;
     /**
      * 设备编号
      */

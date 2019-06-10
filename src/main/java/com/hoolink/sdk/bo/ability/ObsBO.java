@@ -37,4 +37,6 @@ public class ObsBO {
     private Boolean enabled;
 
     private String objectUrl;
+    
+    private Double fileSizeUnitM;
 }

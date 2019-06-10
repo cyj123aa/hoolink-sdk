@@ -1,12 +1,17 @@
 package com.hoolink.sdk.utils;
 
+import com.hoolink.sdk.bo.device.*;
+import com.hoolink.sdk.enums.DeviceSubTypeEnum;
 import com.hoolink.sdk.enums.DeviceTypeEnum;
 import com.hoolink.sdk.exception.BusinessException;
 import com.hoolink.sdk.exception.HoolinkExceptionMassageEnum;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author XuBaofeng.
@@ -15,6 +20,22 @@ import java.util.List;
  * description: 设备工具类
  */
 public class DeviceUtil {
+
+    public static List<DeviceTreeBO> getDeviceTreeBOByList(List<DeviceManagerBO> devices) {
+        List<DeviceTreeBO> result = new ArrayList<>();
+        if (CollectionUtils.isNotEmpty(devices)) {
+            devices.forEach(manager -> {
+                DeviceTreeBO device = new DeviceTreeBO();
+                device.setKey(manager.getId());
+                device.setValue(manager.getId());
+                device.setTitle(manager.getDeviceName());
+                DeviceSubTypeEnum byType = DeviceSubTypeEnum.getByType(manager.getDeviceSubTypeId());
+                device.setType(byType == null ? null : byType.getType());
+                result.add(device);
+            });
+        }
+        return result;
+    }
 
     /**
      * 获取需要排除的设备:
@@ -77,7 +98,7 @@ public class DeviceUtil {
      * @return
      */
     public static String assemblyDeviceName(String poleNo, String poleName, String deviceNo, String deviceName) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         if (StringUtils.isNotBlank(poleNo)) {
             sb.append(poleNo);
         }
@@ -88,7 +109,7 @@ public class DeviceUtil {
             sb.append(poleName);
         }
         if (StringUtils.isNotBlank(deviceNo) || StringUtils.isNotBlank(deviceName)) {
-            Boolean flag = StringUtils.isNotBlank(poleNo) || StringUtils.isNotBlank(poleName);
+            boolean flag = StringUtils.isNotBlank(poleNo) || StringUtils.isNotBlank(poleName);
             if (flag) {
                 sb.append("【");
             }
@@ -120,4 +141,51 @@ public class DeviceUtil {
         return sb.toString();
     }
 
+    /**
+     * 根据设备型号IDS获取设备类型集合
+     *
+     * @param subTypeIds
+     * @return
+     */
+    public static List<DeviceTypeBO> assemblyDeviceTypes(List<Long> subTypeIds) {
+        if (CollectionUtils.isEmpty(subTypeIds)) {
+            return Collections.emptyList();
+        }
+        // ----- 根据设备型号IDS获取设备类型IDS
+        List<Long> typeIds = new ArrayList<>();
+        subTypeIds.forEach(subTypeId -> {
+            DeviceSubTypeEnum subTypeEnum = DeviceSubTypeEnum.getByType(subTypeId);
+            if (!typeIds.contains(subTypeEnum.getType())) {
+                typeIds.add(subTypeEnum.getType());
+            }
+        });
+        if (CollectionUtils.isEmpty(typeIds)) {
+            return Collections.emptyList();
+        }
+        // ----- 根据设备类型IDS获取设备类型ID集合
+        List<DeviceTypeBO> result = new ArrayList<>();
+        typeIds.forEach(typeId -> {
+            DeviceTypeEnum typeEnum = DeviceTypeEnum.getByType(typeId);
+            if (Objects.nonNull(typeEnum)) {
+                DeviceTypeBO deviceTypeBO = new DeviceTypeBO();
+                deviceTypeBO.setId(typeEnum.getDeviceType());
+                deviceTypeBO.setTypeName(typeEnum.getTypeName());
+                deviceTypeBO.setTypeCode(typeEnum.getDeviceCode());
+                result.add(deviceTypeBO);
+            }
+        });
+        return result;
+    }
+
+    public static String getIdBunch(List<Long> idList, String separator) {
+        //生成id串,格式1,2,3
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < idList.size(); i++) {
+            sb.append(idList.get(i));
+            if (i < idList.size() - 1) {
+                sb.append(separator);
+            }
+        }
+        return sb.toString();
+    }
 }
