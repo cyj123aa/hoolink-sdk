@@ -11,6 +11,7 @@ public enum EdmResourceRepertory {
     CACHE_RESOURCE_CODE(2,"cacheRepertory"),
     COMPANY_RESOURCE_CODE(3,"companyRepertory"),
     PUBLIC_RESOURCE_CODE(4,"publicRepertory"),
+    COLLECT_RESOURCE_CODE(5,"collectRepertory"),
     ;
 
     private Integer key;

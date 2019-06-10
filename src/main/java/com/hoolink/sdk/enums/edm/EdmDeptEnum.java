@@ -10,6 +10,10 @@ public enum EdmDeptEnum {
     COMPANY(1),
     DEPT(2),
     POSITION(3),
+    /**
+     * 体系中心
+     */
+    SYSTEM_CENTER(4),
     ;
 
     private Integer key;

@@ -14,10 +14,16 @@ public class ManageDepartmentTreeBO implements Serializable {
 
     private static final long serialVersionUID = 7728059630076949882L;
     /** 组织架构id */
-    private Long id;
+    private Long key;
 
     /** 组织架构名称 */
-    private String name;
+    private String title;
+
+    /** 组织架构id */
+    private String value;
+
+    /*** 部门资源或资源库中的父节点层级code */
+    private String parentIdCode;
 
     /** 组织类型 */
     private Byte deptType;
@@ -26,7 +32,7 @@ public class ManageDepartmentTreeBO implements Serializable {
     private Long parentId;
 
     /*** 组织架构下的子节点*/
-    private List<ManageDepartmentTreeBO> childTreeList;
+    private List<ManageDepartmentTreeBO> children;
 
     /** 组织架构下的人员 */
     private List<SimpleDeptUserBO> userList;
