@@ -23,8 +23,10 @@ public class ProcessNodeBO {
      * </pre>
      */
     private String name;
-
-
+    /**
+     * 流程类型
+     */
+    private String processType;
     /**
      * <pre>
      * 客户号 hoolink为基础模板
