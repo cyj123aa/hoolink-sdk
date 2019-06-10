@@ -1,15 +1,13 @@
 package com.hoolink.sdk.utils;
 
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang3.StringUtils;
+
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.lang3.StringUtils;
+import java.security.SecureRandom;
 
 /**
  * 字符串AES128加密 <加盐>
@@ -17,9 +15,11 @@ import org.apache.commons.lang3.StringUtils;
  * @author XuBaofeng.
  * @date 2018-10-11 18:55.
  */
+@Slf4j
 public class Aes128Util {
 
     private static final String KEY_ALGORITHM = "AES";
+    private static final String SHA1_PRNG = "SHA1PRNG";
     /*** 字符编码 ***/
     private static final String CHARACTER_CODING = "UTF-8";
     /*** 默认的加密算法 ***/
@@ -41,7 +41,7 @@ public class Aes128Util {
      * AES 加密操作, 自定义盐
      *
      * @param content 待加密内容
-     * @param key 秘钥
+     * @param key     秘钥
      * @return 返回Base64转码后的加密数据
      */
     public static String encrypt(String content, String key) {
@@ -58,8 +58,7 @@ public class Aes128Util {
             byte[] result = cipher.doFinal(byteContent);
             return Base64.encodeBase64String(result);
         } catch (Exception e) {
-            String msg = "String: [" + content + "] Aes128Util encryption error";
-            Logger.getLogger(Aes128Util.class.getName()).log(Level.SEVERE, msg, e);
+            log.error("String: [{}] Aes128Util encryption error.", content, e);
         }
         return null;
     }
@@ -78,7 +77,7 @@ public class Aes128Util {
      * AES 解密操作, 自定义盐
      *
      * @param content 待解密内容
-     * @param key 秘钥
+     * @param key     秘钥
      * @return 解密数据
      */
     public static String decrypt(String content, String key) {
@@ -94,8 +93,7 @@ public class Aes128Util {
             byte[] result = cipher.doFinal(Base64.decodeBase64(content));
             return new String(result, CHARACTER_CODING);
         } catch (Exception e) {
-            String msg = "String: [" + content + "] Aes128Util decryption error";
-            Logger.getLogger(Aes128Util.class.getName()).log(Level.SEVERE, msg, e);
+            log.error("String: [{}] Aes128Util decryption error.", content, e);
         }
         return null;
     }
@@ -105,12 +103,12 @@ public class Aes128Util {
      *
      * @return
      */
-    private static SecretKeySpec getSecretKey(final String key) throws Exception {
+    private static SecretKey getSecretKey(String key) throws Exception {
+        SecureRandom secureRandom = SecureRandom.getInstance(SHA1_PRNG);
+        secureRandom.setSeed(key.getBytes());
         KeyGenerator kg = KeyGenerator.getInstance(KEY_ALGORITHM);
-        kg.init(128, new SecureRandom(key.getBytes()));
-        SecretKey secretKey = kg.generateKey();
-        return new SecretKeySpec(secretKey.getEncoded(), KEY_ALGORITHM);
+        kg.init(secureRandom);
+        return kg.generateKey();
     }
-
 
 }

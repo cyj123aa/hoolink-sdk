@@ -1,14 +1,7 @@
 package com.hoolink.sdk.utils;
 
-import java.io.ByteArrayOutputStream;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.net.URLEncoder;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 import org.springframework.core.io.ByteArrayResource;
@@ -16,6 +9,17 @@ import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+
+import java.io.ByteArrayOutputStream;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Excel工具类
@@ -25,6 +29,12 @@ import org.springframework.http.ResponseEntity;
  */
 public class ExcelUtil {
 
+    private static final String FILE_PATTERN = "yyyyMMddHHmmss";
+
+    private static final DateTimeFormatter FILE_PATTERN_FORMATTER = DateTimeFormatter.ofPattern(FILE_PATTERN);
+
+    private static final String SXSSF_FILE_TYPE = ".xlsx";
+
     /**
      * 组装Excel的方法, 通过该方法传入标题栏和数据体得到一个Excel文件
      *
@@ -33,7 +43,7 @@ public class ExcelUtil {
      * @return
      * @throws Exception
      */
-    public static SXSSFWorkbook assembleExcel(List<String> head, List<List<String>> contents) throws Exception {
+    public static SXSSFWorkbook assembleExcel07(List<String> head, List<List<String>> contents) throws Exception {
         // ---- 创建excel文件
         SXSSFWorkbook workbook = new SXSSFWorkbook();
         // ---- 创建工作簿
@@ -48,6 +58,65 @@ public class ExcelUtil {
             cell.setCellStyle(getHeadCellStyle(workbook));
         }
         // ---- 创建数据行
+        assembleContents(contents, sheet);
+        return workbook;
+    }
+
+    /**
+     * 组装Excel的方法, 通过该方法传入标题栏和数据体得到一个Excel文件
+     *
+     * @param head     标题栏
+     * @param contents 数据集合
+     * @return
+     * @throws Exception
+     */
+    public static SXSSFWorkbook assembleExcel07(String[] head, List<List<String>> contents) {
+        // ---- 创建excel文件
+        SXSSFWorkbook workbook = new SXSSFWorkbook();
+        // ---- 创建工作簿
+        Sheet sheet = workbook.createSheet();
+        // ---- 设置默认列宽
+        sheet.setDefaultColumnWidth(15);
+        // ---- 创建标题行
+        Row titleRow = sheet.createRow(0);
+        for (int i = 0; i < head.length; i++) {
+            Cell cell = titleRow.createCell(i);
+            cell.setCellValue(head[i]);
+            cell.setCellStyle(getHeadCellStyle(workbook));
+        }
+        // ---- 创建数据行
+        assembleContents(contents, sheet);
+        return workbook;
+    }
+
+    /**
+     * 创建03版excel
+     *
+     * @param head
+     * @param contents
+     * @return
+     * @throws
+     * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
+     */
+    public static HSSFWorkbook assembleExcel03(List<String> head, List<List<String>> contents) {
+        // ---- 创建excel文件
+        HSSFWorkbook workbook = new HSSFWorkbook();
+        // ---- 创建工作簿
+        Sheet sheet = workbook.createSheet();
+        // ---- 设置默认列宽
+        sheet.setDefaultColumnWidth(15);
+        // ---- 创建标题行
+        Row titleRow = sheet.createRow(0);
+        for (int i = 0; i < head.size(); i++) {
+            Cell cell = titleRow.createCell(i);
+            cell.setCellValue(head.get(i));
+        }
+        // ---- 创建数据行
+        assembleContents(contents, sheet);
+        return workbook;
+    }
+
+    private static void assembleContents(List<List<String>> contents, Sheet sheet) {
         for (int i = 0; i < contents.size(); i++) {
             List<String> content = contents.get(i);
             Row row = sheet.createRow(i + 1);
@@ -55,7 +124,6 @@ public class ExcelUtil {
                 row.createCell(j).setCellValue(content.get(j));
             }
         }
-        return workbook;
     }
 
     /**
@@ -85,15 +153,11 @@ public class ExcelUtil {
      * @return
      * @throws Exception
      */
-    public static ResponseEntity<Resource> export(SXSSFWorkbook workbook, String fileName) throws Exception {
-        ByteArrayResource resource;
-        // ===== response输出excel
-        try (ByteArrayOutputStream out = new ByteArrayOutputStream()) {
-            workbook.write(out);
-            resource = new ByteArrayResource(out.toByteArray());
-        } finally {
-            workbook.dispose();
-        }
+    public static ResponseEntity<Resource> getResponseEntity03(HSSFWorkbook workbook, String fileName) throws Exception {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        workbook.write(out);
+        ByteArrayResource resource = new ByteArrayResource(out.toByteArray());
+        fileName = String.format("%1s_%2s.xls", fileName, new SimpleDateFormat(FILE_PATTERN).format(new Date()));
         String fileDisposition = "attachment;filename=" + URLEncoder.encode(fileName, "UTF-8");
         return ResponseEntity
                 .ok()
@@ -102,6 +166,10 @@ public class ExcelUtil {
                 .header(HttpHeaders.CONTENT_ENCODING, "UTF-8")
                 .header(HttpHeaders.CONTENT_DISPOSITION, fileDisposition)
                 .body(resource);
+    }
+
+    public static String getSXSSFileName(String fileName) {
+        return fileName + "_" + FILE_PATTERN_FORMATTER.format(LocalDateTime.now()) + SXSSF_FILE_TYPE;
     }
 
     public static ResponseEntity<Resource> export(Workbook workbook, String fileName) throws Exception {
@@ -152,16 +220,13 @@ public class ExcelUtil {
 
     public static ResponseEntity<Resource> getResponseEntity(List<String> head, List<List<String>> contents, String fileName) {
         try {
-            SXSSFWorkbook hssfWorkbook = null;
-            hssfWorkbook = ExcelUtil.export(head, contents, fileName);
-            ByteArrayResource resource;
+            SXSSFWorkbook hssfWorkbook = ExcelUtil.export(head, contents);
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             hssfWorkbook.write(out);
-            resource = new ByteArrayResource(out.toByteArray());
-            String excelName = String.format("%1s_%2s.xlsx", fileName, new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+            ByteArrayResource resource = new ByteArrayResource(out.toByteArray());
+            String excelName = String.format("%1s_%2s.xls", fileName, new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
             String fileDisposition = null;
             fileDisposition = "attachment;filename=" + URLEncoder.encode(excelName, "UTF-8");
-
             return ResponseEntity
                     .ok()
                     .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_OCTET_STREAM_VALUE)
@@ -174,7 +239,8 @@ public class ExcelUtil {
         }
         return null;
     }
-    public static SXSSFWorkbook export(List<String> head, List<List<String>> content, String fileName) throws Exception {
+
+    public static SXSSFWorkbook export(List<String> head, List<List<String>> content) throws Exception {
         //创建excel文件
         SXSSFWorkbook hssfWorkbook = new SXSSFWorkbook();
         //创建工作簿
@@ -183,45 +249,34 @@ public class ExcelUtil {
         sheet.setDefaultColumnWidth(15);
         //创建标题行
         Row titleRow = sheet.createRow(0);
-
         for (int i = 0; i < head.size(); i++) {
             titleRow.createCell(i).setCellValue(head.get(i));
         }
         //创建数据行
-        for (int i = 0; i < content.size(); i++) {
-            List<String> list = content.get(i);
-            Row row = sheet.createRow(i + 1);
-            for (int j = 0; j < list.size(); j++) {
-                row.createCell(j).setCellValue(list.get(j));
-            }
-        }
+        assembleContents(content, sheet);
         return hssfWorkbook;
     }
+
     public static <T> ResponseEntity<Resource> getResponseEntity(List<T> list, String[] headers, String title) {
         try {
-            SXSSFWorkbook hssfWorkbook = null;
-            hssfWorkbook = ExcelUtil.exportDataToExcel(list, headers);
-            ByteArrayResource resource;
+            SXSSFWorkbook hssfWorkbook = ExcelUtil.exportDataToExcel(list, headers);
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             hssfWorkbook.write(out);
-            resource = new ByteArrayResource(out.toByteArray());
+            ByteArrayResource resource = new ByteArrayResource(out.toByteArray());
             String excelName = String.format("%1s_%2s.xlsx", title, new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-            String fileDisposition = null;
-            fileDisposition = "attachment;filename=" + URLEncoder.encode(excelName, "UTF-8");
-
+            String fileDisposition = "attachment;filename=" + URLEncoder.encode(excelName, "UTF-8");
             return ResponseEntity
-                .ok()
-                .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_OCTET_STREAM_VALUE)
-                .header(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, "Content-Disposition")
-                .header(HttpHeaders.CONTENT_ENCODING, "UTF-8")
-                .header(HttpHeaders.CONTENT_DISPOSITION, fileDisposition)
-                .body(resource);
+                    .ok()
+                    .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_OCTET_STREAM_VALUE)
+                    .header(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, "Content-Disposition")
+                    .header(HttpHeaders.CONTENT_ENCODING, "UTF-8")
+                    .header(HttpHeaders.CONTENT_DISPOSITION, fileDisposition)
+                    .body(resource);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
-
 
     public static <T> SXSSFWorkbook exportDataToExcel(List<T> list, String[] headers) {
         //创建excel文件
@@ -232,12 +287,10 @@ public class ExcelUtil {
         sheet.setDefaultColumnWidth(15);
         //创建标题行
         Row titleRow = sheet.createRow(0);
-
         for (int i = 0; i < headers.length; i++) {
             Cell cell = titleRow.createCell(i);
             cell.setCellValue(headers[i]);
         }
-
         //将数据放入sheet中
         for (int i = 0; i < list.size(); i++) {
             Row row = sheet.createRow(i + 1);
@@ -250,17 +303,14 @@ public class ExcelUtil {
                     Field field = fields[j];
                     field.setAccessible(true);
                     String fieldName = field.getName();
-                    String methodName =
-                        "get" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
+                    String methodName = "get" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1);
                     Method getMethod = t.getClass().getMethod(methodName, new Class[]{});
                     Object value = getMethod.invoke(t, new Object[]{});
-
                     if (null == value) {
                         value = "";
                     }
                     cell.setCellValue(value.toString());
                 }
-
             } catch (Exception e) {
             }
         }

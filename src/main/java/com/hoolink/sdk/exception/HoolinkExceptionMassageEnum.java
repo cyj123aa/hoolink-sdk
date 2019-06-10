@@ -19,8 +19,6 @@ public enum HoolinkExceptionMassageEnum {
     NOT_AUTH("无权限访问"),
     AUTH_ERROR("权限获取失败"),
     COMMAND_DOWN_ERROR("指令下发失败"),
-    SWITCHCMD_CLASS_NULL("分发命令类未找到"),
-    SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
     NOT_REGISTERED_IN_THE_REGISTRY("未连接到注册中心"),
     SERVICE_CONSUME_FAULT("微服务调用失败"),
 
@@ -91,7 +89,26 @@ public enum HoolinkExceptionMassageEnum {
 
     FACTORY_ID_NOT_NULL_ERROR("厂商ID不能为空"),
     DEVICE_ID_NOT_NULL_ERROR("设备ID不能为空"),
+    DEVICES_ALREADY_GROUPED("保存失败，设备已存在其他分组中"),
 
+    /*** 显示屏相关提示信息 */
+    SCREEN_CREATE_LST_ERROR("清单LST文件创建失败"),
+    SCREEN_TXT_ID_ERROR("文本ID不正确"),
+    PROJECT_CONFIG_MAX_ERROR("该项目下项目已经达到100个，不可再添加"),
+    SCREEN_ONLINE_ERROR("显示屏上线状态更新失败"),
+    SCREEN_OFFLINE_ERROR("显示屏下线状态更新失败"),
+    SCREEN_DATA_ERROR("找不到需要操控的清单或者设备"),
+    SCREEN_ALL_OFFLINE_ERROR("该清单中显示屏全部离线"),
+    SCREEN_CONFIG_ID_ERROR("清单ID不正确"),
+    LIGHT_DIMMER_ERROR("调光值不能为空"),
+    CHANNEL_NO_ERROR("该设备已断线，不可操作"),
+
+    /*** 巡检 */
+    INSPECTION_TIME_SELECT_ERROR("请选择自定义时间"),
+    INSPECTION_RUNNING_UPDATE_ERROR("巡检计划正在进行中，无法编辑！"),
+    INSPECTION_RUNNING_REMOVE_ERROR("巡检计划正在执行中，无法删除！"),
+    INSPECTOR_NAME_EXIST("姓名已存在！"),
+    INSPECTOR_NUMBER_EXIST("编号已存在！"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
@@ -150,6 +167,21 @@ public enum HoolinkExceptionMassageEnum {
     LIST_MENU_BY_ROLE("根据角色获取菜单失败"),
     ORG_INFO_ERROR("获取组织架构信息失败"),
     ENCRYPTED_LEVEL_ERROR("获取密保等级失败"),
+    USER_ACCOUNT_EXISTS("账号重复"),
+    EXCEL_COMPANY_ERROR("请选择正确的公司"),
+    EXCEL_DEPT_ERROR("请选择正确的部门"),
+    EXCEL_TEAM_ERROR("请选择正确的team"),
+    EXCEL_ROLE_ERROR("请选择正确的角色"),
+    EXCEL_ENCRY_LEVEL_ERROR("请选择正确的加密等级"),
+    EXCEL_VIEW_ENCRY_PERMITTED_ERROR("请选择是否可见员工密保等级"),
+    USER_NO_EXISTS("编号重复"),
+    DEPARTMENT_FORMAT_ERROR("部门格式不正确！"),
+    TYPE_AT_LEASE_DEPT("请至少选择到部门层级！"),
+    DEPARTMENT_REPEAT_OR_CONTAIN("部门添加不能出现重复或者包含的关系！"),
+    EXCEL_DATA_FORMAT_ERROR("excel数据格式错误！"),
+    EXCEL_SEX_ERROR("请选择性别"),
+    EXCEL_IMPORTED_FAILED("数据导入失败"),
+    DEPT_NOT_SELECTED("组织架构未选择"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -169,6 +201,15 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_GROUP_NOT_EXIST("密码不能为空, 请输入密码!"),
     MANAGER_USER_NOT_EXIST_ERROR("该用户不存在！"),
     CREATE_GROUP_ERROR("创建组失败!"),
+    USER_MENU_INCOMPLETE("用户菜单权限不完整!"),
+    PLEASE_MENU_CONFIG("请配置菜单权限!"),
+    USER_NOT_VISITOR("当前用户角色无权限!"),
+
+    /** hoolink-command */
+    SWITCHCMD_CLASS_NULL("分发命令类未找到"),
+    SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
+    NB_ACCESS_TOKEN_FAULT("nb平台获取accessToken失败"),
+    NB_SERVICE_CONSUME_FAULT("nb平台调用失败"),
 
     /** edm */
     USER_SECURITY_NOT_EXIST("用户资源密保等级不存在"),

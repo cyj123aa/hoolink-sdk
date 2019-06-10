@@ -20,12 +20,11 @@ public class Constants {
     public static final String SELECT_TYPE_DEVICE = "device";
 
     public static final int HTTP_STATUS_200 = 200;
-
+    public static final String YINGSHI_CODE = "200";
     public static final int HTTP_STATUS_206 = 206;
 
     /**
      * EDM下菜单code
      */
-    public static final String EDM_CODE="edm";
-    public static final String COLLECT_RESOURCE_CODE="collectRepertory";
+
 }

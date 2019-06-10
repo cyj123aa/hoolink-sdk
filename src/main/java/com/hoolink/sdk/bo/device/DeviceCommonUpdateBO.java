@@ -53,10 +53,10 @@ public class DeviceCommonUpdateBO implements Serializable {
     private Long broadcastId;
 
     /*** IP地址 */
-    private String ip;
+    private String cameraIp;
 
     /*** 端口号 */
-    private String port;
+    private String cameraPort;
 
     /*** 设备验证码     */
     private String validateCode;

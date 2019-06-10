@@ -15,7 +15,6 @@ import java.nio.file.StandardCopyOption;
 /**
  * @version V1.0
  * @classname:BroadcastRecordingFilesParamBO
- * @description: TODO
  * @author: xiaolei.yang
  * @date: 2019/5/17 15:11
  **/
