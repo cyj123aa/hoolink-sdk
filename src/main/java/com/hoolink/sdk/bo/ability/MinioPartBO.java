@@ -9,9 +9,10 @@ import lombok.Data;
  * 2019年6月10日-上午11:26:03
  */
 @Data
-public class MinioPartBO extends CombineUploadBaseBO{
+public class MinioPartBO{
 	private Integer partNumber;
 	private String etag;
+	private String uploadAlias;
 	
 	public MinioPartBO(Integer partNumber, String etag) {
 		super();
