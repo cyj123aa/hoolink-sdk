@@ -12,6 +12,7 @@ public class OperateLogBO {
     private Long id;
 
     private String created;
+
     private Long creator;
 
     private String operateName;
@@ -19,5 +20,7 @@ public class OperateLogBO {
      * 操作类型
      */
     private String operateType;
+
+    private OperateUserInfo operateUserInfo;
 
 }
