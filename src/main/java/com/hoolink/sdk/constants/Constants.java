@@ -26,6 +26,6 @@ public class Constants {
     /**
      * EDM下菜单code
      */
-    public static final String EDM_CODE="edm";
-    public static final String COLLECT_RESOURCE_CODE="collectRepertory";
+    public static final String EDM_CODE="EDM";
+    public static final String COLLECT_RESOURCE_CODE="COLLECT_REPERTORY";
 }

@@ -20,12 +20,12 @@ public class UserDeptInfoBO {
     private Integer encryLevelCompany;
 
     /**
-     * id,密保等级（小组）【部门库】
+     * id,密保等级（用户权限下所有存在密保等级的组织架构）【部门库】
      */
     private Map<String,Integer> deptMap;
 
     /**
-     * 用户岗级权限
+     * 用户岗级权限（用户权限下所有存在密保等级的组织架构）
      */
     private List<Long> positionList;
 }
