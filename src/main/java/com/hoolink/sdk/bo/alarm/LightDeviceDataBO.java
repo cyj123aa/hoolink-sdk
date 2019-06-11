@@ -9,6 +9,7 @@ import lombok.Data;
  * description:
  */
 @Data
-public class LightAnalyzerBO extends AnalyzerBO {
+public class LightDeviceDataBO extends DeviceDataBO {
+
     private static final long serialVersionUID = -47675939663507389L;
 }
