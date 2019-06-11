@@ -66,4 +66,10 @@ public class LightBO extends DeviceManagerBO {
 
     /** 设备名称*/
     private String statusName;
+
+    /*** nb注册ID */
+    private String nbDeviceId;
+
+    /*** 设备识别码 */
+    private String verifyCode;
 }
