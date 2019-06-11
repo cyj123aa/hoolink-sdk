@@ -141,4 +141,6 @@ public class IdProjectBO  {
      */
     private Long updator;
 
+    private Long processId;
+
 }
