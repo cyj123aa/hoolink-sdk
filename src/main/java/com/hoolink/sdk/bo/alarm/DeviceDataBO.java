@@ -14,7 +14,7 @@ import java.io.Serializable;
  * description:
  */
 @Data
-public class AnalyzerBO implements Serializable {
+public class DeviceDataBO implements Serializable {
     private static final long serialVersionUID = 4013155475610225458L;
 
     /*** 设备ID */

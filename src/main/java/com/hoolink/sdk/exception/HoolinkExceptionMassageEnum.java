@@ -207,6 +207,16 @@ public enum HoolinkExceptionMassageEnum {
     SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
     NB_ACCESS_TOKEN_FAULT("nb平台获取accessToken失败"),
     NB_SERVICE_CONSUME_FAULT("nb平台调用失败"),
+
+    /** 流程配置 */
+    CREATE_PROCESS_ERROR("创建流程失败"),
+    UPDATE_PROCESS_ERROR("修改流程失败"),
+    REMOVE_PROCESS_ERROR("删除流程失败"),
+    GET_PROCESS_ERROR("查询流程失败"),
+    LIST_PROCESS_ERROR("查询流程列表失败"),
+    PROCESS_AUTHORIZATION_ERROR("流程授权失败"),
+    SET_PROCESS_PROJECT_ERROR("设置流程和项目关系失败"),
+    PROCESS_INFO_ERROR("查询流程信息失败"),
     ;
 
     private String message;
