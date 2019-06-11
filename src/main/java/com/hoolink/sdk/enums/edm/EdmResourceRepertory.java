@@ -7,11 +7,11 @@ package com.hoolink.sdk.enums.edm;
  **/
 public enum EdmResourceRepertory {
 
-    DEPT_RESOURCE_CODE(1,"deptRepertory"),
-    CACHE_RESOURCE_CODE(2,"cacheRepertory"),
-    COMPANY_RESOURCE_CODE(3,"companyRepertory"),
-    PUBLIC_RESOURCE_CODE(4,"publicRepertory"),
-    COLLECT_RESOURCE_CODE(5,"collectRepertory"),
+    DEPT_RESOURCE_CODE(1,"DEPT_REPERTORY"),
+    CACHE_RESOURCE_CODE(2,"CACHE_REPERTORY"),
+    COMPANY_RESOURCE_CODE(3,"COMPANY_REPERTORY"),
+    PUBLIC_RESOURCE_CODE(4,"PUBLIC_REPERTORY"),
+    COLLECT_RESOURCE_CODE(5,"COLLECT_REPERTORY"),
     ;
 
     private Integer key;
