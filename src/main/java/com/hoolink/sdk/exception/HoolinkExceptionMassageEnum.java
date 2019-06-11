@@ -216,6 +216,7 @@ public enum HoolinkExceptionMassageEnum {
     LIST_PROCESS_ERROR("查询流程列表失败"),
     PROCESS_AUTHORIZATION_ERROR("流程授权失败"),
     SET_PROCESS_PROJECT_ERROR("设置流程和项目关系失败"),
+    PROCESS_INFO_ERROR("查询流程信息失败"),
     ;
 
     private String message;
