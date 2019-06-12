@@ -40,8 +40,8 @@ public enum DeviceTypeEnum {
     SOIL(15L, "soil", "土壤监测"),
     // ----- 水质监测
     WATER(16L, "water", "水质监测"),
-    //----- 温湿度
-    TEM_HUMIDITY(17L, "tem_humidity", "温湿度");
+    //----- 景观照明
+    LANDSCAPE_LIGHT(17L, "landscape_light", "景观照明");
 
     private Long deviceType;
     private String deviceCode;

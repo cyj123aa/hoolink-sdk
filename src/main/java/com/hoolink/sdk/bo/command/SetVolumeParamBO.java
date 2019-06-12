@@ -16,26 +16,11 @@ public class SetVolumeParamBO {
     /**
      * 终端ID
      */
-    @NotEmpty(message = "tids不能为空")
+    @NotEmpty(message = "终端ID不能为空")
     private Long tids;
     /**
      * 音量
      */
     private String vol;
 
-    public Long getTids() {
-        return tids;
-    }
-
-    public void setTids(Long tids) {
-        this.tids = tids;
-    }
-
-    public String getVol() {
-        return vol;
-    }
-
-    public void setVol(String vol) {
-        this.vol = vol;
-    }
 }

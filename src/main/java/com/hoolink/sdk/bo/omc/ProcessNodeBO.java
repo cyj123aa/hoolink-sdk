@@ -3,6 +3,8 @@ package com.hoolink.sdk.bo.omc;
 import java.util.List;
 import lombok.Data;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * @author chenyuejun
  */
@@ -27,6 +29,10 @@ public class ProcessNodeBO {
      * 流程类型
      */
     private String processType;
+
+    /*** 项目id */
+    private Long projectId;
+
     /**
      * <pre>
      * 客户号 hoolink为基础模板

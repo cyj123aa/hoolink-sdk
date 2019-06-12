@@ -72,4 +72,9 @@ public class DeviceImportDataBO implements Serializable {
      */
     List<NbLightBO> nbLightBOList;
 
+    /**
+     * dmx
+     */
+    List<DmxBO> dmxList;
+
 }

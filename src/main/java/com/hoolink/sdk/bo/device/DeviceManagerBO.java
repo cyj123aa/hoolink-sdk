@@ -102,4 +102,7 @@ public class DeviceManagerBO implements Serializable {
     /*** 分组名称 */
     private String groupName;
 
+    /*** 设备识别码 */
+    private String verifyCode;
+
 }

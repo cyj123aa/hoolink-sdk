@@ -88,4 +88,12 @@ public class BroadcastEventHistoryBO {
      */
     private Long obsId;
 
+    private Integer totalNum;
+
+    private Integer failNum;
+
+    private String fileUrl;
+
+    private String broadcastTime;
+
 }
