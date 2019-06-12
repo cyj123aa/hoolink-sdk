@@ -12,4 +12,10 @@ import lombok.Data;
 public class LightDeviceDataBO extends DeviceDataBO {
 
     private static final long serialVersionUID = -47675939663507389L;
+
+    /*** ACK码 */
+    private String ack;
+
+    /*** 电压 */
+    private Integer voltage;
 }

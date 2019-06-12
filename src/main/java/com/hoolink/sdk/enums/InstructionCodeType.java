@@ -44,8 +44,12 @@ public enum InstructionCodeType {
     /**
      * NB单灯
      */
-
     NB_LIGHT,
+
+    /**
+     * DMX
+     */
+    DMX,
 
 
 
