@@ -10,6 +10,6 @@ import com.hoolink.sdk.enums.alarm.ItemEnum;
  */
 public @interface AlarmItem {
 
-    ItemEnum item();
+    ItemEnum value();
 
 }
