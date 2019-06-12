@@ -22,4 +22,8 @@ public class RedisConstants {
 
     /*** 报警-集中器故障 */
     public static final String EXTERNAL_FAULT = "external_fault";
+    /*** 报警-单灯故障 */
+    public static final String LIGHT_FAULT = "light_fault";
+    /*** 报警-单灯报警 */
+    public static final String LIGHT_ALARM = "light_alarm";
 }

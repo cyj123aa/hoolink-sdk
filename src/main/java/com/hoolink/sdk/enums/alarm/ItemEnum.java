@@ -14,11 +14,14 @@ import java.util.Objects;
  * 告警配置项枚举
  */
 public enum ItemEnum {
-    /*** 智能照明 */
+    /*** 智能照明-电流 */
     CURRENT(1L, "电流", "mA", DeviceTypeEnum.LIGHT),
+    /*** 智能照明-电压 */
     VOLTAGE(2L, "电压", "V", DeviceTypeEnum.LIGHT),
+    /*** 智能照明-温度 */
     LIGHT_TEMPERATURE(3L, "温度", "℃", DeviceTypeEnum.LIGHT),
-    DROOP(4L, "光衰", "dB", DeviceTypeEnum.LIGHT),
+    /*** 智能照明-光衰 */
+    LIGHT_WEAK(4L, "光衰", "dB", DeviceTypeEnum.LIGHT),
     /*** 环境监测 */
     ENVIRONMENT_TEMPERATURE(5L, "温度", "℃", DeviceTypeEnum.ENVIRONMENT),
     HUMIDITY(6L, "湿度", "%", DeviceTypeEnum.ENVIRONMENT),

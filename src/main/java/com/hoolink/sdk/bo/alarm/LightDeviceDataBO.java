@@ -1,5 +1,7 @@
 package com.hoolink.sdk.bo.alarm;
 
+import com.hoolink.sdk.annotation.AlarmItem;
+import com.hoolink.sdk.enums.alarm.ItemEnum;
 import lombok.Data;
 
 /**
@@ -16,6 +18,19 @@ public class LightDeviceDataBO extends DeviceDataBO {
     /*** ACK码 */
     private String ack;
 
+    /*** 电流 */
+    @AlarmItem(ItemEnum.CURRENT)
+    private Integer current;
+
     /*** 电压 */
+    @AlarmItem(ItemEnum.VOLTAGE)
     private Integer voltage;
+
+    /*** 温度 */
+    @AlarmItem(ItemEnum.LIGHT_TEMPERATURE)
+    private Integer temperature;
+
+    /*** 光衰 */
+    @AlarmItem(ItemEnum.LIGHT_WEAK)
+    private Integer lightWeak;
 }
