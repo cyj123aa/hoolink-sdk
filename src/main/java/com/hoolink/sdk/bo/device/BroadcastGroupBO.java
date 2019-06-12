@@ -58,7 +58,7 @@ public class BroadcastGroupBO implements Serializable {
      */
     private Long created;
 
-    private Integer runStatus;
+    private Boolean runStatus;
 
     private Long deviceSubTypeId;
 
@@ -168,7 +168,7 @@ public class BroadcastGroupBO implements Serializable {
      *
      * @return broadcast_group.runStatus：是否启用(1:启用, 0:禁用)
      */
-    public Integer getRunStatus() {
+    public Boolean getRunStatus() {
         return runStatus;
     }
 
@@ -179,7 +179,7 @@ public class BroadcastGroupBO implements Serializable {
      * @param runStatus
      * broadcast_group.runStatus：是否启用(1:启用, 0:禁用)
      */
-    public void setRunStatus(Integer runStatus) {
+    public void setRunStatus(Boolean runStatus) {
         this.runStatus = runStatus;
     }
 

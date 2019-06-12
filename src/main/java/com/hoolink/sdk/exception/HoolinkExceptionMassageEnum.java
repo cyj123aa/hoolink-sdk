@@ -217,6 +217,7 @@ public enum HoolinkExceptionMassageEnum {
     PROCESS_AUTHORIZATION_ERROR("流程授权失败"),
     SET_PROCESS_PROJECT_ERROR("设置流程和项目关系失败"),
     PROCESS_INFO_ERROR("查询流程信息失败"),
+    LOGIN_PASSWORD_ERROR("密码错误，请稍后再试"),
     ;
 
     private String message;
