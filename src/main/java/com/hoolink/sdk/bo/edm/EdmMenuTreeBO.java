@@ -48,4 +48,9 @@ public class EdmMenuTreeBO implements Serializable {
      * 菜单类别  true：组织架构  false：资源列表
      */
     private Boolean menuType;
+
+    /**
+     * 是否存在下一级
+     */
+    private Boolean existChild;
 }
