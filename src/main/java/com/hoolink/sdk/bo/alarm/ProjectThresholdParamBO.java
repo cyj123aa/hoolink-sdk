@@ -19,4 +19,7 @@ public class ProjectThresholdParamBO implements Serializable {
 
     /*** 设备类型ID */
     private Long deviceTypeId;
+
+    /*** 设备ID */
+    private Long deviceId;
 }
