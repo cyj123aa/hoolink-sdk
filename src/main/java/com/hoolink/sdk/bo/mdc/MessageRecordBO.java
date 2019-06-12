@@ -2,7 +2,6 @@ package com.hoolink.sdk.bo.mdc;
 
 import lombok.Data;
 
-import javax.swing.*;
 import java.io.Serializable;
 import java.util.List;
 
