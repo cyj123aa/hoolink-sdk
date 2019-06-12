@@ -8,6 +8,7 @@ import lombok.Data;
  * 2019年6月11日-下午1:48:54
  */
 @Data
-public class CombineUploadBO extends CombineUploadBaseBO{
+public class CombineUploadBO{
 	private String uploadId;
+	private String objectKey;
 }

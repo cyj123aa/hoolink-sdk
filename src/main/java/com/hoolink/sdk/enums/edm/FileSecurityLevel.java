@@ -9,11 +9,11 @@ import java.util.List;
  * 文件密保等级
  */
 public enum FileSecurityLevel {
-    FIFTH_LEVEL(0,"特级"),
-    FIRST_LEVEL(1,"一级"),
-    SECOND_LEVEL(2,"二级"),
-    THIRD_LEVEL(3,"三级"),
-    FOURTH_LEVEL(4,"四级"),
+    FIFTH_LEVEL(1,"特级"),
+    FIRST_LEVEL(2,"一级"),
+    SECOND_LEVEL(3,"二级"),
+    THIRD_LEVEL(4,"三级"),
+    FOURTH_LEVEL(5,"四级"),
     ;
     private Integer key;
     private String code;
