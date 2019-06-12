@@ -96,6 +96,7 @@ public class CopyPropertiesUtil {
      * @param <T>
      * @return
      */
+    @Deprecated
     public static <T> T copyBean(Class<T> clazz, Object... source) {
         if (ArrayUtil.isEmpty(source)) {
             // ===== 当数据源对象为空时, 直接返回null

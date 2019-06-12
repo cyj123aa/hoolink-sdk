@@ -14,10 +14,14 @@ public class RedisConstants {
     public static final String DEVICE_UPGRADE_END = "device_upgrade_end";
     public static final String DEVICE_UPGRADE_All = "device_upgrade_all";
 
-    /** 操作记录缓存*/
+    /**
+     * 操作记录缓存
+     */
     public static final String BIZ_REQ_HISTORY_KEY = "biz_req_history";
     public static final String OPERATION_MAC_KEY = "biz_history_mac_";
-    /**设备最新一次操作缓存*/
+    /**
+     * 设备最新一次操作缓存
+     */
     public static final String LAST_HISTORY_KEY = "last_history_";
 
     /*** 报警-集中器故障 */
@@ -26,4 +30,10 @@ public class RedisConstants {
     public static final String LIGHT_FAULT = "light_fault";
     /*** 报警-单灯报警 */
     public static final String LIGHT_ALARM = "light_alarm";
+    /*** 报警-监控器报警 */
+    public static final String MONITOR_ALARM = "monitor_alarm";
+    public static final String GAS_ALARM = "GAS_";
+    public static final String WATER_GAUGE_ALARM = "WATER_";
+    public static final String ENVIRONMENT_ALARM = "ENVIRONMENT_";
+    public static final String LEAKAGE_DETECT_ALARM = "LEAKAGE_";
 }
