@@ -6,10 +6,10 @@ package com.hoolink.sdk.enums.mdc;
  * @Desc
  */
 public enum MessageTypeEnum {
-    /** 设备故障 */
-    DEVICE_FAULT(1L, "设备故障"),
-    /** 阈值告警 */
-    BOUND_ALARM(2L, "阈值告警"),
+    /** 设备故障消息 */
+    DEVICE_FAULT(1L, "设备故障消息"),
+    /** 阈值消息 */
+    BOUND_MESSAGE(2L, "阈值消息"),
     /** 工单消息 */
     ORDER_MESSAGE(3L,"工单消息"),
     /** 事件消息 */

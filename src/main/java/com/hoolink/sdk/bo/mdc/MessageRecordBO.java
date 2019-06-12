@@ -2,7 +2,9 @@ package com.hoolink.sdk.bo.mdc;
 
 import lombok.Data;
 
+import javax.swing.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author 朱礼
@@ -30,4 +32,22 @@ public class MessageRecordBO implements Serializable {
 
     /** 是否已读，true：已读，false：未读 */
     private Boolean readStatus;
+
+    /** 设备id */
+    private Long deviceId;
+
+    /** 工单id */
+    private Long orderId;
+
+    /** 设备数量 */
+    private Integer num;
+
+    /** 工单描述 */
+    private String description;
+
+    /** 故障参数 */
+    private List<MessageRecordDetailBO> messageRecordDetailBOList;
+
+    /** 工单流程列表 */
+    private List<OrderProcessBO> orderProcessBOList;
 }
