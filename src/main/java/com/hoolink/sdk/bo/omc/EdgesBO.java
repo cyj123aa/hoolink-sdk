@@ -45,7 +45,9 @@ public class EdgesBO {
     /**
      * 连线颜色
      */
-    private LabelBO label;
+    private String label;
+
+
     /**
      * 连线颜色
      */

@@ -1,6 +1,7 @@
 package com.hoolink.sdk.bo.omc;
 
 
+import java.util.List;
 import lombok.Data;
 
 /**
@@ -42,4 +43,10 @@ public class NodeBO {
      * 连线颜色
      */
     private Long index;
+
+
+    /**
+     * 节点下关联用户
+     */
+    private String userName;
 }
