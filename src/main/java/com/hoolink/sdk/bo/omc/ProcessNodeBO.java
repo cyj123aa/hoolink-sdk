@@ -52,7 +52,7 @@ public class ProcessNodeBO {
     /**
      * 流程下节点
      */
-    private List<NodeBO> nodes;
+    private NodeWebBO nodes;
 
 
 }

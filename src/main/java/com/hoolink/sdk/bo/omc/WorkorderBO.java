@@ -23,7 +23,7 @@ public class WorkorderBO {
      * 表字段 : workorder.type
      * </pre>
      */
-    private Boolean type;
+    private String type;
 
     /**
      * <pre>
@@ -31,7 +31,7 @@ public class WorkorderBO {
      * 表字段 : workorder.priority
      * </pre>
      */
-    private Boolean priority;
+    private Integer priority;
 
     /**
      * <pre>
@@ -63,7 +63,7 @@ public class WorkorderBO {
      * 表字段 : workorder.order_status
      * </pre>
      */
-    private Boolean orderStatus;
+    private Integer orderStatus;
 
     /**
      * <pre>
@@ -81,13 +81,14 @@ public class WorkorderBO {
      */
     private Long ownerId;
 
+
     /**
      * <pre>
      * 当前节点
      * 表字段 : workorder.node_id
      * </pre>
      */
-    private Long nodeId;
+    private String nodeId;
 
     /**
      * <pre>
@@ -144,6 +145,8 @@ public class WorkorderBO {
      * </pre>
      */
     private Long updated;
+
+
 
     /**
      * 文件集合

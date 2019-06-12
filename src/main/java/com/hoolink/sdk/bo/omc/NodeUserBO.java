@@ -8,17 +8,16 @@ import lombok.Data;
  */
 @Data
 public class NodeUserBO {
-    /**
-     * <pre>
-     * 节点id
-     * 表字段 : node.id
-     * </pre>
-     */
-    private Long id;
+
+
+    private Long processId;
+
+    private String nodeId;
 
     /**
      * 用户id集合
      */
-    private List<Long> users;
+    private List<UserNameBO> users;
+
 
 }

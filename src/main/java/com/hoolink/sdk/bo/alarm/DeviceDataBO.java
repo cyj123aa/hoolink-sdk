@@ -1,6 +1,6 @@
 package com.hoolink.sdk.bo.alarm;
 
-import com.hoolink.sdk.enums.DeviceTypeEnum;
+import com.hoolink.sdk.enums.DeviceSubTypeEnum;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -20,13 +20,17 @@ public class DeviceDataBO implements Serializable {
     /*** 设备ID */
     private Long deviceId;
 
+    /*** 项目ID */
+    @NotNull(message = "项目ID不能为空")
+    private Long projectId;
+
     /*** 设备物理地址 */
     @NotBlank(message = "物理地址不能为空")
     private String deviceMac;
 
     /*** 设备类型 */
     @NotNull(message = "设备类型不能为空")
-    private DeviceTypeEnum deviceType;
+    private DeviceSubTypeEnum subType;
 
     @NotNull(message = "设备在线状态不能为空")
     private Boolean online;

@@ -11,4 +11,17 @@ import lombok.Data;
 @Data
 public class MonitorDeviceDataBO extends DeviceDataBO {
     private static final long serialVersionUID = 6825318401784818860L;
+
+    /*** 气体监测 */
+    private GasDeviceDataBO gas;
+
+    /*** 水位监测 */
+    private WaterGaugeDeviceDataBO waterGauge;
+
+    /*** 环境监测 */
+    private EnvironmentDeviceDataBO environment;
+
+    /*** 漏电监测 */
+    private LeakageDetectDeviceDataBO leakageDetect;
+
 }
