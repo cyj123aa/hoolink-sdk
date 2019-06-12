@@ -46,5 +46,12 @@ public class CurrentUserBO implements Serializable {
     private Set<Long> comanyIdSet;
     /** 权限url**/
     private Set<String> accessUrlSet;
+    /**
+     * <pre>
+     * 角色类型【0：普通角色  1：文控角色】
+     * 表字段 : manage_role.role_type
+     * </pre>
+     */
+    private Boolean roleType;
 
 }
