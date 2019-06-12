@@ -225,7 +225,8 @@ public enum HoolinkExceptionMassageEnum {
     UNSATISFIED_PERMISSIONS_EXIST_IN_THE_FAVORITE_FILE("收藏文件中存在不满足您权限的文件，无法收藏！"),
     NO_PERMISSION_OPERA("无权限移动该文件或文件夹！"),
     FILE_NOT_EXIST("该文件不存在"),
-    PLEASE_SET_SUITABLE_TIMEOUT("请设置合适的超时时间")
+    PLEASE_SET_SUITABLE_TIMEOUT("请设置合适的超时时间"),
+    NO_PREVIEW_PERMISSIONS("无预览权限")
     ;
 
     private String message;
