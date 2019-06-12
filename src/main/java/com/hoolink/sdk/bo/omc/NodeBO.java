@@ -1,5 +1,6 @@
 package com.hoolink.sdk.bo.omc;
 
+
 import java.util.List;
 import lombok.Data;
 
@@ -8,53 +9,44 @@ import lombok.Data;
  */
 @Data
 public class NodeBO {
+    private String id;
+
     /**
-     * <pre>
+     * 节点样式
+     */
+    private String shape;
+    /**
+     * 节点大小
+     */
+    private String size;
+    /**
+     * 节点背景颜色
+     */
+    private String color;
+    /**
+     * 节点名称
+     */
+    private String label;
+    /**
+     * 节点x坐标
+     */
+    private Long x;
+    /**
+     * 节点y坐标
+     */
+    private Long y;
+    /**
      * 节点id
-     * 表字段 : node.id
-     * </pre>
      */
-    private Long id;
+    private String nodeId;
     /**
-     * <pre>
-     * 流程id
-     * 表字段 : node.process_id
-     * </pre>
+     * 连线颜色
      */
-    private Long processId;
-    /**
-     * <pre>
-     * 节点名字
-     * 表字段 : node.Node_name
-     * </pre>
-     */
-    private String nodeName;
+    private Long index;
+
 
     /**
-     * <pre>
-     * 节点类型
-     * 表字段 : node.Node_type
-     * </pre>
+     * 节点下关联用户
      */
-    private Boolean nodeType;
-
-    /**
-     * <pre>
-     * 节点key
-     * 表字段 : node.key
-     * </pre>
-     */
-    private Long key;
-
-    /**
-     * <pre>
-     * 描述
-     * 表字段 : node.description
-     * </pre>
-     */
-    private String description;
-
-    private List<Long>  parents;
-
-
+    private String userName;
 }

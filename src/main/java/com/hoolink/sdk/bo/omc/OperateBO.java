@@ -13,7 +13,7 @@ public class OperateBO {
     /**
      * 上级节点
      */
-    private Long  nextNodeId;
+    private String  nextNodeId;
     /**
      * 上级处理人
      */
@@ -26,7 +26,7 @@ public class OperateBO {
     /**
      * 当前节点
      */
-    private Long  nodeId;
+    private String  nodeId;
 
     /**
      * 流程id
