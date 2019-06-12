@@ -46,5 +46,6 @@ public class CurrentUserBO implements Serializable {
     private Set<Long> comanyIdSet;
     /** 权限url**/
     private Set<String> accessUrlSet;
-
+    /** 姓名*/
+    private String userName;
 }
