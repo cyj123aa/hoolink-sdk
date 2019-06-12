@@ -28,4 +28,7 @@ public class DeviceDataBO implements Serializable {
     @NotNull(message = "设备类型不能为空")
     private DeviceTypeEnum deviceType;
 
+    @NotNull(message = "设备在线状态不能为空")
+    private Boolean online;
+
 }

@@ -19,4 +19,7 @@ public class RedisConstants {
     public static final String OPERATION_MAC_KEY = "biz_history_mac_";
     /**设备最新一次操作缓存*/
     public static final String LAST_HISTORY_KEY = "last_history_";
+
+    /*** 报警-集中器故障 */
+    public static final String EXTERNAL_FAULT = "external_fault";
 }
