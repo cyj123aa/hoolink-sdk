@@ -22,7 +22,7 @@ public class AlarmHistoryDataBO implements Serializable {
     private Long configItemId;
 
     /*** 设备当前值 */
-    private Double deviceItemValue;
+    private String deviceItemValue;
 
     /*** 阈值上界 */
     private Double upperBound;
