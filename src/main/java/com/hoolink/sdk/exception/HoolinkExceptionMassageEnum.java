@@ -226,12 +226,13 @@ public enum HoolinkExceptionMassageEnum {
     NO_PERMISSION_OPERA("无权限移动该文件或文件夹！"),
     FILE_NOT_EXIST("该文件不存在"),
     PLEASE_SET_SUITABLE_TIMEOUT("请设置合适的超时时间"),
+    NO_PREVIEW_PERMISSIONS("无预览权限"),
     EDM_CLAIM_UPLOAD_ID_FAILED("获取文件分块上传uploadId失败"),
     EDM_UPLOAD_PART_FAILED("文件分块上传失败"),
     EDM_COMPLETE_MULTIPART_UPLOAD_FAILED("合并文件失败失败"),
     UPLOAD_EDM_FAILED("文件上传失败"),
     NO_PERMISSION_OPERA_DOWNLOAD("文件权限不足，请联系文控中心人员进行下载！"),
-    NO_PERMISSION_OPERA_DELETE("无权限删除所选文件或！"),
+    NO_PERMISSION_OPERA_DELETE("所选文件中存在无权限删除的文件，请重新选择或者联系管理员！")
     ;
 
     private String message;
