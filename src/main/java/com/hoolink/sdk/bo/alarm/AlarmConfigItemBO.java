@@ -19,7 +19,7 @@ public class AlarmConfigItemBO implements Serializable {
     private Long itemId;
 
     /*** 告警阈值项所属设备类型 */
-    private Byte itemType;
+    private Long deviceType;
 
     /*** 告警阈值项名称 */
     private String itemName;
