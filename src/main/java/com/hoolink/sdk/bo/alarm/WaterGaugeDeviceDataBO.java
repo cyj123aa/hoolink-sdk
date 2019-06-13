@@ -1,5 +1,7 @@
 package com.hoolink.sdk.bo.alarm;
 
+import com.hoolink.sdk.annotation.AlarmItem;
+import com.hoolink.sdk.enums.alarm.ItemEnum;
 import lombok.Data;
 
 /**
@@ -11,4 +13,9 @@ import lombok.Data;
 @Data
 public class WaterGaugeDeviceDataBO extends MonitorNodeBO {
     private static final long serialVersionUID = 3213604771393205382L;
+
+    /*** 水位 */
+    @AlarmItem(ItemEnum.WATER_GAUGE)
+    private Double waterGauge;
+
 }
