@@ -1,14 +1,13 @@
 package com.hoolink.sdk.bo.omc;
 
-
 import java.util.List;
 import lombok.Data;
 
 /**
- * @author chenyuejun
+ * @author Administrator
  */
 @Data
-public class NodeBO {
+public class NodeLinkBO {
     private String id;
 
     /**
@@ -50,4 +49,12 @@ public class NodeBO {
      * 节点下关联用户
      */
     private String userName;
+
+
+
+
+    private List<NodeLinkBO> nextNode;
+
+
+
 }

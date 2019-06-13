@@ -56,7 +56,13 @@ public class WorkorderBO {
      * </pre>
      */
     private Long extension;
-
+    /**
+     * <pre>
+     *
+     * 表字段 : workorder.node_typy
+     * </pre>
+     */
+    private String nodeTypy;
     /**
      * <pre>
      * 工单状态
@@ -81,6 +87,13 @@ public class WorkorderBO {
      */
     private Long ownerId;
 
+    /**
+     * <pre>
+     * 项目编号
+     * 表字段 : workorder.work_no
+     * </pre>
+     */
+    private String workNo;
 
     /**
      * <pre>
