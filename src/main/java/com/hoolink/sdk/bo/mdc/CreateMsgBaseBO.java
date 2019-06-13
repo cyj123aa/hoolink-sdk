@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author 朱礼
@@ -12,15 +11,12 @@ import java.util.List;
  * @Desc
  */
 @Data
-public class ThresholdMsgBO implements Serializable {
-    private static final long serialVersionUID = 8914952941787249151L;
+public class CreateMsgBaseBO implements Serializable {
+
+    private static final long serialVersionUID = 7019956848918559989L;
     /** 标题 */
     @NotNull(message = "content 不能为空")
     private String content;
-
-    /** 设备id */
-    @NotNull(message = "deviceId 不能为空")
-    private Long deviceId;
 
     /** 消息子类型id */
     @NotNull(message = "subTypeId 不能为空")
@@ -29,7 +25,4 @@ public class ThresholdMsgBO implements Serializable {
     /** 项目id */
     @NotNull(message = "projectId 不能为空")
     private Long projectId;
-
-    /** 故障参数 */
-    private List<MessageRecordDetailBO> messageRecordDetailBOList;
 }
