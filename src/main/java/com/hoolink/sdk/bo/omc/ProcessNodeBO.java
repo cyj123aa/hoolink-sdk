@@ -33,6 +33,9 @@ public class ProcessNodeBO {
     /*** 项目id */
     private Long projectId;
 
+    /*** 项目名称 */
+    private String projectName;
+
     /**
      * <pre>
      * 客户号 hoolink为基础模板
@@ -40,6 +43,9 @@ public class ProcessNodeBO {
      * </pre>
      */
     private String customerNo;
+
+    /*** 客户名称 */
+    private String customerName;
 
     /**
      * <pre>
