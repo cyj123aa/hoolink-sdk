@@ -21,7 +21,7 @@ public class SpecialThresholdParamBO extends PageParam implements Serializable {
     private Long projectId;
 
     /*** 特殊阈值类型 */
-    private Byte itemType;
+    private Long deviceType;
 
     /*** 设备名称 */
     private String deviceName;

@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
@@ -36,7 +35,7 @@ public class MonitorNodeBO implements Serializable {
     private String deviceAddress;
 
     /*** 告警时间 */
-    private Date alarmTime;
+    private Long alarmTime;
 
     /*** 设备类型 */
     private DeviceTypeEnum deviceType;
