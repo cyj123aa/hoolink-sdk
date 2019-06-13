@@ -9,7 +9,7 @@ import lombok.Data;
  * description:
  */
 @Data
-public class MonitorDeviceDataBO extends DeviceDataBO {
+public class MonitorDeviceDataBO {
     private static final long serialVersionUID = 6825318401784818860L;
 
     /*** 气体监测 */

@@ -14,7 +14,7 @@ import java.io.Serializable;
  * description:
  */
 @Data
-public class DeviceDataBO implements Serializable {
+public class DeviceDataBO<T> implements Serializable {
     private static final long serialVersionUID = 4013155475610225458L;
 
     /*** 设备ID */
@@ -27,7 +27,6 @@ public class DeviceDataBO implements Serializable {
     private String deviceAddress;
 
     /*** 项目ID */
-    @NotNull(message = "项目ID不能为空")
     private Long projectId;
 
     /*** 设备物理地址 */
@@ -40,6 +39,10 @@ public class DeviceDataBO implements Serializable {
 
     @NotNull(message = "设备在线状态不能为空")
     private Boolean online;
+
+    private T data;
+
+    private Class clazz;
 
     @NotNull(message = "数据上报时间不允许为空")
     private Long reportTime;
