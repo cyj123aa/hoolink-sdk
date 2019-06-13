@@ -27,4 +27,16 @@ public class ControlBroadcastParamBO extends DeviceBroadcastBO {
      */
     private Byte startOrStop;
 
+    /**
+     * 广播发起时间
+     * 表字段 : begin_time
+     */
+    private Long beginTime;
+
+    /**
+     * 广播结束时间
+     * 表字段 : end_time
+     */
+    private Long endTime;
+
 }
