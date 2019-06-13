@@ -22,6 +22,12 @@ public enum ItemEnum {
     LIGHT_TEMPERATURE(3L, "温度", "℃", DeviceTypeEnum.LIGHT),
     /*** 智能照明-光衰 */
     LIGHT_WEAK(4L, "光衰", "dB", DeviceTypeEnum.LIGHT),
+    /*** 智能照明-ACK */
+    LIGHT_ACK(29L, "ACK", null, DeviceTypeEnum.LIGHT),
+
+    /*** 监控器-ACK */
+    EXTERNAL_ACK(30L, "ACK", null, DeviceTypeEnum.EXTERNAL),
+
     /*** 环境监测 */
     ENVIRONMENT_TEMPERATURE(5L, "温度", "℃", DeviceTypeEnum.ENVIRONMENT),
     HUMIDITY(6L, "湿度", "%", DeviceTypeEnum.ENVIRONMENT),
