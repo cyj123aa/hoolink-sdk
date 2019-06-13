@@ -3,7 +3,6 @@ package com.hoolink.sdk.bo.alarm;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -18,14 +17,8 @@ public class AlarmHistoryBO implements Serializable {
 
     private Long id;
 
-    /*** 本次告警项 */
-    private Long configItemId;
-
-    /*** 告警类型[true: 恢复; false: 产生] */
-    private Boolean alarmType;
-
     /*** 告警事件 */
-    private Date alarmTime;
+    private Long alarmTime;
 
     /*** 设备ID */
     private Long deviceId;
@@ -36,6 +29,15 @@ public class AlarmHistoryBO implements Serializable {
     /*** 设备安装地址 */
     private String deviceAddress;
 
+    /*** 数据有效性 */
+    private Boolean enabled;
+
+    /*** 告警产生时间 */
+    private Long created;
+
     /*** 当前一帧的所有数据 */
     private List<AlarmHistoryDataBO> alarmData;
+
+    /*** 当前一帧数据所有的告警项 */
+    private List<AlarmHistoryItemBO> alarmItem;
 }
