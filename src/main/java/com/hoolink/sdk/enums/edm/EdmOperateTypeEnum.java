@@ -13,6 +13,7 @@ public enum EdmOperateTypeEnum {
     UPDATE_FILE((byte)5,"编辑文件"),
     MOVE_FILE((byte)6,"移动文件"),
     DOWNLOAD_FILE((byte)7,"下载文件"),
+    FILE_ARCHIVING((byte)8,"文件归档"),
     ;
 
     private Byte key;
