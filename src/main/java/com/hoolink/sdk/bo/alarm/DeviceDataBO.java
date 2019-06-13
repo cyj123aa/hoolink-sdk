@@ -20,6 +20,12 @@ public class DeviceDataBO implements Serializable {
     /*** 设备ID */
     private Long deviceId;
 
+    /*** 设备名称 */
+    private String deviceName;
+
+    /*** 设备安装地址 */
+    private String deviceAddress;
+
     /*** 项目ID */
     @NotNull(message = "项目ID不能为空")
     private Long projectId;
