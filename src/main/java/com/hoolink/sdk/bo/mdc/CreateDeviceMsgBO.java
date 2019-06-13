@@ -22,6 +22,12 @@ public class CreateDeviceMsgBO extends CreateMsgBaseBO implements Serializable {
     /** 消息类型 */
     private Long typeId;
 
+    /** 阈值上界*/
+    private Double upperBound;
+
+    /** 阈值下界*/
+    private Double lowerBound;
+
     /** 故障参数 */
     private List<MessageRecordDetailBO> messageRecordDetailBOList;
 }
