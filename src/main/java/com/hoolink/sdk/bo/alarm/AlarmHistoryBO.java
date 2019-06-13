@@ -18,12 +18,6 @@ public class AlarmHistoryBO implements Serializable {
 
     private Long id;
 
-    /*** 本次告警项 */
-    private Long configItemId;
-
-    /*** 告警类型[true: 恢复; false: 产生] */
-    private Boolean alarmType;
-
     /*** 告警事件 */
     private Date alarmTime;
 
@@ -38,4 +32,7 @@ public class AlarmHistoryBO implements Serializable {
 
     /*** 当前一帧的所有数据 */
     private List<AlarmHistoryDataBO> alarmData;
+
+    /*** 当前一帧数据所有的告警项 */
+    private List<AlarmHistoryItemBO> alarmItem;
 }

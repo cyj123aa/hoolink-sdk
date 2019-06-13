@@ -6,12 +6,13 @@ import java.io.Serializable;
 
 /**
  * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
- * @date 2019-06-12 20:37.
+ * @date 2019-06-13 9:17.
  * <p>
  * description:
  */
 @Data
-public class AlarmHistoryDataBO implements Serializable {
+public class AlarmHistoryItemBO implements Serializable {
+    private static final long serialVersionUID = -5848092934030172265L;
 
     private Long id;
 
@@ -21,12 +22,6 @@ public class AlarmHistoryDataBO implements Serializable {
     /*** 告警项ID */
     private Long configItemId;
 
-    /*** 设备当前值 */
-    private Double deviceItemValue;
-
-    /*** 阈值上界 */
-    private Double upperBound;
-
-    /*** 阈值下界 */
-    private Double lowerBound;
+    /*** 告警类型[true:恢复; false:告警] */
+    private Boolean alarmType;
 }
