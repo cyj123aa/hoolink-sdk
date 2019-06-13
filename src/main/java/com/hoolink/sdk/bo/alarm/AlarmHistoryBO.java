@@ -1,5 +1,6 @@
 package com.hoolink.sdk.bo.alarm;
 
+import com.hoolink.sdk.enums.DeviceTypeEnum;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -22,6 +23,12 @@ public class AlarmHistoryBO implements Serializable {
 
     /*** 设备ID */
     private Long deviceId;
+
+    /*** 项目ID */
+    private Long projectId;
+
+    /*** 设备类型 */
+    private DeviceTypeEnum deviceType;
 
     /*** 设备名称 */
     private String deviceName;

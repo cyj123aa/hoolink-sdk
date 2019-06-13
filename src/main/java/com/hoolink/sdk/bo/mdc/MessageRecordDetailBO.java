@@ -22,6 +22,12 @@ public class MessageRecordDetailBO implements Serializable {
     /** 数值 */
     private String itemValue;
 
+    /** 阈值上界*/
+    private Double upperBound;
+
+    /** 阈值下界*/
+    private Double lowerBound;
+
     /** 告警项标识（false：非告警项，true：告警项） */
     private Boolean sign;
 }

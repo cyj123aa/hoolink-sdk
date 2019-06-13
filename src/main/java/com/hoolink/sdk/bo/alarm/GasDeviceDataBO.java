@@ -14,9 +14,9 @@ import lombok.Data;
 public class GasDeviceDataBO extends MonitorNodeBO {
     private static final long serialVersionUID = -8738082367126542392L;
 
-    /*** 二氧化碳 */
-    @AlarmItem(ItemEnum.CARBON_DIOXIDE)
-    private Double carbonDioxide;
+    /*** 二氧化硫 */
+    @AlarmItem(ItemEnum.SULFUR_DIOXIDE)
+    private Double sulfurDioxide;
 
     /*** 硫化氢 */
     @AlarmItem(ItemEnum.HYDROGEN_SULFIDE)
