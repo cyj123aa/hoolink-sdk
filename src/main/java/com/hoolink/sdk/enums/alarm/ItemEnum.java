@@ -41,7 +41,7 @@ public enum ItemEnum {
     NOISE(14L, "噪音", "dB", DeviceTypeEnum.ENVIRONMENT),
     RAINFALL(15L, "降雨量", "mm", DeviceTypeEnum.ENVIRONMENT),
     /*** 气体监测 */
-    CARBON_DIOXIDE(16L, "二氧化碳", "mg/m3", DeviceTypeEnum.GAS),
+    SULFUR_DIOXIDE(16L, "二氧化硫", "mg/m3", DeviceTypeEnum.GAS),
     HYDROGEN_SULFIDE(17L, "硫化氢", "mg/m3", DeviceTypeEnum.GAS),
     NITRIC_OXIDE(18L, "一氧化氮", "mg/m3", DeviceTypeEnum.GAS),
     NITROGEN_DIOXIDE(19L, "二氧化氮", "mg/m3", DeviceTypeEnum.GAS),
