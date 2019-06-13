@@ -13,6 +13,8 @@ import java.io.Serializable;
 @Data
 public class AlarmHistoryDataBO implements Serializable {
 
+    private Long id;
+
     /*** 告警历史ID */
     private Long alarmHistoryId;
 
@@ -20,11 +22,14 @@ public class AlarmHistoryDataBO implements Serializable {
     private Long configItemId;
 
     /*** 设备当前值 */
-    private Double deviceItemValue;
+    private String deviceItemValue;
 
     /*** 阈值上界 */
     private Double upperBound;
 
     /*** 阈值下界 */
     private Double lowerBound;
+
+    /*** 生成时间 */
+    private Long created;
 }

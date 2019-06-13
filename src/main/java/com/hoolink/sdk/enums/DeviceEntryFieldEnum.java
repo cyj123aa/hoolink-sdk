@@ -11,6 +11,7 @@ public enum DeviceEntryFieldEnum {
     POLEMAC("poleMac"),
     POLESUBTYPENAME("poleSubTypeName"),
     EXTERNAL("externalMac"),
+    EXTERNALSUBTYPENAME("externalSubTypeName"),
     MAC("mac"),
     INSTALLADDRESS("installAddress"),
     DESCRIPTION("description"),
@@ -27,7 +28,7 @@ public enum DeviceEntryFieldEnum {
     ID("id"),
     BROADCASTSUBTYPENAME("broadcastSubTypeName"),
     BROADCASTMAC("broadcastMac"),
-    MODULENO("moduleNo"),
+    VERIFYCODE("verifyCode"),
     ;
 
     private String field;

@@ -41,4 +41,7 @@ public class DeviceDataBO implements Serializable {
     @NotNull(message = "设备在线状态不能为空")
     private Boolean online;
 
+    @NotNull(message = "数据上报时间不允许为空")
+    private Long reportTime;
+
 }
