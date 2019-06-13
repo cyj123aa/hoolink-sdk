@@ -25,7 +25,10 @@ public class SpecialThresholdListBO implements Serializable {
     private Long deviceNum;
 
     /*** 创建人 */
-    private String creator;
+    private Long creator;
+
+    /*** 创建人账号名称 */
+    private String userAccount;
 
     /*** 创建时间 */
     private Long created;

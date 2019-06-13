@@ -19,6 +19,9 @@ public class CreateDeviceMsgBO extends CreateMsgBaseBO implements Serializable {
     @NotNull(message = "deviceId 不能为空")
     private Long deviceId;
 
+    /** 消息类型 */
+    private Long typeId;
+
     /** 故障参数 */
     private List<MessageRecordDetailBO> messageRecordDetailBOList;
 }

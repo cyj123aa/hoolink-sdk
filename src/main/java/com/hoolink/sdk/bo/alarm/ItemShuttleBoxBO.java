@@ -20,4 +20,10 @@ public class ItemShuttleBoxBO implements Serializable {
     /*** 穿梭框信息 */
     private DeviceShuttleBoxBO deviceShuttleBox;
 
+    /*** 被选的设备ID */
+    private List<Long> deviceIds;
+
+    /*** 被其他阈值记录选的设备ID */
+    private List<Long> otherDeviceIds;
+
 }
