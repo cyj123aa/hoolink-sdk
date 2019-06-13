@@ -1,6 +1,8 @@
 package com.hoolink.sdk.bo.alarm;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -11,6 +13,8 @@ import java.io.Serializable;
  * description:
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class AlarmHistoryItemBO implements Serializable {
     private static final long serialVersionUID = -5848092934030172265L;
 
@@ -24,4 +28,13 @@ public class AlarmHistoryItemBO implements Serializable {
 
     /*** 告警类型[true:恢复; false:告警] */
     private Boolean alarmType;
+
+    /*** 生成时间 */
+    private Long created;
+
+    public AlarmHistoryItemBO(Long created, Boolean alarmType, Long configItemId) {
+        this.created = created;
+        this.alarmType = alarmType;
+        this.configItemId = configItemId;
+    }
 }

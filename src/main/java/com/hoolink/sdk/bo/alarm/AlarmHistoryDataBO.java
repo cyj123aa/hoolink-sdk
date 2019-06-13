@@ -29,4 +29,7 @@ public class AlarmHistoryDataBO implements Serializable {
 
     /*** 阈值下界 */
     private Double lowerBound;
+
+    /*** 生成时间 */
+    private Long created;
 }
