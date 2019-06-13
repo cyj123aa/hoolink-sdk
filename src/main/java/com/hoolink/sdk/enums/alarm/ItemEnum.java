@@ -85,7 +85,7 @@ public enum ItemEnum {
         return deviceType;
     }
 
-    public ItemEnum getByItemId(Long id) {
+    public static ItemEnum getByItemId(Long id) {
         ItemEnum[] values = ItemEnum.values();
         for (ItemEnum value : values) {
             if (Objects.equals(value.itemId, id)) {
@@ -95,7 +95,7 @@ public enum ItemEnum {
         return null;
     }
 
-    public List<ItemEnum> getByType(DeviceTypeEnum type) {
+    public static List<ItemEnum> getByType(DeviceTypeEnum type) {
         List<ItemEnum> enums = new ArrayList<>();
         ItemEnum[] values = ItemEnum.values();
         for (ItemEnum value : values) {

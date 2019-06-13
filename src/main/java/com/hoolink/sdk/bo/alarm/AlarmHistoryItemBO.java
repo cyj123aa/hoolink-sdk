@@ -23,6 +23,9 @@ public class AlarmHistoryItemBO implements Serializable {
     /*** 告警历史ID */
     private Long alarmHistoryId;
 
+    /*** 设备当前值 */
+    private Double deviceItemValue;
+
     /*** 告警项ID */
     private Long configItemId;
 
@@ -32,9 +35,10 @@ public class AlarmHistoryItemBO implements Serializable {
     /*** 生成时间 */
     private Long created;
 
-    public AlarmHistoryItemBO(Long created, Boolean alarmType, Long configItemId) {
+    public AlarmHistoryItemBO(Long created, Boolean alarmType, Long configItemId, Double deviceItemValue) {
         this.created = created;
         this.alarmType = alarmType;
         this.configItemId = configItemId;
+        this.deviceItemValue = deviceItemValue;
     }
 }
