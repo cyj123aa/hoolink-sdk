@@ -1,5 +1,11 @@
 package com.hoolink.sdk.bo.omc;
 
+import lombok.Data;
+
+/**
+ * @author Administrator
+ */
+@Data
 public class ConsumablesBO {
     /**
      * <pre>
@@ -16,7 +22,7 @@ public class ConsumablesBO {
      * 表字段 : consumables.device_name
      * </pre>
      */
-    private Long deviceName;
+    private String deviceName;
 
 
     /**

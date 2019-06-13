@@ -1,13 +1,18 @@
 package com.hoolink.sdk.enums.omc;
 
+/**
+ * @author chenyuejun
+ */
+
 public enum WorkStateEnum {
 
-    COMPLETE(1,"工单完成"),
-    CANCEL(2,"工单无法完成"),
-    APPROVALSUCCESS(3,"审批成功"),
-    APPROVALERROR(4,"审批失败"),
-    EXECUTION(5,"申请转派"),
-    DELAYWORK(6,"申请延期"),
+
+    COMPLETE(1,"已完成"),
+    CANCEL(2,"无法完成"),
+    APPROVAL(3,"待指派"),
+    PERFECTED(4,"待完善"),
+    REVIEW(5,"待审核"),
+    PROCESSED(6,"申请延期"),
     ;
 
     public Integer key;

@@ -54,6 +54,12 @@ public class DictionaryBO {
      * </pre>
      */
     private Long typeId;
-
+    /**
+     * <pre>
+     *
+     * 表字段 : dictionary.order_id
+     * </pre>
+     */
+    private Long orderId;
 
 }

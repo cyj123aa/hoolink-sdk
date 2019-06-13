@@ -12,4 +12,10 @@ public class DelayWorkBO extends OperateBO{
      * 延期时间
      */
     private Long extension;
+
+
+    /**
+     * 延期原因
+     */
+    private String  reason;
 }
