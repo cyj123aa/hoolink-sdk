@@ -23,7 +23,7 @@ public class SpecialThresholdBO implements Serializable {
     private String configName;
 
     /*** 告警阈值项所属设备类型 */
-    private Byte itemType;
+    private Long deviceType;
 
     /*** 更新者 */
     private Long updator;
