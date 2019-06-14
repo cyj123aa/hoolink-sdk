@@ -31,10 +31,10 @@ public class DmxProgramBO extends ProjectParamBO implements Serializable {
 
     /*** 播放方式： 0：单目循环，1：列表循环，2：随机播放，3：单次播放*/
     @NotEmpty(message = "播放方式不能为空")
-    private Integer playStyle;
+    private Byte playStyle;
 
     /*** 节目类型 1:常规，2：定时 */
-    private Integer programType;
+    private Byte programType;
 
     /*** 开始时间 */
     @JsonFormat(pattern = "HH:mm")
@@ -75,4 +75,7 @@ public class DmxProgramBO extends ProjectParamBO implements Serializable {
 
     /*** 节目开始到现在的时间 */
     private Long startToNowTime;
+
+    /*** 定时任务的间隔时间（单位秒） */
+    private Long secondInterval;
 }
