@@ -37,6 +37,12 @@ public class ManageDepartmentTreeBO implements Serializable {
     /*** 是否勾选 */
     private Boolean checked;
 
+    /*** 菜单类别 组织架构:true  资源列表:false*/
+    private Boolean menuType;
+
+    /*** 是否存在子集 */
+    private Boolean existChild;
+
     /*** 组织架构下的子节点*/
     private List<ManageDepartmentTreeBO> children;
 
