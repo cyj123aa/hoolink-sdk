@@ -34,7 +34,14 @@ public class ConflictConfigBO implements Serializable {
     /*** 清单模式: 1.每天 2.自定义 3.特殊日期 */
     private Byte pattern;
 
-    private List<DmxProgramStrategyCycleBO> strategyCycles;
+    /*** 特殊日期 */
+    @ApiModelProperty(dataType = "[Ljava.lang.String;")
+    @JsonSerialize(contentUsing = LocalDateSerializer.class)
+    @JsonDeserialize(contentUsing = LocalDateDeserializer.class)
+    private List<LocalDate> dates;
+
+    /*** 自定义周 */
+    private List<Byte> weeks;
 
     /*** 清单开始时间 */
     @JsonFormat(pattern = "HH:mm:ss")
