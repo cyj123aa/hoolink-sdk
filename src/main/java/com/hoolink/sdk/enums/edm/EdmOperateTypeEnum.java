@@ -14,6 +14,8 @@ public enum EdmOperateTypeEnum {
     MOVE_FILE((byte)6,"移动文件"),
     DOWNLOAD_FILE((byte)7,"下载文件"),
     FILE_ARCHIVING((byte)8,"文件归档"),
+    FILE_VISIBLE((byte)9,"文件临时可见"),
+    FILE_REMIND((byte)10,"文件提醒"),
     ;
 
     private Byte key;
