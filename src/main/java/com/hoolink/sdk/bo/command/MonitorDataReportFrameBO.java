@@ -31,6 +31,15 @@ public class MonitorDataReportFrameBO {
     /*** 平均风向 */
     private Integer windDirection;
 
+    /** 风向名称 */
+    private String windDirectionName;
+
+    /** 风向符号 */
+    private String windDirectionSign;
+
+    /** 风速等级，单位：节 */
+    private Integer windLevel;
+
     /*** 平均风速 */
     private Float windSpeed;
 
