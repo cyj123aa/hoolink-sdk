@@ -2,7 +2,9 @@ package com.hoolink.sdk.bo.alarm;
 
 import com.hoolink.sdk.annotation.AlarmItem;
 import com.hoolink.sdk.enums.alarm.ItemEnum;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
@@ -11,6 +13,8 @@ import lombok.Data;
  * description:
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class GasDeviceDataBO extends MonitorNodeBO {
     private static final long serialVersionUID = -8738082367126542392L;
 
