@@ -193,6 +193,7 @@ public enum HoolinkExceptionMassageEnum {
     UPLOAD_FILE_ERROR("文件上传失败"),
     CHECK_FIRMWARE_ERROR("固件校验未通过！请确认输入固件版本与上传文件是否一致"),
     FIRMWARE_NAME_OUT_OF_ORDER("输入固件版本不符合规则！"),
+    SEND_SMS_ERROR("发送短信失败"),
 
     DEVICE_CHECK_PASSWORD_NOT_EXIST("密码不能为空, 请输入密码!"),
     DEVICE_CHECK_PASSWORD_ERROR("密码错误, 请重新输入!"),

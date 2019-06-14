@@ -53,4 +53,9 @@ public class EdmMenuTreeBO implements Serializable {
      * 是否存在下一级
      */
     private Boolean existChild;
+
+    /**
+     * 组织架构最下级外键 （对于缓冲库而言 是 权限菜单id）
+     */
+    private Long departmentId;
 }
