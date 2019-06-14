@@ -43,6 +43,10 @@ public class ManageUserInfoBO {
      * 所属公司
      */
     private String company;
+    /**
+     * 所属公司id
+     */
+    private Long companyId;
 
     /**
      * 联系电话
