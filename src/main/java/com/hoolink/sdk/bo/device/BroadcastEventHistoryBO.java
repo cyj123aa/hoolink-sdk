@@ -40,6 +40,9 @@ public class BroadcastEventHistoryBO {
      */
     private Long creator;
 
+
+    private String creatorName;
+
     /**
      * 创建时间
      * 表字段 : broadcast_event_history.created
@@ -57,6 +60,8 @@ public class BroadcastEventHistoryBO {
      * 表字段 : broadcast_event_history.microphone_id
      */
     private Long microphoneId;
+
+    private String microphoneName;
 
     /**
      * 接收设备id串(broadcastId),格式:1,2,3
@@ -87,5 +92,13 @@ public class BroadcastEventHistoryBO {
      * 表字段 : broadcast_event_history.obs_id
      */
     private Long obsId;
+
+    private Integer totalNum;
+
+    private Integer failNum;
+
+    private String fileUrl;
+
+    private String broadcastTime;
 
 }

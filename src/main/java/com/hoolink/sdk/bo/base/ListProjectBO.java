@@ -112,6 +112,12 @@ public class ListProjectBO  implements Serializable {
      */
     private String customerName;
 
-
+    /**
+     * <pre>
+     * 流程id
+     * 表字段 : base_project.process_id
+     * </pre>
+     */
+    private Long processId;
 
 }

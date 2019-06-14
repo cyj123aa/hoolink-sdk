@@ -68,8 +68,8 @@ public class DeviceImportDataBO implements Serializable {
     List<MonitorBO> monitorInfoList;
 
     /**
-     * NB单灯
+     * dmx
      */
-    List<NbLightBO> nbLightBOList;
+    List<DmxBO> dmxList;
 
 }

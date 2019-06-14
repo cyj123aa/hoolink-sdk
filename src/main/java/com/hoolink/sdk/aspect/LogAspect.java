@@ -125,7 +125,7 @@ public class LogAspect {
                 message = "The value of the interface return value is incorrect.";
             }
             // ===== 输出异常信息
-            LOGGER.error("Exception: [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", txId, CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
+            LOGGER.error("Exception : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", txId, CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
                     CommonConstants.LOG_METHOD, method, CommonConstants.LOG_PARAM, param, CommonConstants.LOG_ERROR, message, e);
             return object;
         }
@@ -149,7 +149,7 @@ public class LogAspect {
         }
         // ===== 获取ApiOperation的value
         String operation = AspectUtil.getMethodOperation(method);
-        LOGGER.info("Request: [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
+        LOGGER.info("Request   : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
                 CommonConstants.LOG_METHOD, method, CommonConstants.LOG_PARAM, param, CommonConstants.LOG_CONTENT, operation);
     }
 
@@ -179,7 +179,7 @@ public class LogAspect {
             response = "The return value of this interface is not BackVO or BackBO. it is: " + object.getClass().getName();
         }
         // ===== 当flag为true时输出info日志
-        LOGGER.info("Response : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", txId, CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
+        LOGGER.info("Response  : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", txId, CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
                 CommonConstants.LOG_METHOD, method, CommonConstants.LOG_RETURN, response, CommonConstants.LOG_CONTENT, operation);
     }
 
@@ -201,7 +201,7 @@ public class LogAspect {
         }
         // ----- 获取方法签名
         Method method = AspectUtil.getMethodSignature(joinPoint);
-        LOGGER.error("Exception: [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT,
+        LOGGER.error("Exception : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT,
                 AspectUtil.getAccount(), CommonConstants.LOG_METHOD, method, CommonConstants.LOG_PARAM, param, CommonConstants.LOG_ERROR, e.getMessage(), e);
     }
 
