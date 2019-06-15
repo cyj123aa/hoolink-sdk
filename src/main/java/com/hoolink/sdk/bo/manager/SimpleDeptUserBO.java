@@ -41,4 +41,7 @@ public class SimpleDeptUserBO implements Serializable {
 
     /** 用户所属组织结构 */
     private Long deptId;
+
+    /** 用户所属设备码 用于推送 */
+    private String deviceCode;
 }
