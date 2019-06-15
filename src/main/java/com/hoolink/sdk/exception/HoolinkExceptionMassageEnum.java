@@ -233,6 +233,7 @@ public enum HoolinkExceptionMassageEnum {
     EDM_COMPLETE_MULTIPART_UPLOAD_FAILED("合并文件失败失败"),
     UPLOAD_EDM_FAILED("文件上传失败"),
     NO_PERMISSION_OPERA_DOWNLOAD("文件权限不足，请联系文控中心人员进行下载！"),
+    NO_PERMISSION_OPERA_ARCHIVE("所选文件中存在无权限归档的文件，请重新选择或者联系管理员！"),
     NO_PERMISSION_OPERA_DELETE("所选文件中存在无权限删除的文件，请重新选择或者联系管理员！")
     ;
 
