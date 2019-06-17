@@ -53,6 +53,15 @@ public class EnvironmentHistoryBO implements Serializable {
     /**  PM10单位：μg/m3 */
     private Float pmTen;
 
+    /** 风向名称 */
+    private String windDirectionName;
 
+    /** 风向符号 */
+    private String windDirectionSign;
 
+    /** 风速等级，单位：节 */
+    private Integer windLevel;
+
+    /** 水尺水位值单位：m */
+    private Float waterLevel;
 }

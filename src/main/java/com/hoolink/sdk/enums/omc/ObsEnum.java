@@ -29,6 +29,10 @@ public enum ObsEnum {
      *
      */
     COMPLETEWORK(6, "完成工单"),
+    /**
+     *
+     */
+    REVIEW(7, "审批"),
     ;
 
 

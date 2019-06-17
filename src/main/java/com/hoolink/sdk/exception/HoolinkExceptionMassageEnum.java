@@ -219,6 +219,8 @@ public enum HoolinkExceptionMassageEnum {
     PROCESS_INFO_ERROR("查询流程信息失败"),
     LOGIN_PASSWORD_ERROR("密码错误，请稍后再试"),
     GET_PROJECT_INFO_ERROR("查询项目信息失败！"),
+    PROCESS_NULL_ERROR("项目下无流程，请添加后再试"),
+    PROCESS_ERROR("流程存在问题，请找管理员确认后再试"),
     ;
 
     private String message;
