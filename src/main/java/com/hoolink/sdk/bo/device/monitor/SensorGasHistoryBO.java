@@ -37,4 +37,21 @@ public class SensorGasHistoryBO implements Serializable {
     /** 创建时间*/
     private Long created;
 
+    /**  一氧化碳超出值 */
+    private Float gasCoBeyond;
+
+    /** 硫化氢超出值 */
+    private Float gasH2sBeyond;
+
+    /** 一氧化氮超出值 */
+    private Float gasNoBeyond;
+
+    /** 二氧化氮超出值 */
+    private Float gasNo2Beyond;
+
+    /** 臭氧超出值 */
+    private Float gasO3Beyond;
+
+    /** 二氧化硫超出值 */
+    private Float gasSo2Beyond;
 }
