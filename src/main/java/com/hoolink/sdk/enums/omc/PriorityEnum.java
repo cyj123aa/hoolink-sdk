@@ -1,21 +1,24 @@
 package com.hoolink.sdk.enums.omc;
 
-import com.hoolink.sdk.enums.ColorEnum;
+
+/**
+ * @author chenyuejun
+ */
 
 public enum PriorityEnum {
-    EXPEDITED(1,"加急"),
-    EXPRESS(2,"特急"),
-    NORMAL(0,"正常"),
+    EXPEDITED((byte)1,"加急"),
+    EXPRESS((byte)2,"特急"),
+    NORMAL((byte)0,"正常"),
    ;
-    public Integer key;
+    public Byte key;
     public String value;
 
-    PriorityEnum(Integer key, String value) {
+    PriorityEnum(Byte key, String value) {
         this.key = key;
         this.value = value;
     }
 
-    public static String getValue(Integer key){
+    public static String getValue(Byte key){
         for (PriorityEnum priorityEnum : PriorityEnum.values()) {
             if (priorityEnum.key.equals(key)) {
                 return priorityEnum.value;
