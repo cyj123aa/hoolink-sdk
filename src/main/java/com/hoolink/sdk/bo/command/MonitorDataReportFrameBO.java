@@ -2,6 +2,8 @@ package com.hoolink.sdk.bo.command;
 
 import lombok.Data;
 
+import java.util.Map;
+
 /**
  * @author zhouyun
  * @description 数据上报内容解析类
@@ -99,4 +101,11 @@ public class MonitorDataReportFrameBO {
 
     /*** 项目id */
     private Long projectId;
+
+    /**
+     * 调用 alarm 处理告警, 并返回当前一帧数据中所有的异常项, 其中:
+     * KEY    >   阈值超出项 ID, 来自于 ItemEnum 枚举的 itemId
+     * value  >   阈值超出值 [ +: 表示超上限; -: 表示超下限 ]
+     */
+    Map<String, Double> beyondValueMap;
 }
