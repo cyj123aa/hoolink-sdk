@@ -11,22 +11,49 @@ public class OperateBO {
 
 
     /**
-     * 上级节点
+     * 上一个节点
      */
-    private String  nextNodeId;
+    private String  lastNodeId;
     /**
-     * 上级处理人
+     * 上一个处理人
      */
     private  Long superiorId;
 
     /**
-     * 当前处理人
+     * 上一个节点类型
      */
-    private  Long ownerId;
+    private  String lastNodeType;
+
+
+
     /**
      * 当前节点
      */
+    private  Long ownerId;
+    /**
+     * 当前节点处理人
+     */
     private String  nodeId;
+    /**
+     * 当前节点类型
+     */
+    private String  nodeType;
+
+
+
+    /**
+     * 下一个节点操作人
+     */
+    private  Long nextId;
+    /**
+     * 下一个节点ID
+     */
+    private String  nextNodeId;
+    /**
+     *  下一个节点类型
+     */
+    private String  nextNodeType;
+
 
     /**
      * 流程id
@@ -44,6 +71,6 @@ public class OperateBO {
      */
 
     private Long  workId;
-
+    private  String  reason;
 
 }
