@@ -224,7 +224,7 @@ public enum HoolinkExceptionMassageEnum {
     USER_NO_FILE_UPDATE_PERMISSION_ERROR("该用户没有编辑权限，请联系管理员授权！"),
     PARENT_NODE_NOT_FOUNT("父级资源没有发现"),
     UNSATISFIED_PERMISSIONS_EXIST_IN_THE_FAVORITE_FILE("收藏文件中存在不满足您权限的文件，无法收藏！"),
-    NO_PERMISSION_OPERA("无权限移动该文件或文件夹！"),
+    NO_PERMISSION_OPERA("您权限不足，无法移动！"),
     FILE_NOT_EXIST("该文件不存在"),
     PLEASE_SET_SUITABLE_TIMEOUT("请设置合适的超时时间"),
     NO_PREVIEW_PERMISSIONS("无预览权限"),
@@ -233,8 +233,9 @@ public enum HoolinkExceptionMassageEnum {
     EDM_COMPLETE_MULTIPART_UPLOAD_FAILED("合并文件失败失败"),
     UPLOAD_EDM_FAILED("文件上传失败"),
     NO_PERMISSION_OPERA_DOWNLOAD("文件权限不足，请联系文控中心人员进行下载！"),
+    NO_PERMISSION_OPERA_ARCHIVE("所选文件中存在无权限归档的文件，请重新选择或者联系管理员！"),
     NO_PERMISSION_OPERA_DELETE("所选文件中存在无权限删除的文件，请重新选择或者联系管理员！"),
-    NO_PERMISSION_SETTING("无权限设置该文件或文件夹！"),
+    NO_PERMISSION_SETTING("无权限设置该文件或文件夹！")
     ;
 
     private String message;
