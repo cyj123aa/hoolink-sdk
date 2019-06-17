@@ -1,8 +1,8 @@
 package com.hoolink.sdk.bo.device.req;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * @author wangdong
@@ -20,4 +20,7 @@ public class DeviceFileTypeBO implements Serializable {
 
     /*** 文件位于播放清单的顺序 */
     private Integer fileOrder;
+
+    /*** 文件名称 */
+    private String fileName;
 }
