@@ -118,12 +118,6 @@ public class RabbitMQConstants {
 
     /** MDC单对单消息队列 消息相关的MQ配置,此处的配置常量用于消息推送业务 **/
     public static final String MDC_EXCHANGE = "mdc.exchange";
-    public static final String REMIND_QUEUE = "remind.queue";
-    public static final String REMIND_QUEUE_ROUTING_KEY = "remind.queue.key";
-    public static final String PROCESS_QUEUE = "process.queue";
-    public static final String PROCESS_QUEUE_ROUTING_KEY = "process.queue.key";
-    public static final String ALARM_QUEUE = "alarm.queue";
-    public static final String ALARM_QUEUE_ROUTING_KEY = "alarm.queue.key";
     /** MDC广播类消息公用队列 **/
     public static final String MDC_COMMON_QUEUE = "mdc.common.queue";
     public static final String MDC_COMMON_QUEUE_ROUTING_KEY = "mdc.common.queue.key";
