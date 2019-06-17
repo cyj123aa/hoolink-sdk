@@ -5,7 +5,7 @@ import com.hoolink.sdk.enums.ColorEnum;
 public enum PriorityEnum {
     EXPEDITED(1,"加急"),
     EXPRESS(2,"特急"),
-    NORMAL(3,"正常"),
+    NORMAL(0,"正常"),
    ;
     public Integer key;
     public String value;

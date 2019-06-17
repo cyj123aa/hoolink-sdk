@@ -17,4 +17,14 @@ public enum WorkEnum {
         this.key = key;
         this.value = value;
     }
+
+    public static String getValue(Integer key){
+        for (WorkEnum workEnum : WorkEnum.values()) {
+            if (workEnum.key.equals(key)) {
+                return workEnum.value;
+            }
+        }
+        return null;
+    }
+
 }

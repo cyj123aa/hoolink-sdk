@@ -15,4 +15,5 @@ public class DeviceBO {
     /*** 设备ID */
 
     private Long deviceId;
+
 }

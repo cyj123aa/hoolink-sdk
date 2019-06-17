@@ -13,5 +13,9 @@ public class ApprovalBO extends OperateBO{
      */
     private Integer  approval;
 
-    private  String  reason;
+    /**
+     * 预设值
+     */
+    private Integer orderStatusPre;
+
 }

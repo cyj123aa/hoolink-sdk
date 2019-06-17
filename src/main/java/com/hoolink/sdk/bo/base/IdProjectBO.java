@@ -112,6 +112,13 @@ public class IdProjectBO  {
      */
     private Long modelId;
 
+    /**
+     * <pre>
+     * 项目模型zip文件ID
+     * 表字段 : base_project.model_zip_id
+     * </pre>
+     */
+    private Long modelZipId;
 
     /**
      * <pre>
