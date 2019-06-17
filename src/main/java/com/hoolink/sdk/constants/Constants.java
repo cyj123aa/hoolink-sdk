@@ -9,6 +9,7 @@ public class Constants {
     public static final String YINGSHI_CODE = "200";
 
     /*** hashMap默认长度 */
+    public static final int ONE_MAP_SIZE = 1;
     public static final int DEFAULT_MAP_SIZE = 16;
 
 }

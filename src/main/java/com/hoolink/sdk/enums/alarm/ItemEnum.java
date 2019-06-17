@@ -22,11 +22,6 @@ public enum ItemEnum {
     LIGHT_TEMPERATURE(3L, "温度", "℃", DeviceTypeEnum.LIGHT),
     /*** 智能照明-光衰 */
     LIGHT_WEAK(4L, "光衰", "dB", DeviceTypeEnum.LIGHT),
-    /*** 智能照明-ACK */
-    LIGHT_ACK(29L, "ACK", null, DeviceTypeEnum.LIGHT),
-
-    /*** 监控器-ACK */
-    EXTERNAL_ACK(30L, "ACK", null, DeviceTypeEnum.EXTERNAL),
 
     /*** 环境监测 */
     ENVIRONMENT_TEMPERATURE(5L, "温度", "℃", DeviceTypeEnum.ENVIRONMENT),
@@ -52,9 +47,11 @@ public enum ItemEnum {
     PH(23L, "", "PH值", DeviceTypeEnum.WATER),
     WATER_TEMPERATURE(24L, "水温", "℃", DeviceTypeEnum.WATER),
     TURBIDITY(25L, "浊度", "mg/L", DeviceTypeEnum.WATER),
-    ELECTRICAL_CONDUCTIVITY(28L, "电导率", "S/m", DeviceTypeEnum.WATER),
+    ELECTRICAL_CONDUCTIVITY(26L, "电导率", "S/m", DeviceTypeEnum.WATER),
     /*** 水位监测 */
     WATER_GAUGE(27L, "水位", "mm", DeviceTypeEnum.WATER_GAUGE),
+    /*** 土壤检测 */
+    Soil_moisture(28L, "土壤水分", "%", DeviceTypeEnum.SOIL),
     ;
 
     private Long itemId;

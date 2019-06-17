@@ -5,15 +5,13 @@ import java.io.Serializable;
 import lombok.Data;
 
 /**
- * @author wangdong
+ * @author zhangyy
  * @date 2019/5/22 14:04
  */
 @Data
-public class DeviceFileTypeBO implements Serializable {
-    private static final long serialVersionUID = 4655119946739289190L;
-
+public class DmxMediaFileBO implements Serializable {
     /*** obs或者txt的ID */
-    private Long obsTxtId;
+    private Long obsId;
 
     /*** 文件类型：1文本 2多媒体 */
     private Byte fileType;
