@@ -17,4 +17,6 @@ public class ReceiptDeviceBO {
     /*** 设备ID */
 
     private Long num;
+
+    private String  unit;
 }

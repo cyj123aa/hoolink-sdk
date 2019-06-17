@@ -229,4 +229,11 @@ public class WorkorderBO {
 
 
     private  String info;
+    /**
+     * <pre>
+     * 状态预值
+     * 表字段 : workorder.order_status_pre
+     * </pre>
+     */
+    private Integer orderStatusPre;
 }

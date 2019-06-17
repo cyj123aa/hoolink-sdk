@@ -16,7 +16,7 @@ public enum WorkStateEnum {
     TURN_DOWN(6,"驳回"),
     CREATE(7,"创建工单"),
 
-    COMPLETE_REVIEW(8,"处理完成审核通过"),
+    COMPLETE_REVIEW(8,"完成审核通过"),
     CANCEL_REVIEW(9,"无法完成审核通过"),
     PERFECT(10,"完善工单"),
     ;

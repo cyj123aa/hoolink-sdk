@@ -33,7 +33,13 @@ public class ReceiptBO {
      */
     private Long userId;
     private String userName;
-
+    /**
+     * <pre>
+     * 创建时间
+     * 表字段 : middle_receipt_work.created
+     * </pre>
+     */
+    private Long created;
     private List<String> obsIdsUrl;
     private List<Long> obsIds;
     private List<ReceiptDeviceBO> receiptDeviceBOS;
