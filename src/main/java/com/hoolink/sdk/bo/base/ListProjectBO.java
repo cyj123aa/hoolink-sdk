@@ -24,6 +24,7 @@ public class ListProjectBO  implements Serializable {
      */
 
     private String no;
+
     /**
      * <pre>
      * 项目模型ID
@@ -31,6 +32,15 @@ public class ListProjectBO  implements Serializable {
      * </pre>
      */
     private Long modelId;
+
+    /**
+     * <pre>
+     * 项目模型zip文件ID
+     * 表字段 : base_project.model_zip_id
+     * </pre>
+     */
+    private Long modelZipId;
+
     /**
      * <pre>
      * 项目所属场景name
@@ -47,17 +57,13 @@ public class ListProjectBO  implements Serializable {
      */
     private String name;
 
-
-
     /**
      * <pre>
      * 归属公司编号
      * 表字段 : base_project.customer_no
      * </pre>
      */
-
     private String customerNo;
-
 
     /**
      * <pre>
