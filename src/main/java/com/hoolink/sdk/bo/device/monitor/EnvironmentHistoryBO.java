@@ -64,4 +64,37 @@ public class EnvironmentHistoryBO implements Serializable {
 
     /** 水尺水位值单位：m */
     private Float waterLevel;
+
+    /** 风向超出值 */
+    private Float windDirectionBeyond;
+
+    /** 风速超出值 */
+    private Float windSpeedBeyond;
+
+    /** 温度超出值 */
+    private Float temperatureBeyond;
+
+    /** 湿度超出值 */
+    private Float humidityBeyond;
+
+    /** 气压超出值 */
+    private Float airPressureBeyond;
+
+    /** 雨量超出值 */
+    private Float rainfallBeyond;
+
+    /** 辐射超出值 */
+    private Float radiationBeyond;
+
+    /** 紫外线超出值 */
+    private Float ultravioletBeyond;
+
+    /** 噪音超出值 */
+    private Float noiseBeyond;
+
+    /** PM2.5超出值 */
+    private Float pmTowpointfiveBeyond;
+
+    /** PM10超出值 */
+    private Float pmTenBeyond;
 }
