@@ -20,5 +20,5 @@ public class DmxNodeGroupBO implements Serializable {
     private Integer nodeNum;
 
     /*** 分组下节点信息 */
-    private List<DmxNodeBO> nodeList;
+    private List<DmxDeviceBO> nodeList;
 }

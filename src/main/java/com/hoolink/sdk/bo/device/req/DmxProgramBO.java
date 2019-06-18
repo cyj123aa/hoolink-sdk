@@ -31,7 +31,7 @@ public class DmxProgramBO extends ProjectParamBO implements Serializable {
 
     /*** 播放方式： 0：单目循环，1：列表循环，2：随机播放，3：单次播放*/
     @NotEmpty(message = "播放方式不能为空")
-    private Byte playStyle;
+    private Byte playMode;
 
     /*** 节目类型 1:常规，2：定时 */
     private Byte programType;
@@ -55,7 +55,7 @@ public class DmxProgramBO extends ProjectParamBO implements Serializable {
 
     /*** 发布文件集合 */
     @NotEmpty(message = "发布文件不能为空")
-    private List<DmxMediaFileBO> files;
+    private List<DmxProgramMediaParamBO> files;
 
     /*** 节点集合 */
     @NotEmpty(message = "下发节点不能为空")
