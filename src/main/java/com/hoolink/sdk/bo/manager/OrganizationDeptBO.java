@@ -11,4 +11,5 @@ public class OrganizationDeptBO {
     private String deptName;
     private String groupName;
     private String companyName;
+    private String systemCenterName;
 }

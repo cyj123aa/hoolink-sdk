@@ -1,5 +1,6 @@
 package com.hoolink.sdk.bo.edm;
 
+import java.util.List;
 import lombok.Data;
 
 /**
@@ -19,7 +20,7 @@ public class OperateUserInfo {
     /**
      * 部门
      */
-    private String deptName;
+    private List<String> deptName;
     /**
      * 职位
      */
