@@ -1,5 +1,6 @@
 package com.hoolink.sdk.bo.manager;
 
+import io.swagger.models.auth.In;
 import lombok.Data;
 
 /**
@@ -18,4 +19,7 @@ public class UserDeptAssociationBO {
 
     /*** 1-公司 2-部门 3-小组 */
     private Byte deptType;
+
+    /*** 密保等级 */
+    private Integer encryLevelDept;
 }
