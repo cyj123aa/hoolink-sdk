@@ -9,7 +9,7 @@ import lombok.Data;
  * @date 2019/5/22 14:04
  */
 @Data
-public class DmxMediaFileBO implements Serializable {
+public class DmxProgramMediaParamBO implements Serializable {
     /*** obs或者txt的ID */
     private Long obsId;
 

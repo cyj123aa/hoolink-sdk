@@ -6,35 +6,28 @@ import lombok.Data;
 
 /**
  * @Author zhangyy
- * @DateTime 2019-06-14 15:08
+ * @DateTime 2019-06-14 17:13
  * @Description
  */
 @Data
-public class DmxDeviceBO extends DeviceManagerBO implements Serializable {
+public class DmxDeviceBO implements Serializable {
 
-    /**
-     * 联机数
-     * 表字段 : device_dmx.online_node_num
-     */
-    private Integer onlineNodeNum;
+    /*** 节点ID */
+    private Long id;
 
-    /**
-     * 控制器总数
-     * 表字段 : device_dmx.controller_num
-     */
+    /*** 联机数量 */
+    private Integer onlineNum;
+
+    /*** 控制器总数量 */
     private Integer controllerNum;
 
-    /**
-     * 当前播放节目ID
-     * 表字段 : device_dmx.program_config_id
-     */
-    private Integer programConfigId;
-
-    /**
-     * 设备状态
-     */
-    private Integer deviceStatus;
-
-    /**当前播放的节目名称**/
+    /*** 节目名称 */
     private String programName;
+
+    /*** 节点状态 */
+    private Integer nodeStatus;
+
+    /*** 节点名称 */
+    private String nodeName;
 }
+
