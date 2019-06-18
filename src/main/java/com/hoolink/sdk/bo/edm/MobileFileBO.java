@@ -22,4 +22,29 @@ public class MobileFileBO {
      * 是否是最后一层组织架构
      */
     private boolean ifLastDepartment;
+
+    /**
+     * 文件大小
+     */
+    private Long fileSize;
+
+    /**
+     * 文件后缀
+     */
+    private String fileSuffix;
+
+    /**
+     * 文件时间
+     */
+    private Long created;
+
+    /**
+     * 是否是文件夹
+     */
+    private Boolean fileType;
+
+    /**
+     * 文件url
+     */
+    private String fileUrl;
 }
