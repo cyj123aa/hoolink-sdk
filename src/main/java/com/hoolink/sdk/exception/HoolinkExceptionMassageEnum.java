@@ -235,7 +235,11 @@ public enum HoolinkExceptionMassageEnum {
     NO_PERMISSION_OPERA_DOWNLOAD("文件权限不足，请联系文控中心人员进行下载！"),
     NO_PERMISSION_OPERA_ARCHIVE("所选文件中存在无权限归档的文件，请重新选择或者联系管理员！"),
     NO_PERMISSION_OPERA_DELETE("您权限不足，无法删除"),
-    NO_PERMISSION_SETTING("您权限不足，无法设置！")
+    NO_PERMISSION_SETTING("您权限不足，无法设置！"),
+
+    /** mdc */
+    MESSAGE_JPUSH_ERROR("极光推送消息失败"),
+
     ;
 
     private String message;
