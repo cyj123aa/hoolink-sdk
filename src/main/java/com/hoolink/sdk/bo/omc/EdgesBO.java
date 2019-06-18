@@ -1,5 +1,6 @@
 package com.hoolink.sdk.bo.omc;
 
+import io.swagger.models.auth.In;
 import lombok.Data;
 
 /**
@@ -21,7 +22,7 @@ public class EdgesBO {
     /**
      * 连线颜色
      */
-    private Long sourceAnchor;
+    private Integer sourceAnchor;
     /**
      * 连线颜色
      */
@@ -29,7 +30,7 @@ public class EdgesBO {
     /**
      * 连线颜色
      */
-    private Long targetAnchor;
+    private Integer targetAnchor;
     /**
      * 连线颜色
      */
@@ -42,7 +43,7 @@ public class EdgesBO {
     /**
      * 连线颜色
      */
-    private Long index;
+    private Integer index;
     /**
      * 连线颜色
      */
