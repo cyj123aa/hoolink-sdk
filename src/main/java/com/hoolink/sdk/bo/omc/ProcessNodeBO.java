@@ -69,5 +69,10 @@ public class ProcessNodeBO {
      */
     private NodeWebBO nodes;
 
+    /**
+     * 场景id
+     */
+    private Long scencId;
+
 
 }
