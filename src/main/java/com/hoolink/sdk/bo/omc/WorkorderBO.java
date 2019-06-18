@@ -24,6 +24,14 @@ public class WorkorderBO {
      * 表字段 : workorder.type
      * </pre>
      */
+    private String type;
+
+    /**
+     * <pre>
+     * 问题类型
+     * 表字段 : workorder.type
+     * </pre>
+     */
     private String workType;
     /**
      * <pre>
