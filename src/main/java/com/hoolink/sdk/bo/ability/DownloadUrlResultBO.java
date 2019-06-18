@@ -13,4 +13,5 @@ public class DownloadUrlResultBO {
 	private DownloadUrlParamBO param;
 	private Long minioId;
 	private String url;
+	private String fileName;
 }
