@@ -25,6 +25,9 @@ public class SendMsgToMqBO implements Serializable {
     /** 项目id */
     private Long projectId;
 
+    /** 项目名称 */
+    private String projectName;
+
     /** 工单id */
     private Long orderId;
 
