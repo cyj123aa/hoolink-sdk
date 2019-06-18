@@ -22,4 +22,7 @@ public class UserDeptAssociationBO {
 
     /*** 密保等级 */
     private Integer encryLevelDept;
+
+    /*** 是否最底层: 是/否 */
+    private Boolean lowestLevel;
 }
