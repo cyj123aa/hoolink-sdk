@@ -28,6 +28,9 @@ public class CreateMsgBaseBO implements Serializable {
     @NotNull(message = "projectId 不能为空")
     private Long projectId;
 
+    /** 推送的用户id */
+    private Long pushUserId;
+
     CreateMsgBaseBO(Long projectId, String content, Long messageSubTypeId) {
         this.content = content;
         this.projectId = projectId;

@@ -23,14 +23,14 @@ import lombok.Data;
 @Data
 public class DmxConflictConfigBO implements Serializable {
 
-    /*** 清单ID */
+    /*** 节目ID program_id*/
     private Long configId;
 
-    /*** 清单名称 */
+    /*** 节目名称  program_name*/
     private String configName;
 
-    /*** 清单模式: 1.每天 2.自定义 3.特殊日期 */
-    private Byte pattern;
+    /*** 节目模式: 1.每天 2.自定义 3.特殊日期  play_mode*/
+    private Byte programMode;
 
     private List<DmxProgramStrategyCycleBO> strategyCycleBOList;
 
