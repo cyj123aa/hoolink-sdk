@@ -3,6 +3,8 @@ package com.hoolink.sdk.bo.device;
 import com.hoolink.sdk.bo.rpc.PageParamBO;
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @author XuBaofeng.
  * @date 2019-05-14 11:50.
@@ -33,5 +35,10 @@ public class SearchDeviceBO extends PageParamBO {
 
     /*** 设备型号ID */
     private Long subTypeId;
+
+    /*** 前端传的设备状态 */
+    private Integer deviceStatus;
+
+    private List<Long> longList;
 
 }
