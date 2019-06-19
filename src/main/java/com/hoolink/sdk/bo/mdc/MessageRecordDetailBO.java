@@ -24,7 +24,7 @@ public class MessageRecordDetailBO implements Serializable {
     private String itemUnit;
 
     /*** 数值 */
-    private String itemValue;
+    private Double itemValue;
 
     /*** 阈值上界*/
     private Double upperBound;
