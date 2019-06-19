@@ -11,5 +11,5 @@ import lombok.Data;
 public class ErrorResponse {
 	private Boolean status;
 	private String errorMsg;
-	private String uploadType;
+	private String type;
 }
