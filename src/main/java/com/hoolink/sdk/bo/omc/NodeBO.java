@@ -30,11 +30,11 @@ public class NodeBO {
     /**
      * 节点x坐标
      */
-    private Long x;
+    private Integer x;
     /**
      * 节点y坐标
      */
-    private Long y;
+    private Integer y;
     /**
      * 节点id
      */
@@ -42,7 +42,7 @@ public class NodeBO {
     /**
      * 连线颜色
      */
-    private Long index;
+    private Integer index;
 
     private List<UserNameBO> userNameBOS;
 

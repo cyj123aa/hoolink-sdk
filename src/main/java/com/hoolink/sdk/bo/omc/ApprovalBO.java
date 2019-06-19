@@ -11,7 +11,11 @@ public class ApprovalBO extends OperateBO{
     /**
      * 审批状态 3成功4失败  7通过， 8，驳回
      */
-    private Integer  approval;
+    private Byte  approval;
 
-    private  String  reason;
+    /**
+     * 预设值
+     */
+    private Byte orderStatusPre;
+
 }

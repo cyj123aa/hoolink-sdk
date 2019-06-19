@@ -1,6 +1,7 @@
 package com.hoolink.sdk.bo.omc;
 
 
+import com.hoolink.sdk.bo.device.DeviceManagerBO;
 import java.util.List;
 import lombok.Data;
 
@@ -24,6 +25,21 @@ public class WorkorderBO {
      * </pre>
      */
     private String type;
+
+    /**
+     * <pre>
+     * 问题类型
+     * 表字段 : workorder.type
+     * </pre>
+     */
+    private String workType;
+    /**
+     * <pre>
+     * 问题类型
+     * 表字段 : workorder.type
+     * </pre>
+     */
+    private String typeName;
 
     /**
      * <pre>
@@ -134,7 +150,13 @@ public class WorkorderBO {
      * </pre>
      */
     private Long creator;
-
+    /**
+     * <pre>
+     * 创建者
+     * 表字段 : workorder.creator
+     * </pre>
+     */
+    private String creatName;
     /**
      * <pre>
      * 创建时间
@@ -166,11 +188,20 @@ public class WorkorderBO {
      */
     private List<Long> obsIds;
 
+    /**
+     * 文件集合
+     */
+    private List<String> obsUrls;
 
     /**
      * 设备集合
      */
     private List<DeviceBO> devices;
+
+    /**
+     * 设备集合
+     */
+    private  List<DeviceManagerBO> deviceManagerBOS;
     /**
      * 项目id
      */
@@ -179,4 +210,48 @@ public class WorkorderBO {
      * 延期原因  审批原因
      */
     private String  reason;
+
+    /**
+     * <pre>
+     * 上个节点类型
+     * 表字段 : workorder.last_node_type
+     * </pre>
+     */
+    private String lastNodeType;
+
+    /**
+     * <pre>
+     * 上个节点id
+     * 表字段 : workorder.last_node_id
+     * </pre>
+     */
+    private String lastNodeId;
+    /**
+     * <pre>
+     * 类型中文
+     * 表字段 : workorder.order_type
+     * </pre>
+     */
+    private String orderType;
+
+
+
+    private  String info;
+    /**
+     * <pre>
+     * 状态预值
+     * 表字段 : workorder.order_status_pre
+     * </pre>
+     */
+    private Integer orderStatusPre;
+
+
+
+    /**
+     * <pre>
+     * 是否延期
+     * 表字段 : workorder.order_status_pre
+     * </pre>
+     */
+    private Boolean delay;
 }

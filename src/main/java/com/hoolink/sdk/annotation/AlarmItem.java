@@ -2,8 +2,7 @@ package com.hoolink.sdk.annotation;
 
 import com.hoolink.sdk.enums.alarm.ItemEnum;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.*;
 
 /**
  * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
@@ -11,6 +10,8 @@ import java.lang.annotation.RetentionPolicy;
  * <p>
  * description:
  */
+@Documented
+@Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AlarmItem {
 

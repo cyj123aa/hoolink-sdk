@@ -16,9 +16,6 @@ public class ScreenPlayScheduleBO implements Serializable {
 
     private Long configId;
 
-    /*** 执行任务的类名称 */
-    private String className;
-
     /*** 定时任务表达式 */
     private String cronExpression;
 

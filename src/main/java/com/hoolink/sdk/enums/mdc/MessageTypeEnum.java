@@ -15,7 +15,7 @@ public enum MessageTypeEnum {
     /** 事件消息 */
     EVENT_MESSAGE(4L, "事件消息"),
     /** 公告消息 */
-    ANNOUNCEMENT_NEWS(5L, "公告消息"),
+    ANNOUNCEMENT_NEWS(5L, "系统消息"),
     /** 提醒消息 */
     REMIND_MESSAGE(6L, "提醒消息");
 

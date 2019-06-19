@@ -34,4 +34,9 @@ public class CustomerProjectBO implements Serializable {
      */
     private Long processId;
 
+    /**
+     * 场景id
+     */
+    private Long scencId;
+
 }

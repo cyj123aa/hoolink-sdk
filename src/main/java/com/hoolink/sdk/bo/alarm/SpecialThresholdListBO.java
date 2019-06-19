@@ -18,6 +18,9 @@ public class SpecialThresholdListBO implements Serializable {
     /*** 特殊阈值类型 */
     private Long deviceType;
 
+    /*** 阈值类型名称 */
+    private String thresholdTypeName;
+
     /*** 说明 */
     private String configName;
 
