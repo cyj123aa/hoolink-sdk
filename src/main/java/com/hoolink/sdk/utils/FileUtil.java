@@ -1,8 +1,11 @@
 package com.hoolink.sdk.utils;
 
-import org.apache.commons.io.FileUtils;
-
-import java.io.*;
+import com.hoolink.sdk.enums.edm.FileTypeEnum;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
@@ -12,6 +15,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.text.DecimalFormat;
+import org.apache.commons.io.FileUtils;
 
 /**
  * @version V1.0
@@ -226,6 +230,18 @@ public class FileUtil {
         }
         return strFileSize;
 
+    }
+
+    /**
+     * 传入文件后缀名称 获取文件类型
+     * @return
+     */
+    public static Integer getFileType(String fileExtName){
+        if(fileExtName == null){
+            return 0;
+        }
+        String upperCase = fileExtName.toUpperCase();
+        return FileTypeEnum.getCode(upperCase);
     }
 
 }
