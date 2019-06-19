@@ -24,5 +24,7 @@ public class FileTypeConstants {
 
     public static final String[] UNKNOWNFILE = {"0"};
 
+    public static final String[] PDF = {"PDF"};
+
 
 }
