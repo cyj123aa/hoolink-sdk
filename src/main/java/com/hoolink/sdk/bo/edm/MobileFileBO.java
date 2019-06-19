@@ -14,6 +14,11 @@ public class MobileFileBO {
     private String name;
 
     /**
+     * 文件类型，如图片，视频，pdf等
+     */
+    private Integer type;
+
+    /**
      * 是否是组织架构
      */
     private boolean ifDepartment;
