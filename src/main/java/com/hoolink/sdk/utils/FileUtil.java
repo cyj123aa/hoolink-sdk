@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.text.DecimalFormat;
 
 /**
  * @version V1.0
@@ -189,6 +190,42 @@ public class FileUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    private static final String ONE_KB="1KB";
+    private static final String KB="KB";
+    private static final String MB="MB";
+    private static final String GB="GB";
+    private static final Integer SIZE_UNIT=1024;
+    /**
+     * 文件大小转化
+     * @param filesize
+     * @return
+     */
+    public  static String getLength(long filesize) {
+        String strFileSize = null;
+        if(filesize<1){
+            return ONE_KB;
+        }
+        if (filesize < SIZE_UNIT) {
+            strFileSize = filesize + KB;
+            return strFileSize;
+        }
+        DecimalFormat df = new DecimalFormat("######0.00");
+
+        //KB
+        if ((filesize >= SIZE_UNIT) && (filesize < SIZE_UNIT * SIZE_UNIT)) {
+            strFileSize = df.format(((double) filesize) / SIZE_UNIT) + KB;
+            //MB
+        } else if ((filesize >= SIZE_UNIT * SIZE_UNIT) && (filesize < SIZE_UNIT * SIZE_UNIT * SIZE_UNIT)) {
+            strFileSize = df.format(((double) filesize) / (SIZE_UNIT * SIZE_UNIT)) + MB;
+            //GB
+        } else {
+            strFileSize = df.format(((double) filesize) / (SIZE_UNIT * SIZE_UNIT * SIZE_UNIT)) + GB;
+        }
+        return strFileSize;
+
     }
 
 }
