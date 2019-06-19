@@ -15,8 +15,8 @@ public enum FileTypeEnum {
     CAD(6,"CAD", FileTypeConstants.CAD),
     PSD(7,"psd", FileTypeConstants.PSD),
     XMIND(8,"XMind", FileTypeConstants.XMIND),
-    FILE(9,"文件", FileTypeConstants.UNKNOWNFILE),
-    PDF(10,"PDF", FileTypeConstants.PDF);
+    FILE(10,"文件", FileTypeConstants.UNKNOWNFILE),
+    PDF(9,"PDF", FileTypeConstants.PDF);
     private Integer key;
     private String code;
     private String[] type;
@@ -36,7 +36,7 @@ public enum FileTypeEnum {
                 }
             }
         }
-        return 9;
+        return 10;
     }
 
 }
