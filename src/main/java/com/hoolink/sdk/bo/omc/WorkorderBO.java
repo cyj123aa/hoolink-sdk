@@ -244,4 +244,14 @@ public class WorkorderBO {
      * </pre>
      */
     private Integer orderStatusPre;
+
+
+
+    /**
+     * <pre>
+     * 是否延期
+     * 表字段 : workorder.order_status_pre
+     * </pre>
+     */
+    private Boolean delay;
 }

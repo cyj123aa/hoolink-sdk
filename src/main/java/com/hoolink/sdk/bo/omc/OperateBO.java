@@ -9,7 +9,10 @@ import lombok.Data;
 @Data
 public class OperateBO {
 
-
+    /**
+     * 截止时间
+     */
+        private  Long deadline;
     /**
      * 上一个节点
      */
