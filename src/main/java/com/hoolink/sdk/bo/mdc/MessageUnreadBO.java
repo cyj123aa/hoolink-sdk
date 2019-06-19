@@ -28,8 +28,8 @@ public class MessageUnreadBO implements Serializable {
     /** 事件消息未读数量 */
     private Integer eventCount;
 
-    /** 公告消息未读数量 */
-    private Integer announceCount;
+    /** 系统消息未读数量 */
+    private Integer systemCount;
 
     /** 提醒消息未读数量 */
     private Integer remindCount;
