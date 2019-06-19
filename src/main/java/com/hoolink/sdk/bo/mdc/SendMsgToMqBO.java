@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @Desc
  */
 @Data
-public class SendMsgToMqBO implements Serializable {
+public class SendMsgToMqBO extends MessageUnreadBO implements Serializable {
     private static final long serialVersionUID = 2363170208014517233L;
 
     /** 消息id */
