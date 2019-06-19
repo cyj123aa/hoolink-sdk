@@ -57,4 +57,11 @@ public class ConflictConfigBO implements Serializable {
     @ApiModelProperty(dataType = "java.lang.String", example = "06:08:00")
     private LocalTime timingEnd;
 
+    private Byte week;
+
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @ApiModelProperty(dataType = "java.lang.String", example = "1970-01-01")
+    private LocalDate specialDate;
 }
