@@ -11,6 +11,18 @@ import java.util.Collection;
 @Data
 public class PushRequestBO {
 
+    /** 消息内容 */
     private String message;
+
+    /** 推送目标 registerId */
     private Collection<String> jPushList;
+
+    /** 附加字段key */
+    private String key;
+
+    /** 附加字段value */
+    private String value;
+
+    /** 推送标题 */
+    private String title;
 }
