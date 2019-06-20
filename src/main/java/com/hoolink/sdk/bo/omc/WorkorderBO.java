@@ -105,6 +105,14 @@ public class WorkorderBO {
 
     /**
      * <pre>
+     * 当前处理人
+     * 表字段 : workorder.owner_id
+     * </pre>
+     */
+    private String ownerName;
+
+    /**
+     * <pre>
      * 项目编号
      * 表字段 : workorder.work_no
      * </pre>
