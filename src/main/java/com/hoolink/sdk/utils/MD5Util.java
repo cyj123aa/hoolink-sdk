@@ -1,5 +1,7 @@
 package com.hoolink.sdk.utils;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
 
@@ -96,6 +98,10 @@ public class MD5Util {
             stringBuilder.append(hv);
         }
         return stringBuilder.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(MD5(MD5("123456")));
     }
 
 }
