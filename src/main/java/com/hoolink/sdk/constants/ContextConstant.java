@@ -12,6 +12,8 @@ public class ContextConstant {
     public static final String REQUEST_PATH = "requestPath";
     /*** 存放Token的header字段 */
     public static final String TOKEN = "X-Token";
+    /**手机端token*/
+    public static final String MOBILE_TOKEN = "M-Token";
     /*** 每次请求的唯一标识 */
     public static final String TX_ID = "txId";
     /*** 项目ID */

@@ -44,6 +44,9 @@ public class MessageRecordBO implements Serializable {
     /** 工单描述 */
     private String description;
 
+    /*** 项目id */
+    private Long projectId;
+
     /** 故障参数 */
     private List<MessageRecordDetailBO> messageRecordDetailBOList;
 

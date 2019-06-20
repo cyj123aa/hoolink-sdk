@@ -164,6 +164,9 @@ public enum HoolinkExceptionMassageEnum {
     ACCESS_OBS_FAILED("访问OBS服务失败"),
     READ_INIT_MENU_FAILED("初始化菜单列表失败"),
     READ_NEXT_MENU_FAILED("获取下级菜单列表失败"),
+    LIST_MENU_BY_ROLE("根据角色获取菜单失败"),
+    ORG_INFO_ERROR("获取组织架构信息失败"),
+    ENCRYPTED_LEVEL_ERROR("获取密保等级失败"),
     USER_ACCOUNT_EXISTS("账号重复"),
     EXCEL_COMPANY_ERROR("请选择正确的公司"),
     EXCEL_DEPT_ERROR("请选择正确的部门"),
@@ -190,6 +193,7 @@ public enum HoolinkExceptionMassageEnum {
     UPLOAD_FILE_ERROR("文件上传失败"),
     CHECK_FIRMWARE_ERROR("固件校验未通过！请确认输入固件版本与上传文件是否一致"),
     FIRMWARE_NAME_OUT_OF_ORDER("输入固件版本不符合规则！"),
+    SEND_SMS_ERROR("发送短信失败"),
 
     DEVICE_CHECK_PASSWORD_NOT_EXIST("密码不能为空, 请输入密码!"),
     DEVICE_CHECK_PASSWORD_ERROR("密码错误, 请重新输入!"),
@@ -219,6 +223,39 @@ public enum HoolinkExceptionMassageEnum {
     PROCESS_INFO_ERROR("查询流程信息失败"),
     LOGIN_PASSWORD_ERROR("密码错误，请稍后再试"),
     GET_PROJECT_INFO_ERROR("查询项目信息失败！"),
+    PROCESS_NULL_ERROR("项目下无流程，请添加后再试"),
+    PROCESS_ERROR("流程存在问题，请找管理员确认后再试"),
+
+    /** edm */
+    USER_SECURITY_NOT_EXIST("用户资源密保等级不存在"),
+    OUTPUT_FILE_NOT_EXIST("输出的文件不纯在"),
+    REPERTORY_INFO_ERROR("需要设置的文件资源为空！"),
+    ORG_LIST_TREE_ERROR("获取组织架构树失败！"),
+    FILE_NO_JURISDICTION("获取文件密保权限失败"),
+    FILE_JURISDICTION_PARAM_ERROR("获取文件密保权限参数错误"),
+    MANAGE_DEPARTMENT_TREE("获取组织架构失败"),
+    USER_ROLE_NOT_EXIST("用户角色不能为空！"),
+    USER_NO_FILE_UPDATE_PERMISSION_ERROR("该用户没有编辑权限，请联系管理员授权！"),
+    PARENT_NODE_NOT_FOUNT("父级资源没有发现"),
+    UNSATISFIED_PERMISSIONS_EXIST_IN_THE_FAVORITE_FILE("收藏文件中存在不满足您权限的文件，无法收藏！"),
+    SOME_DOCUMENTS_HAVE_COLLECTED("有部分文件已收藏"),
+    NO_PERMISSION_OPERA("您权限不足，无法移动！"),
+    FILE_NOT_EXIST("该文件不存在"),
+    PLEASE_SET_SUITABLE_TIMEOUT("请设置合适的超时时间"),
+    NO_PREVIEW_PERMISSIONS("无预览权限"),
+    EDM_CLAIM_UPLOAD_ID_FAILED("获取文件分块上传uploadId失败"),
+    EDM_UPLOAD_PART_FAILED("文件分块上传失败"),
+    EDM_COMPLETE_MULTIPART_UPLOAD_FAILED("合并文件失败失败"),
+    UPLOAD_EDM_FAILED("文件上传失败"),
+    NO_PERMISSION_OPERA_DOWNLOAD("文件权限不足，请联系文控中心人员进行下载！"),
+    NO_PERMISSION_OPERA_ARCHIVE("所选文件中存在无权限归档的文件，请重新选择或者联系管理员！"),
+    NO_PERMISSION_OPERA_DELETE("您权限不足，无法删除"),
+    NO_PERMISSION_SETTING("您权限不足，无法设置！"),
+    USER_DEPT_ENCRY_ERROR("用户部门与密保等级数据错误"),
+
+    /** mdc */
+    MESSAGE_JPUSH_ERROR("极光推送消息失败"),
+
     ;
 
     private String message;

@@ -36,11 +36,6 @@ public class RabbitMQConstants {
     public static final String DISPATCH_SOCKET_QUEUE = "direct.socket.dispatch.queue";
 
     /**
-     * 告警消息队列
-     */
-    public static final String ALARM_QUEUE = "direct.alarm.queue";
-
-    /**
      * 告警webSocket消息队列
      */
     public static final String ALARM_SOCKET_QUEUE = "direct.socket.alarm.queue";
@@ -119,4 +114,11 @@ public class RabbitMQConstants {
      */
     public static final String MEMBER_FACE_QUEUE = "member.face.queue";
     public static final String MEMBER_FACE_ROUTING_KEY = "member.face.routing.key";
+
+
+    /** MDC单对单消息队列 消息相关的MQ配置,此处的配置常量用于消息推送业务 **/
+    public static final String MDC_EXCHANGE = "mdc.exchange";
+    /** MDC广播类消息公用队列 **/
+    public static final String MDC_COMMON_QUEUE = "mdc.common.queue";
+    public static final String MDC_COMMON_QUEUE_ROUTING_KEY = "mdc.common.queue.key";
 }
