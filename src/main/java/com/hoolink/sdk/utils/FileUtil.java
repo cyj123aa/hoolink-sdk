@@ -3,6 +3,7 @@ package com.hoolink.sdk.utils;
 import org.apache.commons.io.FileUtils;
 
 import java.io.*;
+import java.math.BigDecimal;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
@@ -19,6 +20,8 @@ import java.nio.file.StandardCopyOption;
  * @date: 2019/5/17 15:11
  **/
 public class FileUtil {
+
+    private static final Integer M_SIZE=1024;
     /**
      * 根据byte数组，生成文件
      */
@@ -189,6 +192,18 @@ public class FileUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 文件大小计算
+     * @param fileSize
+     * @return
+     */
+    public static Float ByteToM(Long fileSize){
+        Float fileSizeM=fileSize/(M_SIZE*M_SIZE*1F);
+        BigDecimal bg = new BigDecimal(fileSizeM);
+        fileSizeM = bg.setScale(1, BigDecimal.ROUND_HALF_UP).floatValue();
+        return fileSizeM;
     }
 
 }
