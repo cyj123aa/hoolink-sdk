@@ -29,7 +29,6 @@ import org.apache.commons.io.FileUtils;
  **/
 public class FileUtil {
 
-    private static final Integer M_SIZE=1024;
     /**
      * 根据byte数组，生成文件
      */
@@ -256,7 +255,7 @@ public class FileUtil {
      * @return
      */
     public static Float ByteToM(Long fileSize){
-        Float fileSizeM=fileSize/(M_SIZE*M_SIZE*1F);
+        Float fileSizeM=fileSize/(SIZE_UNIT*SIZE_UNIT*1F);
         BigDecimal bg = new BigDecimal(fileSizeM);
         fileSizeM = bg.setScale(1, BigDecimal.ROUND_HALF_UP).floatValue();
         return fileSizeM;
