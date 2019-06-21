@@ -21,10 +21,10 @@ import java.util.List;
  * @desc
  **/
 @Data
-public class TodayLightStrategyItemBO {
+public class TodayPlanItemBO {
 
-    /*** 策略ID */
-    private Long strategyItemId;
+    /*** 单灯：单灯itemID */
+    private Long itemId;
 
     /*** 开始时间 只包含时间 */
     @JsonSerialize(using = LocalTimeSerializer.class)
@@ -36,8 +36,8 @@ public class TodayLightStrategyItemBO {
     @JsonDeserialize(using = LocalTimeDeserializer.class)
     private LocalTime endTime;
 
-    /*** 策略名称 */
-    private String strategyName;
+    /*** 单灯：单灯策略名 */
+    private String itemName;
 
     /*** 重复模式 1.每天 2.自定义 3.特殊日期 */
     private Byte pattern;
@@ -50,7 +50,7 @@ public class TodayLightStrategyItemBO {
     @JsonDeserialize(contentUsing = LocalDateDeserializer.class)
     private List<LocalDate> specialDates;
 
-    /*** 设备 */
+    /*** 设备ID */
     private List<Long> deviceIds;
 
     /*** 开始日期和时间 包含日期和时间 */
@@ -62,4 +62,7 @@ public class TodayLightStrategyItemBO {
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime endDateTime;
+
+    /** 设备类型 DeviceTypeEnum枚举 */
+    private Long deviceType;
 }
