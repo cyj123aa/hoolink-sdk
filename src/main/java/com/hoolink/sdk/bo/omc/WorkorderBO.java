@@ -24,6 +24,14 @@ public class WorkorderBO {
      * 表字段 : workorder.type
      * </pre>
      */
+    private String type;
+
+    /**
+     * <pre>
+     * 问题类型
+     * 表字段 : workorder.type
+     * </pre>
+     */
     private String workType;
     /**
      * <pre>
@@ -94,6 +102,14 @@ public class WorkorderBO {
      * </pre>
      */
     private Long ownerId;
+
+    /**
+     * <pre>
+     * 当前处理人
+     * 表字段 : workorder.owner_id
+     * </pre>
+     */
+    private String ownerName;
 
     /**
      * <pre>
@@ -236,4 +252,14 @@ public class WorkorderBO {
      * </pre>
      */
     private Integer orderStatusPre;
+
+
+
+    /**
+     * <pre>
+     * 是否延期
+     * 表字段 : workorder.order_status_pre
+     * </pre>
+     */
+    private Boolean delay;
 }

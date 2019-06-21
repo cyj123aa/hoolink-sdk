@@ -4,6 +4,12 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.*;
 import java.math.BigDecimal;
+import com.hoolink.sdk.enums.edm.FileTypeEnum;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
@@ -12,6 +18,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.text.DecimalFormat;
+import org.apache.commons.io.FileUtils;
 
 /**
  * @version V1.0
@@ -192,6 +200,54 @@ public class FileUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    private static final String ONE_KB="1KB";
+    private static final String KB="KB";
+    private static final String MB="MB";
+    private static final String GB="GB";
+    private static final Integer SIZE_UNIT=1024;
+    /**
+     * 文件大小转化
+     * @param filesize
+     * @return
+     */
+    public  static String getLength(long filesize) {
+        String strFileSize = null;
+        if(filesize<1){
+            return ONE_KB;
+        }
+        if (filesize < SIZE_UNIT) {
+            strFileSize = filesize + KB;
+            return strFileSize;
+        }
+        DecimalFormat df = new DecimalFormat("######0.00");
+
+        //KB
+        if ((filesize >= SIZE_UNIT) && (filesize < SIZE_UNIT * SIZE_UNIT)) {
+            strFileSize = df.format(((double) filesize) / SIZE_UNIT) + KB;
+            //MB
+        } else if ((filesize >= SIZE_UNIT * SIZE_UNIT) && (filesize < SIZE_UNIT * SIZE_UNIT * SIZE_UNIT)) {
+            strFileSize = df.format(((double) filesize) / (SIZE_UNIT * SIZE_UNIT)) + MB;
+            //GB
+        } else {
+            strFileSize = df.format(((double) filesize) / (SIZE_UNIT * SIZE_UNIT * SIZE_UNIT)) + GB;
+        }
+        return strFileSize;
+
+    }
+
+    /**
+     * 传入文件后缀名称 获取文件类型
+     * @return
+     */
+    public static Integer getFileType(String fileExtName){
+        if(fileExtName == null){
+            return 0;
+        }
+        String upperCase = fileExtName.toUpperCase();
+        return FileTypeEnum.getCode(upperCase);
     }
 
     /**

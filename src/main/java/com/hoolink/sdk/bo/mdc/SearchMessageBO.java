@@ -19,6 +19,10 @@ public class SearchMessageBO extends PageParam implements Serializable {
     @NotNull(message = "userId 不能为空")
     private Long userId;
 
+    /** 项目id */
+    @NotNull(message = "projectId 不能为空")
+    private Long projectId;
+
     /** 消息类型id，0：全部，1:设备故障消息,2:阈值消息,3:工单消息，4：事件消息, 5:公告消息,6:提醒消息 */
     private Long typeId;
 

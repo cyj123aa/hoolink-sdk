@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author wangdong
@@ -26,4 +27,13 @@ public class ProjectThresholdParamBO implements Serializable {
 
     /*** 设备ID */
     private Long deviceId;
+
+    /*** 设备ID集合 */
+    private List<Long> deviceIds;
+
+    public ProjectThresholdParamBO(Long projectId, Long deviceTypeId, Long deviceId) {
+        this.projectId = projectId;
+        this.deviceTypeId = deviceTypeId;
+        this.deviceId = deviceId;
+    }
 }
