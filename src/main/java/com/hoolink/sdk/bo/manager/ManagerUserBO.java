@@ -75,12 +75,12 @@ public class ManagerUserBO {
      * 账号状态: 启用/禁用
      */
     private String statusDesc;
-    
+
     /**
      * 性别: 1/0 男/女
      */
     private Boolean sex;
-    
+
     /**
      * 性别
      */

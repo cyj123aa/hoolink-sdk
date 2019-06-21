@@ -1,5 +1,6 @@
 package com.hoolink.sdk.utils;
 
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -1138,5 +1139,32 @@ public final class DateUtil {
             w = 0;
         }
         return weekDays[w];
+    }
+
+    /**
+     * 根据时间戳和天数获取同一时间
+     *
+     * @param time
+     * @param span
+     * @return
+     * @throws Exception
+     */
+    public static Long getTimeByDateAndDaySpan(Long time, Integer span) throws Exception {
+        return getTimeByDateAndDaySpan(new Timestamp(time), span);
+    }
+
+    /**
+     * 根据时间和天数获取同一时间
+     *
+     * @param time
+     * @param span
+     * @return
+     * @throws Exception
+     */
+    public static Long getTimeByDateAndDaySpan(Timestamp time, Integer span) throws Exception {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(time);
+        calendar.add(Calendar.DATE, span);
+        return calendar.getTimeInMillis();
     }
 }

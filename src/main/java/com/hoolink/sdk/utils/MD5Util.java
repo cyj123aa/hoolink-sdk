@@ -1,9 +1,9 @@
 package com.hoolink.sdk.utils;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
-
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * @Author: xuli
@@ -96,6 +96,10 @@ public class MD5Util {
             stringBuilder.append(hv);
         }
         return stringBuilder.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(MD5(MD5("123456")));
     }
 
 }

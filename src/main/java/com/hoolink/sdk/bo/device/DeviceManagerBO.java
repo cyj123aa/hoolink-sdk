@@ -105,9 +105,4 @@ public class DeviceManagerBO implements Serializable {
     /*** 设备识别码 */
     private String verifyCode;
 
-    /**
-     * 最后一次通讯时间
-     */
-    private Long lastDateTime;
-
 }

@@ -9,6 +9,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.servicecomb.swagger.invocation.context.ContextUtils;
 import org.apache.servicecomb.swagger.invocation.context.InvocationContext;
 
+import java.net.URLDecoder;
+
 /**
  * @author wm
  * @description 工具类
@@ -26,6 +28,7 @@ public class ContextUtil {
             String user = context.getContext(ContextConstant.CURRENT_USER);
             if (StringUtils.isNotEmpty(user)) {
                 userBO = JSONUtils.parse(user, CurrentUserBO.class);
+                userBO.setUserName(URLDecoder.decode(userBO.getUserName(),"utf-8"));
             }
         } catch (Exception e) {
             return getDefaultUser();
