@@ -46,7 +46,7 @@ public class ManageUserInfoBO {
     /**
      * 所属公司id
      */
-    private Long companyId;
+    private List<Long> companyId;
 
     /**
      * 联系电话
