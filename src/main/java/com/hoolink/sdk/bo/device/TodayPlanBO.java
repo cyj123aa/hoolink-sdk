@@ -25,11 +25,14 @@ public class TodayPlanBO implements Serializable {
     /** 运行状态未开始常量 */
     public static final Byte NON_START = (byte)3;
 
+    /** 计划ID 单灯：策略配置项ID 音响：任务ID 显示屏：配置ID 巡检：巡检计划ID */
+    private Long planId;
+
     /** 设备类型 DeviceTypeEnum枚举 */
     private Long deviceType;
 
-    /** 任务名称 (清单名称或者配置名称) */
-    private String taskName;
+    /** 计划名称 */
+    private String planName;
 
     /** 设备数量 */
     private Integer deviceNum;

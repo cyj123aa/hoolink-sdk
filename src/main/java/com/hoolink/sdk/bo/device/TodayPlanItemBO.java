@@ -10,6 +10,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -21,8 +22,9 @@ import java.util.List;
  * @desc
  **/
 @Data
-public class TodayPlanItemBO {
+public class TodayPlanItemBO implements Serializable {
 
+    private static final long serialVersionUID = -5311752920814890667L;
     /*** 单灯：单灯itemID */
     private Long itemId;
 
