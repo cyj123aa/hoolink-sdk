@@ -78,4 +78,11 @@ public class LightCodeConsts {
 
     public static final String DOWN_CMD_36 = "0x36";
     public static final String DOWN_CMD_37 = "0x37";
+
+    /**
+     * nb单灯注册
+     */
+    public static final String DOWN_CMD_REGISTER = "register";
+
+
 }

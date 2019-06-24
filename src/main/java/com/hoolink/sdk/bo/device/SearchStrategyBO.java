@@ -17,4 +17,7 @@ public class SearchStrategyBO implements Serializable {
 
     /*** 场景项ID */
     private Long itemId;
+
+    /*** 设备型号Id */
+    private Long subTypeId;
 }

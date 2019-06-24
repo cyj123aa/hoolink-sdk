@@ -212,6 +212,20 @@ public enum HoolinkExceptionMassageEnum {
     NB_ACCESS_TOKEN_FAULT("nb平台获取accessToken失败"),
     NB_SERVICE_CONSUME_FAULT("nb平台调用失败"),
 
+    /** 流程配置 */
+    CREATE_PROCESS_ERROR("创建流程失败"),
+    UPDATE_PROCESS_ERROR("修改流程失败"),
+    REMOVE_PROCESS_ERROR("删除流程失败"),
+    GET_PROCESS_ERROR("查询流程失败"),
+    LIST_PROCESS_ERROR("查询流程列表失败"),
+    PROCESS_AUTHORIZATION_ERROR("流程授权失败"),
+    SET_PROCESS_PROJECT_ERROR("设置流程和项目关系失败"),
+    PROCESS_INFO_ERROR("查询流程信息失败"),
+    LOGIN_PASSWORD_ERROR("密码错误，请稍后再试"),
+    GET_PROJECT_INFO_ERROR("查询项目信息失败！"),
+    PROCESS_NULL_ERROR("项目下无流程，请添加后再试"),
+    PROCESS_ERROR("流程存在问题，请找管理员确认后再试"),
+
     /** edm */
     USER_SECURITY_NOT_EXIST("用户资源密保等级不存在"),
     OUTPUT_FILE_NOT_EXIST("输出的文件不纯在"),
@@ -221,7 +235,7 @@ public enum HoolinkExceptionMassageEnum {
     FILE_JURISDICTION_PARAM_ERROR("获取文件密保权限参数错误"),
     MANAGE_DEPARTMENT_TREE("获取组织架构失败"),
     USER_ROLE_NOT_EXIST("用户角色不能为空！"),
-    USER_NO_FILE_UPDATE_PERMISSION_ERROR("该用户没有编辑权限，请联系管理员授权！"),
+    USER_NO_FILE_UPDATE_PERMISSION_ERROR("文件权限不足，请联系文控中心人员进行下载！"),
     PARENT_NODE_NOT_FOUNT("父级资源没有发现"),
     UNSATISFIED_PERMISSIONS_EXIST_IN_THE_FAVORITE_FILE("收藏文件中存在不满足您权限的文件，无法收藏！"),
     SOME_DOCUMENTS_HAVE_COLLECTED("有部分文件已收藏"),

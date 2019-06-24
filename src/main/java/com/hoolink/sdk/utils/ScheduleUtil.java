@@ -37,7 +37,7 @@ public class ScheduleUtil {
      * @param time
      * @return
      */
-    public static String assemblyCron(LocalTime time, LocalDate day) {
+    private static String assemblyCron(LocalTime time, LocalDate day) {
         return time.getSecond() + TEMP + time.getMinute() + TEMP + time.getHour() + TEMP +
                 day.getDayOfMonth() + TEMP + day.getMonthValue() + TEMP + "?" + TEMP + day.getYear();
     }

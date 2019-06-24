@@ -11,5 +11,6 @@ import lombok.Data;
 public class DeviceBroadcastBO extends DeviceManagerBO {
 
     private Long id;
+    private Integer volume;
     private Long lastTime;
 }
