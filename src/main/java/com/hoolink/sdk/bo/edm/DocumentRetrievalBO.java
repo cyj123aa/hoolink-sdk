@@ -13,7 +13,7 @@ public class DocumentRetrievalBO extends PageParamBO {
     /**
      * 目录id
      */
-    Long directoryId;
+    String directoryId;
 
     /**
      * 目录类型

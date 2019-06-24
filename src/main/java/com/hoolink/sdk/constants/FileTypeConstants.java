@@ -8,7 +8,10 @@ public class FileTypeConstants {
 
     public static final String[] PICTURE = {"JPG", "JPEG", "PNG", "GIF"};
 
-    public static final String[] VIDEO = {"AVI", "RM", "RMVB", "MPEG", "MPG", "DAT", "MOV", "QT", "ASF", "WMV", "MP4"};
+    /**
+     * AVI不支持预览
+     */
+    public static final String[] VIDEO = {"RM", "RMVB", "MPEG", "MPG", "DAT", "MOV", "QT", "ASF", "WMV", "MP4"};
 
     public static final String[] PPT = {"PPT", "PPTX", "PPSX", "PPTX"};
 
