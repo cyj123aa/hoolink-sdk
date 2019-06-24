@@ -252,7 +252,7 @@ public enum HoolinkExceptionMassageEnum {
     NO_PERMISSION_OPERA_DELETE("您权限不足，无法删除"),
     NO_PERMISSION_SETTING("您权限不足，无法设置！"),
     USER_DEPT_ENCRY_ERROR("用户部门与密保等级数据错误"),
-
+    NO_RESOURCE_OPERA("所选文件中无可操作的文件，请重新选择或者联系管理员！"),
     /** mdc */
     MESSAGE_JPUSH_ERROR("极光推送消息失败"),
 

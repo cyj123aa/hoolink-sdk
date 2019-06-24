@@ -17,6 +17,8 @@ public enum EdmOperateTypeEnum {
     FILE_VISIBLE((byte)9,"文件临时可见"),
     FILE_REMIND((byte)10,"文件提醒"),
     SET_FILE_PERMISSION((byte)11,"设置文件权限"),
+    ADD_COLLECTION((byte)12,"添加收藏"),
+    REMOVE_COLLECTION((byte)13,"取消收藏")
     ;
 
     private Byte key;
