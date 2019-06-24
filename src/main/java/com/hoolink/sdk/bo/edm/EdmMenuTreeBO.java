@@ -20,7 +20,7 @@ public class EdmMenuTreeBO implements Serializable {
     private String value;
 
     /*** 菜单ID */
-    private Long key;
+    private String key;
 
     /*** 子节点 */
     private List<EdmMenuTreeBO> children;
