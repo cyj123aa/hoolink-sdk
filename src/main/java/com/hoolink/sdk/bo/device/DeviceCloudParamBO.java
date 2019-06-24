@@ -19,7 +19,12 @@ public class DeviceCloudParamBO implements Serializable {
     /*** 项目ID */
     private Long projectId;
 
+    /*** 项目ID */
+    private Long typeId;
+
     List<Long> longList;
+
+    private Integer deviceStatus;
 
     List<DeviceCoordParamBO> coordList;
 }

@@ -81,4 +81,6 @@ public class DeviceManagerCloudDetailBO implements Serializable {
      */
     private Long lastDateTime;
 
+    private Integer deviceStatus;
+
 }
