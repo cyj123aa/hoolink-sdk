@@ -1,11 +1,9 @@
 package com.hoolink.sdk.utils;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
-
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * @Author: xuli

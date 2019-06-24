@@ -1,5 +1,9 @@
 package com.hoolink.sdk.utils;
 
+import org.apache.commons.io.FileUtils;
+
+import java.io.*;
+import java.math.BigDecimal;
 import com.hoolink.sdk.enums.edm.FileTypeEnum;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -24,6 +28,7 @@ import org.apache.commons.io.FileUtils;
  * @date: 2019/5/17 15:11
  **/
 public class FileUtil {
+
     /**
      * 根据byte数组，生成文件
      */
@@ -242,6 +247,18 @@ public class FileUtil {
         }
         String upperCase = fileExtName.toUpperCase();
         return FileTypeEnum.getCode(upperCase);
+    }
+
+    /**
+     * 文件大小计算
+     * @param fileSize
+     * @return
+     */
+    public static Float ByteToM(Long fileSize){
+        Float fileSizeM=fileSize/(SIZE_UNIT*SIZE_UNIT*1F);
+        BigDecimal bg = new BigDecimal(fileSizeM);
+        fileSizeM = bg.setScale(1, BigDecimal.ROUND_HALF_UP).floatValue();
+        return fileSizeM;
     }
 
 }
