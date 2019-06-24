@@ -22,4 +22,7 @@ public class WaterLevelHistoryBO implements Serializable {
     /** 创建时间*/
     private Long created;
 
+    /** 水尺水位报警值 */
+    private Float waterLevelBeyond;
+
 }

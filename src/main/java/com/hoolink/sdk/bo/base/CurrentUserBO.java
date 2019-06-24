@@ -46,6 +46,8 @@ public class CurrentUserBO implements Serializable {
     private Set<Long> comanyIdSet;
     /** 权限url**/
     private Set<String> accessUrlSet;
+    /** 姓名*/
+    private String userName;
     /**
      * <pre>
      * 角色类型【0：普通角色  1：文控角色】

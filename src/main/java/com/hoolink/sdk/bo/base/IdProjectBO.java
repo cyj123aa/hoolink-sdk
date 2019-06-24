@@ -112,7 +112,6 @@ public class IdProjectBO  {
      */
     private Long modelId;
 
-
     /**
      * <pre>
      * 附件id 集合
@@ -140,5 +139,7 @@ public class IdProjectBO  {
      * 修改人
      */
     private Long updator;
+
+    private Long processId;
 
 }

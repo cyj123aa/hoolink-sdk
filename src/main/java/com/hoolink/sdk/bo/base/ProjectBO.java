@@ -109,7 +109,6 @@ public class ProjectBO  implements Serializable {
 
     private Long modelId;
 
-
     /**
      * <pre>
      * 附件id 集合
