@@ -235,7 +235,7 @@ public enum HoolinkExceptionMassageEnum {
     FILE_JURISDICTION_PARAM_ERROR("获取文件密保权限参数错误"),
     MANAGE_DEPARTMENT_TREE("获取组织架构失败"),
     USER_ROLE_NOT_EXIST("用户角色不能为空！"),
-    USER_NO_FILE_UPDATE_PERMISSION_ERROR("该用户没有编辑权限，请联系管理员授权！"),
+    USER_NO_FILE_UPDATE_PERMISSION_ERROR("文件权限不足，请联系文控中心人员进行下载！"),
     PARENT_NODE_NOT_FOUNT("父级资源没有发现"),
     UNSATISFIED_PERMISSIONS_EXIST_IN_THE_FAVORITE_FILE("收藏文件中存在不满足您权限的文件，无法收藏！"),
     SOME_DOCUMENTS_HAVE_COLLECTED("有部分文件已收藏"),
