@@ -76,6 +76,8 @@ public class DeviceManagerCloudBO implements Serializable {
     /*** 工作状态 */
     private Boolean workStatus;
 
+    private Integer deviceStatus;
+
     List<DeviceManagerCloudDetailBO> managerBOList;
 
 }
