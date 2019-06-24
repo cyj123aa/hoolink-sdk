@@ -16,4 +16,6 @@ public class ExternalBO extends DeviceManagerBO {
     private Long id;
     /*** 通讯号 */
     private String channelNo;
+    /*** 项目名称 */
+    private String projectName;
 }
