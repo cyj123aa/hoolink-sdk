@@ -18,4 +18,10 @@ public class ExternalBO extends DeviceManagerBO {
     private String channelNo;
     /*** 项目名称 */
     private String projectName;
+    /*** 灯总数 */
+    private Long lightCount;
+    /*** 变更状态 */
+    private Byte changeStatus;
+    /*** 设备状态 */
+    private String deviceStatus;
 }
