@@ -102,7 +102,7 @@ public enum HoolinkExceptionMassageEnum {
     SCREEN_CONFIG_ID_ERROR("清单ID不正确"),
     LIGHT_DIMMER_ERROR("调光值不能为空"),
     CHANNEL_NO_ERROR("该设备已断线，不可操作"),
-    SCREEN_CHANNEL_BUSY("设备通道被占用，请稍后重试！"),
+    SCREEN_CHANNEL_BUSY("文件下发中，暂无法控制！"),
 
     /*** 巡检 */
     INSPECTION_TIME_SELECT_ERROR("请选择自定义时间"),
@@ -207,13 +207,17 @@ public enum HoolinkExceptionMassageEnum {
     PLEASE_MENU_CONFIG("请配置菜单权限!"),
     USER_NOT_VISITOR("当前用户角色无权限!"),
 
-    /** hoolink-command */
+    /**
+     * hoolink-command
+     */
     SWITCHCMD_CLASS_NULL("分发命令类未找到"),
     SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
     NB_ACCESS_TOKEN_FAULT("nb平台获取accessToken失败"),
     NB_SERVICE_CONSUME_FAULT("nb平台调用失败"),
 
-    /** 流程配置 */
+    /**
+     * 流程配置
+     */
     CREATE_PROCESS_ERROR("创建流程失败"),
     UPDATE_PROCESS_ERROR("修改流程失败"),
     REMOVE_PROCESS_ERROR("删除流程失败"),
@@ -227,7 +231,9 @@ public enum HoolinkExceptionMassageEnum {
     PROCESS_NULL_ERROR("项目下无流程，请添加后再试"),
     PROCESS_ERROR("流程存在问题，请找管理员确认后再试"),
 
-    /** edm */
+    /**
+     * edm
+     */
     USER_SECURITY_NOT_EXIST("用户资源密保等级不存在"),
     OUTPUT_FILE_NOT_EXIST("输出的文件不纯在"),
     REPERTORY_INFO_ERROR("需要设置的文件资源为空！"),
@@ -254,7 +260,9 @@ public enum HoolinkExceptionMassageEnum {
     NO_PERMISSION_SETTING("您权限不足，无法设置！"),
     USER_DEPT_ENCRY_ERROR("用户部门与密保等级数据错误"),
     NO_RESOURCE_OPERA("所选文件中无可操作的文件，请重新选择或者联系管理员！"),
-    /** mdc */
+    /**
+     * mdc
+     */
     MESSAGE_JPUSH_ERROR("极光推送消息失败"),
 
     ;
