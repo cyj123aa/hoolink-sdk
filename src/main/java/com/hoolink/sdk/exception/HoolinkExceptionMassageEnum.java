@@ -102,6 +102,7 @@ public enum HoolinkExceptionMassageEnum {
     SCREEN_CONFIG_ID_ERROR("清单ID不正确"),
     LIGHT_DIMMER_ERROR("调光值不能为空"),
     CHANNEL_NO_ERROR("该设备已断线，不可操作"),
+    SCREEN_CHANNEL_BUSY("设备通道被占用，请稍后重试！"),
 
     /*** 巡检 */
     INSPECTION_TIME_SELECT_ERROR("请选择自定义时间"),
