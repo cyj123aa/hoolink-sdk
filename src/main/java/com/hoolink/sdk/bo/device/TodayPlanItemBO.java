@@ -66,5 +66,5 @@ public class TodayPlanItemBO implements Serializable {
     private LocalDateTime endDateTime;
 
     /** 设备类型 DeviceTypeEnum枚举 */
-    private Long deviceType;
+    private Long deviceTypeId;
 }
