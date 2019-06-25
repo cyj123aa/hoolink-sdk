@@ -25,7 +25,7 @@ import java.util.List;
 public class TodayPlanItemBO implements Serializable {
 
     private static final long serialVersionUID = -5311752920814890667L;
-    /*** 单灯：单灯itemID */
+    /*** 单灯：策略配置项ID 音响：任务ID 显示屏：配置ID 巡检：巡检计划ID */
     private Long itemId;
 
     /*** 开始时间 只包含时间 */
@@ -38,7 +38,7 @@ public class TodayPlanItemBO implements Serializable {
     @JsonDeserialize(using = LocalTimeDeserializer.class)
     private LocalTime endTime;
 
-    /*** 单灯：单灯策略名 */
+    /*** 计划项名称 */
     private String itemName;
 
     /*** 重复模式 1.每天 2.自定义 3.特殊日期 */
