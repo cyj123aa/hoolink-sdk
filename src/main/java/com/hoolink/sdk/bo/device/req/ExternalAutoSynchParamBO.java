@@ -15,4 +15,6 @@ public class ExternalAutoSynchParamBO implements Serializable {
     private Long externalId;
     /*** 单灯ID */
     private Long lightId;
+    /*** 创建者ID */
+    private Long creator;
 }

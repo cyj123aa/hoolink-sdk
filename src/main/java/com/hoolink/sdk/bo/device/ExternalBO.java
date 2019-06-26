@@ -24,4 +24,6 @@ public class ExternalBO extends DeviceManagerBO {
     private Byte changeStatus;
     /*** 设备状态 */
     private String deviceStatus;
+    /*** 变更状态中文 */
+    private String changeStatusChinese;
 }
