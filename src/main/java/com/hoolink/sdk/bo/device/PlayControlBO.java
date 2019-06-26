@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * @ClassName PlayControlBO
@@ -14,7 +15,7 @@ import javax.validation.constraints.NotNull;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PlayControlBO {
+public class PlayControlBO implements Serializable {
     @NotNull
     private Long id;
     @NotNull
