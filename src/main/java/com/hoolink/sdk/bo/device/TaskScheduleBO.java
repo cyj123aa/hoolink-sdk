@@ -88,4 +88,10 @@ public class TaskScheduleBO implements Serializable {
      * 表字段 : middle_task_schedule.task_id
      */
     private Long taskId;
+
+
+    /**
+     * 任务执行动作标志
+     */
+    private Boolean play;
 }

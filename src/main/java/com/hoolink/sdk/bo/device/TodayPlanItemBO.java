@@ -10,6 +10,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -21,10 +22,11 @@ import java.util.List;
  * @desc
  **/
 @Data
-public class TodayLightStrategyItemBO {
+public class TodayPlanItemBO implements Serializable {
 
-    /*** 策略ID */
-    private Long strategyItemId;
+    private static final long serialVersionUID = -5311752920814890667L;
+    /*** 单灯：策略配置项ID 音响：任务ID 显示屏：配置ID 巡检：巡检计划ID */
+    private Long itemId;
 
     /*** 开始时间 只包含时间 */
     @JsonSerialize(using = LocalTimeSerializer.class)
@@ -36,8 +38,8 @@ public class TodayLightStrategyItemBO {
     @JsonDeserialize(using = LocalTimeDeserializer.class)
     private LocalTime endTime;
 
-    /*** 策略名称 */
-    private String strategyName;
+    /*** 计划项名称 */
+    private String itemName;
 
     /*** 重复模式 1.每天 2.自定义 3.特殊日期 */
     private Byte pattern;
@@ -50,7 +52,7 @@ public class TodayLightStrategyItemBO {
     @JsonDeserialize(contentUsing = LocalDateDeserializer.class)
     private List<LocalDate> specialDates;
 
-    /*** 设备 */
+    /*** 设备ID */
     private List<Long> deviceIds;
 
     /*** 开始日期和时间 包含日期和时间 */
@@ -62,4 +64,7 @@ public class TodayLightStrategyItemBO {
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime endDateTime;
+
+    /** 设备类型 DeviceTypeEnum枚举 */
+    private Long deviceTypeId;
 }

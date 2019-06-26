@@ -35,14 +35,6 @@ public class ListProjectBO  implements Serializable {
 
     /**
      * <pre>
-     * 项目模型zip文件ID
-     * 表字段 : base_project.model_zip_id
-     * </pre>
-     */
-    private Long modelZipId;
-
-    /**
-     * <pre>
      * 项目所属场景name
      * 表字段 : base_project.scenc_id
      * </pre>

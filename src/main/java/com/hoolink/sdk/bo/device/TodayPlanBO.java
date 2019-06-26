@@ -25,20 +25,28 @@ public class TodayPlanBO implements Serializable {
     /** 运行状态未开始常量 */
     public static final Byte NON_START = (byte)3;
 
+    /** 计划ID 单灯：策略配置项ID 音响：任务ID 显示屏：配置ID 巡检：巡检计划ID */
+    private Long planId;
+
     /** 设备类型 DeviceTypeEnum枚举 */
-    private Long deviceType;
-    /** 任务名称 (清单名称或者配置名称) */
-    private String taskName;
+    private Long deviceTypeId;
+
+    /** 计划名称 */
+    private String planName;
+
     /** 设备数量 */
     private Integer deviceNum;
+
     /** 定时开始时间 */
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime startDateTime;
+
     /** 定时结束时间 */
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime endDateTime;
+
     /** 运行状态 (1:已完成 2:正在进行 3:未开始) */
     private Byte runStatus;
 }

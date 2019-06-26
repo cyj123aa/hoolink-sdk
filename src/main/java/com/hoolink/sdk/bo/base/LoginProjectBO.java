@@ -18,4 +18,10 @@ public class LoginProjectBO implements Serializable {
     private String projectNo;
 
     private String projectName;
+
+    private Long scencId;
+
+    private Long modelId;
+
+    private String modelUrl;
 }

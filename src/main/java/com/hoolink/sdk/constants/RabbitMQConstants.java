@@ -121,4 +121,5 @@ public class RabbitMQConstants {
     /** MDC广播类消息公用队列 **/
     public static final String MDC_COMMON_QUEUE = "mdc.common.queue";
     public static final String MDC_COMMON_QUEUE_ROUTING_KEY = "mdc.common.queue.key";
+
 }

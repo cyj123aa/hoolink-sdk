@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @DATE 2019/5/16 14:51
  */
 @Data
-public class TaskScheduleAndDataBO implements Serializable {
+public class TaskScheduleAndDataBO<T> implements Serializable {
     private TaskScheduleBO job;
-    private MediaTaskBO jobData;
+    private JobData<T> jobData;
 }
