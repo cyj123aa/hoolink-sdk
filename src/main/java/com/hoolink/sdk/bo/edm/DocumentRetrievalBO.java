@@ -13,7 +13,7 @@ public class DocumentRetrievalBO extends PageParamBO {
     /**
      * 目录id
      */
-    Long directoryId;
+    String directoryId;
 
     /**
      * 目录类型
@@ -62,5 +62,5 @@ public class DocumentRetrievalBO extends PageParamBO {
     /**
      * 为最下级组织架构时传值，表示部门id
      */
-    Long departmentId;
+    String departmentId;
 }

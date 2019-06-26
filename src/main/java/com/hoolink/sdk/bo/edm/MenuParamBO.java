@@ -12,12 +12,12 @@ public class MenuParamBO {
     /**
      * resourceId
      */
-    private Long id;
+    private String id;
 
     /**
      * 所属id
      */
-    private Long belongId;
+    private String belongId;
 
     /**
      * 资源类别
