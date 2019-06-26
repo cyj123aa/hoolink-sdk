@@ -2,13 +2,15 @@ package com.hoolink.sdk.bo.device;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @ClassName TaskStrategyBO
  * @Author huyaxi
  * @DATE 2019/5/15 14:43
  */
 @Data
-public class TaskStrategyBO {
+public class TaskStrategyBO implements Serializable {
     /**
      * ID
      * 表字段 : task_strategy.id
