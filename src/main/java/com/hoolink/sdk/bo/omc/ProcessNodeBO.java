@@ -1,9 +1,8 @@
 package com.hoolink.sdk.bo.omc;
 
-import java.util.List;
+
 import lombok.Data;
 
-import javax.validation.constraints.NotNull;
 
 /**
  * @author chenyuejun
