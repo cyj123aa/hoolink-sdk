@@ -16,8 +16,6 @@ public class ExternalParamBO extends PageParam implements Serializable {
 
     /*** 设备名称 */
     private String deviceName;
-    /*** 公司名称 */
-    private String companyName;
     /*** 公司ID列表 */
     private List<Long> projectIds;
     /*** 变更状态 */
