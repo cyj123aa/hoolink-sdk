@@ -1,5 +1,9 @@
 package com.hoolink.sdk.enums.omc;
 
+/**
+ * @author Administrator
+ */
+
 public enum WorkEnum {
 
     COMPLETE((byte)1,"已完成"),

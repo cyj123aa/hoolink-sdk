@@ -18,13 +18,6 @@ public class WorkorderBO {
      */
     private Long id;
 
-    /**
-     * <pre>
-     * 问题类型
-     * 表字段 : workorder.type
-     * </pre>
-     */
-    private String type;
 
     /**
      * <pre>
@@ -33,13 +26,6 @@ public class WorkorderBO {
      * </pre>
      */
     private String workType;
-    /**
-     * <pre>
-     * 问题类型
-     * 表字段 : workorder.type
-     * </pre>
-     */
-    private String typeName;
 
     /**
      * <pre>
@@ -86,7 +72,13 @@ public class WorkorderBO {
      * </pre>
      */
     private Integer orderStatus;
-
+    /**
+     * <pre>
+     * 工单状态 名字
+     * 表字段 : workorder.order_status
+     * </pre>
+     */
+    private String orderStatusName;
     /**
      * <pre>
      * 上级处理人
@@ -236,13 +228,19 @@ public class WorkorderBO {
     private String lastNodeId;
     /**
      * <pre>
+     * 类型
+     * 表字段 : workorder.order_type
+     * </pre>
+     */
+    private Byte orderType;
+
+    /**
+     * <pre>
      * 类型中文
      * 表字段 : workorder.order_type
      * </pre>
      */
-    private String orderType;
-
-
+    private String orderTypeName;
 
     private  String info;
     /**
