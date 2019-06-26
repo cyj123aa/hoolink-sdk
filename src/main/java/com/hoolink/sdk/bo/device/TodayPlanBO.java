@@ -29,7 +29,7 @@ public class TodayPlanBO implements Serializable {
     private Long planId;
 
     /** 设备类型 DeviceTypeEnum枚举 */
-    private Long deviceType;
+    private Long deviceTypeId;
 
     /** 计划名称 */
     private String planName;
