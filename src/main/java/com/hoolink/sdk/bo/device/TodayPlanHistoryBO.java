@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * @author zhouyun
@@ -14,8 +15,6 @@ import java.io.Serializable;
 public class TodayPlanHistoryBO implements Serializable {
 
     private static final long serialVersionUID = -8911411734074391042L;
-    /*** 自增主键 */
-    private Long id;
 
     /*** 计划ID 单灯：策略配置项ID 音响：任务ID 显示屏：配置ID 巡检：巡检计划ID */
     @NotNull(message = "计划id不能为空")
@@ -46,7 +45,6 @@ public class TodayPlanHistoryBO implements Serializable {
     private Long timingEnd;
 
     /*** 创建时间 */
-    @NotNull(message = "创建时间不能为空")
     private Long created;
 
     /*** 创建人 */
