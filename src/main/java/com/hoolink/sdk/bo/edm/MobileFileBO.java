@@ -52,4 +52,9 @@ public class MobileFileBO {
      * 文件url
      */
     private String fileUrl;
+
+    /**
+     * 是否已收藏
+     */
+    private Boolean ifCollect;
 }
