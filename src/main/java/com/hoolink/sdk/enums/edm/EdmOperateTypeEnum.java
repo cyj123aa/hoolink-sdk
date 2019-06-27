@@ -18,7 +18,8 @@ public enum EdmOperateTypeEnum {
     FILE_REMIND((byte)10,"文件提醒"),
     SET_FILE_PERMISSION((byte)11,"设置文件权限"),
     ADD_COLLECTION((byte)12,"添加收藏"),
-    REMOVE_COLLECTION((byte)13,"取消收藏")
+    REMOVE_COLLECTION((byte)13,"取消收藏"),
+    DELETE_VISIBLE_ORG((byte)14,"删除可见组织架构"),
     ;
 
     private Byte key;
