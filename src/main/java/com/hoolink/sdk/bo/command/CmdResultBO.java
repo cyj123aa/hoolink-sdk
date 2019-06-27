@@ -31,4 +31,5 @@ public class CmdResultBO implements Serializable {
 
     /**指令码*/
     private String cmdCode;
+    
 }
