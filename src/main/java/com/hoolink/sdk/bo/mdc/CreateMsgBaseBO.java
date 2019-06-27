@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author 朱礼
@@ -29,7 +30,7 @@ public class CreateMsgBaseBO implements Serializable {
     private Long projectId;
 
     /** 推送的用户id */
-    private Long pushUserId;
+    private List<Long> pushUserIdList;
 
     CreateMsgBaseBO(Long projectId, String content, Long messageSubTypeId) {
         this.content = content;
