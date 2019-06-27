@@ -1,6 +1,7 @@
 package com.hoolink.sdk.bo.device.req;
 
 import java.io.Serializable;
+import java.util.List;
 
 import lombok.Data;
 
@@ -12,9 +13,7 @@ import lombok.Data;
 @Data
 public class ExternalAutoSynchParamBO implements Serializable {
     /*** 集中器ID */
-    private Long externalId;
-    /*** 单灯ID */
-    private Long lightId;
+    private List<Long> externalIdList;
     /*** 创建者ID */
     private Long creator;
 }
