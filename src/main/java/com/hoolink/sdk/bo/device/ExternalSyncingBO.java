@@ -2,6 +2,7 @@ package com.hoolink.sdk.bo.device;
 
 import java.io.Serializable;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 /**
@@ -14,4 +15,5 @@ public class ExternalSyncingBO implements Serializable {
     private String externalName;
     private Long externalId;
     private Byte syncStatus;
+    private Byte onlineStatus;
 }
