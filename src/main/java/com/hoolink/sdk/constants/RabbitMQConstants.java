@@ -114,7 +114,12 @@ public class RabbitMQConstants {
      */
     public static final String MEMBER_FACE_QUEUE = "member.face.queue";
     public static final String MEMBER_FACE_ROUTING_KEY = "member.face.routing.key";
-
+    /**
+     * 工单消息队列
+     */
+    public static final String WORK_ORDER_QUEUE = "work.order.queue";
+    public static final String WORK_ORDER_EXCHANGE = "work.order.exchange";
+    public static final String WORK_ORDER_EXCHANGE_ROUTING_KEY = "work.order.exchange.key";
 
     /** MDC单对单消息队列 消息相关的MQ配置,此处的配置常量用于消息推送业务 **/
     public static final String MDC_EXCHANGE = "mdc.exchange";
