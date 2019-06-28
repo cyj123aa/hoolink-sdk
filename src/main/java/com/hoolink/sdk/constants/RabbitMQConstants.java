@@ -122,4 +122,10 @@ public class RabbitMQConstants {
     public static final String MDC_COMMON_QUEUE = "mdc.common.queue";
     public static final String MDC_COMMON_QUEUE_ROUTING_KEY = "mdc.common.queue.key";
 
+    /**
+     * 设备上行状态推送队列
+     */
+    public static final String DEVICE_STATUS_EXCHANGE= "device.status.exchange";
+    public static final String DEVICE_STATUS_QUEUE = "device.status.queue";
+    public static final String DEVICE_STATUS_QUEUE_ROUTING_KEY = "device.status.routing.key";
 }
