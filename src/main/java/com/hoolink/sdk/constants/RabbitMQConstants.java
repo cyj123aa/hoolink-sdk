@@ -128,4 +128,11 @@ public class RabbitMQConstants {
     public static final String DEVICE_STATUS_EXCHANGE= "device.status.exchange";
     public static final String DEVICE_STATUS_QUEUE = "device.status.queue";
     public static final String DEVICE_STATUS_QUEUE_ROUTING_KEY = "device.status.routing.key";
+
+    /**
+     * 显示屏文件下发进度队列
+     */
+    public static final String SCREEN_SEND_PERCENT_EXCHANGE = "screen.send.percent.exchange";
+    public static final String SCREEN_SEND_PERCENT_QUEUE = "screen.send.percent.queue";
+    public static final String SCREEN_SEND_PERCENT_ROUTING_KEY = "screen.send.percent.routing.key";
 }
