@@ -39,4 +39,7 @@ public class RedisConstants {
 
     /*** 显示屏通道占用 */
     public static final String CHANNEL_BUSY = "channel_busy_";
+
+    /*** 策略-单灯计划任务管理 */
+    public static final String CRON_LIGHT_TASK = "CRON_LIGHT_TASK";
 }
