@@ -13,10 +13,10 @@ public enum WorkStateEnum {
     APPROVAL((byte)3,"指派工单"),
     TRANSFER((byte)4,"申请转派"),
     DELAY_WORK((byte)5,"申请延期"),
-    TURN_DOWN((byte)6,"驳回"),
+    TURN_DOWN((byte)6,"审批被驳回"),
     CREATE((byte)7,"创建工单"),
     PERFECT((byte)8,"完善工单"),
-    THROUGH((byte)9,"通过"),
+    THROUGH((byte)9,"审批已通过"),
     RESET((byte)10,"操作人删除 工单重置"),
     ;
 
