@@ -76,6 +76,23 @@ public class DeviceManagerCloudDetailBO implements Serializable {
     /*** 工作状态 */
     private Boolean workStatus;
 
+    private String imgPath;
+
+    /**
+     * 调光值
+     */
+    private Integer dimmingValue;
+
+    /**
+     * 亮度
+     */
+    private Integer brightness;
+
+    /**
+     * 音量
+     */
+    private Integer volume;
+
     /**
      * 最后一次通讯时间
      */

@@ -50,6 +50,8 @@ public class DeviceCloudBO implements Serializable {
     private Integer y;
     private Integer z;
 
+    private Integer dimmingValue;
+
     /*** 经纬度坐标 */
     private BigDecimal longitude;
     private BigDecimal latitude;
