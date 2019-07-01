@@ -19,12 +19,12 @@ public class DeviceCloudBO implements Serializable {
     private Long id;
 
     /*** 设备类型 */
-    private String typeId;
+    private Long typeId;
 
     private String typeName;
 
     /*** 设备型号 */
-    private String subTypeId;
+    private Long subTypeId;
 
     /*** 设备型号 */
     private String subTypeName;
