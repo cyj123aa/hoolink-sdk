@@ -73,7 +73,7 @@ public class CommonConstants {
     public static final String SPON_REPLACE_2 = "]";
 
     /**
-     * jedis的工具类使用
+     * 字符串零
      */
     public static final String STRING_NUM_0 = "0";
     /**
