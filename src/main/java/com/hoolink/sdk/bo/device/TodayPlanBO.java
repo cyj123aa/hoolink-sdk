@@ -49,4 +49,10 @@ public class TodayPlanBO implements Serializable {
 
     /** 运行状态 (1:已完成 2:正在进行 3:未开始) */
     private Byte runStatus;
+
+    /** 开始时间与当前时间的差值（绝对值，单位为秒）,用于计算锚点 */
+    private Long anchorDuration;
+
+    /** 是否锚点标志位 （true:是 false不是） */
+    private Boolean isAnchor;
 }
