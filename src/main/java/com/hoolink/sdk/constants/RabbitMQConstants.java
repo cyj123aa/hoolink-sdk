@@ -130,6 +130,12 @@ public class RabbitMQConstants {
     public static final String DEVICE_STATUS_QUEUE_ROUTING_KEY = "device.status.routing.key";
 
     /**
+     * 单灯上行数据推送
+     */
+    public static final String DEVICE_LIGHT_STATUS_QUEUE = "device.light.data.queue";
+    public static final String DEVICE_LIGHT_STATUS_QUEUE_ROUTING_KEY = "device.light.data.routing.key";
+
+    /**
      * 显示屏文件下发进度队列
      */
     public static final String SCREEN_SEND_PERCENT_EXCHANGE = "screen.send.percent.exchange";
