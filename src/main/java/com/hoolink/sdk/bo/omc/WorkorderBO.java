@@ -37,6 +37,13 @@ public class WorkorderBO {
 
     /**
      * <pre>
+     * 优先级
+     * 表字段 : workorder.priority
+     * </pre>
+     */
+    private String priorityName;
+    /**
+     * <pre>
      * 描述
      * 表字段 : workorder.description
      * </pre>
