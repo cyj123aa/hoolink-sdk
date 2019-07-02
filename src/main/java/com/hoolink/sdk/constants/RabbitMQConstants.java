@@ -146,4 +146,11 @@ public class RabbitMQConstants {
     public static final String SCREEN_SEND_PERCENT_EXCHANGE = "screen.send.percent.exchange";
     public static final String SCREEN_SEND_PERCENT_QUEUE = "screen.send.percent.queue";
     public static final String SCREEN_SEND_PERCENT_ROUTING_KEY = "screen.send.percent.routing.key";
+
+    /**
+     * 显示屏清单列表刷新队列
+     */
+    public static final String SCREEN_CONFIG_EXCHANGE = "screen.config.exchange";
+    public static final String SCREEN_CONFIG_QUEUE = "screen.config.queue";
+    public static final String SCREEN_CONFIG_ROUTING_KEY = "screen.config.routing.key";
 }
