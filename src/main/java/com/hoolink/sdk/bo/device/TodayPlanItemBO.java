@@ -67,4 +67,7 @@ public class TodayPlanItemBO implements Serializable {
 
     /** 设备类型 DeviceTypeEnum枚举 */
     private Long deviceTypeId;
+
+    /** 播放状态 0 未播放，1，播放 */
+    private Boolean playStatus;
 }
