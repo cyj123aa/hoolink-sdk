@@ -21,6 +21,9 @@ public class CurrentUserBO implements Serializable {
     /*** token验证值 */
     private String token;
 
+    /**手机端token */
+    private String mobileToken;
+
     /*** 登录账号用户信息 */
     private String account;
 

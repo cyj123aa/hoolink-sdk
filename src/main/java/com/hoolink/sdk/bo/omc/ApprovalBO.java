@@ -9,7 +9,7 @@ import lombok.Data;
 public class ApprovalBO extends OperateBO{
 
     /**
-     * 审批状态   1通过， 2，驳回
+     * 审批状态 3成功4失败  7通过， 8，驳回
      */
     private Boolean  approval;
 

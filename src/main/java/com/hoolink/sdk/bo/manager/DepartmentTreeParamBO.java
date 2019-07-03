@@ -16,4 +16,7 @@ public class DepartmentTreeParamBO {
     @NotNull(message = "组织架构层级不能为空")
     private Byte deptType;
 
+    /*** 文件所在公司的id */
+    private Long deptId;
+
 }

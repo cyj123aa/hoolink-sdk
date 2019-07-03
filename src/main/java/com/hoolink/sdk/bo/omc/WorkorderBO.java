@@ -18,6 +18,13 @@ public class WorkorderBO {
      */
     private Long id;
 
+    /**
+     * <pre>
+     * 问题类型
+     * 表字段 : workorder.type
+     * </pre>
+     */
+    private String type;
 
     /**
      * <pre>
@@ -26,6 +33,13 @@ public class WorkorderBO {
      * </pre>
      */
     private String workType;
+    /**
+     * <pre>
+     * 问题类型
+     * 表字段 : workorder.type
+     * </pre>
+     */
+    private String typeName;
 
     /**
      * <pre>

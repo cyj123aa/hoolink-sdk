@@ -126,6 +126,16 @@ public class RabbitMQConstants {
     /** MDC广播类消息公用队列 **/
     public static final String MDC_COMMON_QUEUE = "mdc.common.queue";
     public static final String MDC_COMMON_QUEUE_ROUTING_KEY = "mdc.common.queue.key";
+    /**
+     * edm文件消息队列
+     */
+    public static final String EDM_CACHE_FILE_QUEUE = "edm.file.output.queue";
+    public static final String EDM_CACHE_FILE_ROUTING_KEY = "edm.file.output.routing.key";
+    public static final String EDM_CACHE_FILE_EXCHANGE = "edm.file.output.exchange";
+
+    public static final String EDM_COMPANY_FILE_QUEUE = "edm.file.archive.queue";
+    public static final String EDM_COMPANY_FILE_ROUTING_KEY = "edm.file.archive.routing.key";
+    public static final String EDM_COMPANY_FILE_EXCHANGE = "edm.file.archive.exchange";
 
     /**
      * 设备上行状态推送队列
@@ -153,4 +163,7 @@ public class RabbitMQConstants {
     public static final String SCREEN_CONFIG_EXCHANGE = "screen.config.exchange";
     public static final String SCREEN_CONFIG_QUEUE = "screen.config.queue";
     public static final String SCREEN_CONFIG_ROUTING_KEY = "screen.config.routing.key";
+    public static final String EDM_FILE_DOWNLOAD_QUEUE = "edm.file.download.queue";
+    public static final String EDM_FILE_DOWNLOAD_ROUTING_KEY = "edm.file.download.routing.key";
+    public static final String EDM_FILE_DOWNLOAD_EXCHANGE = "edm.file.download.exchange";
 }

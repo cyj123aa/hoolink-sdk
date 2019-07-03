@@ -14,12 +14,14 @@ public enum EdmOperateTypeEnum {
     MOVE_FILE((byte)6,"移动文件"),
     DOWNLOAD_FILE((byte)7,"下载文件"),
     FILE_ARCHIVING((byte)8,"文件归档"),
-    FILE_VISIBLE((byte)9,"文件临时可见"),
+    FILE_VISIBLE((byte)9,"设置文件临时可见"),
     FILE_REMIND((byte)10,"文件提醒"),
     SET_FILE_PERMISSION((byte)11,"设置文件权限"),
     ADD_COLLECTION((byte)12,"添加收藏"),
     REMOVE_COLLECTION((byte)13,"取消收藏"),
     DELETE_VISIBLE_ORG((byte)14,"删除可见组织架构"),
+    DELETE_FILE_VISIBLE((byte)15,"删除文件临时可见"),
+    SET_FOLDER_REMIND((byte)16,"设置文件夹提醒"),
     ;
 
     private Byte key;

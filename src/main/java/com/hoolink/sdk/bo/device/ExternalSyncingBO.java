@@ -1,9 +1,8 @@
 package com.hoolink.sdk.bo.device;
 
-import java.io.Serializable;
-
-import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * @Author zhangyy

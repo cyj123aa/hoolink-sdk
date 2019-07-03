@@ -9,11 +9,11 @@ import lombok.Data;
 @Data
 public class DeptVisibleCacheBO {
     /**
-     * 是否存在晶日公司
+     * 部门id
      */
-    private Boolean jrDept;
+    private Long id;
     /**
-     *是否存在互灵公司
+     * 部门名称
      */
-    private Boolean hlDept;
+    private String deptName;
 }

@@ -50,6 +50,12 @@ public class DocumentRetrievalBO extends PageParamBO {
     Integer fileSizeSort;
 
     /**
+     * 资源输出时间排序标志位
+     * 1：升序 2：降序
+     */
+    Integer outputTimeSort;
+
+    /**
      * 是否为最下级组织架构
      */
     Boolean isMostJunior;

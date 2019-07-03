@@ -1,15 +1,10 @@
 package com.hoolink.sdk.utils;
 
+import com.hoolink.sdk.enums.edm.FileTypeEnum;
 import org.apache.commons.io.FileUtils;
 
 import java.io.*;
 import java.math.BigDecimal;
-import com.hoolink.sdk.enums.edm.FileTypeEnum;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
@@ -19,7 +14,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.text.DecimalFormat;
-import org.apache.commons.io.FileUtils;
 
 /**
  * @version V1.0
@@ -28,7 +22,6 @@ import org.apache.commons.io.FileUtils;
  * @date: 2019/5/17 15:11
  **/
 public class FileUtil {
-
     /**
      * 根据byte数组，生成文件
      */
@@ -201,20 +194,21 @@ public class FileUtil {
         }
     }
 
+    private static final String ONE_KB = "1KB";
+    private static final String KB = "KB";
+    private static final String MB = "MB";
+    private static final String GB = "GB";
+    private static final Integer SIZE_UNIT = 1024;
 
-    private static final String ONE_KB="1KB";
-    private static final String KB="KB";
-    private static final String MB="MB";
-    private static final String GB="GB";
-    private static final Integer SIZE_UNIT=1024;
     /**
      * 文件大小转化
+     *
      * @param filesize
      * @return
      */
-    public  static String getLength(long filesize) {
+    public static String getLength(long filesize) {
         String strFileSize = null;
-        if(filesize<1){
+        if (filesize < 1) {
             return ONE_KB;
         }
         if (filesize < SIZE_UNIT) {
@@ -239,10 +233,11 @@ public class FileUtil {
 
     /**
      * 传入文件后缀名称 获取文件类型
+     *
      * @return
      */
-    public static Integer getFileType(String fileExtName){
-        if(fileExtName == null){
+    public static Integer getFileType(String fileExtName) {
+        if (fileExtName == null) {
             return 0;
         }
         String upperCase = fileExtName.toUpperCase();
@@ -251,11 +246,12 @@ public class FileUtil {
 
     /**
      * 文件大小计算
+     *
      * @param fileSize
      * @return
      */
-    public static Float ByteToM(Long fileSize){
-        Float fileSizeM=fileSize/(SIZE_UNIT*SIZE_UNIT*1F);
+    public static Float ByteToM(Long fileSize) {
+        Float fileSizeM = fileSize / (SIZE_UNIT * SIZE_UNIT * 1F);
         BigDecimal bg = new BigDecimal(fileSizeM);
         fileSizeM = bg.setScale(1, BigDecimal.ROUND_HALF_UP).floatValue();
         return fileSizeM;

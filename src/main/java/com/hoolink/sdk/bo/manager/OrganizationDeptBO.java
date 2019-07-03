@@ -8,8 +8,13 @@ import lombok.Data;
  */
 @Data
 public class OrganizationDeptBO {
+
     private String deptName;
     private String groupName;
     private String companyName;
     private String systemCenterName;
+    /**
+     * id
+     */
+    private Long deptId;
 }

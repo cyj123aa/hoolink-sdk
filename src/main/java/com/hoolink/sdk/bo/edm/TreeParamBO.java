@@ -11,6 +11,9 @@ import java.util.List;
 @Data
 public class TreeParamBO {
 
+    /** 所属公司id 1晶日 2互灵 */
+    private Long belongId;
+
     /** 是否展示底层员工 */
     private Boolean showUser;
 

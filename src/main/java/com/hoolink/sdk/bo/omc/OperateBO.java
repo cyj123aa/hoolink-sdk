@@ -45,6 +45,20 @@ public class OperateBO {
 
 
     /**
+     * 下一个节点操作人
+     */
+    private  Long nextId;
+    /**
+     * 下一个节点ID
+     */
+    private String  nextNodeId;
+    /**
+     *  下一个节点类型
+     */
+    private String  nextNodeType;
+
+
+    /**
      * 流程id
      */
     private  Long processId;
