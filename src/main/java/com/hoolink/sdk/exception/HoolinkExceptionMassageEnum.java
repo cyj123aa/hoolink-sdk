@@ -265,6 +265,8 @@ public enum HoolinkExceptionMassageEnum {
     DO_NOT_MOVE_ERROR("移动的目标目录包含在需要移动的文件夹中,无法移动！"),
     FOLDER_NO_NEED_SET("空文件夹不可以设置密保等级！"),
     FOLDER_NO_NEED_LOAD("空文件夹不可下载！"),
+    FOLDER_NAME_NOT_NULL("文件夹名称不可为空！"),
+    FOLDER_NAME_NOT_DUPLICATE("文件夹名称不可重复！"),
     /**
      * mdc
      */
