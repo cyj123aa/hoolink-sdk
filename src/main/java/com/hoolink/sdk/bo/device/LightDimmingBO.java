@@ -22,5 +22,7 @@ public class LightDimmingBO implements Serializable {
     /*** 调光值 */
     @NotNull(message = "调光值不能为空")
     private Integer dimming;
+    /** 设备类型 */
+    private Long typeId;
 
 }
