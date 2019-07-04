@@ -13,10 +13,10 @@ import java.util.List;
 public class ScreenFileShuttleBoxBO implements Serializable {
     private static final long serialVersionUID = -4258413813334858071L;
 
-    /*** 全部显示屏 */
+    /*** 全部显示屏文件 */
     private List<ScreenFileShuttleBoxBasicBO> allScreenFile;
 
-    /*** 已被选择的显示屏 */
+    /*** 已被选择的显示屏文件 */
     private List<ScreenFileShuttleBoxBasicBO> beSelectScreenFile;
 
     /*** 文件类型列表 */
