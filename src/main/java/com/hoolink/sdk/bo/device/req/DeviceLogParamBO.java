@@ -13,6 +13,7 @@ import lombok.EqualsAndHashCode;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * @author wangdong
@@ -28,7 +29,7 @@ public class DeviceLogParamBO extends PageParam implements Serializable {
     private Long deviceId;
 
     /*** 开始时间 */
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd ")
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
     @ApiModelProperty(dataType = "java.lang.String", example = "1970-01-01")
@@ -40,4 +41,19 @@ public class DeviceLogParamBO extends PageParam implements Serializable {
     @JsonSerialize(using = LocalDateSerializer.class)
     @ApiModelProperty(dataType = "java.lang.String", example = "1970-01-01")
     private LocalDate endTime;
+
+
+    /*** 开始时间 */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @ApiModelProperty(dataType = "java.lang.String", example = "1970-01-01 00:00:00")
+    private LocalDateTime cloudBeginTime;
+
+    /*** 结束时间 */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
+    @ApiModelProperty(dataType = "java.lang.String", example = "1970-01-01 00:00:00")
+    private LocalDateTime cloudEndTime;
 }
