@@ -20,6 +20,9 @@ public class LightStrategySubItemBO implements Serializable {
     /*** 设备 */
     private List<Long> deviceIds;
 
+    /*** 设备名称 */
+    private List<String> deviceNames;
+
     /*** 设备ID和冲突状态 */
     private List<StatusBO> deviceIdStatuses;
 
