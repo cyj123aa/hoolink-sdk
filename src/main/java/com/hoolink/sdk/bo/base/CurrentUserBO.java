@@ -21,6 +21,9 @@ public class CurrentUserBO implements Serializable {
     /*** token验证值 */
     private String token;
 
+    /**手机端token */
+    private String mobileToken;
+
     /*** 登录账号用户信息 */
     private String account;
 
@@ -48,4 +51,12 @@ public class CurrentUserBO implements Serializable {
     private Set<String> accessUrlSet;
     /** 姓名*/
     private String userName;
+    /**
+     * <pre>
+     * 角色类型【0：普通角色  1：文控角色】
+     * 表字段 : manage_role.role_type
+     * </pre>
+     */
+    private Boolean roleType;
+
 }

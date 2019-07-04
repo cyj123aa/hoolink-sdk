@@ -1,5 +1,6 @@
 package com.hoolink.sdk.bo.omc;
 
+import java.util.List;
 import lombok.Data;
 
 /**
@@ -7,21 +8,15 @@ import lombok.Data;
  */
 @Data
 public class WorkorderHistoryBO {
-    /**
-     * <pre>
-     * 主键
-     * 表字段 : workorder_history.id
-     * </pre>
-     */
-    private Long id;
 
+    private Long id;
     /**
      * <pre>
      * 工单类型
-     * 表字段 : workorder_history.type
+     * 表字段 : workorder_history.order_type
      * </pre>
      */
-    private String type;
+    private String orderType;
 
     /**
      * <pre>
@@ -79,13 +74,6 @@ public class WorkorderHistoryBO {
      */
     private Long designator;
 
-    /**
-     * <pre>
-     * 数据有效性
-     * 表字段 : workorder_history.enabled
-     * </pre>
-     */
-    private Boolean enabled;
 
     /**
      * <pre>
@@ -95,6 +83,15 @@ public class WorkorderHistoryBO {
      */
     private Long creator;
 
+
+    /**
+     * <pre>
+     * 创建者
+     * 表字段 : workorder_history.creator
+     * </pre>
+     */
+    private String creatName;
+
     /**
      * <pre>
      * 创建时间
@@ -103,21 +100,6 @@ public class WorkorderHistoryBO {
      */
     private Long created;
 
-    /**
-     * <pre>
-     * 修改人
-     * 表字段 : workorder_history.updator
-     * </pre>
-     */
-    private Long updator;
-
-    /**
-     * <pre>
-     * 修改时间
-     * 表字段 : workorder_history.updated
-     * </pre>
-     */
-    private Long updated;
 
     /**
      * <pre>
@@ -126,4 +108,22 @@ public class WorkorderHistoryBO {
      * </pre>
      */
     private Integer orderStatus;
+
+    /**
+     * <pre>
+     * 原因
+     * 表字段 : workorder_history.reason
+     * </pre>
+     */
+    private String reason;
+
+    /**
+     * 未执行
+     */
+    private Integer notPerformed;
+
+
+    private List<Long> obsIds;
+    private List<String> obsUrls;
+
 }

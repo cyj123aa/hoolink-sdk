@@ -39,4 +39,9 @@ public class ControlBroadcastParamBO extends DeviceBroadcastBO {
      */
     private Long endTime;
 
+    /**
+     * 正在播放的广播事件的用户ID
+     */
+    private Long userId;
+
 }

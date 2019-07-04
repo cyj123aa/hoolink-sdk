@@ -38,7 +38,7 @@ public class CameraBO extends DeviceManagerBO {
     private String validateCode;
 
     /*** 最近通讯时间     */
-    private Date lastTime;
+    private Long lastTime;
 
     /*** factory外键,关联project_area     */
     private Long projectAreaId;

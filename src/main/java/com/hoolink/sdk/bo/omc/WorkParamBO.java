@@ -9,8 +9,9 @@ import lombok.Data;
 @Data
 public class WorkParamBO extends PageParamBO {
     private Long projectId;
-    private Integer priority;
+    private Long processId;
+    private Byte priority;
     private String type;
-    private Integer orderStatus;
+    private Byte orderStatus;
     private Boolean overdue;
 }

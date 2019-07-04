@@ -27,7 +27,7 @@ public class DmxProgramConflictBO implements Serializable {
     private String programName;
 
     /*** 节目模式: 1.每天 2.自定义 3.特殊日期 */
-    private Byte pattern;
+    private Byte playMode;
 
     /*** 节目周期 */
     private List<DmxProgramStrategyCycleBO> strategyCycles;

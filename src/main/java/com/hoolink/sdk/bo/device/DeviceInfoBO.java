@@ -60,4 +60,7 @@ public class DeviceInfoBO implements Serializable {
     /*** 经纬度坐标 */
     private BigDecimal longitude;
     private BigDecimal latitude;
+
+    /*** 模型编号 */
+    private String modelNo;
 }

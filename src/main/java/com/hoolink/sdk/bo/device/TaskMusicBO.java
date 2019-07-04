@@ -2,13 +2,15 @@ package com.hoolink.sdk.bo.device;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @ClassName TaskMusicBO
  * @Author huyaxi
  * @DATE 2019/5/15 13:43
  */
 @Data
-public class TaskMusicBO {
+public class TaskMusicBO implements Serializable {
     /**
      * ID
      * 表字段 : middle_task_music.id

@@ -36,4 +36,7 @@ public class ScreenFileShuttleBoxBasicBO implements Serializable {
 
     /*** 顺序 */
     private Integer fileOrder;
+
+    /*** 文件大小，单位：B */
+    private Long fileSize;
 }

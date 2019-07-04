@@ -15,6 +15,6 @@ public class ParamBO extends PageParamBO {
      */
     private Integer  type;
 
-    private Long dayTime;
-
+    private Long endTime;
+    private Long  beginTime;
 }

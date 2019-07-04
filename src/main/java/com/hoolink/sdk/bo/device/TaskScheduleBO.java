@@ -54,8 +54,7 @@ public class TaskScheduleBO implements Serializable {
     private String triggerGroup;
 
     /**
-     * 暂停标志
-     * 表字段 : middle_task_schedule.pause
+     * 暂停标志，true 暂停， false 启用
      */
     private Boolean pause;
 
@@ -88,4 +87,10 @@ public class TaskScheduleBO implements Serializable {
      * 表字段 : middle_task_schedule.task_id
      */
     private Long taskId;
+
+
+    /**
+     * 任务执行动作标志
+     */
+    private Boolean play;
 }

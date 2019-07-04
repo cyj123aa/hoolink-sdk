@@ -18,4 +18,10 @@ public class OrderProcessBO implements Serializable {
 
     /** 流程处理时间 */
     private Long handleTime;
+
+    /*** 流程处理状态  1：灰色 未执行状态 2：绿色 成功状态 3：红色  错误状态 4：蓝色 当前状态 */
+    private Byte handleStatus;
+
+    /*** 操作人ID */
+    private Long userId;
 }

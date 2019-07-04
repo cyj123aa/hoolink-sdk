@@ -1,9 +1,8 @@
 package com.hoolink.sdk.bo.omc;
 
-import java.util.List;
+
 import lombok.Data;
 
-import javax.validation.constraints.NotNull;
 
 /**
  * @author chenyuejun
@@ -18,6 +17,7 @@ public class ProcessNodeBO {
      * </pre>
      */
     private Long id;
+
     /**
      * <pre>
      * 流程名字
@@ -25,6 +25,14 @@ public class ProcessNodeBO {
      * </pre>
      */
     private String name;
+
+    /**
+     * <pre>
+     * 流程名字
+     * 表字段 : process.name
+     * </pre>
+     */
+    private String processName;
     /**
      * 流程类型
      */
@@ -59,6 +67,11 @@ public class ProcessNodeBO {
      * 流程下节点
      */
     private NodeWebBO nodes;
+
+    /**
+     * 场景id
+     */
+    private Long scencId;
 
 
 }

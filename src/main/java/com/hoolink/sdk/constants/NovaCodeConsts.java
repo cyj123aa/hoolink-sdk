@@ -23,7 +23,8 @@ public class NovaCodeConsts {
      */
     public static final byte SCREEN_POWER_OFF_SCHEDULE = (byte) 0x43;
     public static final byte SCREEN_POWER_ONOFF_BACK = (byte) 0x85;
-    public static final String SCREEN_HEART_BEAT = "0x00";//心跳
+    //心跳
+    public static final String SCREEN_HEART_BEAT = "0x00";
     /**
      * 显示屏统一返回状态
      */
@@ -68,9 +69,14 @@ public class NovaCodeConsts {
     /**
      * ================================指令码内部参数值=============================
      */
-    public static final byte VALUE_SCREEN_ON = 0x01;//开屏幕
-    public static final byte VALUE_SCREEN_OFF = 0x02;//关屏幕
-    public static final int VALUE_SCREEN_BRIGHTNESS_AUTO = 1;//自动调节亮度
-    public static final int VALUE_SCREEN_BRIGHTNESS_HAND = 2;//手动调节亮度
-    public static final int VALUE_SCREEN_BRIGHTNESS_TIMING = 3;//定时调节亮度
+    //开屏幕
+    public static final byte VALUE_SCREEN_ON = 0x01;
+    //关屏幕
+    public static final byte VALUE_SCREEN_OFF = 0x02;
+    //自动调节亮度
+    public static final int VALUE_SCREEN_BRIGHTNESS_AUTO = 1;
+    //手动调节亮度
+    public static final int VALUE_SCREEN_BRIGHTNESS_HAND = 2;
+    //定时调节亮度
+    public static final int VALUE_SCREEN_BRIGHTNESS_TIMING = 3;
 }

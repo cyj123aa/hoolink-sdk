@@ -6,20 +6,38 @@ package com.hoolink.sdk.enums.omc;
 
 public enum WorkStateEnum {
 
+    COMPLETE((byte)1,"完成",(byte)6),
 
-    COMPLETE(1,"已完成"),
-    CANCEL(2,"无法完成"),
-    APPROVAL(3,"待指派"),
-    PERFECTED(4,"待完善"),
-    REVIEW(5,"待审核"),
-    PROCESSED(6,"申请延期"),
+    CANCEL((byte)2,"无法完成",(byte)5),
+
+    APPROVAL((byte)3,"指派工单",null),
+    TRANSFER((byte)4,"申请转派",(byte)2),
+    DELAY_WORK((byte)5,"申请延期",(byte)4),
+    TURN_DOWN((byte)6,"审批被驳回",(byte)7),
+    CREATE((byte)7,"创建工单",(byte)1),
+    PERFECT((byte)8,"完善工单",(byte)1),
+    THROUGH((byte)9,"审批已通过",(byte)7),
+    RESET((byte)10,"操作人删除 工单重置",null),
     ;
 
-    public Integer key;
+    public Byte key;
     public String value;
-
-    WorkStateEnum(Integer key, String value) {
+    public Byte obsKey;
+    WorkStateEnum(Byte key, String value,Byte obsKey) {
         this.key = key;
         this.value = value;
+        this.obsKey=obsKey;
+    }
+
+    public static String getValue(Byte key){
+        for (WorkStateEnum workStateEnum : WorkStateEnum.values()) {
+            if((byte)9==key){
+                return "审批";
+            }
+            if (workStateEnum.key.equals(key)) {
+                return workStateEnum.value;
+            }
+        }
+        return null;
     }
 }

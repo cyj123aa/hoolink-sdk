@@ -36,4 +36,10 @@ public class RedisConstants {
     public static final String WATER_GAUGE_ALARM = "WATER_";
     public static final String ENVIRONMENT_ALARM = "ENVIRONMENT_";
     public static final String LEAKAGE_DETECT_ALARM = "LEAKAGE_";
+
+    /*** 显示屏通道占用 */
+    public static final String CHANNEL_BUSY = "channel_busy_";
+
+    /*** 策略-单灯计划任务管理 */
+    public static final String CRON_LIGHT_TASK = "CRON_LIGHT_TASK";
 }

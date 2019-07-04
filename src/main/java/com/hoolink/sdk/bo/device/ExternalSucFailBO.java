@@ -6,11 +6,11 @@ import lombok.Data;
 
 /**
  * @Author zhangyy
- * @DateTime 2019-06-14 14:50
+ * @DateTime 2019-06-27 10:22
  * @Description
  */
 @Data
-public class DmxNodeDeviceGropBO implements Serializable {
-
-
+public class ExternalSucFailBO implements Serializable {
+    private Long bizId;
+    private Integer num;
 }

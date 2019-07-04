@@ -16,6 +16,9 @@ public class DeviceShuttleBoxParamBO implements Serializable {
     /*** 设备类型 */
     private Long deviceType;
 
+    /*** 过滤的设备子类型 */
+    private Long outDeviceSubType;
+
     /*** 已被自己选择的设备ID集合 */
     private List<Long> beSelectDeviceIds;
 

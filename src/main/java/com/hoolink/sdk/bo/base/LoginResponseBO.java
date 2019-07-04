@@ -13,6 +13,9 @@ public class LoginResponseBO implements Serializable {
 
     private static final long serialVersionUID = -7877838117943889756L;
 
+    /*** 用户id */
+    private String id;
+
     /*** 用户名 */
     private String userName;
 

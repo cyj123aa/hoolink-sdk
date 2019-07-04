@@ -10,5 +10,5 @@ import lombok.Data;
 public class SortDictionaryBO {
   private   List<DictionaryBO> dictionaryBOS;
 
-  private Long typeId;
+  private Byte typeId;
 }

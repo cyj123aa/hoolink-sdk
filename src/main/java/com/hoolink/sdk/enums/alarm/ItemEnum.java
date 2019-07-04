@@ -47,9 +47,11 @@ public enum ItemEnum {
     PH(23L, "", "PH值", DeviceTypeEnum.WATER),
     WATER_TEMPERATURE(24L, "水温", "℃", DeviceTypeEnum.WATER),
     TURBIDITY(25L, "浊度", "mg/L", DeviceTypeEnum.WATER),
-    ELECTRICAL_CONDUCTIVITY(28L, "电导率", "S/m", DeviceTypeEnum.WATER),
+    ELECTRICAL_CONDUCTIVITY(26L, "电导率", "S/m", DeviceTypeEnum.WATER),
     /*** 水位监测 */
     WATER_GAUGE(27L, "水位", "mm", DeviceTypeEnum.WATER_GAUGE),
+    /*** 土壤检测 */
+    Soil_moisture(28L, "土壤水分", "%", DeviceTypeEnum.SOIL),
     ;
 
     private Long itemId;

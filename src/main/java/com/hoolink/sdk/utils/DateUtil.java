@@ -1,11 +1,9 @@
 package com.hoolink.sdk.utils;
 
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,6 +17,8 @@ import java.util.GregorianCalendar;
  * @since sdk 2.0
  */
 public final class DateUtil {
+    /*** 时区 */
+    private static final String ZONE = "+8";
 
     private static final int[] DAY_OF_MONTH = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
@@ -34,7 +34,6 @@ public final class DateUtil {
     public static final DateTimeFormatter ALL_PATTERN_FORMATTER = DateTimeFormatter.ofPattern(ALL_PATTERN);
     /*** HH:mm */
     public static final DateTimeFormatter HH_MM_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
-
 
     /**
      * 以传入的日期为基数，计算数个月后的日期，如果计算数月前则传入负数
@@ -1139,4 +1138,53 @@ public final class DateUtil {
         }
         return weekDays[w];
     }
+
+    /**
+     * 根据时间戳和天数获取同一时间
+     *
+     * @param time
+     * @param span
+     * @return
+     * @throws Exception
+     */
+    public static Long getTimeByDateAndDaySpan(Long time, Integer span) throws Exception {
+        return getTimeByDateAndDaySpan(new Timestamp(time), span);
+    }
+
+    /**
+     * 根据时间和天数获取同一时间
+     *
+     * @param time
+     * @param span
+     * @return
+     * @throws Exception
+     */
+    public static Long getTimeByDateAndDaySpan(Timestamp time, Integer span) throws Exception {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(time);
+        calendar.add(Calendar.DATE, span);
+        return calendar.getTimeInMillis();
+    }
+
+    /**
+     * 根据 LocalDate & LocalTime 获取时间戳
+     *
+     * @param date
+     * @param time
+     * @return
+     */
+    public static Long getLongTimeByDataAndTime(LocalDate date, LocalTime time) {
+        return getLongTimeByDataTime(LocalDateTime.of(date, time));
+    }
+
+    /**
+     * 根据 LocalDateTime 获取时间戳
+     *
+     * @param dateTime
+     * @return
+     */
+    public static Long getLongTimeByDataTime(LocalDateTime dateTime) {
+        return dateTime.toInstant(ZoneOffset.of(ZONE)).toEpochMilli();
+    }
+
 }
