@@ -273,6 +273,10 @@ public enum HoolinkExceptionMassageEnum {
      */
     MESSAGE_JPUSH_ERROR("极光推送消息失败"),
 
+    /**
+     * 集中器
+     */
+    EXTERNAL_ALL_FILTER("集中器同步失败"),
     ;
 
     private String message;
