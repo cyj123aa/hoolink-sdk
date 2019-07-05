@@ -27,4 +27,5 @@ public class DeviceCloudParamBO implements Serializable {
     private Integer deviceStatus;
 
     List<DeviceCoordParamBO> coordList;
+
 }
