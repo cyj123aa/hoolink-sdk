@@ -18,6 +18,7 @@ public enum WorkStateEnum {
     PERFECT((byte)8,"完善工单",(byte)1),
     THROUGH((byte)9,"审批已通过",(byte)7),
     RESET((byte)10,"操作人删除 工单重置",null),
+    ADD_RECEIPT((byte)11,"添加回执",null),
     ;
 
     public Byte key;

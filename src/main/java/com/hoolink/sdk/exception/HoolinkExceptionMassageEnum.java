@@ -267,11 +267,16 @@ public enum HoolinkExceptionMassageEnum {
     FOLDER_NO_NEED_LOAD("空文件夹不可下载！"),
     FOLDER_NAME_NOT_NULL("文件夹名称不可为空！"),
     FOLDER_NAME_NOT_DUPLICATE("文件夹名称不可重复！"),
+    FILE_NOT_FOUND("下载文件没有发现"),
     /**
      * mdc
      */
     MESSAGE_JPUSH_ERROR("极光推送消息失败"),
 
+    /**
+     * 集中器
+     */
+    EXTERNAL_ALL_FILTER("集中器同步失败"),
     ;
 
     private String message;
