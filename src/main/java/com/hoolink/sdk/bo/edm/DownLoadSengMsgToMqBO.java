@@ -29,4 +29,6 @@ public class DownLoadSengMsgToMqBO {
      * 打包到当前文件的大小
      */
    private Long currentSize;
+
+   private Long userId;
 }
