@@ -39,6 +39,11 @@ public class FileTypeDetailsConstants {
      */
     public static final String PPT = "ppt";
 
+    /**
+     * 视频类型
+     */
+    public static final String MP4 ="mp4";
+
 
 
 
