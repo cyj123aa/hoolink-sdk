@@ -74,6 +74,9 @@ public class OperateBO {
      */
 
     private Long  workId;
+    /**
+     * 原因
+     */
     private  String  reason;
 
 }
