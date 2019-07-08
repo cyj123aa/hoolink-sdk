@@ -17,7 +17,7 @@ public enum WorkStateEnum {
     CREATE((byte)7,"创建工单",(byte)1),
     PERFECT((byte)8,"完善工单",(byte)1),
     THROUGH((byte)9,"审批已通过",(byte)7),
-    RESET((byte)10,"操作人删除 工单重置",null),
+    RESET((byte)10,"操作人删除 工单重置",(byte)1),
     ADD_RECEIPT((byte)11,"添加回执",null),
     ;
 

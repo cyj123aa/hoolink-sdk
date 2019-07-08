@@ -154,7 +154,7 @@ public class CopyPropertiesUtil {
 
     /**
      * 对前端过来的baseParam进行封装
-     * 将前端传过来的参数中data由baseParam<VO>转换成baseParam<BO>再传递给service
+     * 将前端传过来的参数中data由baseParam<VO>转换成baseParam<ProjectTitleBO>再传递给service
      *
      * @param source
      * @param destination

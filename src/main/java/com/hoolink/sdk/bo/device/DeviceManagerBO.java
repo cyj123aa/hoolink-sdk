@@ -105,4 +105,6 @@ public class DeviceManagerBO implements Serializable {
     /*** 设备识别码 */
     private String verifyCode;
 
+    /*** 设备状态 */
+    private Integer status;
 }

@@ -63,4 +63,22 @@ public class TimeUtil {
         return c.getTimeInMillis();
     }
 
+    /**
+     * 计算时间差
+     * @param start
+     * @param end
+     * @return
+     */
+    public static  Long getDayEnd(Long start,Long end) {
+        Calendar c = Calendar.getInstance();
+        if (null != start) {
+            c.setTimeInMillis(end);
+        }
+        c.set(Calendar.HOUR_OF_DAY, 23);
+        c.set(Calendar.MINUTE, 59);
+        c.set(Calendar.SECOND, 59);
+        return c.getTimeInMillis();
+    }
+
+
 }
