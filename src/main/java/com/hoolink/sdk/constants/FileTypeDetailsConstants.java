@@ -34,5 +34,12 @@ public class FileTypeDetailsConstants {
      */
     public static final String EXCEL_XLSX = "xlsx";
 
+    /**
+     * ppt
+     */
+    public static final String PPT = "ppt";
+
+
+
 
 }
