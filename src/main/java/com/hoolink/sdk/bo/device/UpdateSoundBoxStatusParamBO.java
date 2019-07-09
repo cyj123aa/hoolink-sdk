@@ -2,6 +2,7 @@ package com.hoolink.sdk.bo.device;
 
 import lombok.Data;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -14,9 +15,16 @@ public class UpdateSoundBoxStatusParamBO {
     /** 设备mac列表 */
     private List<String> macList;
     /** 设备运行状态 */
+    @NotNull(message = "运行状态不能为空")
     private Boolean runStatus;
     /** 设备子类型ID */
     private Long deviceSubTypeId;
     /** 更新时间 毫秒数 */
     private Long time;
+    /** 三方任务ID */
+    private String random;
+    /** 清单音量 */
+    private Integer taskVol;
+    /** 通信时间 */
+    private Long lastTime;
 }
