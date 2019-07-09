@@ -110,6 +110,8 @@ public enum HoolinkExceptionMassageEnum {
     INSPECTION_RUNNING_REMOVE_ERROR("巡检计划正在执行中，无法删除！"),
     INSPECTOR_NAME_EXIST("姓名已存在！"),
     INSPECTOR_NUMBER_EXIST("编号已存在！"),
+    INSPECTOR_CREATE_ERROR("新增人员失败!"),
+    INSPECTOR_UPDATE_ERROR("编辑人员失败!"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
