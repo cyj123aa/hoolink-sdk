@@ -12,6 +12,8 @@ public enum WorkEnum {
     PERFECTED((byte)4,"待完善"),
     REVIEW((byte)5,"待审核"),
     PROCESSED((byte)6,"待处理"),
+    DELAYOVER((byte)7,"延期结束"),
+
 ;
 
     public Byte key;
