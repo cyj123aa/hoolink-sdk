@@ -33,4 +33,8 @@ public class EdmDownloadBO {
      * 打包时长
      */
     private Float packTime;
+    /**
+     * 用户id
+     */
+    private Long userId;
 }
