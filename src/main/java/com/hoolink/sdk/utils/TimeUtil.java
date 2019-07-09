@@ -69,15 +69,9 @@ public class TimeUtil {
      * @param end
      * @return
      */
-    public static  Long getDayEnd(Long start,Long end) {
-        Calendar c = Calendar.getInstance();
-        if (null != start) {
-            c.setTimeInMillis(end);
-        }
-        c.set(Calendar.HOUR_OF_DAY, 23);
-        c.set(Calendar.MINUTE, 59);
-        c.set(Calendar.SECOND, 59);
-        return c.getTimeInMillis();
+    public static  Integer dilfferentDaysByMillisecond(Long start,Long end) {
+        Integer days = (int)(start - end) / (1000*3600*24);
+        return days;
     }
 
 
