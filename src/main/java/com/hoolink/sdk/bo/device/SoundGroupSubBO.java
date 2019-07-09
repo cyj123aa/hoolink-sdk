@@ -19,11 +19,11 @@ public class SoundGroupSubBO implements Serializable {
     private String groupName;
     /** 设备数量 */
     private Integer deviceNum;
-    /** 单灯id */
+    /** 设备id */
     private Long id;
-    /** 单灯名称 */
+    /** 设备名称 */
     private String deviceName;
-    /** 清单音量 */
+    /** 设备音量 */
     private Integer taskVol;
     /** 清单名称 */
     private String taskName;
