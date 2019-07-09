@@ -37,4 +37,8 @@ public class EdmDownloadBO {
      * 用户id
      */
     private Long userId;
+    /**
+     * 下载的url
+     */
+    private String url;
 }
