@@ -1104,8 +1104,10 @@ public final class DateUtil {
      */
     public static boolean timeConflict(LocalTime srcStart, LocalTime srcEnd, LocalTime distStart, LocalTime distEnd) {
         // 开始 > src结束 && 结束 < src开始， 当中需要考虑跨天场景
-        return (srcEnd.isBefore(srcStart) || distStart.isBefore(srcEnd))
-                && (distEnd.isBefore(distStart) || distEnd.isAfter(srcStart));
+        return ((srcEnd.isBefore(srcStart) || distStart.isBefore(srcEnd))
+                && (distEnd.isBefore(distStart) || distEnd.isAfter(srcStart))) ||
+                ((srcEnd.isBefore(srcStart) || srcStart.isBefore(distEnd))
+                        && (distEnd.isBefore(distStart) || srcEnd.isAfter(distStart)));
     }
 
     /**

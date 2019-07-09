@@ -68,4 +68,9 @@ public class EdmMenuTreeBO implements Serializable {
      * 是否展开
      */
     private Boolean expand;
+
+    /**
+     * 节点下文件数目
+     */
+    private Integer fileNum;
 }
