@@ -8,6 +8,7 @@ import lombok.Data;
  */
 @Data
 public class FileSendMsgToMqBO {
-   private String msg;
-   private Boolean flag;
+
+    private String msg;
+    private Boolean flag;
 }
