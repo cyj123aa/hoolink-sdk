@@ -29,21 +29,53 @@ public class FileTypeDetailsConstants {
      */
     public static final String EXCEL_XLS = "xls";
 
-    /**
-     * 表格
-     */
     public static final String EXCEL_XLSX = "xlsx";
+
+    public static final String EXCEL_XLSM = "xlsm";
 
     /**
      * ppt
      */
     public static final String PPT = "ppt";
 
+    public static final String PPSX = "ppsx";
+
+    public static final String PPTX = "pptx";
+
+    /**
+     * psd
+     */
+    public static final String PSD = "psd";
+
+    /**
+     * pdf
+     */
+    public static final String PDF = "pdf";
+
+
+
     /**
      * 视频类型
      */
     public static final String MP4 ="mp4";
 
+    public static final String RM ="rm";
+
+    public static final String RMVB ="rmvb";
+
+    public static final String MPEG ="mpeg";
+
+    public static final String MPG ="mpg";
+
+    public static final String DAT ="dat";
+
+    public static final String MOV ="mov";
+
+    public static final String QT ="qt";
+
+    public static final String ASF ="asf";
+
+    public static final String WMV ="wmv";
 
 
 
