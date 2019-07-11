@@ -109,6 +109,12 @@ public class ProjectBO  implements Serializable {
 
     private Long modelId;
 
+
+    /**
+     * 项目zip的url
+     */
+    private String modelUrl;
+
     /**
      * <pre>
      * 附件id 集合
