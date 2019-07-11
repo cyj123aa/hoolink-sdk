@@ -772,6 +772,7 @@ public final class DateUtil {
      *
      * @return
      */
+    @Deprecated
     public static Date getSysCurDateTime() {
         return string0DateTime(getSysCurDateTimeStr());
     }

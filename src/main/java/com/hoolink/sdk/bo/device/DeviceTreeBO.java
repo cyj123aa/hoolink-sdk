@@ -32,4 +32,13 @@ public class DeviceTreeBO implements Serializable {
     private Integer y;
     /*** 坐标系Z轴 */
     private Integer z;
+
+    /*** 设备状态 */
+    private Integer status;
+
+    /*** 安装地址 */
+    private String installAddress;
+    /*** 设备类型名 */
+    private String typeName;
+
 }
