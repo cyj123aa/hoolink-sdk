@@ -145,6 +145,12 @@ public class RabbitMQConstants {
     public static final String DEVICE_STATUS_QUEUE_ROUTING_KEY = "device.status.routing.key";
 
     /**
+     * 音响音量数据推送
+     */
+    public static final String DEVICE_SOUND_VOL_QUEUE = "device.sound.vol.queue";
+    public static final String DEVICE_SOUND_VOL_QUEUE_ROUTING_KEY = "device.sound.vol.routing.key";
+
+    /**
      * 单灯上行数据推送
      */
     public static final String DEVICE_LIGHT_STATUS_QUEUE = "device.light.data.queue";

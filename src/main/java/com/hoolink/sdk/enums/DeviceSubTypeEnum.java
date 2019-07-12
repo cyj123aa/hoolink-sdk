@@ -45,7 +45,7 @@ public enum DeviceSubTypeEnum {
     // ----- 互灵智能灯杆设备
     POLE_HOOLINK(18L, "pole_hoolink", "hoolink", "互灵智能灯杆设备", InstructionCodeType.MONITOR_HOOLINK, 13L),
     // ----- 互灵集中器设备
-    EXTERNAL_HOOLINK(19L, "external_hoolink", "hoolink", "互灵集中器设备", InstructionCodeType.MONITOR_HOOLINK, 14L),
+    EXTERNAL_HOOLINK(19L, "external_hoolink", "hoolink", "互灵集中器设备", InstructionCodeType.MING_ZHI, 14L),
     // ----- 互灵土壤监测设备
     SOIL_HOOLINK(20L, "soil_hoolink", "hoolink", "互灵土壤监测设备", InstructionCodeType.MONITOR_HOOLINK, 15L),
     // ----- 互灵水质监测设备

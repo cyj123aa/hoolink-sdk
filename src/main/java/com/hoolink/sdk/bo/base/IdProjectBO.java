@@ -113,6 +113,11 @@ public class IdProjectBO  {
     private Long modelId;
 
     /**
+     * 项目zip的url
+     */
+    private String modelUrl;
+
+    /**
      * <pre>
      * 附件id 集合
      * 表字段 : 存入中间表

@@ -15,6 +15,6 @@ public class ScreenConfigParamBO implements Serializable {
     /*** 清单ID */
     private Long configId;
 
-    /*** 亮度 */
+    /*** 显示屏亮度 */
     private Integer brightness;
 }
