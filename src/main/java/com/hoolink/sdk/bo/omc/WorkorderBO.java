@@ -272,7 +272,10 @@ public class WorkorderBO {
      */
     private Integer orderStatusPre;
 
-
+    /**
+     * app 端的描述
+     */
+    private String bewrite;
 
     /**
      * <pre>
