@@ -42,4 +42,11 @@ public class RedisConstants {
 
     /*** 策略-单灯计划任务管理 */
     public static final String CRON_LIGHT_TASK = "CRON_LIGHT_TASK";
+
+    /**
+     * 音响设备上行操作缓存
+     */
+    public static final String SOUND_BIZ_HISTORY = "sound_biz_history";
+    public static final String SOUND_OPERATION_RANDOM = "sound_operation_random_";
+
 }
