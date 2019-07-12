@@ -247,6 +247,8 @@ public enum HoolinkExceptionMassageEnum {
     USER_NO_FILE_UPDATE_PERMISSION_ERROR("文件权限不足，请联系文控中心人员进行下载！"),
     PARENT_NODE_NOT_FOUNT("父级资源没有发现"),
     UNSATISFIED_PERMISSIONS_EXIST_IN_THE_FAVORITE_FILE("您权限不足，无法收藏！"),
+    RESOURCE_ORGANIZATIONAL_STRUCTURE_DONT_MATCH_USER("资源可见组织架构与您的部门划分不匹配，无法收藏！"),
+    RESOURCE_TEMPORARY_VISIBLE_DONT_MATCH_USER("资源临时可见与您不匹配，无法收藏！"),
     SOME_DOCUMENTS_HAVE_COLLECTED("有部分文件已收藏"),
     ONE_DOCUMENTS_HAVE_COLLECTED("该文件已被收藏"),
     NO_PERMISSION_OPERA("您权限不足，无法移动！"),

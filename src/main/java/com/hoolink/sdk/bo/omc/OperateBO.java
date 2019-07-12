@@ -79,4 +79,6 @@ public class OperateBO {
      */
     private  String  reason;
 
+    private  String   bewrite;
+
 }
