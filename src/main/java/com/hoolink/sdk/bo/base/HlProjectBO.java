@@ -85,6 +85,10 @@ public class HlProjectBO {
      * </pre>
      */
     private Long modelId;
+    /**
+     * 项目zip的url
+     */
+    private String modelUrl;
 
     /**
      * <pre>
