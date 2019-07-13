@@ -72,9 +72,6 @@ public class CopyPropertiesUtil {
      */
     public static <T> T copyBean(Object obj, Class<T> clazz) {
         String json = JSONObject.toJSONString(obj);
-        if (StringUtils.isBlank(json)) {
-            return null;
-        }
         return JSONObject.parseObject(json, clazz);
     }
 
