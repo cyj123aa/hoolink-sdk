@@ -284,4 +284,12 @@ public class WorkorderBO {
      * </pre>
      */
     private Boolean delay;
+
+    /**
+     * <pre>
+     * 是否展示按钮
+     * 表字段 : workorder.readonlyButton
+     * </pre>
+     */
+    private Boolean readonlyButton;
 }
