@@ -13,5 +13,6 @@ import java.io.Serializable;
 public class DeviceMqDataBO implements Serializable {
     private Long deviceId;
     private Long deviceSubTypeId;
+    private Long projectId;
     private Integer deviceStatus;
 }
