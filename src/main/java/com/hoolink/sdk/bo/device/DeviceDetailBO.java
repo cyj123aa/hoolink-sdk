@@ -84,5 +84,14 @@ public class DeviceDetailBO implements Serializable {
 
     /*** 模组编号 */
     private String verifyCode;
-    
+
+    /*** 模型x轴值 */
+    private Integer x;
+
+    /*** 模型y轴值 */
+    private Integer y;
+
+    /*** 模型z轴值 */
+    private Integer z;
+
 }
