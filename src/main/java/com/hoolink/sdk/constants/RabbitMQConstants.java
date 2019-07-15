@@ -7,10 +7,17 @@ package com.hoolink.sdk.constants;
 public class RabbitMQConstants {
 
     /**
-     * 设备升级
+     * 设备升级(device发送，support接收)
      */
-    public static final String DEVICE_UPGRADE_QUEUE = "device.upgrade.queue";
+    public static final String DEVICE_UPGRADE_QUEUE = "device.upgrade.queue1";
     public static final String DEVICE_UPGRADE_EXCHANGE = "device.upgrade.exchange";
+
+    /**
+     * 设备升级(support发送，socket接收)
+     */
+    public static final String DEVICE_UPGRADE_SOCKET_QUEUE = "device.upgrade.socket.queue";
+    public static final String DEVICE_UPGRADE_SOCKET_EXCHANGE = "device.upgrade.socket.exchange";
+    public static final String DEVICE_UPGRADE_SOCKET_EXCHANGE_ROUTING_KEY  = "device.upgrade.socket.exchange.routing.key";
 
     /**
      * 派工交换器
