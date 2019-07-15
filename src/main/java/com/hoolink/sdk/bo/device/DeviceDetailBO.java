@@ -81,5 +81,8 @@ public class DeviceDetailBO implements Serializable {
 
     /*** 分组名称 */
     private String groupName;
+
+    /*** 模组编号 */
+    private String verifyCode;
     
 }
