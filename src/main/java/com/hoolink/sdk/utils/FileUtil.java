@@ -198,6 +198,7 @@ public class FileUtil {
     private static final String KB = "KB";
     private static final String MB = "MB";
     private static final String GB = "GB";
+    private static final String T = "T";
     private static final Integer SIZE_UNIT = 1024;
 
     /**
@@ -217,15 +218,15 @@ public class FileUtil {
         }
         DecimalFormat df = new DecimalFormat("######0.00");
 
-        //KB
+        //MB
         if ((filesize >= SIZE_UNIT) && (filesize < SIZE_UNIT * SIZE_UNIT)) {
-            strFileSize = df.format(((double) filesize) / SIZE_UNIT) + KB;
-            //MB
-        } else if ((filesize >= SIZE_UNIT * SIZE_UNIT) && (filesize < SIZE_UNIT * SIZE_UNIT * SIZE_UNIT)) {
-            strFileSize = df.format(((double) filesize) / (SIZE_UNIT * SIZE_UNIT)) + MB;
+            strFileSize = df.format(((double) filesize) / SIZE_UNIT) +  MB;
             //GB
+        } else if ((filesize >= SIZE_UNIT * SIZE_UNIT) && (filesize < SIZE_UNIT * SIZE_UNIT * SIZE_UNIT)) {
+            strFileSize = df.format(((double) filesize) / (SIZE_UNIT * SIZE_UNIT)) + GB;
+            //T
         } else {
-            strFileSize = df.format(((double) filesize) / (SIZE_UNIT * SIZE_UNIT * SIZE_UNIT)) + GB;
+            strFileSize = df.format(((double) filesize) / (SIZE_UNIT * SIZE_UNIT * SIZE_UNIT)) + T;
         }
         return strFileSize;
 
