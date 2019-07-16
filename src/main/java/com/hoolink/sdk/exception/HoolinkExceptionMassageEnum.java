@@ -37,6 +37,7 @@ public enum HoolinkExceptionMassageEnum {
     RESET_PASSWORD_ERROR("重置密码操作失败！"),
     ROLE_USER_NOT_EXIST("角色不存在"),
     ROLE_NAME_EXIST("角色名称重复"),
+    ROLE_STATUS_DISABLED("角色被禁用"),
     /*** 项目管理提示信息message */
     PROJECT_SCENE_ERROR("项目类型获取失败！"),
     CREATE_PROJECT_ERROR("项目创建失败！"),
