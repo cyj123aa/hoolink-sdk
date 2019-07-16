@@ -29,6 +29,7 @@ public class DeviceCloudBO implements Serializable {
     /*** 设备型号 */
     private String subTypeName;
 
+    /** 模型编号 */
     private String modelNo;
 
     /*** 设备名称 */
