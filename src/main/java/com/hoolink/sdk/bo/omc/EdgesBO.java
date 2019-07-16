@@ -38,7 +38,7 @@ public class EdgesBO {
     /**
      * 连线颜色
      */
-   // private StyleBO style;
+    private StyleBO style;
 
     /**
      * 连线颜色
@@ -47,7 +47,7 @@ public class EdgesBO {
     /**
      * 连线颜色
      */
-    private String label;
+    private LabelBO label;
 
 
     /**

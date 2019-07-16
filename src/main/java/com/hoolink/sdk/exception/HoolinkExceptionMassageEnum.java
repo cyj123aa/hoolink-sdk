@@ -13,7 +13,8 @@ public enum HoolinkExceptionMassageEnum {
     SYSTEM_ERROR("系统错误"),
     PARAM_ERROR("参数错误"),
     LOGIN_ERROR("登录异常"),
-    LOGIN_TIME_OUT("登录超时"),
+    //返回这个 前端会返回   发生下列情况，需要您重新登录：操作超时/密码重置/权限重置
+    LOGIN_TIME_OUT("login_time_out"),
     PAGE_TIME_OUT("页面超时，请重新操作！"),
     OTHER_USER_LOGIN("异地登录"),
     NOT_AUTH("无权限访问"),
@@ -36,6 +37,7 @@ public enum HoolinkExceptionMassageEnum {
     RESET_PASSWORD_ERROR("重置密码操作失败！"),
     ROLE_USER_NOT_EXIST("角色不存在"),
     ROLE_NAME_EXIST("角色名称重复"),
+    ROLE_STATUS_DISABLED("角色被禁用"),
     /*** 项目管理提示信息message */
     PROJECT_SCENE_ERROR("项目类型获取失败！"),
     CREATE_PROJECT_ERROR("项目创建失败！"),
@@ -247,6 +249,7 @@ public enum HoolinkExceptionMassageEnum {
     USER_NO_FILE_UPDATE_PERMISSION_ERROR("文件权限不足，请联系文控中心人员进行下载！"),
     PARENT_NODE_NOT_FOUNT("父级资源没有发现"),
     UNSATISFIED_PERMISSIONS_EXIST_IN_THE_FAVORITE_FILE("您权限不足，无法收藏！"),
+    SELECTED_FILES_ALREADY_COLLECTED("所选文件已收藏，请勿重复操作！"),
     RESOURCE_ORGANIZATIONAL_STRUCTURE_DONT_MATCH_USER("资源可见组织架构与您的部门划分不匹配，无法收藏！"),
     RESOURCE_TEMPORARY_VISIBLE_DONT_MATCH_USER("资源临时可见与您不匹配，无法收藏！"),
     SOME_DOCUMENTS_HAVE_COLLECTED("有部分文件已收藏"),
