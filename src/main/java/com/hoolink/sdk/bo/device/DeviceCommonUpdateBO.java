@@ -64,6 +64,14 @@ public class DeviceCommonUpdateBO implements Serializable {
     /*** 模型编号 */
     private String modelNo;
 
+    /*** 模型x轴值 */
+    private Integer x;
+
+    /*** 模型y轴值 */
+    private Integer y;
+
+    /*** 模型z轴值 */
+    private Integer z;
 
 
 }
