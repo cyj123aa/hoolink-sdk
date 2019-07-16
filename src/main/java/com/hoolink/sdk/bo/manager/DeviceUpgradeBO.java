@@ -45,6 +45,7 @@ public class DeviceUpgradeBO {
     /*** 升级描述 */
     private String description;
 
+    /*** 升级的批次id*/
     private String  batchId;
 
     /*** 升级类型 0 高版本升级 1 强制升级 */
