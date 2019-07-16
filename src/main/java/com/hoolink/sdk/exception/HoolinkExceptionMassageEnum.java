@@ -13,7 +13,8 @@ public enum HoolinkExceptionMassageEnum {
     SYSTEM_ERROR("系统错误"),
     PARAM_ERROR("参数错误"),
     LOGIN_ERROR("登录异常"),
-    LOGIN_TIME_OUT("登录超时"),
+    //返回这个 前端会返回   发生下列情况，需要您重新登录：操作超时/密码重置/权限重置
+    LOGIN_TIME_OUT("login_time_out"),
     PAGE_TIME_OUT("页面超时，请重新操作！"),
     OTHER_USER_LOGIN("异地登录"),
     NOT_AUTH("无权限访问"),
