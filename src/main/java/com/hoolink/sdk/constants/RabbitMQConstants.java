@@ -9,7 +9,7 @@ public class RabbitMQConstants {
     /**
      * 设备升级(device发送，support接收)
      */
-    public static final String DEVICE_UPGRADE_QUEUE = "device.upgrade.queue1";
+    public static final String DEVICE_UPGRADE_QUEUE = "device.upgrade.queue";
     public static final String DEVICE_UPGRADE_EXCHANGE = "device.upgrade.exchange";
 
     /**
