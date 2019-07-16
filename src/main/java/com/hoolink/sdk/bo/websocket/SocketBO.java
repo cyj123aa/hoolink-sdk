@@ -3,13 +3,15 @@ package com.hoolink.sdk.bo.websocket;
 import com.hoolink.sdk.enums.SocketEventType;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author zhouyun
  * @description websocket推送前端的BO
  * @date 2018/12/29 10:01
  **/
 @Data
-public class SocketBO<T> {
+public class SocketBO<T>{
     /**
      * 用户ID
      */

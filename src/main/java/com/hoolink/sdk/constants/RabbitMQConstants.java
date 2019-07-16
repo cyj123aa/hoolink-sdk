@@ -172,4 +172,14 @@ public class RabbitMQConstants {
     public static final String EDM_FILE_DOWNLOAD_QUEUE = "edm.file.download.queue";
     public static final String EDM_FILE_DOWNLOAD_ROUTING_KEY = "edm.file.download.routing.key";
     public static final String EDM_FILE_DOWNLOAD_EXCHANGE = "edm.file.download.exchange";
+
+    /**
+     * edm的socket推送
+     */
+    public static final String EDM_SOCKET_QUEUE = "direct.socket.edm.queue";
+
+    /**
+     * 支撑平台的socket推送
+     */
+    public static final String SUPPORT_SOCKET_QUEUE = "direct.socket.support.queue";
 }
