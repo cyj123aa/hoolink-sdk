@@ -33,6 +33,12 @@ public class CurrentUserBO implements Serializable {
     /*** 客户编号 */
     private String customerNo;
 
+    /*** 用户状态 */
+    private Boolean status;
+
+    /*** 数据有效性 */
+    private Boolean enabled;
+
     /*** 用户类型 */
     private Byte userType;
 
