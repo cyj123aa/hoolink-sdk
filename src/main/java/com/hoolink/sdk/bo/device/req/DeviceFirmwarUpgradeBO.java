@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 public class DeviceFirmwarUpgradeBO {
 
-    /*** 升级目标版本 */
+    /*** 升级目标版本  */
     private String dstVersion;
 
     /*** 升级类型 0 高版本升级 1 强制升级 */
