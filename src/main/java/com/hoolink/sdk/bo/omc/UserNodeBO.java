@@ -7,7 +7,11 @@ import lombok.Data;
  */
 @Data
 public class UserNodeBO {
+
+  private Long processId;
   private String processName;
 
   private String nodeName;
+
+  private String projectName;
 }
