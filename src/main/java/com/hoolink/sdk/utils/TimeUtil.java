@@ -70,7 +70,7 @@ public class TimeUtil {
      * @return
      */
     public static  Integer dilfferentDaysByMillisecond(Long start,Long end) {
-        Integer days = (int)(start - end) / (1000*3600*24) +1;
+        Integer days = (int)(start - end) / (1000*3600*24) ;
         return days;
     }
 
