@@ -56,8 +56,10 @@ public enum DeviceSubTypeEnum {
     DMX_HOOLINK(23L, "dmx_hoolink", "hoolink", "DMX景观照明", InstructionCodeType.DMX, 17L),
     // ----- 智能1+灯杆
     POLE_YEAH(24L, "pole_yeah", "hoolink", "智能1+", InstructionCodeType.MONITOR_HOOLINK, 13L),
-    // ----- 芳华杆
-    POLE_YOUNG(25L, "pole_young", "hoolink", "芳华", InstructionCodeType.MONITOR_HOOLINK, 13L);
+    // ----- 芳华灯杆
+    POLE_YOUNG(25L, "pole_young", "hoolink", "芳华", InstructionCodeType.MONITOR_HOOLINK, 13L),
+    // ----- F9灯杆
+    POLE_F9(26L, "pole_f9", "hoolink", "F9", InstructionCodeType.MONITOR_HOOLINK, 13L);
 
     private Long subType;
     private String subCode;
