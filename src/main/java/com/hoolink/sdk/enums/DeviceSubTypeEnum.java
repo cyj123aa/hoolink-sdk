@@ -53,7 +53,11 @@ public enum DeviceSubTypeEnum {
     // ----- 互灵漏电监测设备
     LEAKAGE_HOOLINK(22L, "leakage_hoolink", "hoolink", "互灵漏电监测设备", InstructionCodeType.MONITOR_HOOLINK, 10L),
     // ----- DMX景观照明
-    DMX_HOOLINK(23L, "dmx_hoolink", "hoolink", "DMX景观照明", InstructionCodeType.DMX, 17L);
+    DMX_HOOLINK(23L, "dmx_hoolink", "hoolink", "DMX景观照明", InstructionCodeType.DMX, 17L),
+    // ----- 智能1+灯杆
+    POLE_YEAH(24L, "pole_yeah", "hoolink", "智能1+", InstructionCodeType.MONITOR_HOOLINK, 13L),
+    // ----- 芳华杆
+    POLE_YOUNG(25L, "pole_young", "hoolink", "芳华", InstructionCodeType.MONITOR_HOOLINK, 13L);
 
     private Long subType;
     private String subCode;
