@@ -18,6 +18,7 @@ public enum HoolinkExceptionMassageEnum {
     PAGE_TIME_OUT("页面超时，请重新操作！"),
     OTHER_USER_LOGIN("异地登录"),
     NOT_AUTH("无权限访问"),
+    ILLEGAL_OPERATION("非法操作！"),
     ACCOUNT_STATUS_DISABLED("账号禁用，无法操作！"),
     AUTH_ERROR("权限获取失败"),
     COMMAND_DOWN_ERROR("指令下发失败"),
