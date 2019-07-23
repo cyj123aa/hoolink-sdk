@@ -125,6 +125,8 @@ public class IdProjectBO  {
      */
     private List<Long> annexIds;
 
+    private List<AnnexBO> annexList;
+
 
     /**
      * <pre>
