@@ -13,14 +13,15 @@ public enum HoolinkExceptionMassageEnum {
     SYSTEM_ERROR("系统错误"),
     PARAM_ERROR("参数错误"),
     LOGIN_ERROR("登录异常"),
+    //返回这个 前端会返回   发生下列情况，需要您重新登录：操作超时/密码重置/权限重置
     LOGIN_TIME_OUT("登录超时"),
     PAGE_TIME_OUT("页面超时，请重新操作！"),
     OTHER_USER_LOGIN("异地登录"),
     NOT_AUTH("无权限访问"),
+    ILLEGAL_OPERATION("非法操作！"),
+    ACCOUNT_STATUS_DISABLED("账号禁用，无法操作！"),
     AUTH_ERROR("权限获取失败"),
     COMMAND_DOWN_ERROR("指令下发失败"),
-    SWITCHCMD_CLASS_NULL("分发命令类未找到"),
-    SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
     NOT_REGISTERED_IN_THE_REGISTRY("未连接到注册中心"),
     SERVICE_CONSUME_FAULT("微服务调用失败"),
 
@@ -32,12 +33,14 @@ public enum HoolinkExceptionMassageEnum {
     USER_PHONE_EXISTS("手机号已被绑定，请更换其他手机号"),
     USER_PHONE_NOT_EXISTS("手机号不存在"),
     USER_BIND_PHONE_ERROR("手机绑定失败"),
+    CAPTCHA_NO_SEND("请先获取验证码"),
     CAPTCHA_ERROR("您输入的验证码有误！"),
     CAPTCHA_CACHE_TOO_FREQUENTLY("验证码存储过于频繁"),
     USER_LIST_ERROR("用户列表信息获取失败"),
     RESET_PASSWORD_ERROR("重置密码操作失败！"),
     ROLE_USER_NOT_EXIST("角色不存在"),
     ROLE_NAME_EXIST("角色名称重复"),
+    ROLE_STATUS_DISABLED("角色被禁用"),
     /*** 项目管理提示信息message */
     PROJECT_SCENE_ERROR("项目类型获取失败！"),
     CREATE_PROJECT_ERROR("项目创建失败！"),
@@ -91,7 +94,29 @@ public enum HoolinkExceptionMassageEnum {
 
     FACTORY_ID_NOT_NULL_ERROR("厂商ID不能为空"),
     DEVICE_ID_NOT_NULL_ERROR("设备ID不能为空"),
+    DEVICES_ALREADY_GROUPED("保存失败，设备已存在其他分组中"),
 
+    /*** 显示屏相关提示信息 */
+    SCREEN_CREATE_LST_ERROR("清单LST文件创建失败"),
+    SCREEN_TXT_ID_ERROR("文本ID不正确"),
+    PROJECT_CONFIG_MAX_ERROR("该项目下项目已经达到100个，不可再添加"),
+    SCREEN_ONLINE_ERROR("显示屏上线状态更新失败"),
+    SCREEN_OFFLINE_ERROR("显示屏下线状态更新失败"),
+    SCREEN_DATA_ERROR("找不到需要操控的清单或者设备"),
+    SCREEN_ALL_OFFLINE_ERROR("该清单中显示屏全部离线"),
+    SCREEN_CONFIG_ID_ERROR("清单ID不正确"),
+    LIGHT_DIMMER_ERROR("调光值不能为空"),
+    CHANNEL_NO_ERROR("该设备已断线，不可操作"),
+    SCREEN_CHANNEL_BUSY("文件下发中，暂无法控制！"),
+
+    /*** 巡检 */
+    INSPECTION_TIME_SELECT_ERROR("请选择自定义时间"),
+    INSPECTION_RUNNING_UPDATE_ERROR("巡检计划正在进行中，无法编辑！"),
+    INSPECTION_RUNNING_REMOVE_ERROR("巡检计划正在执行中，无法删除！"),
+    INSPECTOR_NAME_EXIST("姓名已存在！"),
+    INSPECTOR_NUMBER_EXIST("编号已存在！"),
+    INSPECTOR_CREATE_ERROR("新增人员失败!"),
+    INSPECTOR_UPDATE_ERROR("编辑人员失败!"),
 
     /*** 客户管理提示信息 */
     GET_CUSTOMER_LIST_ERROR("客户列表获取失败！"),
@@ -147,6 +172,24 @@ public enum HoolinkExceptionMassageEnum {
     ACCESS_OBS_FAILED("访问OBS服务失败"),
     READ_INIT_MENU_FAILED("初始化菜单列表失败"),
     READ_NEXT_MENU_FAILED("获取下级菜单列表失败"),
+    LIST_MENU_BY_ROLE("根据角色获取菜单失败"),
+    ORG_INFO_ERROR("获取组织架构信息失败"),
+    ENCRYPTED_LEVEL_ERROR("获取密保等级失败"),
+    USER_ACCOUNT_EXISTS("账号重复"),
+    EXCEL_COMPANY_ERROR("请选择正确的公司"),
+    EXCEL_DEPT_ERROR("请选择正确的部门"),
+    EXCEL_TEAM_ERROR("请选择正确的team"),
+    EXCEL_ROLE_ERROR("请选择正确的角色"),
+    EXCEL_ENCRY_LEVEL_ERROR("请选择正确的加密等级"),
+    EXCEL_VIEW_ENCRY_PERMITTED_ERROR("请选择是否可见员工密保等级"),
+    USER_NO_EXISTS("编号重复"),
+    DEPARTMENT_FORMAT_ERROR("部门格式不正确！"),
+    TYPE_AT_LEASE_DEPT("请至少选择到部门层级！"),
+    DEPARTMENT_REPEAT_OR_CONTAIN("部门添加不能出现重复或者包含的关系！"),
+    EXCEL_DATA_FORMAT_ERROR("excel数据格式错误！"),
+    EXCEL_SEX_ERROR("请选择性别"),
+    EXCEL_IMPORTED_FAILED("数据导入失败"),
+    DEPT_NOT_SELECTED("组织架构未选择"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -158,6 +201,7 @@ public enum HoolinkExceptionMassageEnum {
     UPLOAD_FILE_ERROR("文件上传失败"),
     CHECK_FIRMWARE_ERROR("固件校验未通过！请确认输入固件版本与上传文件是否一致"),
     FIRMWARE_NAME_OUT_OF_ORDER("输入固件版本不符合规则！"),
+    SEND_SMS_ERROR("发送短信失败"),
 
     DEVICE_CHECK_PASSWORD_NOT_EXIST("密码不能为空, 请输入密码!"),
     DEVICE_CHECK_PASSWORD_ERROR("密码错误, 请重新输入!"),
@@ -166,6 +210,83 @@ public enum HoolinkExceptionMassageEnum {
     DEVICE_GROUP_NOT_EXIST("密码不能为空, 请输入密码!"),
     MANAGER_USER_NOT_EXIST_ERROR("该用户不存在！"),
     CREATE_GROUP_ERROR("创建组失败!"),
+    USER_MENU_INCOMPLETE("用户菜单权限不完整!"),
+    PLEASE_MENU_CONFIG("请配置菜单权限!"),
+    USER_NOT_VISITOR("当前用户角色无权限!"),
+
+    /**
+     * hoolink-command
+     */
+    SWITCHCMD_CLASS_NULL("分发命令类未找到"),
+    SWITCHCMD_METHOD_NULL("分发命令方法未找到"),
+    NB_ACCESS_TOKEN_FAULT("nb平台获取accessToken失败"),
+    NB_SERVICE_CONSUME_FAULT("nb平台调用失败"),
+
+    /**
+     * 流程配置
+     */
+    CREATE_PROCESS_ERROR("创建流程失败"),
+    UPDATE_PROCESS_ERROR("修改流程失败"),
+    REMOVE_PROCESS_ERROR("删除流程失败"),
+    GET_PROCESS_ERROR("查询流程失败"),
+    LIST_PROCESS_ERROR("查询流程列表失败"),
+    PROCESS_AUTHORIZATION_ERROR("流程授权失败"),
+    SET_PROCESS_PROJECT_ERROR("设置流程和项目关系失败"),
+    PROCESS_INFO_ERROR("查询流程信息失败"),
+    LOGIN_PASSWORD_ERROR("密码错误，请稍后再试"),
+    GET_PROJECT_INFO_ERROR("查询项目信息失败！"),
+    PROCESS_NULL_ERROR("项目下无流程，请添加后再试"),
+    PROCESS_ERROR("流程存在问题，请找管理员确认后再试"),
+
+    /**
+     * edm
+     */
+    USER_SECURITY_NOT_EXIST("用户资源密保等级不存在"),
+    OUTPUT_FILE_NOT_EXIST("输出的文件不纯在"),
+    REPERTORY_INFO_ERROR("需要设置的文件资源为空！"),
+    ORG_LIST_TREE_ERROR("获取组织架构树失败！"),
+    FILE_NO_JURISDICTION("获取文件密保权限失败"),
+    FILE_JURISDICTION_PARAM_ERROR("获取文件密保权限参数错误"),
+    MANAGE_DEPARTMENT_TREE("获取组织架构失败"),
+    USER_ROLE_NOT_EXIST("用户角色不能为空！"),
+    USER_NO_FILE_UPDATE_PERMISSION_ERROR("文件权限不足，请联系文控中心人员进行下载！"),
+    PARENT_NODE_NOT_FOUNT("父级资源没有发现"),
+    UNSATISFIED_PERMISSIONS_EXIST_IN_THE_FAVORITE_FILE("您权限不足，无法收藏！"),
+    SELECTED_FILES_ALREADY_COLLECTED("所选文件已收藏，请勿重复操作！"),
+    RESOURCE_ORGANIZATIONAL_STRUCTURE_DONT_MATCH_USER("资源可见组织架构与您的部门划分不匹配，无法收藏！"),
+    RESOURCE_TEMPORARY_VISIBLE_DONT_MATCH_USER("资源临时可见与您不匹配，无法收藏！"),
+    SOME_DOCUMENTS_HAVE_COLLECTED("有部分文件已收藏"),
+    ONE_DOCUMENTS_HAVE_COLLECTED("该文件已被收藏"),
+    NO_PERMISSION_OPERA("您权限不足，无法移动！"),
+    FILE_NOT_EXIST("该文件不存在"),
+    NAV_NOT_EXIST("当前目录层级不存在"),
+    PLEASE_SET_SUITABLE_TIMEOUT("请设置合适的超时时间"),
+    NO_PREVIEW_PERMISSIONS("无预览权限"),
+    EDM_CLAIM_UPLOAD_ID_FAILED("获取文件分块上传uploadId失败"),
+    EDM_UPLOAD_PART_FAILED("文件分块上传失败"),
+    EDM_COMPLETE_MULTIPART_UPLOAD_FAILED("合并文件失败失败"),
+    UPLOAD_EDM_FAILED("文件上传失败"),
+    NO_PERMISSION_OPERA_DOWNLOAD("人员权限不足，请联系文控中心人员进行下载！"),
+    NO_PERMISSION_OPERA_ARCHIVE("所选文件中存在无权限归档的文件，请重新选择或者联系管理员！"),
+    NO_PERMISSION_OPERA_DELETE("您权限不足，无法删除"),
+    NO_PERMISSION_SETTING("您权限不足，无法设置！"),
+    USER_DEPT_ENCRY_ERROR("用户部门与密保等级数据错误"),
+    NO_RESOURCE_OPERA("你对所选文件无操作权限，请重新选择或联系文控人员！"),
+    DO_NOT_MOVE_ERROR("移动的目标目录包含在需要移动的文件夹中,无法移动！"),
+    FOLDER_NO_NEED_SET("空文件夹不可以设置密保等级！"),
+    FOLDER_NO_NEED_LOAD("空文件夹不可下载！"),
+    FOLDER_NAME_NOT_NULL("文件夹名称不可为空！"),
+    FOLDER_NAME_NOT_DUPLICATE("文件夹名称不可重复！"),
+    FILE_NOT_FOUND("下载文件没有发现"),
+    /**
+     * mdc
+     */
+    MESSAGE_JPUSH_ERROR("极光推送消息失败"),
+
+    /**
+     * 集中器
+     */
+    EXTERNAL_ALL_FILTER("集中器同步失败"),
     ;
 
     private String message;

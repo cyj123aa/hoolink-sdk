@@ -7,13 +7,15 @@ import com.github.pagehelper.PageInfo;
 import com.hoolink.sdk.bo.BackBO;
 import com.hoolink.sdk.param.BaseParam;
 import com.hoolink.sdk.vo.BackVO;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Field;
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 对象属性拷贝工具类
@@ -21,8 +23,8 @@ import java.util.*;
  * @author ${zht}
  * @date 2018/9/21
  */
+@Slf4j
 public class CopyPropertiesUtil {
-    private static final Logger LOGGER = LoggerFactory.getLogger(CopyPropertiesUtil.class);
 
     /**
      * List的copy
@@ -70,9 +72,6 @@ public class CopyPropertiesUtil {
      */
     public static <T> T copyBean(Object obj, Class<T> clazz) {
         String json = JSONObject.toJSONString(obj);
-        if (StringUtils.isBlank(json)) {
-            return null;
-        }
         return JSONObject.parseObject(json, clazz);
     }
 
@@ -94,6 +93,7 @@ public class CopyPropertiesUtil {
      * @param <T>
      * @return
      */
+    @Deprecated
     public static <T> T copyBean(Class<T> clazz, Object... source) {
         if (ArrayUtil.isEmpty(source)) {
             // ===== 当数据源对象为空时, 直接返回null
@@ -112,7 +112,7 @@ public class CopyPropertiesUtil {
                             // ----- 当 key 或 value 为null时, 不作操作, 所以出现在改 map 中的所有 key 必然有对应的 value 且 value 不为 null
                             if (map.containsKey(key)) {
                                 // ----- 当已经存在时, 进入到这里, 说明出现了同一个属性出现多个值的情况, 默认保留第一次出现的值
-                                LOGGER.warn("copyBean error Failure because of clash of attributes, key:{}, oldValue: {}, newValue{}", key, map.get(key), value);
+                                log.warn("copyBean error Failure because of clash of attributes, key:{}, oldValue: {}, newValue{}", key, map.get(key), value);
                             } else {
                                 // ----- 当该 key 在 map 中不存在时, 直接 put
                                 map.put(key, value);
@@ -151,7 +151,7 @@ public class CopyPropertiesUtil {
 
     /**
      * 对前端过来的baseParam进行封装
-     * 将前端传过来的参数中data由baseParam<VO>转换成baseParam<BO>再传递给service
+     * 将前端传过来的参数中data由baseParam<VO>转换成baseParam<ProjectTitleBO>再传递给service
      *
      * @param source
      * @param destination

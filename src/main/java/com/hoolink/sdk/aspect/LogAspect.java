@@ -11,13 +11,12 @@ import com.hoolink.sdk.exception.HoolinkExceptionMassageEnum;
 import com.hoolink.sdk.param.BaseParam;
 import com.hoolink.sdk.utils.*;
 import com.hoolink.sdk.vo.BackVO;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -34,10 +33,10 @@ import java.util.List;
  *
  * @author zhuli
  */
+@Slf4j
 @Aspect
 @Component
 public class LogAspect {
-    private static final Logger LOGGER = LoggerFactory.getLogger(LogAspect.class);
 
     /**
      * 定义拦截规则：拦截有@PostMapping注解的方法。
@@ -104,14 +103,9 @@ public class LogAspect {
         } catch (Exception e) {
             // ===== 日志输出之后组装返回值
             String message = e.getMessage();
-            if (e instanceof BusinessException) {
+            if (!(e instanceof BusinessException) && !(e instanceof ConstraintViolationException)) {
                 // ----- 当controller捕获到的异常是BusinessException异常
-                if (!HoolinkExceptionMassageEnum.isExist(message)) {
-                    message = assembleCodeAndMsg(method);
-                }
-            } else if (e instanceof ConstraintViolationException) {
                 // ----- 当controller捕获的异常是由于参数校验不通过引起的ConstraintViolationException时, 不做任何处理, 只接将message返回
-            } else {
                 // ----- 当controller捕获到的异常不是自定义的异常
                 message = assembleCodeAndMsg(method);
             }
@@ -130,7 +124,7 @@ public class LogAspect {
                 message = "The value of the interface return value is incorrect.";
             }
             // ===== 输出异常信息
-            LOGGER.error("Exception: [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", txId, CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
+            log.error("Exception : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", txId, CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
                     CommonConstants.LOG_METHOD, method, CommonConstants.LOG_PARAM, param, CommonConstants.LOG_ERROR, message, e);
             return object;
         }
@@ -154,7 +148,7 @@ public class LogAspect {
         }
         // ===== 获取ApiOperation的value
         String operation = AspectUtil.getMethodOperation(method);
-        LOGGER.info("Request: [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
+        log.info("Request   : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
                 CommonConstants.LOG_METHOD, method, CommonConstants.LOG_PARAM, param, CommonConstants.LOG_CONTENT, operation);
     }
 
@@ -184,7 +178,7 @@ public class LogAspect {
             response = "The return value of this interface is not BackVO or BackBO. it is: " + object.getClass().getName();
         }
         // ===== 当flag为true时输出info日志
-        LOGGER.info("Response : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", txId, CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
+        log.info("Response  : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", txId, CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
                 CommonConstants.LOG_METHOD, method, CommonConstants.LOG_RETURN, response, CommonConstants.LOG_CONTENT, operation);
     }
 
@@ -206,7 +200,7 @@ public class LogAspect {
         }
         // ----- 获取方法签名
         Method method = AspectUtil.getMethodSignature(joinPoint);
-        LOGGER.error("Exception: [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT,
+        log.error("Exception : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT,
                 AspectUtil.getAccount(), CommonConstants.LOG_METHOD, method, CommonConstants.LOG_PARAM, param, CommonConstants.LOG_ERROR, e.getMessage(), e);
     }
 
@@ -222,12 +216,10 @@ public class LogAspect {
         // ===== 组装VO或者BO
         if (resultClass.equals(BackBO.class)) {
             // ----- 组装BO返回
-            BackBO<Object> backBO = BackBOUtil.operateError(message);
-            return backBO;
+            return BackBOUtil.operateError(message);
         } else if (resultClass.equals(BackVO.class)) {
             // ----- 组装vo返回
-            BackVO<Object> backVO = BackVOUtil.operateError(message);
-            return backVO;
+            return BackVOUtil.operateError(message);
         } else if (resultClass.equals(ResponseEntity.class)) {
             // ----- 组装ResponseEntity返回
             String headerValue;
@@ -276,11 +268,6 @@ public class LogAspect {
         if (annotation != null) {
             CheckEnum checkEnum = annotation.check();
             switch (checkEnum) {
-                case DATA_NOT_NULL:
-                    if (data == null) {
-                        throwParamErrorException();
-                    }
-                    break;
                 case STRING_NOT_BLANK:
                     if (StringUtils.isBlank((String) data)) {
                         throwParamErrorException();
@@ -297,6 +284,7 @@ public class LogAspect {
                         throwParamErrorException();
                     }
                     break;
+                case DATA_NOT_NULL:
                 default:
                     if (data == null) {
                         throwParamErrorException();

@@ -14,9 +14,6 @@ import java.util.List;
 public class BizReqHistoryParamBO implements Serializable {
     private static final long serialVersionUID = 5276609512152857345L;
 
-    /**设备型号id*/
-    private Long deviceSubTypeId;
-
     /**操作类型*/
     private String operationType;
 
@@ -40,4 +37,10 @@ public class BizReqHistoryParamBO implements Serializable {
 
     /**操作失败设备数*/
     private Integer failNum;
+
+    /** 创建时间*/
+    private Long created;
+
+    /**项目id*/
+    private Long projectId;
 }

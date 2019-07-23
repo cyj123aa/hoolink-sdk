@@ -112,6 +112,10 @@ public class IdProjectBO  {
      */
     private Long modelId;
 
+    /**
+     * 项目zip的url
+     */
+    private String modelUrl;
 
     /**
      * <pre>
@@ -120,6 +124,8 @@ public class IdProjectBO  {
      * </pre>
      */
     private List<Long> annexIds;
+
+    private List<AnnexBO> annexList;
 
 
     /**
@@ -140,5 +146,7 @@ public class IdProjectBO  {
      * 修改人
      */
     private Long updator;
+
+    private Long processId;
 
 }

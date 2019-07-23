@@ -21,4 +21,6 @@ public class RoleProjectMenuBO implements Serializable {
     private Boolean readonly;
     /*** 菜单类型 */
     private Byte menuType;
+    /*** 场景ID */
+    private Long sceneId;
 }

@@ -7,10 +7,17 @@ package com.hoolink.sdk.constants;
 public class RabbitMQConstants {
 
     /**
-     * 设备升级
+     * 设备升级(device发送，support接收)
      */
     public static final String DEVICE_UPGRADE_QUEUE = "device.upgrade.queue";
     public static final String DEVICE_UPGRADE_EXCHANGE = "device.upgrade.exchange";
+
+    /**
+     * 设备升级(support发送，socket接收)
+     */
+    public static final String DEVICE_UPGRADE_SOCKET_QUEUE = "device.upgrade.socket.queue";
+    public static final String DEVICE_UPGRADE_SOCKET_EXCHANGE = "device.upgrade.socket.exchange";
+    public static final String DEVICE_UPGRADE_SOCKET_EXCHANGE_ROUTING_KEY  = "device.upgrade.socket.exchange.routing.key";
 
     /**
      * 派工交换器
@@ -36,20 +43,9 @@ public class RabbitMQConstants {
     public static final String DISPATCH_SOCKET_QUEUE = "direct.socket.dispatch.queue";
 
     /**
-     * 告警消息队列
-     */
-    public static final String ALARM_QUEUE = "direct.alarm.queue";
-
-    /**
      * 告警webSocket消息队列
      */
     public static final String ALARM_SOCKET_QUEUE = "direct.socket.alarm.queue";
-
-    /**
-     * 人脸比对事件消息队列
-     */
-    public static final String FACE_QUEUE = "face.queue";
-    public static final String FACE_EXCHANGE = "face.exchange";
 
     /**
      * 灯杆设备实时信息消息队列
@@ -120,6 +116,77 @@ public class RabbitMQConstants {
     public static final String MUSIC_TIMING_STRATEGY_EXCHANGE = "music.strategy.exchange";
     public static final String MUSIC_TIMING_STRATEGY_EXCHANGE_ROUTING_KEY = "music.strategy.exchange.key";
 
+    /**
+     * 成员人脸消息队列
+     */
+    public static final String MEMBER_FACE_QUEUE = "member.face.queue";
+    public static final String MEMBER_FACE_ROUTING_KEY = "member.face.routing.key";
+    /**
+     * 工单消息队列
+     */
+    public static final String WORK_ORDER_QUEUE = "work.order.queue";
+    public static final String WORK_ORDER_EXCHANGE = "work.order.exchange";
+    public static final String WORK_ORDER_EXCHANGE_ROUTING_KEY = "work.order.exchange.key";
 
+    /** MDC单对单消息队列 消息相关的MQ配置,此处的配置常量用于消息推送业务 **/
+    public static final String MDC_EXCHANGE = "mdc.exchange";
+    /** MDC广播类消息公用队列 **/
+    public static final String MDC_COMMON_QUEUE = "mdc.common.queue";
+    public static final String MDC_COMMON_QUEUE_ROUTING_KEY = "mdc.common.queue.key";
+    /**
+     * edm文件消息队列
+     */
+    public static final String EDM_CACHE_FILE_QUEUE = "edm.file.output.queue";
+    public static final String EDM_CACHE_FILE_ROUTING_KEY = "edm.file.output.routing.key";
+    public static final String EDM_CACHE_FILE_EXCHANGE = "edm.file.output.exchange";
 
+    public static final String EDM_COMPANY_FILE_QUEUE = "edm.file.archive.queue";
+    public static final String EDM_COMPANY_FILE_ROUTING_KEY = "edm.file.archive.routing.key";
+    public static final String EDM_COMPANY_FILE_EXCHANGE = "edm.file.archive.exchange";
+
+    /**
+     * 设备上行状态推送队列
+     */
+    public static final String DEVICE_STATUS_EXCHANGE= "device.status.exchange";
+    public static final String DEVICE_STATUS_QUEUE = "device.status.queue";
+    public static final String DEVICE_STATUS_QUEUE_ROUTING_KEY = "device.status.routing.key";
+
+    /**
+     * 音响音量数据推送
+     */
+    public static final String DEVICE_SOUND_VOL_QUEUE = "device.sound.vol.queue";
+    public static final String DEVICE_SOUND_VOL_QUEUE_ROUTING_KEY = "device.sound.vol.routing.key";
+
+    /**
+     * 单灯上行数据推送
+     */
+    public static final String DEVICE_LIGHT_STATUS_QUEUE = "device.light.data.queue";
+    public static final String DEVICE_LIGHT_STATUS_QUEUE_ROUTING_KEY = "device.light.data.routing.key";
+
+    /**
+     * 显示屏文件下发进度队列
+     */
+    public static final String SCREEN_SEND_PERCENT_EXCHANGE = "screen.send.percent.exchange";
+    public static final String SCREEN_SEND_PERCENT_QUEUE = "screen.send.percent.queue";
+    public static final String SCREEN_SEND_PERCENT_ROUTING_KEY = "screen.send.percent.routing.key";
+
+    /**
+     * 显示屏清单列表刷新队列
+     */
+    public static final String SCREEN_CONFIG_EXCHANGE = "screen.config.exchange";
+    public static final String SCREEN_CONFIG_QUEUE = "screen.config.queue";
+    public static final String SCREEN_CONFIG_ROUTING_KEY = "screen.config.routing.key";
+    public static final String EDM_FILE_DOWNLOAD_QUEUE = "edm.file.download.queue";
+    public static final String EDM_FILE_DOWNLOAD_ROUTING_KEY = "edm.file.download.routing.key";
+    public static final String EDM_FILE_DOWNLOAD_EXCHANGE = "edm.file.download.exchange";
+
+    /**
+     * edm的socket推送
+     */
+    public static final String EDM_SOCKET_QUEUE = "direct.socket.edm.queue";
+
+    /**
+     * 支撑平台的socket推送
+     */
+    public static final String SUPPORT_SOCKET_QUEUE = "direct.socket.support.queue";
 }

@@ -26,4 +26,17 @@ public class CustomerProjectBO implements Serializable {
     /*** 客户号 */
     private String customerNo;
 
+    /**
+     * <pre>
+     * 流程id
+     * 表字段 : base_project.process_id
+     * </pre>
+     */
+    private Long processId;
+
+    /**
+     * 场景id
+     */
+    private Long scencId;
+
 }

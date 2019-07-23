@@ -37,4 +37,6 @@ public class CreateUserBO implements Serializable {
     private String customerNo;
     /*** 用户头像 */
     private Long imageId;
+    /*** 用户状态 */
+    private Boolean status;
 }

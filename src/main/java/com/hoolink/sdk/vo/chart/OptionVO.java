@@ -1,6 +1,8 @@
 package com.hoolink.sdk.vo.chart;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -11,6 +13,8 @@ import java.util.List;
  * @date 2018/11/22
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class OptionVO<L, A, S> {
 
     /**

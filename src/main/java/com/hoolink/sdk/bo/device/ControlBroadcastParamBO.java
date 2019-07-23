@@ -1,5 +1,7 @@
 package com.hoolink.sdk.bo.device;
 
+import lombok.Data;
+
 import java.util.List;
 
 /**
@@ -8,12 +10,16 @@ import java.util.List;
  * @author: xiaolei.yang
  * @date: 2019/5/16 13:51
  **/
+
+@Data
 public class ControlBroadcastParamBO extends DeviceBroadcastBO {
+
+    private Long deviceId;
 
     /**
      * 广播组的id
      */
-    private List<Long> configGroupIds;
+    private List<Long> groupIds;
 
     /**
      * 标志是否开始广播/停止广播(0:开始,1:停止)--世邦
@@ -21,19 +27,21 @@ public class ControlBroadcastParamBO extends DeviceBroadcastBO {
      */
     private Byte startOrStop;
 
-    public List<Long> getConfigGroupIds() {
-        return configGroupIds;
-    }
+    /**
+     * 广播发起时间
+     * 表字段 : begin_time
+     */
+    private Long beginTime;
 
-    public void setConfigGroupIds(List<Long> configGroupIds) {
-        this.configGroupIds = configGroupIds;
-    }
+    /**
+     * 广播结束时间
+     * 表字段 : end_time
+     */
+    private Long endTime;
 
-    public Byte getStartOrStop() {
-        return startOrStop;
-    }
+    /**
+     * 正在播放的广播事件的用户ID
+     */
+    private Long userId;
 
-    public void setStartOrStop(Byte startOrStop) {
-        this.startOrStop = startOrStop;
-    }
 }

@@ -92,11 +92,23 @@ public class CommonDeviceExcelBO {
      * 实时广播的物理地址
      */
     private String broadcastMac;
+    /**
+     * 设备识别码
+     */
+    private String verifyCode;
+    /**
+     * 宽
+     */
+    private String width;
+    /**
+     * 高
+     */
+    private String height;
 
     public CommonDeviceExcelBO() {
     }
 
-    public CommonDeviceExcelBO(String subTypeName, String deviceName, String poleMac, String poleSubTypeName, String externalMac, String externalSubTypeName, String mac, String installAddress, String description, String modelNo, String operateType, String ipAddr, String ipPort, String validateCode, String existLeakage, String existEnvironment, String existWaterLevel, String existGas, String broadcastSubTypeName, String broadcastMac) {
+    public CommonDeviceExcelBO(String subTypeName, String deviceName, String poleMac, String poleSubTypeName, String externalMac, String externalSubTypeName, String mac, String installAddress, String description, String modelNo, String operateType, String ipAddr, String ipPort, String validateCode, String existLeakage, String existEnvironment, String existWaterLevel, String existGas, String broadcastSubTypeName, String broadcastMac, String verifyCode, String widht, String height) {
         this.subTypeName = subTypeName;
         this.deviceName = deviceName;
         this.poleMac = poleMac;
@@ -117,6 +129,9 @@ public class CommonDeviceExcelBO {
         this.existGas = existGas;
         this.broadcastSubTypeName = broadcastSubTypeName;
         this.broadcastMac = broadcastMac;
+        this.verifyCode = verifyCode;
+        this.width = widht;
+        this.height = height;
     }
 }
 

@@ -24,10 +24,10 @@ public class SearchBizReqHistoryBO extends PageParamBO implements Serializable {
     private String operationType;
 
     /*** 开始时间 */
-    private Long beginTime;
+    private Long beginLongTime;
 
     /*** 结束时间 */
-    private Long endTime;
+    private Long endLongTime;
 
     /*** 设备类型ID */
     private Long deviceTypeId;

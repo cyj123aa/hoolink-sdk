@@ -2,6 +2,8 @@ package com.hoolink.sdk.bo.command;
 
 import lombok.Data;
 
+import java.util.Map;
+
 /**
  * @author zhouyun
  * @description 数据上报内容解析类
@@ -10,85 +12,100 @@ import lombok.Data;
 @Data
 public class MonitorDataReportFrameBO {
 
-    /**
-     * 监控器MAC
-     */
+    /*** 设备id */
+    private Long monitorId;
+
+    /*** 环境传感器扩展表外键ID */
+    private Long deviceSensorEnvironmentId;
+
+    /*** 气体传感器扩展表外键ID */
+    private Long deviceSensorGasId;
+
+    /*** 漏电传感器扩展表外键ID */
+    private Long deviceSensorLeakageId;
+
+    /*** 水位传感器扩展表外键ID */
+    private Long deviceSensorWaterLevelId;
+
+    /*** 监控器MAC */
     private String mac;
-    /**
-     * 平均风向
-     */
+
+    /*** 平均风向 */
     private Integer windDirection;
-    /**
-     * 平均风速
-     */
+
+    /** 风向名称 */
+    private String windDirectionName;
+
+    /** 风向符号 */
+    private String windDirectionSign;
+
+    /** 风速等级，单位：节 */
+    private Integer windLevel;
+
+    /*** 平均风速 */
     private Float windSpeed;
-    /**
-     * 温度
-     */
+
+    /*** 温度 */
     private Float temperature;
-    /**
-     * 湿度
-     */
+
+    /*** 湿度*/
     private Float humidity;
-    /**
-     * 气压
-     */
+
+    /*** 气压 */
     private Float airPressure;
-    /**
-     * 雨量
-     */
+
+    /*** 雨量*/
     private Float rainfall;
-    /**
-     * 辐射
-     */
+
+    /*** 辐射 */
     private Float radiation;
-    /**
-     * 紫外线
-     */
+
+    /*** 紫外线 */
     private Integer ultraviolet;
-    /**
-     * 噪音
-     */
+
+    /*** 噪音 */
     private Float noise;
-    /**
-     * PM2.5
-     */
+
+    /*** PM2.5 */
     private Float pmTowPointFive;
-    /**
-     * PM10
-     */
+
+    /*** PM10 */
     private Float pmTen;
-    /**
-     * CO气体
-     */
-    private Float co;
-    /**
-     * SO2气体
-     */
-    private Float so2;
-    /**
-     * H2S气体
-     */
-    private Float h2s;
-    /**
-     * NO2气体
-     */
-    private Float no2;
-    /**
-     * O3气体
-     */
-    private Float o3;
-    /**
-     * NO气体
-     */
-    private Float no;
-    /**
-     * 水尺水位
-     */
+
+    /*** CO气体 一氧化碳 */
+    private Float gasCo;
+
+    /*** SO2气体 */
+    private Float gasSo2;
+
+    /*** H2S气体 硫化氢 */
+    private Float gasH2s;
+
+    /*** NO2气体 二氧化氮 */
+    private Float gasNo2;
+
+    /*** O3气体 臭氧 */
+    private Float gasO3;
+
+    /*** NO气体 一氧化氮 */
+    private Float gasNo;
+
+    /*** 水尺水位 */
     private Float waterLevel;
-    /**
-     * 漏电电流
-     */
+
+    /*** 漏电电流 */
     private Float leakageCurrent;
 
+    /*** 最新通讯时间 */
+    private Long lastTime;
+
+    /*** 项目id */
+    private Long projectId;
+
+    /**
+     * 调用 alarm 处理告警, 并返回当前一帧数据中所有的异常项, 其中:
+     * KEY    >   阈值超出项 ID, 来自于 ItemEnum 枚举的 itemId
+     * value  >   阈值超出值 [ +: 表示超上限; -: 表示超下限 ]
+     */
+    Map<String, Double> beyondValueMap;
 }

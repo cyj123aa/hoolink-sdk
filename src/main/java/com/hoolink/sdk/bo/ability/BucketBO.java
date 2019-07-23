@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * @ClassName BucketBO
- * @Author Administrator
+ * @Author  Administrator
  * @DATE 2019/4/28 13:09
  */
 @Data

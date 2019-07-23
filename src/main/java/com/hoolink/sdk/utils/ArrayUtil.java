@@ -1,5 +1,7 @@
 package com.hoolink.sdk.utils;
 
+import org.springframework.util.CollectionUtils;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -37,7 +39,16 @@ public class ArrayUtil {
         return !isEmpty(source);
     }
 
+    /**
+     * 去重
+     * @param originalList
+     * @param <T>
+     * @return
+     */
     public static <T> List<T> removeDuplict(List<T> originalList){
+        if(CollectionUtils.isEmpty(originalList)){
+            return null;
+        }
         Set<T> set = new HashSet(originalList);
         List<T> tempList = new ArrayList(set);
         return tempList;

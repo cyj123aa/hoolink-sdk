@@ -30,4 +30,7 @@ public class ProjectMenuTreeBO implements Serializable {
 
     /*** 菜单类型 */
     private Byte menuType;
+
+    /*** 场景ID */
+    private Long sceneId;
 }

@@ -1,12 +1,9 @@
 package com.hoolink.sdk.utils;
 
-
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
@@ -20,6 +17,8 @@ import java.util.GregorianCalendar;
  * @since sdk 2.0
  */
 public final class DateUtil {
+    /*** 时区 */
+    private static final String ZONE = "+8";
 
     private static final int[] DAY_OF_MONTH = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
@@ -30,6 +29,11 @@ public final class DateUtil {
     /*** 分隔符 ***/
     private static final String SEPARATOR_ONE = "-";
     private static final String SEPARATOR_TWO = "/";
+
+    /*** "yyyy-MM-dd HH:mm:ss" */
+    public static final DateTimeFormatter ALL_PATTERN_FORMATTER = DateTimeFormatter.ofPattern(ALL_PATTERN);
+    /*** HH:mm */
+    public static final DateTimeFormatter HH_MM_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
 
     /**
      * 以传入的日期为基数，计算数个月后的日期，如果计算数月前则传入负数
@@ -334,7 +338,6 @@ public final class DateUtil {
     public static String date2StringBySecond(Date date) {
         return date2String(date, "yyyy-MM-dd HH:mm:ss");
     }
-
 
     /**
      * 指定年月日，返回Date对象
@@ -769,6 +772,7 @@ public final class DateUtil {
      *
      * @return
      */
+    @Deprecated
     public static Date getSysCurDateTime() {
         return string0DateTime(getSysCurDateTimeStr());
     }
@@ -964,7 +968,7 @@ public final class DateUtil {
      * @author : wangdong
      * @date : 2018/10/17 15:59
      */
-    public static Boolean judgeToday(Date inputJudgeDate)  {
+    public static Boolean judgeToday(Date inputJudgeDate) {
         //获取当前系统时间
         long longDate = System.currentTimeMillis();
         Date nowDate = new Date(longDate);
@@ -1046,7 +1050,7 @@ public final class DateUtil {
      * 以年为维度添加或减去指定的时间
      *
      * @param date 日期
-     * @param num 年数
+     * @param num  年数
      */
     public static Date getDateByYear(Date date, int num) {
         Calendar c = Calendar.getInstance();
@@ -1077,12 +1081,13 @@ public final class DateUtil {
 
     /**
      * 时间戳转为string时间格式
+     *
      * @param key
      * @return
      * @Auth lixiaoran
      * @Date 2019-04-18
      */
-    public static String getStringByTimeStamp(Long key){
+    public static String getStringByTimeStamp(Long key) {
         // 设置时间格式
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return format.format(key);
@@ -1100,8 +1105,89 @@ public final class DateUtil {
      */
     public static boolean timeConflict(LocalTime srcStart, LocalTime srcEnd, LocalTime distStart, LocalTime distEnd) {
         // 开始 > src结束 && 结束 < src开始， 当中需要考虑跨天场景
-        return  (srcEnd.isBefore(srcStart) || distStart.isBefore(srcEnd))
-                && (distEnd.isBefore(distStart) || distEnd.isAfter(srcStart));
+        return ((srcEnd.isBefore(srcStart) || distStart.isBefore(srcEnd))
+                && (distEnd.isBefore(distStart) || distEnd.isAfter(srcStart))) ||
+                ((srcEnd.isBefore(srcStart) || srcStart.isBefore(distEnd))
+                        && (distEnd.isBefore(distStart) || srcEnd.isAfter(distStart)));
+    }
+
+    /**
+     * 根据当前时间戳获取当前时周几
+     *
+     * @param dt
+     * @return
+     * @throws
+     * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
+     */
+    public static Integer getWeekByDate(Long dt) {
+        return getWeekByDate(new Date(dt));
+    }
+
+    /**
+     * 根据当前时间获取当前时周几
+     *
+     * @param dt
+     * @return
+     * @throws
+     * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
+     */
+    public static Integer getWeekByDate(Date dt) {
+        Integer[] weekDays = {7, 1, 2, 3, 4, 5, 6};
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(dt);
+        int w = cal.get(Calendar.DAY_OF_WEEK) - 1;
+        if (w < 0) {
+            w = 0;
+        }
+        return weekDays[w];
+    }
+
+    /**
+     * 根据时间戳和天数获取同一时间
+     *
+     * @param time
+     * @param span
+     * @return
+     * @throws Exception
+     */
+    public static Long getTimeByDateAndDaySpan(Long time, Integer span) throws Exception {
+        return getTimeByDateAndDaySpan(new Timestamp(time), span);
+    }
+
+    /**
+     * 根据时间和天数获取同一时间
+     *
+     * @param time
+     * @param span
+     * @return
+     * @throws Exception
+     */
+    public static Long getTimeByDateAndDaySpan(Timestamp time, Integer span) throws Exception {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(time);
+        calendar.add(Calendar.DATE, span);
+        return calendar.getTimeInMillis();
+    }
+
+    /**
+     * 根据 LocalDate & LocalTime 获取时间戳
+     *
+     * @param date
+     * @param time
+     * @return
+     */
+    public static Long getLongTimeByDataAndTime(LocalDate date, LocalTime time) {
+        return getLongTimeByDataTime(LocalDateTime.of(date, time));
+    }
+
+    /**
+     * 根据 LocalDateTime 获取时间戳
+     *
+     * @param dateTime
+     * @return
+     */
+    public static Long getLongTimeByDataTime(LocalDateTime dateTime) {
+        return dateTime.toInstant(ZoneOffset.of(ZONE)).toEpochMilli();
     }
 
 }

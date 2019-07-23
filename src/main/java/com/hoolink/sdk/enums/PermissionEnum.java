@@ -43,7 +43,7 @@ public enum PermissionEnum {
 	public static String getValue(Integer key) {
     	if(key != null) {
         	for(PermissionEnum permissionEnum : PermissionEnum.values()) {
-        		if(permissionEnum.key.intValue() == key.intValue()) {
+        		if(permissionEnum.key.equals(key)) {
         			return permissionEnum.value;
         		}
         	}    		

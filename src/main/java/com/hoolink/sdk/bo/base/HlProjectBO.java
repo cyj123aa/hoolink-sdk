@@ -76,10 +76,7 @@ public class HlProjectBO {
      * 表字段 : base_project.address
      * </pre>
      */
-
     private String address;
-
-
 
     /**
      * <pre>
@@ -88,7 +85,10 @@ public class HlProjectBO {
      * </pre>
      */
     private Long modelId;
-
+    /**
+     * 项目zip的url
+     */
+    private String modelUrl;
 
     /**
      * <pre>

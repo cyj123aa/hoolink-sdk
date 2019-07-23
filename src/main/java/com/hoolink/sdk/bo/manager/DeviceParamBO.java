@@ -20,6 +20,9 @@ public class DeviceParamBO {
     /*** 设备版本versionNameList */
     private List<String> versionNameList;
 
+    /*** 客户号编号（公司） */
+    private List<String> customerNoList;
+
     /*** 项目idList */
     private List<Long> projectIdList;
 

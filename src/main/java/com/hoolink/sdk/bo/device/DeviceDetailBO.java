@@ -75,5 +75,23 @@ public class DeviceDetailBO implements Serializable {
 
     /*** 版本信息 */
     private String versionName;
-    
+
+    /*** 分组ID */
+    private Long groupId;
+
+    /*** 分组名称 */
+    private String groupName;
+
+    /*** 模组编号 */
+    private String verifyCode;
+
+    /*** 模型x轴值 */
+    private Integer x;
+
+    /*** 模型y轴值 */
+    private Integer y;
+
+    /*** 模型z轴值 */
+    private Integer z;
+
 }

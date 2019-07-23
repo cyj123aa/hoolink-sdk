@@ -48,5 +48,11 @@ public class DeviceReturnBO implements Serializable {
     /*** 安装地址 */
     private String installAddress;
 
+    /*** 分组ID */
+    private Long groupId;
+
+    /*** 分组名称 */
+    private String groupName;
+
 
 }

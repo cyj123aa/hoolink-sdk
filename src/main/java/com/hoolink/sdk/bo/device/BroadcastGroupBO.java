@@ -58,15 +58,15 @@ public class BroadcastGroupBO implements Serializable {
      */
     private Long created;
 
-    /**
-     * 项目id
-     * 表字段 : broadcast_group.project_id
-     */
+    private Boolean runStatus;
+
+    private Long deviceSubTypeId;
+
+    private Integer deviceNum;
+
     private Long projectId;
 
-
     private List<Long> longList;
-
 
     private List<GroupBO> groupBOList;
 
@@ -164,107 +164,23 @@ public class BroadcastGroupBO implements Serializable {
 
     /**
      * 获取：是否启用(1:启用, 0:禁用)
-     * 表字段：broadcast_group.enabled
+     * 表字段：broadcast_group.runStatus
      *
-     * @return broadcast_group.enabled：是否启用(1:启用, 0:禁用)
+     * @return broadcast_group.runStatus：是否启用(1:启用, 0:禁用)
      */
-    public Boolean getEnabled() {
-        return enabled;
+    public Boolean getRunStatus() {
+        return runStatus;
     }
 
     /**
      * 设置：是否启用(1:启用, 0:禁用)
-     * 表字段：broadcast_group.enabled
+     * 表字段：broadcast_group.runStatus
      *
-     * @param enabled
-     *            broadcast_group.enabled：是否启用(1:启用, 0:禁用)
+     * @param runStatus
+     * broadcast_group.runStatus：是否启用(1:启用, 0:禁用)
      */
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    /**
-     * 获取：更新者
-     * 表字段：broadcast_group.updator
-     *
-     * @return broadcast_group.updator：更新者
-     */
-    public Long getUpdator() {
-        return updator;
-    }
-
-    /**
-     * 设置：更新者
-     * 表字段：broadcast_group.updator
-     *
-     * @param updator
-     *            broadcast_group.updator：更新者
-     */
-    public void setUpdator(Long updator) {
-        this.updator = updator;
-    }
-
-    /**
-     * 获取：更新时间
-     * 表字段：broadcast_group.updated
-     *
-     * @return broadcast_group.updated：更新时间
-     */
-    public Long getUpdated() {
-        return updated;
-    }
-
-    /**
-     * 设置：更新时间
-     * 表字段：broadcast_group.updated
-     *
-     * @param updated
-     *            broadcast_group.updated：更新时间
-     */
-    public void setUpdated(Long updated) {
-        this.updated = updated;
-    }
-
-    /**
-     * 获取：创建者
-     * 表字段：broadcast_group.creator
-     *
-     * @return broadcast_group.creator：创建者
-     */
-    public Long getCreator() {
-        return creator;
-    }
-
-    /**
-     * 设置：创建者
-     * 表字段：broadcast_group.creator
-     *
-     * @param creator
-     *            broadcast_group.creator：创建者
-     */
-    public void setCreator(Long creator) {
-        this.creator = creator;
-    }
-
-    /**
-     * 获取：创建时间
-     * 表字段：broadcast_group.created
-     *
-     * @return broadcast_group.created：创建时间
-     */
-    public Long getCreated() {
-        return created;
-    }
-
-    /**
-     * 设置：创建时间
-     * 表字段：broadcast_group.created
-     *
-     * @param created
-     *            broadcast_group.created：创建时间
-     */
-    public void setCreated(Long created) {
-        this.created = created;
+    public void setRunStatus(Boolean runStatus) {
+        this.runStatus = runStatus;
     }
 
     /**
@@ -288,6 +204,45 @@ public class BroadcastGroupBO implements Serializable {
         this.projectId = projectId;
     }
 
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public Long getUpdator() {
+        return updator;
+    }
+
+    public void setUpdator(Long updator) {
+        this.updator = updator;
+    }
+
+    public Long getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Long updated) {
+        this.updated = updated;
+    }
+
+    public Long getCreator() {
+        return creator;
+    }
+
+    public void setCreator(Long creator) {
+        this.creator = creator;
+    }
+
+    public Long getCreated() {
+        return created;
+    }
+
+    public void setCreated(Long created) {
+        this.created = created;
+    }
 
     public List<Long> getLongList() {
         return longList;
@@ -303,5 +258,21 @@ public class BroadcastGroupBO implements Serializable {
 
     public void setGroupBOList(List<GroupBO> groupBOList) {
         this.groupBOList = groupBOList;
+    }
+
+    public Long getDeviceSubTypeId() {
+        return deviceSubTypeId;
+    }
+
+    public void setDeviceSubTypeId(Long deviceSubTypeId) {
+        this.deviceSubTypeId = deviceSubTypeId;
+    }
+
+    public Integer getDeviceNum() {
+        return deviceNum;
+    }
+
+    public void setDeviceNum(Integer deviceNum) {
+        this.deviceNum = deviceNum;
     }
 }

@@ -1,11 +1,9 @@
 package com.hoolink.sdk.bo.manager;
 
-import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 
 /**
  * @author : chenzb
- * @Description : TODO
  * @date : Created on 2019/4/25 15:57
  */
 @Data
@@ -47,6 +45,7 @@ public class DeviceUpgradeBO {
     /*** 升级描述 */
     private String description;
 
+    /*** 升级的批次id*/
     private String  batchId;
 
     /*** 升级类型 0 高版本升级 1 强制升级 */
@@ -64,7 +63,9 @@ public class DeviceUpgradeBO {
     /*** 第三步状态（完成）：0未开始完成，1完成中，2成功 */
     private Byte thirdStepStatus;
 
+    /*** 缓存开始时间 */
+    private Long cacheCreated;
 
-
-
+    /*** 缓存操作人 */
+    private Long cacheCreator;
 }
