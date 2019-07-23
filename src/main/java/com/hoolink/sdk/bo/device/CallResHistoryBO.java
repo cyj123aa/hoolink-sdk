@@ -62,10 +62,22 @@ public class CallResHistoryBO implements Serializable {
     private String microphoneMac;
 
     /**
+     * 接收设备名称
+     * 表字段 : device_call_res_history.microphone_name
+     */
+    private String microphoneName;
+
+    /**
      * 一键呼叫的物理地址
      * 表字段 : device_call_res_history.call_mac
      */
     private String callMac;
+
+    /**
+     * 呼叫设备名称
+     * 表字段 : device_call_res_history.call_name
+     */
+    private String callName;
 
     /**
      * 创建时间
