@@ -155,6 +155,7 @@ public enum HoolinkExceptionMassageEnum {
     NOT_BIND_PHONE("未绑定安全手机，请联系管理员"),
     PHONE_CODE_SEND_ERROR("手机验证码发送失败"),
     EXCEL_ERROR("excel错误"),
+    PASSWORD_ERROR("密码错误"),
     GET_CURRENT_USER_ERROR("获取当前登录用户失败"),
     PHONE_EXISTS("该手机号已存在"),
     GET_CHECK_EXCEL_DATA_ERROR("获取校验excel数据结果失败"),
@@ -191,6 +192,14 @@ public enum HoolinkExceptionMassageEnum {
     EXCEL_SEX_ERROR("请选择性别"),
     EXCEL_IMPORTED_FAILED("数据导入失败"),
     DEPT_NOT_SELECTED("组织架构未选择"),
+    ROLE_SELECT_ERROR("所属角色选择不正确"),
+    ENCRYPTED_LEVEL_SELECT_ERROR("密保等级选择不正确"),
+    COMPANY_ENCRYPTED_LEVEL_SELECT_ERROR("资源库密保等级选择不正确"),
+    USER_NO_NOT_NULL("用户编号不能为空"),
+    USER_NAME_NOT_NULL("用户姓名不能为空"),
+    USER_SEX_SELECT_NULL("用户性别选择不正确"),
+    USER_POSITION_NOT_NULL("用户职位不能为空"),
+    USER_ACCOUNT_NOT_NULL("用户账号不能为空"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
