@@ -155,6 +155,7 @@ public enum HoolinkExceptionMassageEnum {
     NOT_BIND_PHONE("未绑定安全手机，请联系管理员"),
     PHONE_CODE_SEND_ERROR("手机验证码发送失败"),
     EXCEL_ERROR("excel错误"),
+    PASSWORD_ERROR("密码错误"),
     GET_CURRENT_USER_ERROR("获取当前登录用户失败"),
     PHONE_EXISTS("该手机号已存在"),
     GET_CHECK_EXCEL_DATA_ERROR("获取校验excel数据结果失败"),
