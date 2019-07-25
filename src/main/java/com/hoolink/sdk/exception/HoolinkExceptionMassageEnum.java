@@ -15,7 +15,7 @@ public enum HoolinkExceptionMassageEnum {
     LOGIN_ERROR("登录异常"),
     //返回这个 前端会返回   发生下列情况，需要您重新登录：操作超时/密码重置/权限重置
     LOGIN_TIME_OUT("登录超时"),
-    USER_SESSION_EMPTY(" 发生下列情况，需要您重新登录：操作超时/密码重置/账户权限禁用"),
+    USER_SESSION_EMPTY("请重新登录"),
     PAGE_TIME_OUT("页面超时，请重新操作！"),
     OTHER_USER_LOGIN("异地登录"),
     NOT_AUTH("无权限访问"),
