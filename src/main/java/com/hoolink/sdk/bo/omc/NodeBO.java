@@ -3,6 +3,7 @@ package com.hoolink.sdk.bo.omc;
 
 import java.util.List;
 import lombok.Data;
+import org.hibernate.validator.constraints.Length;
 
 /**
  * @author chenyuejun
@@ -26,6 +27,7 @@ public class NodeBO {
     /**
      * 节点名称
      */
+    @Length(min = 1, max = 10, message = "节点名字长度为1到10")
     private String label;
     /**
      * 节点x坐标
