@@ -65,4 +65,9 @@ public class CurrentUserBO implements Serializable {
      */
     private Boolean roleType;
 
+    /**
+     * 角色是否被禁用
+     */
+    private Boolean roleStatus;
+
 }

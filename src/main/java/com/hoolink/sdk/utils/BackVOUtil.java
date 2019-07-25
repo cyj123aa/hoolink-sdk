@@ -92,4 +92,13 @@ public class BackVOUtil {
         return backVO;
     }
 
+    public static <T> BackVO<T> operateErrorToLogin(String message) {
+        BackVO<T> backVO = new BackVO<>();
+        backVO.setData(null);
+        backVO.setMessage(message);
+        backVO.setStatus(false);
+        backVO.setIfLogin(true);
+        return backVO;
+    }
+
 }
