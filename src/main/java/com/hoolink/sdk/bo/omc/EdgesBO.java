@@ -12,27 +12,27 @@ public class EdgesBO {
     private String id;
 
     /**
-     * 连线颜色
+     * 节点样式
      */
     private String shape;
     /**
-     * 连线颜色
+     * 下级关联节点id
      */
     private String source;
     /**
-     * 连线颜色
+     * 链接线
      */
     private Integer sourceAnchor;
     /**
-     * 连线颜色
+     * 上级节点
      */
     private String target;
     /**
-     * 连线颜色
+     * 链接点位
      */
     private Integer targetAnchor;
     /**
-     * 连线颜色
+     * 当前步骤id
      */
     private String edgesId;
     /**
@@ -41,17 +41,17 @@ public class EdgesBO {
     private StyleBO style;
 
     /**
-     * 连线颜色
+     * 下标
      */
     private Integer index;
     /**
-     * 连线颜色
+     * 连线中间文案
      */
     private LabelBO label;
 
 
     /**
-     * 连线颜色
+     * 连接线中间文案背景颜色
      */
     private LabelRectStyleBO labelRectStyle;
 
