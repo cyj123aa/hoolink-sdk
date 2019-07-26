@@ -1,6 +1,11 @@
 package com.hoolink.sdk.utils;
 
+import com.hoolink.sdk.exception.BusinessException;
+import com.hoolink.sdk.exception.HoolinkExceptionMassageEnum;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,7 +21,7 @@ public class TemplateParasUtil {
      * @param list
      * @return
      */
-    public static String getTemplateParams(List<String> list) {
+    private static String getTemplateParams(List<String> list) {
         StringBuilder sb = new StringBuilder("[\"");
         for (int i = 0; i < list.size(); i++) {
             if (i == (list.size() - 1)) {
@@ -28,4 +33,16 @@ public class TemplateParasUtil {
         }
         return sb.append("\"]").toString();
     }
+
+    public static String getTemplateParams(Date date, String... strs) {
+        if (ArrayUtil.isEmpty(strs)) {
+            throw new BusinessException(HoolinkExceptionMassageEnum.PARAM_ERROR);
+        }
+        List<String> strings = new ArrayList<>();
+        strings.add(DateUtil.date2String(date, "yyyy/MM/dd"));
+        strings.add(DateUtil.date2String(date, "HH:mm:ss"));
+        strings.addAll(Arrays.asList(strs));
+        return getTemplateParams(strings);
+    }
+
 }
