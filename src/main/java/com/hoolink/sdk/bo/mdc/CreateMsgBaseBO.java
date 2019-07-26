@@ -32,6 +32,14 @@ public class CreateMsgBaseBO implements Serializable {
     /** 推送的用户id */
     private List<Long> pushUserIdList;
 
+    /** 短信参数拼接 */
+    @NotNull(message = "templateParas不能为空")
+    private String templateParas;
+
+    /** 短信模板ID */
+    @NotNull(message = "templateId不能为空")
+    private String templateId;
+
     CreateMsgBaseBO(Long projectId, String content, Long messageSubTypeId) {
         this.content = content;
         this.projectId = projectId;

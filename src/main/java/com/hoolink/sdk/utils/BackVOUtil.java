@@ -97,7 +97,7 @@ public class BackVOUtil {
         backVO.setData(null);
         backVO.setMessage(message);
         backVO.setStatus(false);
-        backVO.setIfLogin(true);
+        backVO.setCode("login");
         return backVO;
     }
 
