@@ -17,6 +17,11 @@ public class BackVO<T> implements Serializable {
 
     private String message;
 
+    /**
+     * code
+     */
+    private String code;
+
     public BackVO() {
 
     }
