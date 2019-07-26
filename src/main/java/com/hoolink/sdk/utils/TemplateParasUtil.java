@@ -23,12 +23,11 @@ public class TemplateParasUtil {
      */
     private static String getTemplateParams(List<String> list) {
         StringBuilder sb = new StringBuilder("[\"");
-        for (int i = 0; i < list.size(); i++) {
-            if (i == (list.size() - 1)) {
-                sb.append(list.get(i));
-            } else {
-                sb.append(list.get(i))
-                        .append("\",\"");
+        int size = list.size();
+        for (int i = 0; i < size; i++) {
+            sb.append(list.get(i));
+            if (i != (size - 1)) {
+                sb.append("\",\"");
             }
         }
         return sb.append("\"]").toString();
@@ -37,6 +36,9 @@ public class TemplateParasUtil {
     public static String getTemplateParams(Date date, String... strs) {
         if (ArrayUtil.isEmpty(strs)) {
             throw new BusinessException(HoolinkExceptionMassageEnum.PARAM_ERROR);
+        }
+        if (date == null) {
+            date = new Date(System.currentTimeMillis());
         }
         List<String> strings = new ArrayList<>();
         strings.add(DateUtil.date2String(date, "yyyy/MM/dd"));
