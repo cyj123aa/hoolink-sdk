@@ -18,9 +18,9 @@ public class BackVO<T> implements Serializable {
     private String message;
 
     /**
-     * 是否跳转到登录页面
+     * code
      */
-    private Boolean ifLogin;
+    private String code;
 
     public BackVO() {
 
