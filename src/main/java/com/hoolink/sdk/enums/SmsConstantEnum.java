@@ -25,6 +25,9 @@ public enum SmsConstantEnum {
     /*** 用户对设备进行操作提醒 格式：${DATE} ${TIME}，用户${TXT_20}执行了${TXT_20} */
     USER_OPERATE_TEMPLATE_ID("2b166fdbd4274afd8e9b83b29b228853", 60, 4),
 
+    /*** 广播占用提醒 格式：${DATE} ${TIME}，您用${TXT_20}开启的广播，已被${TXT_20}用户强制关闭 */
+    DEVICE_OCCUPY_TEMPLATE_ID("30e9114502e44ee0aee2fef72a144bea", 20, 20),
+
     /*** EDM短信签名 格式：文控中心提醒你在${DATE}前将相关文件输出到缓存库，要求：${TXT_60} */
     EDM_MESSAGE_TEMPLATE_ID("2027cf05ea414be5bb03b16d1fa2ff57", 60, 4);
 
