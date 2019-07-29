@@ -12,4 +12,5 @@ public class SmsConstant {
      * 默认的短信验证码长度
      */
     public static final int CAPTCHA_LENGTH = 6;
+
 }
