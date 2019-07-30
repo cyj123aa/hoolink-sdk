@@ -288,6 +288,7 @@ public enum HoolinkExceptionMassageEnum {
     FOLDER_NO_NEED_LOAD("空文件夹不可下载！"),
     FOLDER_NAME_NOT_NULL("文件夹名称不可为空！"),
     FOLDER_NAME_NOT_DUPLICATE("文件夹名称不可重复！"),
+    FILE_NAME_NOT_DUPLICATE("该文件名称已经存在，请重新修改文件名称！"),
     FILE_NOT_FOUND("下载文件没有发现"),
     /**
      * mdc
