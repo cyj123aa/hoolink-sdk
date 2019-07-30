@@ -49,4 +49,5 @@ public class RedisConstants {
     public static final String SOUND_BIZ_HISTORY = "sound_biz_history";
     public static final String SOUND_OPERATION_RANDOM = "sound_operation_random_";
 
+    public static final String MY_FILE_NAME = "myfile";
 }
