@@ -76,16 +76,16 @@ public class LogAspect {
     public Object doAround(ProceedingJoinPoint joinPoint) throws Throwable {
         String txId = ContextUtil.getTxid();
         Object[] args = null;
-        if (joinPoint.getArgs() != null && joinPoint.getArgs().length > 0) {
-            args = joinPoint.getArgs();
-        } else {
-            return joinPoint.proceed();
-        }
         // ===== 获取函数签名信息
         Method method = AspectUtil.getMethodSignature(joinPoint);
-        // ----- 获取方法的返回值类型
         Class<?> returnType = method.getReturnType();
         try {
+            if (joinPoint.getArgs() != null && joinPoint.getArgs().length > 0) {
+                args = joinPoint.getArgs();
+            } else {
+                return joinPoint.proceed();
+            }
+            // ----- 获取方法的返回值类型
             if (AspectUtil.checkUploadFile(joinPoint)) {
                 // ===== 检查是否是上传文件的接口, 如果是上传文件, 则不做以下操作
                 return joinPoint.proceed(joinPoint.getArgs());
