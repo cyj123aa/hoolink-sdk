@@ -74,7 +74,6 @@ public class LogAspect {
      */
     @Around("controllerMethodPointcut()")
     public Object doAround(ProceedingJoinPoint joinPoint) throws Throwable {
-        String txId = ContextUtil.getTxid();
         Object[] args = null;
         // ===== 获取函数签名信息
         Method method = AspectUtil.getMethodSignature(joinPoint);
@@ -125,7 +124,7 @@ public class LogAspect {
                 message = "The value of the interface return value is incorrect.";
             }
             // ===== 输出异常信息
-            log.error("Exception : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", txId, CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
+            log.error("Exception : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
                     CommonConstants.LOG_METHOD, method, CommonConstants.LOG_PARAM, param, CommonConstants.LOG_ERROR, message, e);
             return object;
         }
@@ -172,11 +171,12 @@ public class LogAspect {
         String operation = AspectUtil.getMethodOperation(method);
         // ===== 获取返回值
         String response;
-        if (object instanceof BackVO || object instanceof BackBO) {
-            // ===== 当返回的是BackVO或BackBO时
+        try {
+            // ===== 当返回值类型能够被序列化输出时
             response = JSONObject.toJSONString(object, SerializerFeature.WriteMapNullValue);
-        } else {
-            response = "The return value of this interface is not BackVO or BackBO. it is: " + object.getClass().getName();
+        } catch (Exception e) {
+            // ===== 当返回值类型不能被序列化输出时
+            response = "The return value of this interface cannot be serialized. It is: " + object.getClass().getName();
         }
         // ===== 当flag为true时输出info日志
         log.info("Response  : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", txId, CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
@@ -233,8 +233,12 @@ public class LogAspect {
                     .header(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, "Error-Message")
                     .header("Error-Message", headerValue).body(new ByteArrayResource("".getBytes(), null));
         } else {
-            // ----- 当controller的返回值即不为backVO又不为backBO时, 说明函数签名定义的不对
-            return null;
+            // ----- 当controller的返回值即不为backVO又不为backBO时, 根据返回值类型返回对应的实例对象, 但该实例对象所有的属性值都为 NULL
+            try {
+                return resultClass.newInstance();
+            } catch (Exception e) {
+                return null;
+            }
         }
     }
 
