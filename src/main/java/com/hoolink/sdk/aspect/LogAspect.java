@@ -268,6 +268,8 @@ public class LogAspect {
         if (annotation != null) {
             CheckEnum checkEnum = annotation.check();
             switch (checkEnum) {
+                case DONT_CHECK:
+                    break;
                 case STRING_NOT_BLANK:
                     if (StringUtils.isBlank((String) data)) {
                         throwParamErrorException();
