@@ -78,7 +78,6 @@ public class LogAspect {
         Object[] args = null;
         // ===== 获取函数签名信息
         Method method = AspectUtil.getMethodSignature(joinPoint);
-        Class<?> returnType = method.getReturnType();
         try {
             if (joinPoint.getArgs() != null && joinPoint.getArgs().length > 0) {
                 args = joinPoint.getArgs();
@@ -93,8 +92,9 @@ public class LogAspect {
             if (!ArrayUtil.isEmpty(args)) {
                 for (Object obj : args) {
                     if (obj instanceof BaseParam) {
-                        // ===== 根据@ParamNotNull校验参数
+                        // ===== 根据check属性值校验参数
                         checkParam((BaseParam) obj, method);
+                        break;
                     }
                 }
             }
@@ -110,6 +110,7 @@ public class LogAspect {
                 message = assembleCodeAndMsg(method);
             }
             // ----- 根据(codeAndMsg + txId + returnType)组装BackBO或BackVO返回
+            Class<?> returnType = method.getReturnType();
             Object object = assembleBackObject(message, returnType);
             String param;
             // ===== 处理方法入参的输出
