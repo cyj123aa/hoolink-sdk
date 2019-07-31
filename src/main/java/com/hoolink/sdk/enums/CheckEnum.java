@@ -15,6 +15,8 @@ public enum CheckEnum {
     /*** Integer不为空且>=0 ***/
     LONG_GREATER_THAN_ZERO,
     /*** List不为空且size>0 ***/
-    LIST_NOT_EMPTY;
+    LIST_NOT_EMPTY,
+    /*** 不对参数做任何校验 ***/
+    DONT_CHECK,
 
 }
