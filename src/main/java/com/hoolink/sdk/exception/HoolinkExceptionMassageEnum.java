@@ -289,8 +289,7 @@ public enum HoolinkExceptionMassageEnum {
     FOLDER_NAME_NOT_NULL("文件夹名称不可为空！"),
     FOLDER_NAME_NOT_DUPLICATE("文件夹名称不可重复！"),
     FILE_NAME_NOT_DUPLICATE("该文件名称已经存在，请重新修改文件名称！"),
-    FILE_NAME_NOT_DUPLICATE_PLEASE_RE_SELECT("文件名称存在,请重新选择目标文件夹或者更改文件名称！"),
-    FOLDER_NAME_NOT_DUPLICATE_PLEASE_RE_SELECT("文件夹名称存在,请重新选择目标文件夹或者更改文件夹名称！"),
+    FILE_NAME_NOT_DUPLICATE_PLEASE_RE_SELECT("文件或者文件夹已存在,请重新选择目标文件夹或者更改文件名称！"),
     FILE_NOT_FOUND("下载文件没有发现"),
     /**
      * mdc
