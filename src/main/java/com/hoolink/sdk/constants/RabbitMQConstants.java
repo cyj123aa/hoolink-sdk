@@ -16,7 +16,7 @@ public class RabbitMQConstants {
      * 设备升级(support发送，socket接收)
      */
     public static final String DEVICE_UPGRADE_SOCKET_QUEUE = "device.upgrade.socket.queue";
-    public static final String DEVICE_UPGRADE_SOCKET_EXCHANGE = "device.upgrade.socket.exchange";
+    public static final String DEVICE_UPGRADE_SOCKET_EXCHANGE = "device.upgrade.socket.exchange.new";
     public static final String DEVICE_UPGRADE_SOCKET_EXCHANGE_ROUTING_KEY  = "device.upgrade.socket.exchange.routing.key";
 
     /**

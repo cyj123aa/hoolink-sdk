@@ -1,6 +1,7 @@
 package com.hoolink.sdk.bo.omc;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.Length;
 
 /**
  * @author chenyuejun
@@ -29,6 +30,7 @@ public class DictionaryBO {
      * 表字段 : dictionary.value_set
      * </pre>
      */
+    @Length(min=1, max = 10, message = "字典值最大为10")
     private String valueSet;
 
     /**
