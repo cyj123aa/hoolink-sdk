@@ -185,6 +185,7 @@ public enum HoolinkExceptionMassageEnum {
     EXCEL_ROLE_ERROR("请选择正确的角色"),
     EXCEL_ENCRY_LEVEL_ERROR("请选择正确的加密等级"),
     EXCEL_VIEW_ENCRY_PERMITTED_ERROR("请选择是否可见员工密保等级"),
+    EXCEL_RECEIVE_SMS_ERROR("请选择是否接收提醒短信"),
     USER_NO_EXISTS("编号重复"),
     DEPARTMENT_FORMAT_ERROR("部门格式不正确！"),
     TYPE_AT_LEASE_DEPT("请至少选择到部门层级！"),
@@ -201,6 +202,7 @@ public enum HoolinkExceptionMassageEnum {
     USER_SEX_SELECT_NULL("用户性别选择不正确"),
     USER_POSITION_NOT_NULL("用户职位不能为空"),
     USER_ACCOUNT_NOT_NULL("用户账号不能为空"),
+    RECEIVE_SMS_SELECT_NULL("是否接收短信提醒选择不正确"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
