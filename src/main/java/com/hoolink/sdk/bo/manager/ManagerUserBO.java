@@ -100,4 +100,9 @@ public class ManagerUserBO {
      * 用户部门关系
      */
     private List<DeptPairBO> userDeptPairList;
+
+    /**
+     * 是否接收提醒
+     */
+    private Boolean receiveSms;
 }
