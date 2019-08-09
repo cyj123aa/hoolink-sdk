@@ -88,6 +88,7 @@ public enum HoolinkExceptionMassageEnum {
     CHOOSE_POLE_ERROR("获取灯杆列表失败"),
     CHOOSE_RADIO_ERROR("获取广播列表失败"),
     GET_PROJECT_ID_ERROR("所属项目不能为空"),
+    GET_PROJECT_ANNEX_ERROR("获取项目附件失败"),
     BATCH_IMPORT_EXCEL_DATE_ERROR("批量导入设备数据失败"),
 
     DELETE_CLUSTER_SUBTYPE_ERROR("该设备种类下有设备型号，不能删除"),
