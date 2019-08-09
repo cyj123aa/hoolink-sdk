@@ -10,4 +10,5 @@ import lombok.Data;
 @Data
 public class SearchProjectAnnexParamBO extends PageParam {
     private String fileName;
+    private Long projectId;
 }

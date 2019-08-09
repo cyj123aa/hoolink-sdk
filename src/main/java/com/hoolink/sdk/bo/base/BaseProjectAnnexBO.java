@@ -7,7 +7,7 @@ import lombok.Data;
  * @date 2019/8/8 16:18
  */
 @Data
-public class MiddleProjectAnnexBO {
+public class BaseProjectAnnexBO {
     /**
      * <pre>
      * 主键id
