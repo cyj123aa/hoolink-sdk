@@ -60,7 +60,6 @@ public class ContextUtil {
             String user = context.getContext(ContextConstant.MANAGE_CURRENT_USER);
             if (StringUtils.isNotEmpty(user)) {
                 userBO = JSONUtils.parse(user, CurrentUserBO.class);
-                userBO.setUserName(URLDecoder.decode(userBO.getUserName(),"utf-8"));
             }
         } catch (Exception e) {
             throw new BusinessException(HoolinkExceptionMassageEnum.GET_CURRENT_USER_ERROR);
