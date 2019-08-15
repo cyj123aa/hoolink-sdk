@@ -7,10 +7,12 @@ package com.hoolink.sdk.enums.analysis;
  */
 public enum CmdEnum {
     /*** 命令下发 */
-    Light("1","下发单灯"),Broadcast("2","下发音响播放"),
-    BroadcastConfig("3","暂停继续音响"),PlayScreen("4","播放显示屏"),
-    StopScreen("5","停止显示屏"),
-    UNKUOW("9","未知命令");
+    LIGHT("1","下发单灯"),
+    MEDIA("2","下发音响"),
+    MEDIA_VOLUME("3","音响调音"),
+    SCREEN("4","下发显示屏"),
+    SCREEN_VOLUME("5","显示屏亮度"),
+    UNKNOWN("9","未知命令");
 
 
     public String key;
