@@ -15,6 +15,8 @@ public class FileTypeConstants {
 
     public static final String[] VOICE = {"MP3", "OGG", "WAV", "WEBM"};
 
+    public static final String[] TXT = {"TXT"};
+
     public static final String[] PPT = {"PPT", "PPTX", "PPSX", "PPTX"};
 
     public static final String[] ECXEL = {"XLS", "XLSX", "XLSM"};

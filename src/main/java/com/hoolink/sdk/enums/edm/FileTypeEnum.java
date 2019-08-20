@@ -17,7 +17,8 @@ public enum FileTypeEnum {
     XMIND(8,"XMind", FileTypeConstants.XMIND),
     FILE(10,"文件", FileTypeConstants.UNKNOWNFILE),
     PDF(9,"PDF", FileTypeConstants.PDF),
-    VOICE(11,"音频", FileTypeConstants.VOICE);
+    VOICE(11,"音频", FileTypeConstants.VOICE),
+    TXT(12,"TXT", FileTypeConstants.TXT);
     private Integer key;
     private String code;
     private String[] type;
