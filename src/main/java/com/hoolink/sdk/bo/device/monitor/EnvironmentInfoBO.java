@@ -68,6 +68,6 @@ public class EnvironmentInfoBO implements Serializable {
     private Float waterLevel;
 
     /** 光照度 */
-    private Integer light;
+    private Long light;
 
 }

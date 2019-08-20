@@ -99,5 +99,5 @@ public class EnvironmentHistoryBO implements Serializable {
     private Float pmTenBeyond;
 
     /** 光照度 */
-    private Integer light;
+    private Long light;
 }
