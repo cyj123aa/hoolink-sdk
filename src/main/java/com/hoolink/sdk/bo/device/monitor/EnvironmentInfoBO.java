@@ -67,4 +67,7 @@ public class EnvironmentInfoBO implements Serializable {
     /** 水尺水位值单位：m */
     private Float waterLevel;
 
+    /** 光照度 */
+    private Integer light;
+
 }
