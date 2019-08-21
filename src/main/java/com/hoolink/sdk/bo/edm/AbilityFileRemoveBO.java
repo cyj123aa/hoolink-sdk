@@ -18,4 +18,6 @@ public class AbilityFileRemoveBO {
      * minioIds
      */
     private List<Long> minioIds;
+
+    private Long userId;
 }
