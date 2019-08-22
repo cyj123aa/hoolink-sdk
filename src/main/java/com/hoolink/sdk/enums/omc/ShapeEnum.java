@@ -3,6 +3,7 @@ package com.hoolink.sdk.enums.omc;
 
 /**
  * @author chenyuejun
+ * 工单节点功能枚举
  */
 
 public enum ShapeEnum {

@@ -3,6 +3,7 @@ package com.hoolink.sdk.enums.omc;
 
 /**
  * @author chenyuejun
+ * 工单状态
  */
 
 public enum PriorityEnum {

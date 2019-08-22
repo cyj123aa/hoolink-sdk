@@ -1,9 +1,9 @@
 package com.hoolink.sdk.enums.analysis;
 /**
- * @author XuBaofeng.
+ * @author chenyuejun.
  * @date 2018-12-27 10:00.
  * <p>
- * description:
+ * description: 语音命令下发枚举类
  */
 public enum CmdEnum {
     /*** 命令下发 */
