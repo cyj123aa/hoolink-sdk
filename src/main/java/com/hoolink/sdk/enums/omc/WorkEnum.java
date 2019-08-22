@@ -2,6 +2,7 @@ package com.hoolink.sdk.enums.omc;
 
 /**
  * @author Administrator
+ * 工单状态枚举
  */
 
 public enum WorkEnum {

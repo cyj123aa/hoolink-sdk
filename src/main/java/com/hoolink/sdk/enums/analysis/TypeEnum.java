@@ -1,5 +1,10 @@
 package com.hoolink.sdk.enums.analysis;
-
+/**
+ * @author chenyuejun.
+ * @date 2018-12-27 10:00.
+ * <p>
+ * description: 语音控制设备
+ */
 public enum TypeEnum {
     LIGHT((byte)1,"单灯"),
     MEDIA((byte)2,"音响"),
