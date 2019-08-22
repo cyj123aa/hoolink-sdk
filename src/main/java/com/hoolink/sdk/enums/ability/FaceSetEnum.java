@@ -10,9 +10,9 @@ import com.hoolink.sdk.utils.ByteUtil;
 public enum FaceSetEnum {
 
     /**
-     * 巡检人脸库
+     * 人脸库
      */
-    FACE_SET_INSPECTION(ByteUtil.intToByte(1),"inspection");
+    FACE_SET(ByteUtil.intToByte(1),"face_set");
 
     private Byte key;
     private String value;

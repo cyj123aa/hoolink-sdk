@@ -21,12 +21,12 @@ public class MobileFileBO {
     /**
      * 是否是组织架构
      */
-    private boolean ifDepartment;
+    private Boolean ifDepartment;
 
     /**
      * 是否是最后一层组织架构
      */
-    private boolean ifLastDepartment;
+    private Boolean ifLastDepartment;
 
     /**
      * 文件大小

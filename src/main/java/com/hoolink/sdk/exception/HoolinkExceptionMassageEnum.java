@@ -88,6 +88,7 @@ public enum HoolinkExceptionMassageEnum {
     CHOOSE_POLE_ERROR("获取灯杆列表失败"),
     CHOOSE_RADIO_ERROR("获取广播列表失败"),
     GET_PROJECT_ID_ERROR("所属项目不能为空"),
+    GET_PROJECT_ANNEX_ERROR("获取项目附件失败"),
     BATCH_IMPORT_EXCEL_DATE_ERROR("批量导入设备数据失败"),
 
     DELETE_CLUSTER_SUBTYPE_ERROR("该设备种类下有设备型号，不能删除"),
@@ -185,6 +186,7 @@ public enum HoolinkExceptionMassageEnum {
     EXCEL_ROLE_ERROR("请选择正确的角色"),
     EXCEL_ENCRY_LEVEL_ERROR("请选择正确的加密等级"),
     EXCEL_VIEW_ENCRY_PERMITTED_ERROR("请选择是否可见员工密保等级"),
+    EXCEL_RECEIVE_SMS_ERROR("请选择是否接收提醒短信"),
     USER_NO_EXISTS("编号重复"),
     DEPARTMENT_FORMAT_ERROR("部门格式不正确！"),
     TYPE_AT_LEASE_DEPT("请至少选择到部门层级！"),
@@ -201,6 +203,7 @@ public enum HoolinkExceptionMassageEnum {
     USER_SEX_SELECT_NULL("用户性别选择不正确"),
     USER_POSITION_NOT_NULL("用户职位不能为空"),
     USER_ACCOUNT_NOT_NULL("用户账号不能为空"),
+    RECEIVE_SMS_SELECT_NULL("是否接收短信提醒选择不正确"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
@@ -288,7 +291,10 @@ public enum HoolinkExceptionMassageEnum {
     FOLDER_NO_NEED_LOAD("空文件夹不可下载！"),
     FOLDER_NAME_NOT_NULL("文件夹名称不可为空！"),
     FOLDER_NAME_NOT_DUPLICATE("文件夹名称不可重复！"),
+    FILE_NAME_NOT_DUPLICATE("该文件名称已经存在，请重新修改文件名称！"),
+    FILE_NAME_NOT_DUPLICATE_PLEASE_RE_SELECT("文件或者文件夹已存在,请重新选择目标文件夹或者更改文件名称！"),
     FILE_NOT_FOUND("下载文件没有发现"),
+    FILE_NAME_NOT_DUPLICATE_PLEASE_RE_UPLOAD("文件已经存在,请删除或者修改名称后重新上传"),
     /**
      * mdc
      */

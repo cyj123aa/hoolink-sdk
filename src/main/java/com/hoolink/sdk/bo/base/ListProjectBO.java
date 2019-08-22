@@ -1,6 +1,7 @@
 package com.hoolink.sdk.bo.base;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import lombok.Data;
 
 /**
@@ -122,5 +123,45 @@ public class ListProjectBO  implements Serializable {
      * </pre>
      */
     private Long processId;
+
+    /**
+     * <pre>
+     * 经度
+     * 表字段 : base_project.longitude
+     * </pre>
+     */
+    private BigDecimal longitude;
+
+    /**
+     * <pre>
+     * 纬度
+     * 表字段 : base_project.latitude
+     * </pre>
+     */
+    private BigDecimal latitude;
+
+    /**
+     * <pre>
+     * 省
+     * 表字段 : base_project.province
+     * </pre>
+     */
+    private String province;
+
+    /**
+     * <pre>
+     * 市
+     * 表字段 : base_project.city
+     * </pre>
+     */
+    private String city;
+
+    /**
+     * <pre>
+     * 区
+     * 表字段 : base_project.area
+     * </pre>
+     */
+    private String area;
 
 }

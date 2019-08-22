@@ -4,17 +4,33 @@ package com.hoolink.sdk.enums.edm;
 import com.hoolink.sdk.constants.FileTypeDetailsConstants;
 
 /**
- * @author chenzhixiong
+ * @author lixiaoran
  * @date 2019/6/19 14:16
  */
 public enum FileMediaTypeEnum {
+    /**
+     * 文件类型jpg
+     */
     JPG("image/jpeg",FileTypeDetailsConstants.PICTURE_JPG),
-    //todo 待测
+    /**
+     * 文件类型jpeg
+     */
     JPEG("image/jpeg",FileTypeDetailsConstants.PICTURE_JPEG),
+    /**
+     * 文件类型png
+     */
     PNG("application/x-png",FileTypeDetailsConstants.PICTURE_PNG),
+    /**
+     * 文件类型gif
+     */
     GIF("image/gif",FileTypeDetailsConstants.PICTURE_GIF),
-
+    /**
+     * 文件类型txt
+     */
     TXT("text/plain",FileTypeDetailsConstants.TXT),
+    /**
+     * 文件类型doc
+     */
     DOC("application/msword",FileTypeDetailsConstants.WORD_DOC);
 
 

@@ -181,4 +181,14 @@ public class RabbitMQConstants {
      * 支撑平台的socket推送
      */
     public static final String SUPPORT_SOCKET_QUEUE = "direct.socket.support.queue";
+
+    /**
+     * 语音解析mq队列
+     */
+
+    public static final String  ANALYSIS_QUEUE = "analysis.queue";
+    public static final String  ANALYSIS_ROUTING_KEY = "analysis.routing.key";
+    public static final String  ANALYSIS_STORAGE_ROUTING_KEY = "analysis.storage.routing.key";
+    public static final String  ANALYSIS_EXCHANGE = "analysis.exchange";
+
 }

@@ -17,8 +17,14 @@
 
 package com.hoolink.sdk.cloud.client;
 
+/**
+ * @author XuBaofeng.
+ * @date 2019-04-25 14:24.
+ * <p>
+ * description:
+ */
 public enum ConfigurationAction {
-  CREATE,
-  SET,
-  DELETE
+    CREATE,
+    SET,
+    DELETE
 }

@@ -3,6 +3,7 @@ package com.hoolink.sdk.bo.base;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
@@ -12,6 +13,7 @@ import java.io.Serializable;
  */
 @Data
 public class LoginProjectBO implements Serializable {
+    private static final long serialVersionUID = -4870004080790526719L;
 
     private Long projectId;
 
@@ -24,4 +26,8 @@ public class LoginProjectBO implements Serializable {
     private Long modelId;
 
     private String modelUrl;
+
+    private BigDecimal longitude;
+
+    private BigDecimal latitude;
 }

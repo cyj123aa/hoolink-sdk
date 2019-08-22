@@ -1,5 +1,10 @@
 package com.hoolink.sdk.enums.namespace;
 
+/**
+ * @author update lixiaoran
+ * @date 2019-08-22
+ */
+
 public enum PatrolDeviceType {
 
     /**

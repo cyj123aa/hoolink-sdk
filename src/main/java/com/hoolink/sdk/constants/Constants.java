@@ -5,8 +5,6 @@ package com.hoolink.sdk.constants;
  * @data 2018/8/7 11:59
  */
 public class Constants {
-    
-    public static final ThreadLocal<String> THREAD_LOCAL = new ThreadLocal<>();
 
     public static final String LOG_EXCHANGE_NULL="参数exchange为空";
     public static final String LOG_QUEUE_NULL="参数queue为空";
