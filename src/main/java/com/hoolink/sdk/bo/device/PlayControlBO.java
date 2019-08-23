@@ -20,4 +20,6 @@ public class PlayControlBO implements Serializable {
     private Long id;
     @NotNull
     private Boolean play;
+    @NotNull
+    private Boolean operator;
 }
