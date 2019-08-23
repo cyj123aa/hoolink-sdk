@@ -66,4 +66,6 @@ public class BaseProjectAnnexBO {
 
     private Byte fileType;
 
+    private Long updated;
+
 }

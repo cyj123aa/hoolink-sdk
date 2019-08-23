@@ -17,4 +17,5 @@ public class MergeUpload {
     private Long projectId;
     private Long fileSize;
     private Long id;
+    private String objectKey;
 }
