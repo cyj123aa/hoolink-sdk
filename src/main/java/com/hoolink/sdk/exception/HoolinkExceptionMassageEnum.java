@@ -204,6 +204,8 @@ public enum HoolinkExceptionMassageEnum {
     USER_POSITION_NOT_NULL("用户职位不能为空"),
     USER_ACCOUNT_NOT_NULL("用户账号不能为空"),
     RECEIVE_SMS_SELECT_NULL("是否接收短信提醒选择不正确"),
+    USER_BIND_PHONE_TIP("请先绑定手机号码,用来接收短信通知"),
+    RESET_PHONE_TIP("重置手机号码,将导致无法接收短信通知,请慎重操作！"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
