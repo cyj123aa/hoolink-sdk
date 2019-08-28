@@ -9,7 +9,8 @@ public enum TypeEnum {
     LIGHT((byte)1,"单灯"),
     MEDIA((byte)2,"音响"),
     SCREEN((byte)3,"显示屏"),
-    ALL((byte)4,"全部初始化加载");
+    ALL((byte)4,"全部初始化加载"),
+    DISABLE((byte)5,"取消单词匹配");
 
 
     public Byte key;
