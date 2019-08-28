@@ -49,23 +49,23 @@ public class Crc16Util {
 
     /**
      * 根据报文byte数组，获取CRC-16 int值
-     * 48 4C 01 00 01 00 00 05 00 00 >> 58951
      * {0x48, 0x4C, 0x01, 0x00, 0x01, 0x00, 0x00, 0x05, 0x00, 0x00} >> 58951
      *
      * @param data 报文数组
      * @return CRC值（10进制）
      */
     public static int getCrc16(byte[] data) {
-        int temp;
         int crc = 0xFFFF;
+        int polynomial = 0xA001;
         byte byteLen = 8;
-        for (byte i : data) {
-            crc ^= i;
+        for (byte b : data) {
+            crc ^= ((int) b & 0x00FF);
             for (int j = 0; j < byteLen; j++) {
-                temp = crc & 0x0001;
-                crc = crc >> 1;
-                if (temp != 0x0) {
-                    crc ^= 0xA001;
+                if ((crc & 0x0001) != 0) {
+                    crc >>= 1;
+                    crc ^= polynomial;
+                } else {
+                    crc >>= 1;
                 }
             }
         }
@@ -84,9 +84,9 @@ public class Crc16Util {
         int strLen = str.length();
         byte[] result = new byte[strLen / TWO];
         // ----- 两位一个字节
-        for (int i = 0; i < strLen; i = i + TWO) {
+        for (int i = 0; i < strLen; i += TWO) {
             String temp = str.substring(i, i + TWO);
-            result[i / TWO] = Byte.parseByte(temp, HEX);
+            result[i / TWO] = (byte) Integer.parseInt(temp, HEX);
         }
         return result;
     }
@@ -114,18 +114,18 @@ public class Crc16Util {
      * @param str
      */
     private static void printHexStr(String str) {
-        byte[] byteArr = getByteArr(str);
+        String[] split = str.split(SPACE);
         StringBuilder builder = new StringBuilder();
         builder.append("unsigned char arr[] = {");
-        for (int i = 0; i < byteArr.length; i++) {
-            builder.append("0x").append(byteArr[i]);
-            if (i < byteArr.length - 1) {
+        for (int i = 0; i < split.length; i++) {
+            builder.append("0x").append(split[i]);
+            if (i < split.length - 1) {
                 builder.append(", ");
             }
         }
         builder.append("};");
         System.out.println(builder.toString());
-        System.out.println("int len = " + byteArr.length + ";");
+        System.out.println("int len = " + split.length + ";");
     }
 
     /**
@@ -135,10 +135,12 @@ public class Crc16Util {
      */
     public static void main(String[] args) throws Exception {
         String str = "48 4C 01 00 01 00 00 05 00 00";
+        // ----- 输出16进制数组给 C++ 测试使用
         Crc16Util.printHexStr(str);
+        // ----- 获取CRC-16的值
         System.out.println("crc16 int is: " + Crc16Util.getCrc16(str));
         System.out.println("crc16 hex is: " + Crc16Util.getCrc16HexStr(str));
-
+        // ----- 获取FTP地址的十六进制数组
         String ftp = "ftp://127.0.0.1/xxx-dt1.1-v1.1.2.2r.img";
         byte[] asc = ftp.getBytes("US-ASCII");
         System.out.println(ByteUtil.bytesToHexPrint(asc));
