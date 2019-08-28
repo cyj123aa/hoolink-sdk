@@ -6,6 +6,7 @@ package com.hoolink.sdk.enums.analysis;
  * description: 语音控制设备
  */
 public enum TypeEnum {
+    BASE((byte)0,"单灯"),
     LIGHT((byte)1,"单灯"),
     MEDIA((byte)2,"音响"),
     SCREEN((byte)3,"显示屏"),
