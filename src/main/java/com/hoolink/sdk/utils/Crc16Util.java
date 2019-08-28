@@ -12,6 +12,7 @@ public class Crc16Util {
     private static final Integer HEX = 16;
     private static final String NUL = "";
     private static final String SPACE = " ";
+    private static final String ASCII = "US-ASCII";
 
     /**
      * 根据报文byte数组，获取CRC-16 16进制字符串
@@ -124,7 +125,7 @@ public class Crc16Util {
     private static void printHexStr(String str) {
         String[] split = str.split(SPACE);
         StringBuilder builder = new StringBuilder();
-        builder.append("unsigned char arr[] = {");
+        builder.append("    unsigned char arr[] = {");
         for (int i = 0; i < split.length; i++) {
             builder.append("0x").append(split[i]);
             if (i < split.length - 1) {
@@ -133,7 +134,7 @@ public class Crc16Util {
         }
         builder.append("};");
         System.out.println(builder.toString());
-        System.out.println("int len = " + split.length + ";");
+        System.out.println("    int len = " + split.length + ";");
     }
 
     /**
@@ -150,7 +151,7 @@ public class Crc16Util {
         System.out.println("crc16 hex is: " + Crc16Util.getCrc16HexStr(str));
         // ----- 获取FTP地址的十六进制数组
         String ftp = "ftp://127.0.0.1/xxx-dt1.1-v1.1.2.2r.img";
-        byte[] asc = ftp.getBytes("US-ASCII");
+        byte[] asc = ftp.getBytes(ASCII);
         System.out.println(ByteUtil.bytesToHexPrint(asc));
         System.out.println(Integer.toHexString(asc.length));
     }
