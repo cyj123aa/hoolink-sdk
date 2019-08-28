@@ -55,20 +55,25 @@ public class Crc16Util {
      * @return CRC值（10进制）
      */
     public static int getCrc16(byte[] data) {
+        // ----- 预置一个CRC寄存器，初始值为0xFFFF
         int crc = 0xFFFF;
-        int polynomial = 0xA001;
         byte byteLen = 8;
         for (byte b : data) {
+            // ----- 循环，将每数据帧中的每个字节与CRC寄存器中的低字节进行异或运算
             crc ^= ((int) b & 0x00FF);
             for (int j = 0; j < byteLen; j++) {
+                // ----- 将寄存器右移1位，最高位自动补0
                 if ((crc & 0x0001) != 0) {
+                    // ----- 如果右移出来的位不为0，将寄存器与固定值 0xA001 异或运算
                     crc >>= 1;
-                    crc ^= polynomial;
+                    crc ^= 0xA001;
                 } else {
+                    // ----- 如果右移出来的位为0，不做处理，进行下一次右移，知道处理完整个字节的8位
                     crc >>= 1;
                 }
             }
         }
+        // ----- 最终寄存器得值就是CRC的值，返回
         return crc;
     }
 
@@ -92,7 +97,7 @@ public class Crc16Util {
     }
 
     /**
-     * 将CRC-16值转换成16进制字符串，且保持最小长度为4为
+     * 将CRC-16值转换成16进制字符串，且保持最小长度为4位
      * <p>
      * 58951 >> E647
      *
@@ -101,11 +106,14 @@ public class Crc16Util {
      */
     private static String intToHexStr(int data) {
         String crcStr = Integer.toHexString(data).toUpperCase();
-        int defaultLen = 4;
-        while (crcStr.length() < defaultLen) {
-            crcStr = "0" + crcStr;
+        int size = 4 - crcStr.length();
+        StringBuilder builder = new StringBuilder();
+        // ---- 长度不够 4 位高位自动补0
+        while (size > 0) {
+            builder.append("0");
+            size--;
         }
-        return crcStr;
+        return builder.append(crcStr).toString();
     }
 
     /**
