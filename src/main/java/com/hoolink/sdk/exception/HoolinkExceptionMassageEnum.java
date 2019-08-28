@@ -14,7 +14,7 @@ public enum HoolinkExceptionMassageEnum {
     PARAM_ERROR("参数错误"),
     LOGIN_ERROR("登录异常"),
     //返回这个 前端会返回   发生下列情况，需要您重新登录：操作超时/密码重置/权限重置
-    LOGIN_TIME_OUT("登录超时"),
+    LOGIN_TIME_OUT("登录失效"),
     USER_SESSION_EMPTY("请重新登录"),
     PAGE_TIME_OUT("页面超时，请重新操作！"),
     OTHER_USER_LOGIN("异地登录"),
@@ -204,6 +204,8 @@ public enum HoolinkExceptionMassageEnum {
     USER_POSITION_NOT_NULL("用户职位不能为空"),
     USER_ACCOUNT_NOT_NULL("用户账号不能为空"),
     RECEIVE_SMS_SELECT_NULL("是否接收短信提醒选择不正确"),
+    USER_BIND_PHONE_TIP("请先绑定手机号码,用来接收短信通知"),
+    RESET_PHONE_TIP("重置手机号码,将导致无法接收短信通知,请慎重操作！"),
 
     /*** manage-base-版本管理 */
     VERSION_DETAIL_ERROR("版本详情信息获取失败"),
