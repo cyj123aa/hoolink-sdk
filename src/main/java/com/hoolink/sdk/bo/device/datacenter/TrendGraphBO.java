@@ -17,5 +17,5 @@ public class TrendGraphBO implements Serializable {
     private List<String> x;
 
     /*** Y轴数组数据 */
-    private List<Integer> y;
+    private List<Long> y;
 }
