@@ -81,4 +81,6 @@ public class CommonConstants {
      */
     public static final Integer DEFAULT_VALUE_0 = 0;
     public static final String REDIS_RESULT_OK = "OK";
+
+    public static int INT_ZERO=0;
 }
