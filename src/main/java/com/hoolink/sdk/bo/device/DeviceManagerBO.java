@@ -93,7 +93,7 @@ public class DeviceManagerBO implements Serializable {
     /*** 工作状态 */
     private Boolean workStatus;
 
-    /*** 操作类型 1 增加，2修改*/
+    /*** 操作类型 1 新增，2修改*/
     private String operateType;
 
     /*** 分组Id */
