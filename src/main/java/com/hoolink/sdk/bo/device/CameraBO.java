@@ -46,6 +46,9 @@ public class CameraBO extends DeviceManagerBO {
     /*** factory外键,关联event_basis     */
     private Long eventBasisId;
 
+    /*** nvr ID */
+    private Long nvrId;
+
     private String pircture;
 
     /*** 灯杆mac */
@@ -55,6 +58,12 @@ public class CameraBO extends DeviceManagerBO {
 
     /*** 灯杆型号名称 */
     private String poleSubTypeName;
+
+    /*** nvr mac */
+    private String nvrMac;
+
+    /*** nvr 型号 */
+    private String nvrSubTypeName;
 
 
 }
