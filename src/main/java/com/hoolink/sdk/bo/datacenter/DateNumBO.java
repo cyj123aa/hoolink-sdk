@@ -1,4 +1,4 @@
-package com.hoolink.sdk.bo.device.datacenter;
+package com.hoolink.sdk.bo.datacenter;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -7,12 +7,12 @@ import lombok.Data;
 
 /**
  * @Author zhangyy
- * @DateTime 2019-08-27 17:39
+ * @DateTime 2019-08-28 18:16
  * @Description
  */
 @Data
-public class DeviceAlarmNumBO implements Serializable {
+public class DateNumBO  implements Serializable {
 
-    private Long alarmNum;
+    private Long countNum;
     private LocalDate countDate;
 }

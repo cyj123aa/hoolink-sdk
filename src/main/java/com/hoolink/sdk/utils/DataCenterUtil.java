@@ -11,8 +11,8 @@ import java.util.List;
 
 import org.apache.commons.collections.CollectionUtils;
 
-import com.hoolink.sdk.bo.device.datacenter.DateNumBO;
-import com.hoolink.sdk.bo.device.datacenter.TrendGraphBO;
+import com.hoolink.sdk.bo.datacenter.DateNumBO;
+import com.hoolink.sdk.bo.datacenter.TrendGraphBO;
 import com.hoolink.sdk.constants.CommonConstants;
 
 /**
@@ -75,6 +75,7 @@ public class DataCenterUtil {
      */
     public static Double colPercent(Long molecule,Long denominator){
         DecimalFormat df = new DecimalFormat(".0");
+        molecule=molecule*CommonConstants.INT_ONEHUNDERD;
         Double dd=Double.valueOf(molecule.toString())/denominator;
         Double d=Double.valueOf(df.format(dd));
         return d;
