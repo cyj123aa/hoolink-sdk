@@ -27,11 +27,9 @@ public class UpdateUserBO implements Serializable {
     /*** 姓名 */
     @NotBlank(message = "姓名不允许为空", groups = {Group.User.Name.class, Group.Admin.class})
     private String name;
-
     /*** 手机号 */
     @NotBlank(message = "手机号不允许为空", groups = Group.Admin.class)
     private String phone;
-
     /*** 性别 */
     @NotNull(message = "性别不允许为空", groups = Group.User.Sex.class)
     private Boolean sex;

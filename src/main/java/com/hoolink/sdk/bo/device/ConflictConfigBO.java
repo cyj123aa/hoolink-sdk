@@ -64,4 +64,10 @@ public class ConflictConfigBO implements Serializable {
     @JsonSerialize(using = LocalDateSerializer.class)
     @ApiModelProperty(dataType = "java.lang.String", example = "1970-01-01")
     private LocalDate specialDate;
+
+    /**
+     * 播放状态：1：正在播放， 2：停止
+     * 表字段 : screen_play_config.play_status
+     */
+    private Integer playStatus;
 }

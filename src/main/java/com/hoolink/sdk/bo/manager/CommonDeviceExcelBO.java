@@ -1,12 +1,16 @@
 package com.hoolink.sdk.bo.manager;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @Author by lixiaoran
  * @date 2019-05-06
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CommonDeviceExcelBO {
 
     private Long deviceTypeId;
@@ -104,34 +108,9 @@ public class CommonDeviceExcelBO {
      * 高
      */
     private String height;
-
-    public CommonDeviceExcelBO() {
-    }
-
-    public CommonDeviceExcelBO(String subTypeName, String deviceName, String poleMac, String poleSubTypeName, String externalMac, String externalSubTypeName, String mac, String installAddress, String description, String modelNo, String operateType, String ipAddr, String ipPort, String validateCode, String existLeakage, String existEnvironment, String existWaterLevel, String existGas, String broadcastSubTypeName, String broadcastMac, String verifyCode, String widht, String height) {
-        this.subTypeName = subTypeName;
-        this.deviceName = deviceName;
-        this.poleMac = poleMac;
-        this.poleSubTypeName = poleSubTypeName;
-        this.externalMac = externalMac;
-        this.externalSubTypeName = externalSubTypeName;
-        this.mac = mac;
-        this.installAddress = installAddress;
-        this.description = description;
-        this.modelNo = modelNo;
-        this.operateType = operateType;
-        this.ipAddr = ipAddr;
-        this.ipPort = ipPort;
-        this.validateCode = validateCode;
-        this.existLeakage = existLeakage;
-        this.existEnvironment = existEnvironment;
-        this.existWaterLevel = existWaterLevel;
-        this.existGas = existGas;
-        this.broadcastSubTypeName = broadcastSubTypeName;
-        this.broadcastMac = broadcastMac;
-        this.verifyCode = verifyCode;
-        this.width = widht;
-        this.height = height;
-    }
+    /**
+     * 错误信息
+     */
+    private String errorInfo;
 }
 

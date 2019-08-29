@@ -2,6 +2,7 @@ package com.hoolink.sdk.enums.omc;
 
 /**
  * @author chenyuejun
+ * 工单状态枚举
  */
 
 public enum WorkStateEnum {

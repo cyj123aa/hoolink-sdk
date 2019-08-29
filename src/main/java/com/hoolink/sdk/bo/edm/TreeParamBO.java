@@ -19,4 +19,7 @@ public class TreeParamBO {
 
     /** 传入list表示需要勾选 */
     private List<CheckedParamBO> checkedList;
+
+    /** 搜索的用户名 目前只搜索用户，若需要搜索组织，自己扩展 */
+    private String name;
 }

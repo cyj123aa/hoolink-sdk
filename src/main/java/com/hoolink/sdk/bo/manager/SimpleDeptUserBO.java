@@ -44,4 +44,7 @@ public class SimpleDeptUserBO implements Serializable {
 
     /** 用户所属设备码 用于推送 */
     private String deviceCode;
+
+    /** 是否接收短信提醒 */
+    private Boolean receiveSms;
 }
