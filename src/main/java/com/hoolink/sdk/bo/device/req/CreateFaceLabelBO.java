@@ -15,7 +15,5 @@ public class CreateFaceLabelBO {
     private Long obsId;
     @NotNull
     private Long projectId;
-    @NotNull
-    private Byte faceSetType;
 
 }

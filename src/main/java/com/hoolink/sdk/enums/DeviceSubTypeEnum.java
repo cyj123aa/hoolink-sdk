@@ -59,7 +59,9 @@ public enum DeviceSubTypeEnum {
     // ----- 芳华灯杆
     POLE_YOUNG(25L, "pole_young", "hoolink", "芳华", InstructionCodeType.MONITOR_HOOLINK, 13L),
     // ----- F9灯杆
-    POLE_F9(26L, "pole_f9", "hoolink", "F9", InstructionCodeType.MONITOR_HOOLINK, 13L);
+    POLE_F9(26L, "pole_f9", "hoolink", "F9", InstructionCodeType.MONITOR_HOOLINK, 13L),
+    // ----- DS-8664N-l16(海康NVR)
+    NVR_DS_8664N_l16(27L, "nvr_ds_8664n_l16", "海康", "DS-8664N-l16", InstructionCodeType.HIKVISION, 18L);
 
     private Long subType;
     private String subCode;

@@ -2,6 +2,7 @@ package com.hoolink.sdk.enums.omc;
 
 /**
  * @author chenyuejun
+ * 工单obs表 类型
  */
 
 public enum ObsEnum {

@@ -58,4 +58,6 @@ public class SearchProjectBO extends PageParamBO implements Serializable {
 
     private String ownerPhone;
 
+    private String address;
+
 }
