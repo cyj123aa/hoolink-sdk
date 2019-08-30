@@ -19,13 +19,13 @@ public class DeviceNumAndExpiryBO implements Serializable {
     private String deviceTypeName;
 
     /*** 设备数量 */
-    private Integer deviceNum;
+    private Long deviceNum;
 
     /*** 设备在保数量 */
-    private Integer underWarrantyNum;
+    private Long underWarrantyNum;
 
     /*** 设备过保数量 */
-    private Integer overWarrantyNum;
+    private Long overWarrantyNum;
 
     /*** 在保百分比值 */
     private Double underWarrantyPercent;
