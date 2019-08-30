@@ -14,8 +14,9 @@ import java.io.Serializable;
 public class DeletePlayListBO implements Serializable {
 
     private static final long serialVersionUID = 8105740222283028674L;
-    @NotBlank(message = "登录用户名不能为空")
+    /** 登录用户名 (必填) */
     private String loginName;
+    /** 广播室ID (必填) */
     @NotBlank(message = "广播室ID不能为空")
     private String bcId;
     /** 播放列表的ID */
