@@ -15,23 +15,24 @@ import java.util.List;
 public class AddPlayListBO implements Serializable {
 
     private static final long serialVersionUID = -2896626943455717873L;
-    @NotBlank(message = "登录用户名不能为空")
+    /**  登录用户（必填） */
     private String loginName;
-    @NotBlank(message = "广播室编号不能为空")
+    /** 广播室编号 （必填）*/
     private String bcId;
-    /** 是否直播 0/1 非直播/直播 */
-    @NotBlank(message = "是否直播标志位不能为空")
+    /** 是否直播 0/1 非直播/直播 （必填）*/
     private String realTime;
-    /** 文件的存储路径 */
-    private List<String> fileNamePath;
+    /** 文件名称 （必填）*/
+    @NotBlank(message = "文件名称不能为空")
+    private List<String> fileName;
     /** 列表名称 */
     private String attrName;
     /** 播放模式 0：顺序播放 1：随机播放 */
     private String playMod;
-    /** 播放次数 参考值0-99 0：表示循环 */
+    /** 播放次数 参考值0-99 0：表示循环 （必填）*/
     @NotBlank(message = "播放次数不能为空")
     private String fileCount;
-    /** 清单音量 参考值0-99 */
+    /** 清单音量 参考值0-99 （必填）*/
+    @NotBlank(message = "清单音量不能为空")
     private String taskVolume;
     /** 音源模式 */
     private String realAudioSrc;

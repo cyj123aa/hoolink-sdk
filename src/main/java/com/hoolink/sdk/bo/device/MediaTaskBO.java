@@ -134,6 +134,12 @@ public class MediaTaskBO implements Serializable {
     private Long runTime;
 
     /**
+     * 迈可行广播室ID
+     * 表字段 : media_task.room_id
+     */
+    private String roomId;
+
+    /**
      * 策略列表：周或者日期
      */
     private List<TaskStrategyBO> strategys;
