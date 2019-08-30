@@ -72,4 +72,9 @@ public class DeviceImportDataBO implements Serializable {
      */
     List<DeviceDmxBO> dmxList;
 
+    /**
+     * nvr
+     */
+    List<NvrBO> nvrList;
+
 }

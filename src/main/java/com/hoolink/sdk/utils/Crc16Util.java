@@ -26,7 +26,7 @@ public class Crc16Util {
      * @return CRC值（16进制）
      */
     public static String getCrc16HexStr(String data) {
-        return intToHexStr(getCrc16(data));
+        return crcToHexStr(getCrc16(data));
     }
 
     /**
@@ -41,7 +41,7 @@ public class Crc16Util {
             // ----- 校验：报文字符串不能为空，否则抛异常
             throw new RuntimeException("The string cannot be empty!");
         }
-        return getCrc16(getByteArr(data));
+        return getCrc16(hexStrToByteArr(data));
     }
 
     /**
@@ -52,7 +52,7 @@ public class Crc16Util {
      * @return CRC值（16进制）
      */
     public static String getCrc16HexStr(byte[] data) {
-        return intToHexStr(getCrc16(data));
+        return crcToHexStr(getCrc16(data));
     }
 
     /**
@@ -69,20 +69,24 @@ public class Crc16Util {
         }
         // ----- 预置一个CRC寄存器，初始值为0xFFFF
         int crc = 0xFFFF;
-        byte byteLen = 8;
-        for (byte b : data) {
+        byte byteLen;
+        boolean flag;
+        for (byte item : data) {
             // ----- 循环，将每数据帧中的每个字节与CRC寄存器中的低字节进行异或运算
-            crc ^= ((int) b & 0x00FF);
-            for (int j = 0; j < byteLen; j++) {
+            crc ^= ((int) item & 0x00FF);
+            byteLen = 8;
+            while (byteLen > 0) {
+                // ----- 判断寄存器最后一位是 1\0：[true: 1; false: 0]
+                flag = (crc & ONE) == ONE;
                 // ----- 将寄存器右移1位，最高位自动补0
-                if ((crc & 0x0001) != 0) {
-                    // ----- 如果右移出来的位不为0，将寄存器与固定值 0xA001 异或运算
-                    crc >>= 1;
+                crc >>= 1;
+                if (flag) {
+                    // ----- 如果右移出来的位是 1：将寄存器与固定值 0xA001 异或运算
+                    // ----- 如果右移出来的位是 0：不做处理，进行下一次右移
+                    // ----- 直到处理完整个字节的8位
                     crc ^= 0xA001;
-                } else {
-                    // ----- 如果右移出来的位为0，不做处理，进行下一次右移，知道处理完整个字节的8位
-                    crc >>= 1;
                 }
+                byteLen--;
             }
         }
         // ----- 最终寄存器得值就是CRC的值，返回
@@ -96,7 +100,7 @@ public class Crc16Util {
      * @param str 报文字符串
      * @return 报文数组
      */
-    private static byte[] getByteArr(String str) {
+    private static byte[] hexStrToByteArr(String str) {
         str = str.replaceAll(SPACE, NUL);
         int strLen = str.length();
         if ((strLen & ONE) == ONE) {
@@ -119,7 +123,7 @@ public class Crc16Util {
      * @param data CRC值（10进制）
      * @return CRC值（16进制）
      */
-    private static String intToHexStr(int data) {
+    private static String crcToHexStr(int data) {
         String crcStr = Integer.toHexString(data).toUpperCase();
         int size = 4 - crcStr.length();
         StringBuilder builder = new StringBuilder();

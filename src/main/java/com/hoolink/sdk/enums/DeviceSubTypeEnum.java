@@ -60,6 +60,8 @@ public enum DeviceSubTypeEnum {
     POLE_YOUNG(25L, "pole_young", "hoolink", "芳华", InstructionCodeType.MONITOR_HOOLINK, 13L),
     // ----- F9灯杆
     POLE_F9(26L, "pole_f9", "hoolink", "F9", InstructionCodeType.MONITOR_HOOLINK, 13L),
+    // ----- DS-8664N-l16(海康NVR)
+    NVR_DS_8664N_l16(27L, "nvr_ds_8664n_l16", "海康", "DS-8664N-l16", InstructionCodeType.HIKVISION, 18L),
     // ----- 迈可行音响
     SOUND_BOX_MICRO(28L, "sound_box_micro", "micro", "迈可行数字音箱", InstructionCodeType.MICRO, 2L);
 

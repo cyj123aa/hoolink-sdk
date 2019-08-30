@@ -46,4 +46,9 @@ public class DeviceCheckBO implements Serializable {
 
     /*** DMX错误返回 */
     List<CheckErrorBO> dmxErrorList;
+
+    /*** NVR错误返回 */
+    List<CheckErrorBO> nvrErrorList;
+
+
 }

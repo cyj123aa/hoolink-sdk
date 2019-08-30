@@ -56,6 +56,24 @@ public class DeviceUtil {
     }
 
     /**
+     * 获取需要排除的设备:
+     * * 气体检测
+     * * 环境监测
+     * * 水位监测
+     * * 漏电检测
+     *
+     * @return
+     */
+    public static List<Long> getDeviceSubTypeIds() {
+        List<Long> typeIds = new ArrayList<>();
+        typeIds.add(DeviceSubTypeEnum.GAS_HOOLINK.getSubType());
+        typeIds.add(DeviceSubTypeEnum.LEAKAGE_HOOLINK.getSubType());
+        typeIds.add(DeviceSubTypeEnum.WATER_GAUGE_HOOLINK.getSubType());
+        typeIds.add(DeviceSubTypeEnum.ENVIRONMENT_FUAOTONG.getSubType());
+        return typeIds;
+    }
+
+    /**
      * 根据规则生成设备序列号
      *
      * @param subTypeId 设备型号ID
