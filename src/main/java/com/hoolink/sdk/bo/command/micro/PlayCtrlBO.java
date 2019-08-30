@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author zhouyun
@@ -14,14 +15,16 @@ import java.io.Serializable;
 public class PlayCtrlBO implements Serializable {
 
     private static final long serialVersionUID = -1808156996726302261L;
-    @NotBlank(message = "登录用户名不能为空")
+    /** 登录用户名 （必填）*/
     private String loginName;
     @NotBlank(message = "广播室ID不能为空")
     private String bcId;
-    /** 播放列表的ID */
+    /** 播放列表的ID （必填）*/
     private String listId;
-    /** 广播类型 */
+    /** 广播类型 （必填）*/
     private String type;
     /** 当前时间 */
     private Long time;
+    @NotBlank(message = "设备编号列表不能为空")
+    private List<String> devNoList;
 }

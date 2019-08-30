@@ -59,7 +59,10 @@ public enum DeviceSubTypeEnum {
     // ----- 芳华灯杆
     POLE_YOUNG(25L, "pole_young", "hoolink", "芳华", InstructionCodeType.MONITOR_HOOLINK, 13L),
     // ----- F9灯杆
-    POLE_F9(26L, "pole_f9", "hoolink", "F9", InstructionCodeType.MONITOR_HOOLINK, 13L);
+    POLE_F9(26L, "pole_f9", "hoolink", "F9", InstructionCodeType.MONITOR_HOOLINK, 13L),
+    // ----- 迈可行音响
+    SOUND_BOX_MICRO(28L, "sound_box_micro", "micro", "迈可行数字音箱", InstructionCodeType.MICRO, 2L);
+
 
     private Long subType;
     private String subCode;

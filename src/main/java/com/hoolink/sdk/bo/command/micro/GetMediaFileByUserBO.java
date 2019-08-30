@@ -14,9 +14,9 @@ import java.io.Serializable;
 public class GetMediaFileByUserBO implements Serializable {
 
     private static final long serialVersionUID = -381449438555051995L;
-    @NotBlank(message = "登录用户名不能为空")
+    /** 登录用户名 （必填）*/
     private String loginName;
-    @NotBlank(message = "文件类型不能为空")
+    /** 文件类型 1:私有文件 2:公有文件 （必填）*/
     private String privateState;
     /** 输入的查询信息(可查询的字段：媒体文件名)(可模糊查询，为空查询所有) */
     private String condition;
