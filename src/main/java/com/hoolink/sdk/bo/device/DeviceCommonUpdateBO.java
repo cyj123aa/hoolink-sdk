@@ -73,5 +73,6 @@ public class DeviceCommonUpdateBO implements Serializable {
     /*** 模型z轴值 */
     private Integer z;
 
-
+    /*** 所属NVR */
+    private Long nvrId;
 }
