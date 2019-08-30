@@ -94,4 +94,7 @@ public class DeviceDetailBO implements Serializable {
     /*** 模型z轴值 */
     private Integer z;
 
+    /*** nvr ID */
+    private Long nvrId;
+
 }
