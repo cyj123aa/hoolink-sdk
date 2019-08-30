@@ -75,4 +75,16 @@ public class DeviceCommonUpdateBO implements Serializable {
 
     /*** 所属NVR */
     private Long nvrId;
+
+    /*** NVR IP地址 */
+    private String nvrIp;
+
+    /*** NVR 端口号 */
+    private Integer nvrPort;
+
+    /*** nvr 账号 */
+    private String nvrAccount;
+
+    /*** nvr 密码 */
+    private String nvrPassword;
 }
