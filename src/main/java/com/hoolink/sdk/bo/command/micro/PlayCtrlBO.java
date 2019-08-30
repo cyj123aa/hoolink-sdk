@@ -27,4 +27,6 @@ public class PlayCtrlBO implements Serializable {
     private Long time;
     @NotBlank(message = "设备编号列表不能为空")
     private List<String> devNoList;
+    @NotBlank(message = "清单音量不能为空")
+    private String taskVol;
 }

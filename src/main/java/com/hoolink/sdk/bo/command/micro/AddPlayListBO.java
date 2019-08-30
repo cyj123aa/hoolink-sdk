@@ -32,7 +32,6 @@ public class AddPlayListBO implements Serializable {
     @NotBlank(message = "播放次数不能为空")
     private String fileCount;
     /** 清单音量 参考值0-99 （必填）*/
-    @NotBlank(message = "清单音量不能为空")
     private String taskVolume;
     /** 音源模式 */
     private String realAudioSrc;
