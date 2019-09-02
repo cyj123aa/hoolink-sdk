@@ -112,5 +112,25 @@ public class CommonDeviceExcelBO {
      * 错误信息
      */
     private String errorInfo;
+
+    /**
+     * nvr型号
+     */
+    private String nvrSubTypeName;
+
+    /**
+     * nvr 物理地址
+     */
+    private String nvrMac;
+
+    /**
+     * 账号
+     */
+    private String account;
+
+    /**
+     * 密码
+     */
+    private String pwd;
 }
 
