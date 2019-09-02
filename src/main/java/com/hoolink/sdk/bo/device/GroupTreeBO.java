@@ -26,6 +26,9 @@ public class GroupTreeBO implements Serializable {
     /*** 该组设备个数 */
     private Integer deviceSize;
 
+    /*** 没有通道号设备个数 */
+    private Integer noChannelSize;
+
     /*** 每个节点的唯一标识 */
     private List<DeviceTreeBO> children;
 
