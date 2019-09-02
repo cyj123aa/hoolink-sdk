@@ -1,4 +1,4 @@
-package com.hoolink.sdk.bo.device.datacenter;
+package com.hoolink.sdk.bo.datacenter;
 
 import java.io.Serializable;
 

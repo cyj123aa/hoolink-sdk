@@ -11,8 +11,8 @@ import java.util.List;
 
 import org.apache.commons.collections.CollectionUtils;
 
-import com.hoolink.sdk.bo.device.datacenter.DateNumBO;
-import com.hoolink.sdk.bo.device.datacenter.TrendGraphBO;
+import com.hoolink.sdk.bo.datacenter.DateNumBO;
+import com.hoolink.sdk.bo.datacenter.TrendGraphBO;
 import com.hoolink.sdk.constants.CommonConstants;
 
 /**
@@ -34,7 +34,7 @@ public class DataCenterUtil {
         List<Long> yList=new ArrayList<>();
         int j=CommonConstants.INT_ZERO;
         long dateNum;
-        for(int i=CommonConstants.INT_ZERO;i<dateLen;i++){
+        for(int i=CommonConstants.INT_ZERO;i<=dateLen;i++){
             LocalDate tempDate=startDate.plusDays(i);
             if(CollectionUtils.isNotEmpty(trendGraphList)){
                 LocalDate selectDate=trendGraphList.get(j).getCountDate();
@@ -75,6 +75,10 @@ public class DataCenterUtil {
      */
     public static Double colPercent(Long molecule,Long denominator){
         DecimalFormat df = new DecimalFormat(".0");
+        molecule=molecule*CommonConstants.INT_ONEHUNDERD;
+        if(denominator.equals(CommonConstants.INT_ZERO.longValue())){
+            denominator=CommonConstants.INT_ONE.longValue();
+        }
         Double dd=Double.valueOf(molecule.toString())/denominator;
         Double d=Double.valueOf(df.format(dd));
         return d;
