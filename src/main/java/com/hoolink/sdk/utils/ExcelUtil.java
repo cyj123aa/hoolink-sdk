@@ -255,7 +255,7 @@ public class ExcelUtil {
         //创建数据行
         assembleContents(content, sheet);
         return hssfWorkbook;
-    }
+}
 
     public static <T> ResponseEntity<Resource> getResponseEntity(List<T> list, String[] headers, String title) {
         try {
