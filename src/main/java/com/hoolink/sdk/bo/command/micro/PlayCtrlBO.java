@@ -29,4 +29,7 @@ public class PlayCtrlBO implements Serializable {
     private List<String> devNoList;
     @NotBlank(message = "清单音量不能为空")
     private String taskVol;
+    /** 分区ID（必填） */
+    @NotBlank(message = "分区ID不能为空")
+    private String sectorId;
 }

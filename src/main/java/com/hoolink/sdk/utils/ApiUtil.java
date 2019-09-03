@@ -12,6 +12,7 @@ import java.util.Map;
 public class ApiUtil {
 
     private static final String HTTPS = "https://";
+    private static final String COLON = ":";
 
     /**
      * 获取HTTPS协议的API
@@ -20,8 +21,8 @@ public class ApiUtil {
      * @param params
      * @return
      */
-    public static String getApi(String host, String api, Map<String, String> params) {
-        StringBuffer sb = new StringBuffer(HTTPS).append(host).append(api);
+    public static String getApi(String host, String port, String api, Map<String, String> params) {
+        StringBuffer sb = new StringBuffer(HTTPS).append(host).append(COLON).append(port).append(api);
         if (!CollectionUtils.isEmpty(params)) {
             sb.append("?");
             params.forEach((key, value) -> sb.append(key).append("=").append(value).append("&"));
