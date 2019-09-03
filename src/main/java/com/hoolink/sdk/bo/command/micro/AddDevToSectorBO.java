@@ -15,12 +15,12 @@ import java.util.List;
 public class AddDevToSectorBO implements Serializable {
 
     private static final long serialVersionUID = -427590585959706938L;
-    @NotBlank(message = "登录用户名不能为空")
+    /** 登录用户名(必填) */
     private String loginName;
-    /** 终端编号 */
+    /** 终端编号(必填) */
     @NotBlank(message = "终端编号不能为空")
     private List<String> devNoList;
-    /** 分区ID */
+    /** 分区ID(必填) */
     @NotBlank(message = "分区ID不能为空")
     private String sectorId;
     /** 当前时间 */
