@@ -38,5 +38,5 @@ public class WorkOrderCountBO implements Serializable {
     private String unOperationNum;
 
     /*** 工单完成率 */
-    private List<ValueAndNameBO> workCompletePercent;
+    private ValueAndNameBO workCompletePercent;
 }
