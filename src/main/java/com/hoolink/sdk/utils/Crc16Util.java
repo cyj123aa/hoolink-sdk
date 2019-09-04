@@ -301,8 +301,8 @@ public class Crc16Util {
         param.put("seq", 1);
         param.put("code", "login");
         Crc16Util.printJsonStr(JSONUtils.toJSONString(param));
-        System.out.println("hex to crc16 int is: " + Crc16Util.getCrc16ByJson(param));
-        System.out.println("hex to crc16 hex is: " + Crc16Util.getCrc16HexStrByJson(param));
+        System.out.println("json to crc16 int is: " + Crc16Util.getCrc16ByJson(param));
+        System.out.println("json to crc16 hex is: " + Crc16Util.getCrc16HexStrByJson(param));
         System.out.println();
 
         // ===== 测试3：将16进制字符串进行高低位转换
