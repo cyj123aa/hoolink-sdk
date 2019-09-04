@@ -1,5 +1,6 @@
 package com.hoolink.sdk.utils;
 
+import com.google.common.base.CharMatcher;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -98,6 +99,10 @@ public class Crc16Util {
             throw new RuntimeException("The string cannot be empty!");
         }
         data = data.replaceAll(SPACE, NUL);
+        if (!CharMatcher.ascii().matchesAllOf(data)) {
+            // ===== 所有的字符必须属于ASCII码
+            throw new RuntimeException("All characters must belong to ASCII code!");
+        }
         return getCrc16ByHex(data.getBytes(ASCII));
     }
 
@@ -247,14 +252,18 @@ public class Crc16Util {
     private static void printJsonStr(String str) {
         str = str.replaceAll(SPACE, NUL);
         System.out.println("    str: " + str.length() + " -> " + str);
+        Character[] escapes = {'\"', '\'', '\\', '\b', '\n', '\r', '\t'};
         char[] chars = str.toCharArray();
         StringBuffer buffer = new StringBuffer();
         buffer.append("    unsigned char arr[] = {");
         for (int i = 0; i < chars.length; i++) {
             char item = chars[i];
             buffer.append("\'");
-            if (item == '\"') {
-                buffer.append("\\");
+            for (char c : escapes) {
+                if (item == c) {
+                    buffer.append("\\");
+                    break;
+                }
             }
             buffer.append(item).append("\'");
             if (i < chars.length - 1) {
