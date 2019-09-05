@@ -33,6 +33,9 @@ public class DeviceManagerBO implements Serializable {
     /*** 维保年限 */
     private Short maintainTime;
 
+    /*** 过保时间 */
+    private Long warrantyTime;
+
     /*** 项目ID */
     private Long projectId;
 
