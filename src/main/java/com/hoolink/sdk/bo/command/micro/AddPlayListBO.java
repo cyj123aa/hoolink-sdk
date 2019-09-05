@@ -21,9 +21,9 @@ public class AddPlayListBO implements Serializable {
     private String bcId;
     /** 是否直播 0/1 非直播/直播 （必填）*/
     private String realTime;
-    /** 文件名称 （必填）*/
-    @NotBlank(message = "文件名称不能为空")
-    private List<String> fileName;
+    /** 文件路径 （必填）*/
+    @NotBlank(message = "文件路径不能为空")
+    private List<String> filePathName;
     /** 列表名称 */
     private String attrName;
     /** 播放模式 0：顺序播放 1：随机播放 */
