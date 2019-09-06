@@ -15,4 +15,6 @@ public class ProjectDeviceCountBO implements Serializable {
     private Long projectId;
 
     private Integer count;
+
+    private Long deviceTypeId;
 }
