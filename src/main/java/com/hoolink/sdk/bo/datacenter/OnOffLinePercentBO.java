@@ -13,4 +13,5 @@ import java.io.Serializable;
 public class OnOffLinePercentBO implements Serializable {
     private Double onLinePercent;
     private Double offLinePercent;
+    private Double compareYesterday;
 }
