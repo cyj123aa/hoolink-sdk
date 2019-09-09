@@ -4,7 +4,6 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author zhouyun
@@ -25,7 +24,7 @@ public class SoundBizReqHistoryParamBO implements Serializable {
     private String cmdCode;
 
     /** 设备列表*/
-    private Map<Long, List<CmdResultBO>> deviceMap;
+    private List<CmdResultBO> deviceList;
 
     /**创建者id*/
     private Long creator;
@@ -42,6 +41,7 @@ public class SoundBizReqHistoryParamBO implements Serializable {
     /**项目id*/
     private Long projectId;
 
-    /** random 音响特用属性 */
-    private String random;
+    /** 任务ID */
+    private Long taskId;
+
 }

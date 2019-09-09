@@ -17,11 +17,13 @@ public class UpsideBO implements Serializable {
     /*** 设备编号 */
     private String devNo;
     /*** 设备注册状态 0：注册成功 1：注册失败 */
-    private Byte devState;
+    private Boolean devState;
     /*** 设备开关 */
     private Byte devSwitch;
     /*** 设备开关状态 只有设备开关和设备开关状态都为1设备才处于播放状态 */
     private Byte devSwitchState;
     /*** 事件类型 四种取值（online/offline/play/stop）*/
     private String eventType;
+    /*** 设备播放状态  0：停止 1：播放 */
+    private Boolean play;
 }
