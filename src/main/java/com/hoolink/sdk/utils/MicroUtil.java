@@ -1,18 +1,18 @@
 package com.hoolink.sdk.utils;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.security.cert.X509Certificate;
-import java.util.UUID;
 
 /**
  * @author zhouyun
@@ -140,84 +140,4 @@ public class MicroUtil {
         return proxyHttpRequest(address , REQUEST_METHOD);
     }
 
-    /**
-     * 上传音乐文件到指定路径
-     * @param url 请求url
-     * @param music 文件
-     * @param name 文件名称
-     */
-    public static void uploadFile(String url, MultipartFile music, String name) {
-        System.out.println("====================== uploadFile begin");
-        HttpURLConnection urlConn = null;
-        OutputStream out = null;
-        InputStream in = null;
-
-        try {
-            String BOUNDARY = UUID.randomUUID().toString();
-
-            URL httpUrl = new URL(url);
-            urlConn = (HttpURLConnection) httpUrl.openConnection();
-            urlConn.setUseCaches(false);
-            urlConn.setRequestProperty("Content-Type", "multipart/form-data;boundary="+BOUNDARY);
-            urlConn.setRequestProperty("Connection", "Keep-Alive");
-            urlConn.setConnectTimeout(6000);
-            urlConn.setDoOutput(true);
-            urlConn.setDoInput(true);
-            urlConn.setRequestMethod("POST");
-            out = urlConn.getOutputStream();
-
-            StringBuffer sb = new StringBuffer();
-            sb.append("--"+BOUNDARY+"\r\n")
-                    .append("Content-Disposition: form-data; name= "+ URLEncoder.encode(name,"utf-8")+" ;"+"filename= uploadifyMediaFileBC \r\n")
-                    .append("Content-Type: text/plain; charset=utf-8" + "\r\n");
-                    //.append("Content-Length: "+ music.getSize() +"\r\n\r\n");
-
-            out.write((sb.toString()).getBytes("utf-8"));
-
-            in = music.getInputStream();
-            int c;
-            while ((c = in.available()) > 0) {
-                byte[] byteBuffer = new byte[c];
-                int i = in.read(byteBuffer);
-                out.write(byteBuffer, 0, i);
-            }
-            out.flush();
-
-            if (in != null) {
-                in.close();
-            }
-            if (out != null) {
-                out.close();
-            }
-
-            InputStream inputStream = urlConn.getInputStream();
-            /*ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-            int b;
-            while ((b = inputStream.read()) != -1) {
-                outputStream.write(b);
-            }*/
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (in != null) {
-                try {
-                    in.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (out != null) {
-                try {
-                    out.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (null != urlConn) {
-                urlConn.disconnect();
-            }
-            urlConn = null;
-        }
-    }
 }
