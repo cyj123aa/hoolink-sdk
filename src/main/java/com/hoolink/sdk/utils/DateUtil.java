@@ -1190,4 +1190,48 @@ public final class DateUtil {
         return dateTime.toInstant(ZoneOffset.of(ZONE)).toEpochMilli();
     }
 
+
+    /**
+     * 时间戳转日期
+     * @param timestamp
+     * @return
+     */
+    public static LocalDateTime getDateTimeOfTimestamp(long timestamp) {
+        Instant instant = Instant.ofEpochMilli(timestamp);
+        ZoneId zone = ZoneId.systemDefault();
+        return LocalDateTime.ofInstant(instant, zone);
+    }
+
+
+    /**
+     * 获取时间戳中的时间
+     * @param timestamp
+     * @return
+     */
+    public static LocalTime getLocalTimeOfTimestamp(Long timestamp) {
+        return getDateTimeOfTimestamp(timestamp).toLocalTime();
+    }
+
+
+    /**
+     * 获取时间戳中的日期
+     * @param timestamp
+     * @return
+     */
+    public static LocalDate getLocalDateOfTimestamp(Long timestamp) {
+        return getDateTimeOfTimestamp(timestamp).toLocalDate();
+    }
+
+
+    /**
+     * 将字符串转成LocalDate
+     * @param time
+     * @param format
+     * @return
+     */
+    public static LocalDate parseStringToDateTime(String time, String format) {
+        DateTimeFormatter df = DateTimeFormatter.ofPattern(format);
+        return LocalDate.parse(time, df);
+    }
+
 }
