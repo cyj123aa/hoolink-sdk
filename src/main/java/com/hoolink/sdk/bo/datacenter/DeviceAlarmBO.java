@@ -29,7 +29,7 @@ public class DeviceAlarmBO {
     private LocalDate countDate;
 
     /*** 告警次数 */
-    private Long alarmNum;
+    private Long countNum;
 
     /*** 统计时间（时间戳） */
     private Long creator;
