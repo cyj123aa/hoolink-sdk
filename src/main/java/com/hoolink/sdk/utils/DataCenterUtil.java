@@ -78,7 +78,7 @@ public class DataCenterUtil {
      * @param denominator
      */
     public static Double colPercent(Long molecule,Long denominator){
-        DecimalFormat df = new DecimalFormat(".0");
+        DecimalFormat df = new DecimalFormat("#");
         molecule=molecule*CommonConstants.INT_ONEHUNDERD;
         if(denominator.equals(CommonConstants.INT_ZERO.longValue())){
             denominator=CommonConstants.INT_ONE.longValue();
