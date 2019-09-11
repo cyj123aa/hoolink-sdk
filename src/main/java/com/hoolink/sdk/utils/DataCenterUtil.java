@@ -37,10 +37,14 @@ public class DataCenterUtil {
         for(int i=CommonConstants.INT_ZERO;i<=dateLen;i++){
             LocalDate tempDate=startDate.plusDays(i);
             if(CollectionUtils.isNotEmpty(trendGraphList)){
-                LocalDate selectDate=trendGraphList.get(j).getCountDate();
-                if(tempDate.equals(selectDate)){
-                    dateNum=trendGraphList.get(j).getCountNum();
-                    j++;
+                if(j<trendGraphList.size()){
+                    LocalDate selectDate=trendGraphList.get(j).getCountDate();
+                    if(tempDate.equals(selectDate)){
+                        dateNum=trendGraphList.get(j).getCountNum();
+                        j++;
+                    }else{
+                        dateNum=CommonConstants.INT_ZERO;
+                    }
                 }else{
                     dateNum=CommonConstants.INT_ZERO;
                 }
@@ -69,12 +73,12 @@ public class DataCenterUtil {
     }
 
     /**
-     * 计算百分比保留两位小数
+     * 计算百分比保留一位小数
      * @param molecule
      * @param denominator
      */
     public static Double colPercent(Long molecule,Long denominator){
-        DecimalFormat df = new DecimalFormat(".0");
+        DecimalFormat df = new DecimalFormat("#");
         molecule=molecule*CommonConstants.INT_ONEHUNDERD;
         if(denominator.equals(CommonConstants.INT_ZERO.longValue())){
             denominator=CommonConstants.INT_ONE.longValue();
