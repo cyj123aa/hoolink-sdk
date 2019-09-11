@@ -153,4 +153,9 @@ public class MediaTaskBO implements Serializable {
      * 播放清单设备资源
      */
     private List<TaskDeviceBO> devices;
+
+    /**
+     * 创建人
+     */
+    private Long creator;
 }
