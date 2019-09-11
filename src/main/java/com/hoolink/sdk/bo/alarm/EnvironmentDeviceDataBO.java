@@ -58,4 +58,6 @@ public class EnvironmentDeviceDataBO extends MonitorNodeBO {
     @AlarmItem(ItemEnum.RAINFALL)
     private Double rainfall;
 
+    @AlarmItem(ItemEnum.ILLUMINANCE)
+    private Double illuminance;
 }
