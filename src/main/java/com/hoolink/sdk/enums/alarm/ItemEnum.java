@@ -35,6 +35,7 @@ public enum ItemEnum {
     ULTRAVIOLET(13L, "紫外线", "UV", DeviceTypeEnum.ENVIRONMENT),
     NOISE(14L, "噪音", "dB", DeviceTypeEnum.ENVIRONMENT),
     RAINFALL(15L, "降雨量", "mm", DeviceTypeEnum.ENVIRONMENT),
+    ILLUMINANCE(29L, "光照度", "Lux", DeviceTypeEnum.ENVIRONMENT),
     /*** 气体监测 */
     SULFUR_DIOXIDE(16L, "二氧化硫", "mg/m3", DeviceTypeEnum.GAS),
     HYDROGEN_SULFIDE(17L, "硫化氢", "mg/m3", DeviceTypeEnum.GAS),

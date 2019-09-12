@@ -19,4 +19,7 @@ public class SendFileCmdBO {
 
     /*** 文件URL */
     private String fileUrl;
+
+    /*** 文件总大小 */
+    private Long size;
 }
