@@ -69,6 +69,9 @@ public class DeviceManagerBO implements Serializable {
     /*** 异常状态 */
     private Boolean alarmStatus;
 
+    /*** 事件状态 */
+    private Boolean eventStatus;
+
     /*** 描述 */
     private String description;
 
