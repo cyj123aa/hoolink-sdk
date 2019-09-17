@@ -52,4 +52,20 @@ public class TaskMusicBO implements Serializable {
      * 表字段 : middle_task_music.play_order
      */
     private Integer playOrder;
+
+    /**
+     * <pre>
+     * 迈可行文件路径
+     * 表字段 : ability_music.micro_file_path
+     * </pre>
+     */
+    private String microFilePath;
+
+    /**
+     * <pre>
+     * 音乐文件的时长 单位为秒
+     * 表字段 : ability_music.file_time
+     * </pre>
+     */
+    private Integer fileTime;
 }

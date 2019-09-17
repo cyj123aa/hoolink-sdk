@@ -97,4 +97,7 @@ public class EnvironmentHistoryBO implements Serializable {
 
     /** PM10超出值 */
     private Float pmTenBeyond;
+
+    /** 光照度 */
+    private Long light;
 }

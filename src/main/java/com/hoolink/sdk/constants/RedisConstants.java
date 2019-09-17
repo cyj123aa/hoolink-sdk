@@ -47,7 +47,9 @@ public class RedisConstants {
      * 音响设备上行操作缓存
      */
     public static final String SOUND_BIZ_HISTORY = "sound_biz_history";
-    public static final String SOUND_OPERATION_RANDOM = "sound_operation_random_";
+    public static final String SOUND_OPERATION_ID = "sound_operation_id_";
+    public static final String SOUND_DEVICE_TASK = "sound_device_task";
+    public static final String SOUND_MICRO_DEVICE_ROOM = "sound_micro_device_room";
 
     public static final String MY_FILE_NAME = "myfile";
 }

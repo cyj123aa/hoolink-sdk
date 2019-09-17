@@ -96,6 +96,9 @@ public class MonitorDataReportFrameBO {
     /*** 漏电电流 */
     private Float leakageCurrent;
 
+    /** 关照强度  单位 LUX*/
+    private Long light;
+
     /*** 最新通讯时间 */
     private Long lastTime;
 
