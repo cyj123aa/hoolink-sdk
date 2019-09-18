@@ -34,7 +34,7 @@ public class WorkorderBO {
      * 表字段 : workorder.type
      * </pre>
      */
-    @NotBlank(message = "验证码不允许为空")
+    @NotBlank(message = "问题类型不允许为空")
     private String workType;
     /**
      * <pre>
