@@ -4,7 +4,7 @@ import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
-import java.util.List;
+import java.util.Map;
 
 /**
  * @author zhouyun
@@ -25,8 +25,8 @@ public class PlayCtrlBO implements Serializable {
     private String type;
     /** 当前时间 */
     private Long time;
-    @NotBlank(message = "设备编号列表不能为空")
-    private List<String> devNoList;
+    @NotBlank(message = "设备编号与运行状态map不能为空")
+    private Map<String, Boolean> devNoMap;
     @NotBlank(message = "清单音量不能为空")
     private String taskVol;
     /** 分区ID */
