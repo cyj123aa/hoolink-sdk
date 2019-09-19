@@ -3,7 +3,9 @@ package com.hoolink.sdk.bo.omc;
 
 import com.hoolink.sdk.bo.device.DeviceManagerBO;
 import java.util.List;
+import javax.validation.constraints.NotBlank;
 import lombok.Data;
+import org.hibernate.validator.constraints.Length;
 
 /**
  * @author chenyuejun
@@ -32,6 +34,7 @@ public class WorkorderBO {
      * 表字段 : workorder.type
      * </pre>
      */
+    @NotBlank(message = "问题类型不允许为空")
     private String workType;
     /**
      * <pre>
@@ -62,6 +65,8 @@ public class WorkorderBO {
      * 表字段 : workorder.description
      * </pre>
      */
+    @NotBlank(message = "描述不允许为空")
+    @Length(max=60, message="描述长度必须在0-60之间")
     private String description;
 
     /**

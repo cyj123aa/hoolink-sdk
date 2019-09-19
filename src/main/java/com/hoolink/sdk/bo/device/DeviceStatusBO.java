@@ -24,6 +24,9 @@ public class DeviceStatusBO implements Serializable {
     /*** 告警状态 */
     private Boolean alarmStatus;
 
+    /*** 事件状态 */
+    private Boolean eventStatus;
+
     /*** 在线状态 */
     private Boolean onlineStatus;
 
