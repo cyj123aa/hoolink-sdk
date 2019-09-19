@@ -1,6 +1,9 @@
 package com.hoolink.sdk.utils;
 
-import com.hoolink.sdk.bo.device.*;
+import com.hoolink.sdk.bo.device.DeviceManagerBO;
+import com.hoolink.sdk.bo.device.DeviceTreeBO;
+import com.hoolink.sdk.bo.device.DeviceTypeBO;
+import com.hoolink.sdk.constants.CommonConstants;
 import com.hoolink.sdk.enums.DeviceSubTypeEnum;
 import com.hoolink.sdk.enums.DeviceTypeEnum;
 import com.hoolink.sdk.exception.BusinessException;
@@ -84,6 +87,10 @@ public class DeviceUtil {
         if (StringUtils.isBlank(mac)) {
             // ----- 物理地址不能为空
             throw new BusinessException(HoolinkExceptionMassageEnum.DEVICE_MAC_EMPTY_ERROR);
+        }
+        // ----- 处理mac中的特殊字符
+        for (String specialChar : CommonConstants.GET_SPECIAL_CHAR) {
+            mac = mac.replaceAll(specialChar, "");
         }
         char[] deviceNo;
         int flagLength = 13;

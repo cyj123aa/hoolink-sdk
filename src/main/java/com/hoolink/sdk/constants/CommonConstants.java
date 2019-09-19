@@ -1,5 +1,8 @@
 package com.hoolink.sdk.constants;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author ds
  * Created by ds on 2017/12/11.
@@ -81,4 +84,13 @@ public class CommonConstants {
      */
     public static final Integer DEFAULT_VALUE_0 = 0;
     public static final String REDIS_RESULT_OK = "OK";
+
+    public static Integer INT_ZERO=0;
+
+    public static Integer INT_ONEHUNDERD=100;
+
+    public static Integer INT_ONE=1;
+
+    /*** 物理地址特殊字符 */
+    public static List<String> GET_SPECIAL_CHAR = Arrays.asList(":");
 }

@@ -1,5 +1,6 @@
 package com.hoolink.sdk.bo;
 
+import com.hoolink.sdk.bo.base.DeviceTypeOfProjectBO;
 import com.hoolink.sdk.bo.device.*;
 import lombok.Data;
 
@@ -71,5 +72,15 @@ public class DeviceImportDataBO implements Serializable {
      * dmx
      */
     List<DeviceDmxBO> dmxList;
+
+    /**
+     * nvr
+     */
+    List<NvrBO> nvrList;
+
+    /**
+     * 设备维保信息
+     */
+    List<DeviceTypeOfProjectBO> deviceTypeOfProjectList;
 
 }

@@ -20,4 +20,7 @@ public class DeviceNameAndNoBO implements Serializable {
 
     /*** 设备名称 */
     private String deviceName;
+
+    /*** 物理地址 */
+    private String mac;
 }

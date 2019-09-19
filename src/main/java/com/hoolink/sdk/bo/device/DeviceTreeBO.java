@@ -41,4 +41,7 @@ public class DeviceTreeBO implements Serializable {
     /*** 设备类型名 */
     private String typeName;
 
+    /*** 通道号 */
+    private String channelNo;
+
 }

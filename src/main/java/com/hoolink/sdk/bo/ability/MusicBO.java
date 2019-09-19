@@ -25,4 +25,8 @@ public class MusicBO {
     private Long created;
 
     private String musicUrl;
+
+    private String microFilePath;
+
+    private Integer fileTime;
 }

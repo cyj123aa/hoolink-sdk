@@ -51,6 +51,11 @@ public enum InstructionCodeType {
      */
     DMX,
 
+    /**
+     * 迈可行
+     */
+    MICRO,
+
 
 
 
