@@ -158,4 +158,14 @@ public class MediaTaskBO implements Serializable {
      * 创建人
      */
     private Long creator;
+
+    /**
+     * 修改人
+     */
+    private Long updator;
+
+    /**
+     * 修改时间
+     */
+    private Long updated;
 }
