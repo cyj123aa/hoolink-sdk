@@ -3,9 +3,6 @@ package com.hoolink.sdk.utils;
 import com.google.common.base.CharMatcher;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author <a herf="mailto:yanwu0527@163.com">XuBaofeng</a>
  * @date 2019-08-26 14:22.
@@ -37,7 +34,7 @@ public class Crc16Util {
         if (StringUtils.isBlank(str)) {
             throw new RuntimeException("The string cannot be empty!");
         }
-        str = str.replaceAll(SPACE, NUL);
+        str = processingString(str);
         int strLen = str.length();
         if ((strLen & ONE) == ONE) {
             // ----- 报文字符串必须是以一个字节为单位（两个字符为一个字节），所以当去除所有空格后的字符串为单数时说明字符串错误
@@ -101,7 +98,7 @@ public class Crc16Util {
         if (StringUtils.isBlank(data)) {
             throw new RuntimeException("The string cannot be empty!");
         }
-        data = data.replaceAll(SPACE, NUL);
+        data = processingString(data);
         if (!CharMatcher.ascii().matchesAllOf(data)) {
             // ===== 所有的字符必须属于ASCII码
             throw new RuntimeException("All characters must belong to ASCII code!");
@@ -192,7 +189,7 @@ public class Crc16Util {
      * @return 报文数组
      */
     private static byte[] hexStrToByteArr(String str) {
-        str = str.replaceAll(SPACE, NUL);
+        str = processingString(str);
         int strLen = str.length();
         if ((strLen & ONE) == ONE) {
             // ----- 报文字符串必须是以一个字节为单位（两个字符为一个字节），所以当去除所有空格后的报文长度为单数时说明报文错误
@@ -253,7 +250,7 @@ public class Crc16Util {
      * @param str json字符串
      */
     private static void printJsonStr(String str) {
-        str = str.replaceAll(SPACE, NUL);
+        str = processingString(str);
         System.out.println("    str: " + str.length() + " -> " + str);
         Character[] escapes = {'\"', '\'', '\\', '\b', '\n', '\r', '\t'};
         char[] chars = str.toCharArray();
@@ -279,42 +276,23 @@ public class Crc16Util {
     }
 
     /**
-     * 测试CRC获取
+     * 去除字符串中的 【空格、\r、\n】 等字符
      *
-     * @param args
+     * @param jsonStr
+     * @return
      */
-    public static void main(String[] args) throws Exception {
-        // ===== 测试1：hex方式获取CRC-16
-        String str = "48 4C 01 00 01 00 00 05 00 00";
-        // ----- 输出16进制数组给 C++ 测试使用
-        Crc16Util.printHexStr(str);
-        // ----- 获取CRC-16的值
-        System.out.println("hex to crc16 int is: " + Crc16Util.getCrc16ByHex(str));
-        System.out.println("hex to crc16 hex is: " + Crc16Util.getCrc16HexStrByHex(str));
-        System.out.println();
-
-        // ===== 测试2：json方式获取CRC-16
-        Map param = new HashMap<>();
-        param.put("version", "010001");
-        param.put("type", "light");
-        param.put("sn", "light001");
-        param.put("seq", 1);
-        param.put("code", "login");
-        Crc16Util.printJsonStr(JSONUtils.toJSONString(param));
-        System.out.println("json to crc16 int is: " + Crc16Util.getCrc16ByJson(param));
-        System.out.println("json to crc16 hex is: " + Crc16Util.getCrc16HexStrByJson(param));
-        System.out.println();
-
-        // ===== 测试3：将16进制字符串进行高低位转换
-        String temp = "722E696D";
-        String lowBits = Crc16Util.convertHighLow(temp);
-        System.out.println(temp + " -> " + lowBits);
-        System.out.println();
-
-        // ===== 测试4：获取FTP地址的十六进制数组
-        String ftp = "ftp://127.0.0.1/xxx-dt1.1-v1.1.2.2r.img";
-        byte[] asc = ftp.getBytes(ASCII);
-        System.out.println(ByteUtil.bytesToHexPrint(asc));
-        System.out.println(Integer.toHexString(asc.length));
+    private static String processingString(String jsonStr) {
+        if (StringUtils.isBlank(jsonStr)) {
+            return null;
+        }
+        // ----- 在计算CRC之前去除字符串中的特殊字符
+        String[] strs = {" ", "\r", "\t", "\n"};
+        for (String str : strs) {
+            if (jsonStr.contains(str)) {
+                jsonStr = jsonStr.replaceAll(str, NUL);
+            }
+        }
+        return jsonStr;
     }
+
 }
