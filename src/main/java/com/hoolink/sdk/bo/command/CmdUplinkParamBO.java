@@ -15,7 +15,7 @@ public class CmdUplinkParamBO implements Serializable {
     /**
      * 协议报文
      */
-    private Byte[] bytes;
+    private byte[] bytes;
     /**
      * 通道号
      */
