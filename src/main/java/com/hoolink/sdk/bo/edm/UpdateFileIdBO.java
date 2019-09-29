@@ -12,7 +12,7 @@ public class UpdateFileIdBO {
     /**
      * 数据库已经存在的obsId
      */
-    private Long fileResourceId;
+    private Long obsId;
     /**
      * 需要修改的备份的minioId
      */
