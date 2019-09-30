@@ -10,12 +10,12 @@ import java.io.Serializable;
  * @Desc
  */
 @Data
-public class CmdUplinkParamBO implements Serializable {
+public final class CmdUplinkParamBO implements Serializable {
     private static final long serialVersionUID = -6620300937429180093L;
     /**
      * 协议报文
      */
-    private Byte[] bytes;
+    private byte[] bytes;
     /**
      * 通道号
      */
