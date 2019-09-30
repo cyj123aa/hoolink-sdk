@@ -23,7 +23,7 @@ public class FileTypeConstants {
 
     public static final String[] WORD = {"DOC", "DOCX"};
 
-    public static final String[] CAD = {"DWG", "DWS", "DWT", "DXF"};
+    public static final String[] CAD = {"DWG"};
 
     public static final String[] XMIND = {"XMIND"};
 
