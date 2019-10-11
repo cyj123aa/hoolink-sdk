@@ -57,6 +57,8 @@ public enum HoolinkExceptionMassageEnum {
     GET_DEVICE_TYPE_ERROR("获取设备类型！"),
     UPDATE_DEVICE_TYPE_ERROR("获取设备类型！"),
     PROJECT_NAME_EXIST("项目名称已经存在"),
+    DOWNLOAD_EXCEL_ERROR("请在项目配置中选择设备类型"),
+
 
     /*** 设备管理提示信息message */
     DEVICE_MATCH_LIST_ERROR("获取匹配设备列表失败"),
