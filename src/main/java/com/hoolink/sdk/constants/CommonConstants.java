@@ -93,4 +93,13 @@ public class CommonConstants {
 
     /*** 物理地址特殊字符 */
     public static List<String> GET_SPECIAL_CHAR = Arrays.asList(":");
+
+    /*** 文件下发状态:下发中 */
+    public static final String SCREEN_FILE_SEND_ING = "0";
+
+    /*** 文件下发状态:下发成功 */
+    public static final String SCREEN_FILE_SEND_SUCCESS = "1";
+
+    /*** 文件下发状态:下发失败 */
+    public static final String SCREEN_FILE_SEND_FAILURE = "2";
 }
