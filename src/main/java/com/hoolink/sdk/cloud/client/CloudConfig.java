@@ -1,12 +1,15 @@
+/*
 package com.hoolink.sdk.cloud.client;
 
 import org.apache.commons.configuration.Configuration;
 
+*/
 /**
  * @ClassName CloudConfig
  * @Author Administrator
  * @DATE 2019/4/22 10:52
- */
+ *//*
+
 public class CloudConfig {
     public static final CloudConfig INSTANCE = new CloudConfig();
     private static Configuration finalConfig;
@@ -57,3 +60,4 @@ public class CloudConfig {
         return finalConfig.getInt(FIRST_REFRESH_INTERVAL, DEFAULT_FIRST_REFRESH_INTERVAL);
     }
 }
+*/

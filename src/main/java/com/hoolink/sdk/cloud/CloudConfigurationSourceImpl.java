@@ -1,3 +1,4 @@
+/*
 package com.hoolink.sdk.cloud;
 
 import com.google.common.collect.ImmutableMap;
@@ -23,11 +24,13 @@ import static com.hoolink.sdk.cloud.client.ConfigurationAction.SET;
 import static com.hoolink.sdk.cloud.client.ConfigurationAction.DELETE;
 import static com.netflix.config.WatchedUpdateResult.createIncremental;
 
+*/
 /**
  * @ClassName CloudConfigurationSourceImpl
  * @Author Administrator
  * @DATE 2019/4/22 10:38
- */
+ *//*
+
 public class CloudConfigurationSourceImpl implements ConfigCenterConfigurationSource {
     private static final Logger LOGGER = LoggerFactory.getLogger(CloudConfigurationSourceImpl.class);
     private final Map<String, Object> valueCache = new ConcurrentHashMap<>();
@@ -116,3 +119,4 @@ public class CloudConfigurationSourceImpl implements ConfigCenterConfigurationSo
         }
     }
 }
+*/

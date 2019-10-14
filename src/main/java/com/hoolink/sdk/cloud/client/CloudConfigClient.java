@@ -1,3 +1,4 @@
+/*
 package com.hoolink.sdk.cloud.client;
 
 
@@ -16,11 +17,13 @@ import java.util.concurrent.TimeUnit;
 
 import static com.hoolink.sdk.cloud.client.ConfigurationAction.*;
 
+*/
 /**
  * @ClassName CloudConfigClient
  * @Author Administrator
  * @DATE 2019/4/19 15:56
- */
+ *//*
+
 public class CloudConfigClient {
     private static final Logger LOGGER = LoggerFactory.getLogger(CloudConfigClient.class);
     private static final CloudConfig CLOUD_CONFIG = CloudConfig.INSTANCE;
@@ -112,3 +115,4 @@ public class CloudConfigClient {
     }
 
 }
+*/
