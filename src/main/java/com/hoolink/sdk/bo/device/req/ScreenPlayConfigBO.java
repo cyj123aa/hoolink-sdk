@@ -13,6 +13,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author wangdong
@@ -83,4 +84,7 @@ public class ScreenPlayConfigBO implements Serializable {
 
     /*** 播放文件序号，与inner_name相对应 */
     private Integer playIndex;
+
+    /*** 每个设备下发文件的状态 */
+    private Map<String,String> screenSendStatusMap;
 }

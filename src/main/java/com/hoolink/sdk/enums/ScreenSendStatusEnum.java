@@ -10,17 +10,17 @@ public enum  ScreenSendStatusEnum {
     /**
      * 下发中
      */
-    SEND(ByteUtil.intToByte(0),"下发中"),
+    SEND((byte)0,"下发中"),
 
     /**
      * 下发成功
      */
-    SEND_OK(ByteUtil.intToByte(1),"下发成功"),
+    SEND_OK((byte)1,"下发成功"),
 
     /**
      * 下发失败
      */
-    SEND_ERROR(ByteUtil.intToByte(2),"下发失败")
+    SEND_ERROR((byte)2,"下发失败")
     ;
 
     private Byte type;

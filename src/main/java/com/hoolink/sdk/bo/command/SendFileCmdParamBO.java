@@ -23,4 +23,9 @@ public class SendFileCmdParamBO {
      */
     private List<SendFileCmdBO> sendFileCmdBOS;
 
+    /**
+     * mac和通道号对应关系
+     */
+    private List<DeviceMacChannelBO> deviceMacChannelList;
+
 }
