@@ -230,7 +230,7 @@ public class Crc16Util {
      */
     private static void printHexStr(String str) {
         String[] split = str.split(SPACE);
-        System.out.println("    str: " + split.length + " -> " + str);
+        System.out.println("    str: " + convertHighLow(crc16ToHexStr(split.length)) + " -> " + str);
         StringBuffer buffer = new StringBuffer();
         buffer.append("    unsigned char arr[] = {");
         for (int i = 0; i < split.length; i++) {
@@ -251,7 +251,7 @@ public class Crc16Util {
      */
     private static void printJsonStr(String str) {
         str = processingString(str);
-        System.out.println("    str: " + str.length() + " -> " + str);
+        System.out.println("    str: " + convertHighLow(crc16ToHexStr(str.length())) + " -> " + str);
         Character[] escapes = {'\"', '\'', '\\', '\b', '\n', '\r', '\t'};
         char[] chars = str.toCharArray();
         StringBuffer buffer = new StringBuffer();
