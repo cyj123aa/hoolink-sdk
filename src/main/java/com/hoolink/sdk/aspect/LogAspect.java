@@ -124,7 +124,7 @@ public class LogAspect {
                 message = "The value of the interface return value is incorrect.";
             }
             // ===== 输出异常信息
-            log.error("Exception : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
+            log.error("Exception : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", "11", CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
                     CommonConstants.LOG_METHOD, method, CommonConstants.LOG_PARAM, param, CommonConstants.LOG_ERROR, message, e);
             return object;
         }
@@ -148,7 +148,7 @@ public class LogAspect {
         }
         // ===== 获取ApiOperation的value
         String operation = AspectUtil.getMethodOperation(method);
-        log.info("Request   : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
+        log.info("Request   : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}","11", CommonConstants.LOG_ACCOUNT, AspectUtil.getAccount(),
                 CommonConstants.LOG_METHOD, method, CommonConstants.LOG_PARAM, param, CommonConstants.LOG_CONTENT, operation);
     }
 
@@ -164,7 +164,7 @@ public class LogAspect {
             return;
         }
         // ===== 处理txId
-        String txId = ContextUtil.getTxid();
+        String txId = "";
         // ===== 获取方法签名
         Method method = AspectUtil.getMethodSignature(joinPoint);
         // ===== 获取ApiOperation的value
@@ -201,7 +201,7 @@ public class LogAspect {
         }
         // ----- 获取方法签名
         Method method = AspectUtil.getMethodSignature(joinPoint);
-        log.error("Exception : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", ContextUtil.getTxid(), CommonConstants.LOG_ACCOUNT,
+        log.error("Exception : [txId]: {}, {}: {}, {}: {}, {}: {}, {}: {}", "11", CommonConstants.LOG_ACCOUNT,
                 AspectUtil.getAccount(), CommonConstants.LOG_METHOD, method, CommonConstants.LOG_PARAM, param, CommonConstants.LOG_ERROR, e.getMessage(), e);
     }
 

@@ -159,6 +159,7 @@ public enum HoolinkExceptionMassageEnum {
     EXCEL_ERROR("excel错误"),
     PASSWORD_ERROR("密码错误"),
     GET_CURRENT_USER_ERROR("获取当前登录用户失败"),
+    SET_CURRENT_USER_ERROR("设置全局当前登录用户失败"),
     PHONE_EXISTS("该手机号已存在"),
     GET_CHECK_EXCEL_DATA_ERROR("获取校验excel数据结果失败"),
     READ_FIRMWARE_FILE_ERROR("固件文件读取失败"),

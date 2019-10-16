@@ -84,7 +84,7 @@ public class AspectUtil {
      * @return
      */
     public static final String getAccount() {
-        CurrentUserBO userBO = ContextUtil.getCurrentUser();
+        CurrentUserBO userBO = null;
         return userBO != null ? userBO.getAccount() : "admin";
     }
 }
