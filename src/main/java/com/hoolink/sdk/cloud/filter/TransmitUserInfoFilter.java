@@ -39,12 +39,15 @@ public class TransmitUserInfoFilter implements Filter {
 
     private void initUserInfo(HttpServletRequest request){
         String userJson = request.getHeader("managecurrentuser");
+        String txId = request.getHeader("txId");
+        log.info("TransmitUserInfoFilter的请求头中 user :{},txId :{}",userJson,txId);
         if (StringUtils.isNotBlank(userJson)) {
             try {
                 userJson = URLDecoder.decode(userJson,"UTF-8");
                 CurrentUserBO userInfo = (CurrentUserBO) JSON.parseObject(userJson,CurrentUserBO.class);
                 //将UserInfo放入上下文中
                 ContextUtil.setManageCurrentUser(userInfo);
+                ContextUtil.setTxid(txId);
             } catch (UnsupportedEncodingException e) {
                 log.error("init userInfo error",e);
             }

@@ -28,10 +28,13 @@ public class TransmitUserInfoFeighClientIntercepter implements RequestIntercepto
     public void apply(RequestTemplate requestTemplate) {
         //从应用上下文中取出user信息，放入Feign的请求头中
         CurrentUserBO user = ContextUtil.getManageCurrentUser();
+        String txId = ContextUtil.getTxid();
+        log.info("Feign的请求头中 user :{},txId :{}",JSON.toJSONString(user),txId);
         if (user != null) {
             try {
                 String userJson = JSON.toJSONString(user);
                 requestTemplate.header("manageCurrentUser",new String[]{URLDecoder.decode(userJson,"UTF-8")});
+                requestTemplate.header("txId",txId);
             } catch (UnsupportedEncodingException e) {
                 log.error("用户信息设置错误",e);
             }

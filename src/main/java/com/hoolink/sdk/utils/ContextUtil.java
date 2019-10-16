@@ -2,7 +2,6 @@ package com.hoolink.sdk.utils;
 
 import com.hoolink.sdk.bo.base.CurrentUserBO;
 import com.hoolink.sdk.constants.CommonConstants;
-import com.hoolink.sdk.constants.ContextConstant;
 
 
 /**
@@ -13,6 +12,8 @@ public class ContextUtil {
 
     private static ThreadLocal<CurrentUserBO> manageUserInfo = new ThreadLocal<CurrentUserBO>();
     private static ThreadLocal<CurrentUserBO> hoolinkUserInfo = new ThreadLocal<CurrentUserBO>();
+    private static ThreadLocal<String> txId = new ThreadLocal<String>();
+
 
 
     public ContextUtil() {
@@ -31,6 +32,14 @@ public class ContextUtil {
 
     public static void setCurrentUser(CurrentUserBO user){
         hoolinkUserInfo.set(user);
+    }
+
+    public static String getTxid(){
+        return (String) txId.get();
+    }
+
+    public static void setTxid(String Txid){
+        txId.set(Txid);
     }
 
     /**
@@ -63,18 +72,6 @@ public class ContextUtil {
         userBO.setAccount(CommonConstants.DEFAULT_USER_ACCOUNT);
         return userBO;
     }
-
-    /**
-     * 获取每次请求的全局txID
-     *
-     * @return
-     */
-//    public static String getTxid() {
-//        if (ContextUtils.getInvocationContext() == null) {
-//            return null;
-//        }
-//        return ContextUtils.getInvocationContext().getContext(ContextConstant.TX_ID);
-//    }
 
 //    /**
 //     * 获取每次请求的项目ID
