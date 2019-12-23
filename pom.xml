@@ -172,6 +172,7 @@
 
     <build>
         <finalName>hoolink-sdk</finalName>
+        <defaultGoal>compile</defaultGoal>
     </build>
 
 </project>
