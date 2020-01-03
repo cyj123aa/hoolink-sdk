@@ -17,7 +17,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
         <java.version>1.8</java.version>
-        <amqp.client.version>4.0.3</amqp.client.version>
+        <amqp.client.version>4.8.0</amqp.client.version>
         <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
         <cse.version>2.3.65</cse.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
